@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* === Tani IoT — Design Tokens (earthy organik) === */
+:root {
+  --background: #FFFCF8;
+  --foreground: #1C1917;
+  --muted: #F5F5F0;
+  --muted-fg: #57534E;
+  --border: #E7E5E4;
+  --ring: #2E7D32;
+
+  --primary: #2E7D32;
+  --primary-hover: #1B5E20;
+  --primary-fg: #FFFFFF;
+  --primary-soft: #E8F5E9;
+  --primary-soft-fg: #1B5E20;
+
+  --accent: #F59E0B;
+  --accent-hover: #D97706;
+  --accent-fg: #5C3A05;
+  --accent-soft: #FFFBEB;
+  --accent-soft-fg: #92400E;
+
+  --success: #15803D;
+  --success-soft: #DCFCE7;
+  --warning: #D97706;
+  --warning-soft: #FEF3C7;
+  --destructive: #DC2626;
+  --destructive-soft: #FEE2E2;
+  --info: #0284C7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-fg: var(--muted-fg);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-fg: var(--primary-fg);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-soft-fg: var(--primary-soft-fg);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-soft-fg: var(--accent-soft-fg);
+
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-destructive: var(--destructive);
+  --color-destructive-soft: var(--destructive-soft);
+  --color-info: var(--info);
+
+  --font-sans: var(--font-outfit);
+  --font-body: var(--font-instrument);
+  --font-mono: var(--font-jetbrains);
+
+  --radius-card: 1rem;
+  --radius-button: 0.75rem;
+  --radius-pill: 9999px;
+}
+
+/* === Base === */
+* {
+  border-color: var(--border);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-instrument), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D6D3D1;
+}
