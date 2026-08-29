@@ -27,8 +27,10 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
 
   async validate(payload: JwtPayload) {
     if (payload.type === 'refresh') {
-      // Refresh token tidak boleh dipakai sebagai access token
-      return null;
+      // Refresh token tidak boleh dipakai sebagai access token -> AuthGuard akan 401
+      // Melempar Unauthorized lebih eksplisit daripada return null
+      const { UnauthorizedException } = await import('@nestjs/common');
+      throw new UnauthorizedException('Refresh token tidak dapat dipakai sebagai access token');
     }
     return { id: payload.sub, email: payload.email, role: payload.role };
   }
