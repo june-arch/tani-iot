@@ -1,0 +1,5322 @@
+[
+  {
+    "name": "Kangkung",
+    "slug": "kangkung",
+    "category": "SAYUR",
+    "scientificName": "Ipomoea aquatica",
+    "description": "Sayur air yang tumbuh sangat cepat, favorit hidroponik dan tumis Indonesia.",
+    "iklimOptimal": "Tropis lembap, 25-32°C, curah hujan sedang",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rockwool + air",
+      "durasiHari": 5,
+      "suhuOptimal": "25-30°C",
+      "kelembaban": "70-85%",
+      "langkah": [
+        "Rendam benih kangkung 2-4 jam dalam air hangat",
+        "Siapkan rockwool + air yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 5 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat daun",
+          "Kutu daun",
+          "Busuk daun"
+        ],
+        "panenHariRange": "20-35 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Ulat grayak",
+          "Busuk lunak",
+          "Kutu kebul"
+        ],
+        "panenHariRange": "30-45 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "800-1200",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 25
+    }
+  },
+  {
+    "name": "Bayam",
+    "slug": "bayam",
+    "category": "SAYUR",
+    "scientificName": "Amaranthus spp.",
+    "description": "Sayuran daun kaya zat besi, panen cepat 25-35 hari.",
+    "iklimOptimal": "Tropis, 25-30°C, sinar penuh",
+    "ketinggianOptimal": "0-1000 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rockwool / tanah gembur",
+      "durasiHari": 4,
+      "suhuOptimal": "24-30°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih bayam 2-4 jam dalam air hangat",
+        "Siapkan rockwool / tanah gembur yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 4 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 4 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat daun",
+          "Kutu daun",
+          "Busuk daun"
+        ],
+        "panenHariRange": "20-35 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Ulat grayak",
+          "Busuk lunak",
+          "Kutu kebul"
+        ],
+        "panenHariRange": "30-45 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "800-1200",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 25
+    }
+  },
+  {
+    "name": "Sawi Hijau",
+    "slug": "sawi-hijau",
+    "category": "SAYUR",
+    "scientificName": "Brassica juncea",
+    "description": "Sawi hijau untuk sup dan tumis, toleran dataran rendah.",
+    "iklimOptimal": "Sejuk-sedang, 22-30°C",
+    "ketinggianOptimal": "0-1200 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rockwool / cocopeat",
+      "durasiHari": 7,
+      "suhuOptimal": "22-28°C",
+      "kelembaban": "70-85%",
+      "langkah": [
+        "Rendam benih sawi hijau 2-4 jam dalam air hangat",
+        "Siapkan rockwool / cocopeat yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 7 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 7 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat daun",
+          "Kutu daun",
+          "Busuk daun"
+        ],
+        "panenHariRange": "20-35 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Ulat grayak",
+          "Busuk lunak",
+          "Kutu kebul"
+        ],
+        "panenHariRange": "30-45 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "Wick",
+      "ppmRange": "800-1200",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 25
+    }
+  },
+  {
+    "name": "Pakcoy",
+    "slug": "pakcoy",
+    "category": "SAYUR",
+    "scientificName": "Brassica rapa subsp. chinensis",
+    "description": "Pakcoy renyah, populer untuk hidroponik NFT.",
+    "iklimOptimal": "Sejuk, 18-28°C",
+    "ketinggianOptimal": "0-1200 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rockwool",
+      "durasiHari": 10,
+      "suhuOptimal": "20-28°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih pakcoy 2-4 jam dalam air hangat",
+        "Siapkan rockwool yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 10 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 10 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat daun",
+          "Kutu daun",
+          "Busuk daun"
+        ],
+        "panenHariRange": "20-35 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Ulat grayak",
+          "Busuk lunak",
+          "Kutu kebul"
+        ],
+        "panenHariRange": "30-45 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "800-1200",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 25
+    }
+  },
+  {
+    "name": "Selada",
+    "slug": "selada",
+    "category": "SAYUR",
+    "scientificName": "Lactuca sativa",
+    "description": "Selada keriting dan romaine, butuh suhu sejuk agar tidak pahit.",
+    "iklimOptimal": "Sejuk, 18-25°C",
+    "ketinggianOptimal": "300-1200 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rockwool",
+      "durasiHari": 10,
+      "suhuOptimal": "18-24°C",
+      "kelembaban": "60-80%",
+      "langkah": [
+        "Rendam benih selada 2-4 jam dalam air hangat",
+        "Siapkan rockwool yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 10 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 10 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat daun",
+          "Kutu daun",
+          "Busuk daun"
+        ],
+        "panenHariRange": "20-35 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Ulat grayak",
+          "Busuk lunak",
+          "Kutu kebul"
+        ],
+        "panenHariRange": "30-45 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "560-840",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 25
+    }
+  },
+  {
+    "name": "Kemangi",
+    "slug": "kemangi",
+    "category": "SAYUR",
+    "scientificName": "Ocimum basilicum var. citriodorum",
+    "description": "Kemangi harum untuk lalapan dan pepes, tumbuh mudah.",
+    "iklimOptimal": "Tropis hangat, 24-32°C",
+    "ketinggianOptimal": "0-700 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Tanah + kompos / rockwool",
+      "durasiHari": 7,
+      "suhuOptimal": "24-30°C",
+      "kelembaban": "65-80%",
+      "langkah": [
+        "Rendam benih kemangi 2-4 jam dalam air hangat",
+        "Siapkan tanah + kompos / rockwool yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 7 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 7 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat daun",
+          "Kutu daun",
+          "Busuk daun"
+        ],
+        "panenHariRange": "20-35 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Ulat grayak",
+          "Busuk lunak",
+          "Kutu kebul"
+        ],
+        "panenHariRange": "30-45 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "Wick",
+      "ppmRange": "800-1200",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 25
+    }
+  },
+  {
+    "name": "Seledri",
+    "slug": "seledri",
+    "category": "SAYUR",
+    "scientificName": "Apium graveolens",
+    "description": "Seledri wangi untuk sup dan jus, pertumbuhan lambat di awal.",
+    "iklimOptimal": "Sejuk, 16-26°C",
+    "ketinggianOptimal": "200-1200 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rockwool / persemaian nampan",
+      "durasiHari": 14,
+      "suhuOptimal": "18-26°C",
+      "kelembaban": "70-85%",
+      "langkah": [
+        "Rendam benih seledri 2-4 jam dalam air hangat",
+        "Siapkan rockwool / persemaian nampan yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat daun",
+          "Kutu daun",
+          "Busuk daun"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Ulat grayak",
+          "Busuk lunak",
+          "Kutu kebul"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Daun Bawang",
+    "slug": "daun-bawang",
+    "category": "SAYUR",
+    "scientificName": "Allium fistulosum",
+    "description": "Daun bawang untuk taburan dan tumis, panen berulang.",
+    "iklimOptimal": "Sejuk-sedang, 20-30°C",
+    "ketinggianOptimal": "0-1500 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Tanah gembur / polybag",
+      "durasiHari": 12,
+      "suhuOptimal": "20-28°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih daun bawang 2-4 jam dalam air hangat",
+        "Siapkan tanah gembur / polybag yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 12 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 12 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Kubis",
+    "slug": "kubis",
+    "category": "SAYUR",
+    "scientificName": "Brassica oleracea var. capitata",
+    "description": "Kubis bulat padat, butuh suhu sejuk untuk pembentukan krop.",
+    "iklimOptimal": "Sejuk, 15-25°C",
+    "ketinggianOptimal": "500-1500 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Bedengan semai / nampan",
+      "durasiHari": 14,
+      "suhuOptimal": "16-24°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih kubis 2-4 jam dalam air hangat",
+        "Siapkan bedengan semai / nampan yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat daun",
+          "Kutu daun",
+          "Busuk daun"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Ulat grayak",
+          "Busuk lunak",
+          "Kutu kebul"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Kembang Kol",
+    "slug": "kembang-kol",
+    "category": "SAYUR",
+    "scientificName": "Brassica oleracea var. botrytis",
+    "description": "Kembang kol putih, sensitif panas.",
+    "iklimOptimal": "Sejuk, 15-24°C",
+    "ketinggianOptimal": "600-1500 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Nampan semai + cocopeat",
+      "durasiHari": 14,
+      "suhuOptimal": "15-24°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih kembang kol 2-4 jam dalam air hangat",
+        "Siapkan nampan semai + cocopeat yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat daun",
+          "Kutu daun",
+          "Busuk daun"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Ulat grayak",
+          "Busuk lunak",
+          "Kutu kebul"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Brokoli",
+    "slug": "brokoli",
+    "category": "SAYUR",
+    "scientificName": "Brassica oleracea var. italica",
+    "description": "Brokoli kaya antioksidan, butuh dataran tinggi.",
+    "iklimOptimal": "Sejuk, 15-23°C",
+    "ketinggianOptimal": "700-1500 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rockwool / nampan",
+      "durasiHari": 12,
+      "suhuOptimal": "16-23°C",
+      "kelembaban": "70-85%",
+      "langkah": [
+        "Rendam benih brokoli 2-4 jam dalam air hangat",
+        "Siapkan rockwool / nampan yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 12 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 12 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat daun",
+          "Kutu daun",
+          "Busuk daun"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Ulat grayak",
+          "Busuk lunak",
+          "Kutu kebul"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Cabai Rawit",
+    "slug": "cabai-rawit",
+    "category": "SAYUR",
+    "scientificName": "Capsicum frutescens",
+    "description": "Cabai rawit pedas, produktif dan tahan virus.",
+    "iklimOptimal": "Tropis panas, 26-32°C",
+    "ketinggianOptimal": "0-1000 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rockwool / polybag semai",
+      "durasiHari": 10,
+      "suhuOptimal": "26-32°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih cabai rawit 2-4 jam dalam air hangat",
+        "Siapkan rockwool / polybag semai yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 10 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 10 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-45 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-90 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1200-1800",
+      "phRange": "5.8-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 75
+    }
+  },
+  {
+    "name": "Cabai Keriting",
+    "slug": "cabai-keriting",
+    "category": "SAYUR",
+    "scientificName": "Capsicum annuum var. acuminatum",
+    "description": "Cabai keriting untuk sambal dan masakan Padang.",
+    "iklimOptimal": "Tropis, 24-32°C",
+    "ketinggianOptimal": "0-1200 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rockwool / tray semai",
+      "durasiHari": 10,
+      "suhuOptimal": "24-30°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih cabai keriting 2-4 jam dalam air hangat",
+        "Siapkan rockwool / tray semai yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 10 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 10 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-45 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-90 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1200-1800",
+      "phRange": "5.8-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 75
+    }
+  },
+  {
+    "name": "Cabai Besar",
+    "slug": "cabai-besar",
+    "category": "SAYUR",
+    "scientificName": "Capsicum annuum",
+    "description": "Cabai besar merah, buah tebal dan kurang pedas.",
+    "iklimOptimal": "Tropis, 24-32°C",
+    "ketinggianOptimal": "0-1200 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Tray semai + cocopeat",
+      "durasiHari": 10,
+      "suhuOptimal": "24-30°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih cabai besar 2-4 jam dalam air hangat",
+        "Siapkan tray semai + cocopeat yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 10 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 10 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-45 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-90 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1200-1800",
+      "phRange": "5.8-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 75
+    }
+  },
+  {
+    "name": "Tomat",
+    "slug": "tomat",
+    "category": "SAYUR",
+    "scientificName": "Solanum lycopersicum",
+    "description": "Tomat serbaguna untuk sambal, saus, dan jus.",
+    "iklimOptimal": "Sedang, 20-30°C",
+    "ketinggianOptimal": "0-1500 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rockwool / tray",
+      "durasiHari": 10,
+      "suhuOptimal": "20-28°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih tomat 2-4 jam dalam air hangat",
+        "Siapkan rockwool / tray yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 10 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 10 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-45 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-90 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1200-1800",
+      "phRange": "5.8-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 75
+    }
+  },
+  {
+    "name": "Terong",
+    "slug": "terong",
+    "category": "SAYUR",
+    "scientificName": "Solanum melongena",
+    "description": "Terong ungu panjang dan bulat, tahan panas.",
+    "iklimOptimal": "Tropis panas, 25-32°C",
+    "ketinggianOptimal": "0-1000 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Polybag semai",
+      "durasiHari": 10,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih terong 2-4 jam dalam air hangat",
+        "Siapkan polybag semai yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 10 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 10 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-45 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-90 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.8-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 75
+    }
+  },
+  {
+    "name": "Timun",
+    "slug": "timun",
+    "category": "SAYUR",
+    "scientificName": "Cucumis sativus",
+    "description": "Timun segar untuk lalapan dan acar, merambat.",
+    "iklimOptimal": "Tropis, 25-32°C",
+    "ketinggianOptimal": "0-1000 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Langsung tanam / polybag",
+      "durasiHari": 5,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "70-85%",
+      "langkah": [
+        "Rendam benih timun 2-4 jam dalam air hangat",
+        "Siapkan langsung tanam / polybag yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 5 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-45 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-90 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.8-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 75
+    }
+  },
+  {
+    "name": "Pare",
+    "slug": "pare",
+    "category": "SAYUR",
+    "scientificName": "Momordica charantia",
+    "description": "Pare pahit untuk tumis dan jamu, merambat kuat.",
+    "iklimOptimal": "Tropis panas, 25-32°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Polybag / bedengan",
+      "durasiHari": 7,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "70-85%",
+      "langkah": [
+        "Rendam benih pare 2-4 jam dalam air hangat",
+        "Siapkan polybag / bedengan yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 7 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 7 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-45 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-90 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.8-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 75
+    }
+  },
+  {
+    "name": "Oyong",
+    "slug": "oyong",
+    "category": "SAYUR",
+    "scientificName": "Luffa acutangula",
+    "description": "Oyong/gambas untuk sayur bening, merambat.",
+    "iklimOptimal": "Tropis lembap, 25-32°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Langsung tanam",
+      "durasiHari": 5,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "70-85%",
+      "langkah": [
+        "Rendam benih oyong 2-4 jam dalam air hangat",
+        "Siapkan langsung tanam yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 5 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-45 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-90 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.8-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 75
+    }
+  },
+  {
+    "name": "Labu Siam",
+    "slug": "labu-siam",
+    "category": "SAYUR",
+    "scientificName": "Sechium edule",
+    "description": "Labu siam untuk lodeh dan tumis, tanaman merambat tahunan.",
+    "iklimOptimal": "Sejuk-sedang, 20-30°C",
+    "ketinggianOptimal": "300-1500 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Buah utuh ditanam miring",
+      "durasiHari": 14,
+      "suhuOptimal": "20-28°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih labu siam 2-4 jam dalam air hangat",
+        "Siapkan buah utuh ditanam miring yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Kacang Panjang",
+    "slug": "kacang-panjang",
+    "category": "SAYUR",
+    "scientificName": "Vigna unguiculata subsp. sesquipedalis",
+    "description": "Kacang panjang untuk tumis dan pecel.",
+    "iklimOptimal": "Tropis, 25-32°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Langsung tanam di bedengan",
+      "durasiHari": 5,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih kacang panjang 2-4 jam dalam air hangat",
+        "Siapkan langsung tanam di bedengan yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 5 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-45 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-90 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.8-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 75
+    }
+  },
+  {
+    "name": "Buncis",
+    "slug": "buncis",
+    "category": "SAYUR",
+    "scientificName": "Phaseolus vulgaris",
+    "description": "Buncis tegak dan merambat, kaya protein.",
+    "iklimOptimal": "Sejuk-sedang, 20-28°C",
+    "ketinggianOptimal": "300-1500 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Langsung tanam",
+      "durasiHari": 5,
+      "suhuOptimal": "20-28°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih buncis 2-4 jam dalam air hangat",
+        "Siapkan langsung tanam yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 5 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-45 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-90 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.8-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 75
+    }
+  },
+  {
+    "name": "Bawang Merah",
+    "slug": "bawang-merah",
+    "category": "SAYUR",
+    "scientificName": "Allium cepa var. aggregatum",
+    "description": "Bawang merah untuk bumbu dasar, umbi lapis.",
+    "iklimOptimal": "Tropis kering, 25-32°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Tanah gembur berpasir + kompos",
+      "durasiHari": 0,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "60-75%",
+      "langkah": [
+        "Rendam benih bawang merah 2-4 jam dalam air hangat",
+        "Siapkan umbi langsung tanam yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+      ],
+      "siapTanamIndikator": "Siung bertunas 1-2 cm, akar mulai keluar"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-60 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-75 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 60
+    }
+  },
+  {
+    "name": "Bawang Putih",
+    "slug": "bawang-putih",
+    "category": "SAYUR",
+    "scientificName": "Allium sativum",
+    "description": "Bawang putih butuh suhu sejuk dan hari panjang.",
+    "iklimOptimal": "Sejuk, 18-25°C",
+    "ketinggianOptimal": "700-1500 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Tanah gembur + dolomit",
+      "durasiHari": 0,
+      "suhuOptimal": "18-25°C",
+      "kelembaban": "60-75%",
+      "langkah": [
+        "Rendam benih bawang putih 2-4 jam dalam air hangat",
+        "Siapkan siung langsung tanam yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+      ],
+      "siapTanamIndikator": "Siung bertunas 1-2 cm, akar mulai keluar"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-60 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-75 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 60
+    }
+  },
+  {
+    "name": "Wortel",
+    "slug": "wortel",
+    "category": "SAYUR",
+    "scientificName": "Daucus carota",
+    "description": "Wortel oranye untuk sayur dan jus, umbi akar.",
+    "iklimOptimal": "Sejuk, 16-24°C",
+    "ketinggianOptimal": "500-1500 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Langsung tanam di bedengan gembur",
+      "durasiHari": 0,
+      "suhuOptimal": "16-24°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih wortel 2-4 jam dalam air hangat",
+        "Siapkan langsung tanam di bedengan gembur yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+      ],
+      "siapTanamIndikator": "Benih berkecambah 3-5 hari, siap dijarangkan"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-60 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-75 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 60
+    }
+  },
+  {
+    "name": "Kentang",
+    "slug": "kentang",
+    "category": "SAYUR",
+    "scientificName": "Solanum tuberosum",
+    "description": "Kentang umbi untuk goreng dan sup, butuh dataran tinggi.",
+    "iklimOptimal": "Sejuk, 14-22°C",
+    "ketinggianOptimal": "800-2000 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Umbi ber-tunas / stek",
+      "durasiHari": 7,
+      "suhuOptimal": "14-22°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih kentang 2-4 jam dalam air hangat",
+        "Siapkan umbi ber-tunas / stek yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 7 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 7 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-60 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "90-180 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 90
+    }
+  },
+  {
+    "name": "Jahe",
+    "slug": "jahe",
+    "category": "SAYUR",
+    "scientificName": "Zingiber officinale",
+    "description": "Jahe rimpang untuk jamu dan bumbu.",
+    "iklimOptimal": "Tropis lembap, 25-32°C, teduh parsial",
+    "ketinggianOptimal": "0-1200 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rimpang bertunas",
+      "durasiHari": 14,
+      "suhuOptimal": "25-30°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih jahe 2-4 jam dalam air hangat",
+        "Siapkan rimpang bertunas yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-60 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "90-180 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 90
+    }
+  },
+  {
+    "name": "Kunyit",
+    "slug": "kunyit",
+    "category": "SAYUR",
+    "scientificName": "Curcuma longa",
+    "description": "Kunyit rimpang kuning untuk jamu dan pewarna.",
+    "iklimOptimal": "Tropis lembap, 25-32°C",
+    "ketinggianOptimal": "0-1000 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rimpang bertunas",
+      "durasiHari": 14,
+      "suhuOptimal": "25-30°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih kunyit 2-4 jam dalam air hangat",
+        "Siapkan rimpang bertunas yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-60 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "90-180 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 90
+    }
+  },
+  {
+    "name": "Lengkuas",
+    "slug": "lengkuas",
+    "category": "SAYUR",
+    "scientificName": "Alpinia galanga",
+    "description": "Lengkuas untuk rendang dan tom yum.",
+    "iklimOptimal": "Tropis lembap, 25-32°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rimpang bertunas",
+      "durasiHari": 14,
+      "suhuOptimal": "25-30°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih lengkuas 2-4 jam dalam air hangat",
+        "Siapkan rimpang bertunas yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-60 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "90-180 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 60
+    }
+  },
+  {
+    "name": "Serai",
+    "slug": "serai",
+    "category": "SAYUR",
+    "scientificName": "Cymbopogon citratus",
+    "description": "Serai wangi untuk soto dan teh.",
+    "iklimOptimal": "Tropis panas, 25-34°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Anakan / stek batang",
+      "durasiHari": 10,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih serai 2-4 jam dalam air hangat",
+        "Siapkan anakan / stek batang yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 10 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 10 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-60 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "60-75 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 60
+    }
+  },
+  {
+    "name": "Jagung Manis",
+    "slug": "jagung-manis",
+    "category": "SAYUR",
+    "scientificName": "Zea mays var. saccharata",
+    "description": "Jagung manis untuk rebus dan bakar.",
+    "iklimOptimal": "Tropis, 24-32°C",
+    "ketinggianOptimal": "0-1200 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Langsung tanam benih",
+      "durasiHari": 0,
+      "suhuOptimal": "24-32°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih jagung manis 2-4 jam dalam air hangat",
+        "Siapkan langsung tanam benih yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+      ],
+      "siapTanamIndikator": "Benih berkecambah 3-5 hari, siap dijarangkan"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Singkong",
+    "slug": "singkong",
+    "category": "SAYUR",
+    "scientificName": "Manihot esculenta",
+    "description": "Singkong umbi dan daun untuk gulai.",
+    "iklimOptimal": "Tropis panas, 25-32°C",
+    "ketinggianOptimal": "0-1000 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Stek batang 20cm",
+      "durasiHari": 0,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "65-80%",
+      "langkah": [
+        "Rendam benih singkong 2-4 jam dalam air hangat",
+        "Siapkan stek batang 20cm yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+      ],
+      "siapTanamIndikator": "Benih berkecambah 3-5 hari, siap dijarangkan"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-60 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "90-180 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 60
+    }
+  },
+  {
+    "name": "Ubi Jalar",
+    "slug": "ubi-jalar",
+    "category": "SAYUR",
+    "scientificName": "Ipomoea batatas",
+    "description": "Ubi jalar manis untuk rebus dan keripik.",
+    "iklimOptimal": "Tropis, 22-30°C",
+    "ketinggianOptimal": "0-1200 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Stek pucuk / sulur",
+      "durasiHari": 7,
+      "suhuOptimal": "22-30°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih ubi jalar 2-4 jam dalam air hangat",
+        "Siapkan stek pucuk / sulur yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 7 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 7 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "30-60 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "90-180 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 60
+    }
+  },
+  {
+    "name": "Okra",
+    "slug": "okra",
+    "category": "SAYUR",
+    "scientificName": "Abelmoschus esculentus",
+    "description": "Okra hijau berlendir untuk tumis.",
+    "iklimOptimal": "Tropis panas, 25-35°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Langsung tanam",
+      "durasiHari": 5,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "65-80%",
+      "langkah": [
+        "Rendam benih okra 2-4 jam dalam air hangat",
+        "Siapkan langsung tanam yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 5 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Kailan",
+    "slug": "kailan",
+    "category": "SAYUR",
+    "scientificName": "Brassica oleracea var. alboglabra",
+    "description": "Kailan untuk cah, mirip sawi tebal.",
+    "iklimOptimal": "Sejuk, 18-28°C",
+    "ketinggianOptimal": "300-1200 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Rockwool / tray",
+      "durasiHari": 7,
+      "suhuOptimal": "18-28°C",
+      "kelembaban": "70-85%",
+      "langkah": [
+        "Rendam benih kailan 2-4 jam dalam air hangat",
+        "Siapkan rockwool / tray yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 7 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 7 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat daun",
+          "Kutu daun",
+          "Busuk daun"
+        ],
+        "panenHariRange": "20-35 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Ulat grayak",
+          "Busuk lunak",
+          "Kutu kebul"
+        ],
+        "panenHariRange": "30-45 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "800-1200",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 25
+    }
+  },
+  {
+    "name": "Sawi Putih",
+    "slug": "sawi-putih",
+    "category": "SAYUR",
+    "scientificName": "Brassica rapa subsp. pekinensis",
+    "description": "Sawi putih untuk sup dan kimchi.",
+    "iklimOptimal": "Sejuk, 16-26°C",
+    "ketinggianOptimal": "300-1500 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Tray semai",
+      "durasiHari": 10,
+      "suhuOptimal": "16-24°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih sawi putih 2-4 jam dalam air hangat",
+        "Siapkan tray semai yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 10 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 10 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat daun",
+          "Kutu daun",
+          "Busuk daun"
+        ],
+        "panenHariRange": "20-35 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Ulat grayak",
+          "Busuk lunak",
+          "Kutu kebul"
+        ],
+        "panenHariRange": "30-45 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "Wick",
+      "ppmRange": "800-1200",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 25
+    }
+  },
+  {
+    "name": "Ketumbar",
+    "slug": "ketumbar",
+    "category": "SAYUR",
+    "scientificName": "Coriandrum sativum",
+    "description": "Ketumbar daun dan biji untuk bumbu.",
+    "iklimOptimal": "Sejuk-sedang, 18-28°C",
+    "ketinggianOptimal": "0-1200 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Tabur langsung / rockwool",
+      "durasiHari": 10,
+      "suhuOptimal": "18-28°C",
+      "kelembaban": "65-80%",
+      "langkah": [
+        "Rendam benih ketumbar 2-4 jam dalam air hangat",
+        "Siapkan tabur langsung / rockwool yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 10 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 10 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor di sekitar perakaran pagi hari"
+          },
+          {
+            "nama": "Pupuk kandang kompos",
+            "takaran": "1 kg per m2",
+            "intervalHari": 14,
+            "cara": "Tabur dan aduk ringan ke tanah"
+          }
+        ],
+        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "hama": [
+          "Ulat grayak",
+          "Kutu daun",
+          "Thrips",
+          "Layu fusarium"
+        ],
+        "panenHariRange": "20-35 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "MKP + KNO3",
+            "takaran": "3 g per liter air",
+            "intervalHari": 7,
+            "cara": "Semprot daun atau kocor sore hari"
+          },
+          {
+            "nama": "Pupuk kandang + dolomit",
+            "takaran": "0.5 kg per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur melingkar di tajuk"
+          }
+        ],
+        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "hama": [
+          "Layu bakteri",
+          "Thrips",
+          "Kutu daun"
+        ],
+        "panenHariRange": "30-45 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "Wick",
+      "ppmRange": "800-1200",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Sayur Daun",
+        "Kalsium nitrat",
+        "Magnesium sulfat"
+      ],
+      "durasiHari": 25
+    }
+  },
+  {
+    "name": "Melon",
+    "slug": "melon",
+    "category": "BUAH",
+    "scientificName": "Cucumis melo",
+    "description": "Melon manis beraroma, butuh sinar penuh dan drainase baik.",
+    "iklimOptimal": "Tropis kering, 25-32°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Polybag semai",
+      "durasiHari": 7,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih melon 2-4 jam dalam air hangat",
+        "Siapkan polybag semai yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 7 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 7 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "20-30 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "65-85 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1200-1600",
+      "phRange": "5.8-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 75
+    }
+  },
+  {
+    "name": "Semangka",
+    "slug": "semangka",
+    "category": "BUAH",
+    "scientificName": "Citrullus lanatus",
+    "description": "Semangka segar, butuh lahan luas dan sinar penuh.",
+    "iklimOptimal": "Tropis panas, 25-34°C",
+    "ketinggianOptimal": "0-700 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Langsung tanam",
+      "durasiHari": 5,
+      "suhuOptimal": "25-34°C",
+      "kelembaban": "65-75%",
+      "langkah": [
+        "Rendam benih semangka 2-4 jam dalam air hangat",
+        "Siapkan langsung tanam yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 5 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "20-30 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "65-85 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1200-1600",
+      "phRange": "5.8-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 75
+    }
+  },
+  {
+    "name": "Stroberi",
+    "slug": "stroberi",
+    "category": "BUAH",
+    "scientificName": "Fragaria × ananassa",
+    "description": "Stroberi manis-asam, butuh dataran tinggi sejuk.",
+    "iklimOptimal": "Sejuk, 15-24°C",
+    "ketinggianOptimal": "800-1800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Stolon / anakan",
+      "durasiHari": 14,
+      "suhuOptimal": "15-22°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih stroberi 2-4 jam dalam air hangat",
+        "Siapkan stolon / anakan yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "20-30 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "60-90 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "800-1200",
+      "phRange": "5.5-6.2",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 90
+    }
+  },
+  {
+    "name": "Pisang",
+    "slug": "pisang",
+    "category": "BUAH",
+    "scientificName": "Musa spp.",
+    "description": "Pisang cavendish/kepok, buah sepanjang tahun.",
+    "iklimOptimal": "Tropis lembap, 26-32°C",
+    "ketinggianOptimal": "0-1000 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Anakan / bonggol",
+      "durasiHari": 14,
+      "suhuOptimal": "26-32°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih pisang 2-4 jam dalam air hangat",
+        "Siapkan anakan / bonggol yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Pepaya",
+    "slug": "pepaya",
+    "category": "BUAH",
+    "scientificName": "Carica papaya",
+    "description": "Pepaya california, cepat berbuah 7-9 bulan.",
+    "iklimOptimal": "Tropis, 25-32°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Polybag semai",
+      "durasiHari": 14,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih pepaya 2-4 jam dalam air hangat",
+        "Siapkan polybag semai yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Jambu Biji",
+    "slug": "jambu-biji",
+    "category": "BUAH",
+    "scientificName": "Psidium guajava",
+    "description": "Jambu biji kristal/merah, kaya vitamin C.",
+    "iklimOptimal": "Tropis, 25-32°C",
+    "ketinggianOptimal": "0-1000 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Cangkok / okulasi",
+      "durasiHari": 21,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih jambu biji 2-4 jam dalam air hangat",
+        "Siapkan cangkok / okulasi yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 21 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 21 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Jambu Air",
+    "slug": "jambu-air",
+    "category": "BUAH",
+    "scientificName": "Syzygium aqueum",
+    "description": "Jambu air citra/deli, renyah dan berair.",
+    "iklimOptimal": "Tropis lembap, 25-32°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Cangkok",
+      "durasiHari": 21,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih jambu air 2-4 jam dalam air hangat",
+        "Siapkan cangkok yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 21 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 21 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Mangga",
+    "slug": "mangga",
+    "category": "BUAH",
+    "scientificName": "Mangifera indica",
+    "description": "Mangga harum manis dan arumanis, raja buah tropis.",
+    "iklimOptimal": "Tropis kering, 26-32°C, musim kering untuk bunga",
+    "ketinggianOptimal": "0-600 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Okulasi / sambung",
+      "durasiHari": 21,
+      "suhuOptimal": "26-32°C",
+      "kelembaban": "65-75%",
+      "langkah": [
+        "Rendam benih mangga 2-4 jam dalam air hangat",
+        "Siapkan okulasi / sambung yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 21 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 21 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "180-365 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Nanas",
+    "slug": "nanas",
+    "category": "BUAH",
+    "scientificName": "Ananas comosus",
+    "description": "Nanas madu dan cayenne, toleran lahan kering.",
+    "iklimOptimal": "Tropis panas, 24-32°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Mahkota / anakan",
+      "durasiHari": 14,
+      "suhuOptimal": "24-32°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih nanas 2-4 jam dalam air hangat",
+        "Siapkan mahkota / anakan yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Jeruk Manis",
+    "slug": "jeruk-manis",
+    "category": "BUAH",
+    "scientificName": "Citrus sinensis",
+    "description": "Jeruk manis untuk jus dan buah meja.",
+    "iklimOptimal": "Tropis-subtropis, 22-32°C",
+    "ketinggianOptimal": "0-1200 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Okulasi",
+      "durasiHari": 21,
+      "suhuOptimal": "22-30°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih jeruk manis 2-4 jam dalam air hangat",
+        "Siapkan okulasi yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 21 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 21 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Alpukat",
+    "slug": "alpukat",
+    "category": "BUAH",
+    "scientificName": "Persea americana",
+    "description": "Alpukat mentega, lemak sehat tinggi.",
+    "iklimOptimal": "Tropis, 22-30°C",
+    "ketinggianOptimal": "0-1500 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Sambung pucuk",
+      "durasiHari": 21,
+      "suhuOptimal": "22-30°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih alpukat 2-4 jam dalam air hangat",
+        "Siapkan sambung pucuk yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 21 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 21 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "180-365 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Buah Naga",
+    "slug": "buah-naga",
+    "category": "BUAH",
+    "scientificName": "Hylocereus spp.",
+    "description": "Buah naga merah/putih, kaktus merambat.",
+    "iklimOptimal": "Tropis kering, 26-34°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Stek batang",
+      "durasiHari": 14,
+      "suhuOptimal": "26-34°C",
+      "kelembaban": "60-75%",
+      "langkah": [
+        "Rendam benih buah naga 2-4 jam dalam air hangat",
+        "Siapkan stek batang yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Durian",
+    "slug": "durian",
+    "category": "BUAH",
+    "scientificName": "Durio zibethinus",
+    "description": "Durian musang king/montong, raja buah.",
+    "iklimOptimal": "Tropis lembap, 24-32°C",
+    "ketinggianOptimal": "0-600 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Okulasi / sambung",
+      "durasiHari": 30,
+      "suhuOptimal": "24-32°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih durian 2-4 jam dalam air hangat",
+        "Siapkan okulasi / sambung yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 30 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 30 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "180-365 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Rambutan",
+    "slug": "rambutan",
+    "category": "BUAH",
+    "scientificName": "Nephelium lappaceum",
+    "description": "Rambutan binjai, musiman berbuah lebat.",
+    "iklimOptimal": "Tropis lembap, 25-32°C",
+    "ketinggianOptimal": "0-600 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Okulasi",
+      "durasiHari": 21,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih rambutan 2-4 jam dalam air hangat",
+        "Siapkan okulasi yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 21 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 21 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Manggis",
+    "slug": "manggis",
+    "category": "BUAH",
+    "scientificName": "Garcinia mangostana",
+    "description": "Manggis ratu buah, kulit ungu daging putih.",
+    "iklimOptimal": "Tropis lembap, 25-32°C, curah hujan tinggi",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Biji apomiksis",
+      "durasiHari": 30,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih manggis 2-4 jam dalam air hangat",
+        "Siapkan biji apomiksis yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 30 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 30 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "180-365 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Duku",
+    "slug": "duku",
+    "category": "BUAH",
+    "scientificName": "Lansium parasiticum",
+    "description": "Duku palembang manis, musiman.",
+    "iklimOptimal": "Tropis lembap, 25-32°C",
+    "ketinggianOptimal": "0-600 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Biji / okulasi",
+      "durasiHari": 30,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih duku 2-4 jam dalam air hangat",
+        "Siapkan biji / okulasi yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 30 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 30 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "180-365 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Salak",
+    "slug": "salak",
+    "category": "BUAH",
+    "scientificName": "Salacca zalacca",
+    "description": "Salak pondoh manis, kulit bersisik.",
+    "iklimOptimal": "Tropis lembap, 24-32°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Biji / anakan",
+      "durasiHari": 21,
+      "suhuOptimal": "24-32°C",
+      "kelembaban": "75-85%",
+      "langkah": [
+        "Rendam benih salak 2-4 jam dalam air hangat",
+        "Siapkan biji / anakan yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 21 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 21 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Nangka",
+    "slug": "nangka",
+    "category": "BUAH",
+    "scientificName": "Artocarpus heterophyllus",
+    "description": "Nangka madu untuk gudeg dan keripik.",
+    "iklimOptimal": "Tropis, 25-32°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Okulasi",
+      "durasiHari": 21,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih nangka 2-4 jam dalam air hangat",
+        "Siapkan okulasi yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 21 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 21 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Sirsak",
+    "slug": "sirsak",
+    "category": "BUAH",
+    "scientificName": "Annona muricata",
+    "description": "Sirsak untuk jus dan obat herbal.",
+    "iklimOptimal": "Tropis, 25-32°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Biji / okulasi",
+      "durasiHari": 21,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih sirsak 2-4 jam dalam air hangat",
+        "Siapkan biji / okulasi yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 21 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 21 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Markisa",
+    "slug": "markisa",
+    "category": "BUAH",
+    "scientificName": "Passiflora edulis",
+    "description": "Markisa asam manis untuk sirup, merambat.",
+    "iklimOptimal": "Tropis-sedang, 20-30°C",
+    "ketinggianOptimal": "300-1200 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Biji / stek",
+      "durasiHari": 14,
+      "suhuOptimal": "20-30°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih markisa 2-4 jam dalam air hangat",
+        "Siapkan biji / stek yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Belimbing",
+    "slug": "belimbing",
+    "category": "BUAH",
+    "scientificName": "Averrhoa carambola",
+    "description": "Belimbing manis bentuk bintang.",
+    "iklimOptimal": "Tropis, 25-32°C",
+    "ketinggianOptimal": "0-700 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Cangkok / okulasi",
+      "durasiHari": 21,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih belimbing 2-4 jam dalam air hangat",
+        "Siapkan cangkok / okulasi yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 21 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 21 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Sawo",
+    "slug": "sawo",
+    "category": "BUAH",
+    "scientificName": "Manilkara zapota",
+    "description": "Sawo manila manis legit.",
+    "iklimOptimal": "Tropis panas, 25-34°C",
+    "ketinggianOptimal": "0-600 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Cangkok / okulasi",
+      "durasiHari": 30,
+      "suhuOptimal": "25-34°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih sawo 2-4 jam dalam air hangat",
+        "Siapkan cangkok / okulasi yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 30 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 30 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Kelengkeng",
+    "slug": "kelengkeng",
+    "category": "BUAH",
+    "scientificName": "Dimocarpus longan",
+    "description": "Kelengkeng pingpong dan diamond.",
+    "iklimOptimal": "Tropis, 24-32°C",
+    "ketinggianOptimal": "0-800 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Cangkok / okulasi",
+      "durasiHari": 21,
+      "suhuOptimal": "24-32°C",
+      "kelembaban": "70-80%",
+      "langkah": [
+        "Rendam benih kelengkeng 2-4 jam dalam air hangat",
+        "Siapkan cangkok / okulasi yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 21 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 21 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  },
+  {
+    "name": "Blewah",
+    "slug": "blewah",
+    "category": "BUAH",
+    "scientificName": "Cucumis melo var. cantalupensis",
+    "description": "Blewah harum untuk es buah.",
+    "iklimOptimal": "Tropis panas, 25-32°C",
+    "ketinggianOptimal": "0-700 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Polybag semai",
+      "durasiHari": 7,
+      "suhuOptimal": "25-32°C",
+      "kelembaban": "65-75%",
+      "langkah": [
+        "Rendam benih blewah 2-4 jam dalam air hangat",
+        "Siapkan polybag semai yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 7 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 7 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "20-30 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "65-85 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "DFT",
+      "ppmRange": "1200-1600",
+      "phRange": "5.8-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 75
+    }
+  },
+  {
+    "name": "Anggur",
+    "slug": "anggur",
+    "category": "BUAH",
+    "scientificName": "Vitis vinifera",
+    "description": "Anggur tropis untuk jus dan buah meja.",
+    "iklimOptimal": "Tropis kering, 24-32°C, sinar penuh",
+    "ketinggianOptimal": "0-1000 mdpl",
+    "imageUrl": null,
+    "sowingGuide": {
+      "mediaTanam": "Stek batang",
+      "durasiHari": 21,
+      "suhuOptimal": "24-32°C",
+      "kelembaban": "65-75%",
+      "langkah": [
+        "Rendam benih anggur 2-4 jam dalam air hangat",
+        "Siapkan stek batang yang lembap dan steril",
+        "Tabur benih tipis, tutup tipis dengan media, semprot air",
+        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
+        "Pindahkan bibit saat berdaun 2-4 helai setelah 21 hari"
+      ],
+      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 21 hari"
+    },
+    "growingGuides": [
+      {
+        "fase": "VEGETATIF",
+        "pupuk": [
+          {
+            "nama": "NPK 15-15-15 + kompos",
+            "takaran": "100-200 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Benam melingkar di bawah tajuk"
+          },
+          {
+            "nama": "Pupuk organik cair",
+            "takaran": "10 ml per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun pagi hari"
+          }
+        ],
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat"
+        ],
+        "panenHariRange": "90-180 hari"
+      },
+      {
+        "fase": "GENERATIF",
+        "pupuk": [
+          {
+            "nama": "KNO3 + Boron",
+            "takaran": "150 g per tanaman",
+            "intervalHari": 30,
+            "cara": "Kocor atau tabur lalu siram"
+          },
+          {
+            "nama": "MKP",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Semprot daun saat pembungaan"
+          }
+        ],
+        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "hama": [
+          "Lalat buah",
+          "Kutu putih",
+          "Ulat",
+          "Antraknosa"
+        ],
+        "panenHariRange": "120-240 hari"
+      }
+    ],
+    "hydroponicGuide": {
+      "sistem": "NFT",
+      "ppmRange": "1000-1400",
+      "phRange": "5.5-6.5",
+      "nutrisi": [
+        "AB Mix Buah",
+        "Kalium sulfat",
+        "MKP"
+      ],
+      "durasiHari": 120
+    }
+  }
+]

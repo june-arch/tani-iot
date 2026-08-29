@@ -7,6 +7,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { KebunsModule } from './modules/kebuns/kebuns.module';
 import { DevicesModule } from './modules/devices/devices.module';
 import { SensorsModule } from './modules/sensors/sensors.module';
+import { CropsModule } from './modules/crops/crops.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { SensorsModule } from './modules/sensors/sensors.module';
     KebunsModule,
     DevicesModule,
     SensorsModule,
+    CropsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
