@@ -1,0 +1,45 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: tani-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tani
+      POSTGRES_PASSWORD: tani
+      POSTGRES_DB: tani_iot
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tani -d tani_iot"]
+      interval: 10s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: tani-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  emqx:
+    image: emqx/emqx:5.8
+    container_name: tani-emqx
+    restart: unless-stopped
+    ports:
+      - "1883:1883"   # mqtt
+      - "8083:8083"   # ws
+      - "18083:18083" # dashboard
+    environment:
+      EMQX_DASHBOARD__DEFAULT_USERNAME: admin
+      EMQX_DASHBOARD__DEFAULT_PASSWORD: public
+    volumes:
+      - emqx_data:/opt/emqx/data
+
+volumes:
+  pgdata:
+  redis_data:
+  emqx_data:

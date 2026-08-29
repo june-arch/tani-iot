@@ -1,0 +1,72 @@
+# Deps
+node_modules/
+.pnp/
+.pnp.js
+
+# Build
+dist/
+build/
+.next/
+out/
+.expo/
+.expo-shared/
+*.tsbuildinfo
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.jks
+*.keystore
+credentials.json
+auth/
+scans/
+
+# AI agent dirs
+.hermes/
+.claude/
+.codex/
+.opencode/
+.cursor/
+.agents/
+.gemini/
+.kimi/
+.qwen/
+.kiro/
+.trae/
+.openclaw/
+.codebuddy/
+.joycode/
+
+# OS
+.DS_Store
+Thumbs.db
+__pycache__/
+*.log
+*.pid
+
+# Graphify
+graphify-out/
+
+# DB backups
+backups/
+uploads/
+
+# Mobile
+apps/mobile/.expo/
+apps/mobile/android/
+apps/mobile/ios/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.gradle/
+local.properties
+
+# Docker volumes
+pgdata/
+emqx_data/
+redis_data/
