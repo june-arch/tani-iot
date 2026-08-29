@@ -1,0 +1,380 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// =====================
+// User & Kebun (Multi-tenant)
+// =====================
+model User {
+  id           String        @id @default(cuid())
+  email        String        @unique
+  passwordHash String
+  nama         String
+  role         GlobalRole    @default(PETANI)
+  isActive     Boolean       @default(true)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  kebuns       Kebun[]       @relation("KebunPemilik")
+  memberships  KebunMember[]
+  alerts       Alert[]
+  diagnoses    Diagnosis[]
+
+  @@map("users")
+}
+
+model Kebun {
+  id        String        @id @default(cuid())
+  nama      String
+  lokasi    String
+  luas      Float?
+  deskripsi String?
+  pemilikId String
+  pemilik   User          @relation("KebunPemilik", fields: [pemilikId], references: [id])
+  members   KebunMember[]
+  lahans    Lahan[]
+  devices   Device[]
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@index([pemilikId])
+  @@map("kebuns")
+}
+
+model KebunMember {
+  id        String    @id @default(cuid())
+  kebunId   String
+  kebun     Kebun     @relation(fields: [kebunId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role      KebunRole @default(PETANI)
+  createdAt DateTime  @default(now())
+
+  @@unique([kebunId, userId])
+  @@map("kebun_members")
+}
+
+// =====================
+// Lahan & Planting
+// =====================
+model Lahan {
+  id        String     @id @default(cuid())
+  kebunId   String
+  kebun     Kebun      @relation(fields: [kebunId], references: [id], onDelete: Cascade)
+  nama      String
+  tipe      LahanType
+  luas      Float
+  lokasi    String?
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  devices   Device[]
+  plantings Planting[]
+
+  @@index([kebunId])
+  @@map("lahans")
+}
+
+model Planting {
+  id           String        @id @default(cuid())
+  lahanId      String
+  lahan        Lahan         @relation(fields: [lahanId], references: [id], onDelete: Cascade)
+  cropId       String
+  crop         Crop          @relation(fields: [cropId], references: [id])
+  metode       LahanType
+  fase         PlantingFase  @default(SEMAI)
+  jumlah       Int?
+  tanggalSemai DateTime?
+  tanggalTanam DateTime?
+  status       PlantingStatus @default(AKTIF)
+  catatan      String?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  diagnoses    Diagnosis[]
+
+  @@index([lahanId])
+  @@index([cropId])
+  @@map("plantings")
+}
+
+// =====================
+// Crop Knowledge Base
+// =====================
+model Crop {
+  id                 String            @id @default(cuid())
+  name               String
+  slug               String            @unique
+  category           CropCategory
+  scientificName     String?
+  description        String?
+  imageUrl           String?
+  iklimOptimal       String?
+  ketinggianOptimal  String?
+  createdAt          DateTime          @default(now())
+  updatedAt          DateTime          @updatedAt
+  sowingGuides       SowingGuide[]
+  growingGuides      GrowingGuide[]
+  hydroponicGuides   HydroponicGuide[]
+  plantings          Planting[]
+
+  @@map("crops")
+}
+
+model SowingGuide {
+  id                  String   @id @default(cuid())
+  cropId              String
+  crop                Crop     @relation(fields: [cropId], references: [id], onDelete: Cascade)
+  mediaTanam          String
+  durasiHari          Int
+  suhuOptimal         String
+  kelembaban          String
+  langkah             Json
+  siapTanamIndikator  String
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@map("sowing_guides")
+}
+
+model GrowingGuide {
+  id              String       @id @default(cuid())
+  cropId          String
+  crop            Crop         @relation(fields: [cropId], references: [id], onDelete: Cascade)
+  fase            GrowingPhase
+  pupuk           Json
+  penyiraman      String
+  hama            Json?
+  panenHariRange  String
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  @@unique([cropId, fase])
+  @@map("growing_guides")
+}
+
+model HydroponicGuide {
+  id        String   @id @default(cuid())
+  cropId    String
+  crop      Crop     @relation(fields: [cropId], references: [id], onDelete: Cascade)
+  sistem    String
+  ppmRange  String
+  phRange   String
+  nutrisi   Json
+  durasiHari Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("hydroponic_guides")
+}
+
+// =====================
+// Device & Sensor
+// =====================
+model Device {
+  id        String       @id @default(cuid())
+  kebunId   String
+  kebun     Kebun        @relation(fields: [kebunId], references: [id], onDelete: Cascade)
+  lahanId   String?
+  lahan     Lahan?       @relation(fields: [lahanId], references: [id])
+  nama      String
+  type      DeviceType
+  lokasi    String?
+  status    DeviceStatus @default(OFFLINE)
+  mqttTopic String       @unique
+  lastSeen  DateTime?
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+  sensors   Sensor[]
+
+  @@index([kebunId])
+  @@index([lahanId])
+  @@map("devices")
+}
+
+model Sensor {
+  id           String     @id @default(cuid())
+  deviceId     String
+  device       Device     @relation(fields: [deviceId], references: [id], onDelete: Cascade)
+  type         SensorType
+  unit         String
+  minThreshold Float?
+  maxThreshold Float?
+  isEnabled    Boolean    @default(true)
+  config       Json?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  telemetries  Telemetry[]
+
+  @@index([deviceId])
+  @@map("sensors")
+}
+
+model Telemetry {
+  id         String   @id @default(cuid())
+  sensorId   String
+  sensor     Sensor   @relation(fields: [sensorId], references: [id], onDelete: Cascade)
+  value      Float
+  raw        Json?
+  recordedAt DateTime @default(now())
+
+  @@index([sensorId, recordedAt])
+  @@map("telemetries")
+}
+
+// =====================
+// Irrigation Logs
+// =====================
+model IrrigationLog {
+  id         String           @id @default(cuid())
+  kebunId    String
+  lahanId    String?
+  deviceId   String?
+  durationSec Int
+  source     IrrigationSource
+  status     IrrigationStatus @default(SUKSES)
+  createdAt  DateTime         @default(now())
+
+  @@index([kebunId])
+  @@map("irrigation_logs")
+}
+
+// =====================
+// Alerts & AI Diagnosis
+// =====================
+model Alert {
+  id        String    @id @default(cuid())
+  kebunId   String?
+  sensorId  String?
+  lahanId   String?
+  type      AlertType
+  title     String
+  message   String
+  isRead    Boolean   @default(false)
+  userId    String?
+  user      User?     @relation(fields: [userId], references: [id])
+  createdAt DateTime  @default(now())
+
+  @@index([kebunId])
+  @@map("alerts")
+}
+
+model Diagnosis {
+  id         String   @id @default(cuid())
+  userId     String?
+  user       User?    @relation(fields: [userId], references: [id])
+  plantingId String?
+  planting   Planting? @relation(fields: [plantingId], references: [id])
+  imageUrl   String
+  cropSlug   String?
+  diagnosis  String
+  confidence Float?
+  penyebab   String?
+  solusi     Json?
+  pencegahan String?
+  feedback   Json?
+  createdAt  DateTime @default(now())
+
+  @@map("diagnoses")
+}
+
+// =====================
+// Enums
+// =====================
+enum GlobalRole {
+  SUPERADMIN
+  ADMIN
+  PETANI
+  VIEWER
+}
+
+enum KebunRole {
+  OWNER
+  ADMIN
+  PETANI
+  VIEWER
+}
+
+enum LahanType {
+  TANAH
+  HIDROPONIK
+}
+
+enum PlantingFase {
+  SEMAI
+  PINDAH_TANAM
+  VEGETATIF
+  GENERATIF
+  PANEN
+  SELESAI
+}
+
+enum PlantingStatus {
+  AKTIF
+  PANEN
+  GAGAL
+  SELESAI
+}
+
+enum CropCategory {
+  SAYUR
+  BUAH
+}
+
+enum GrowingPhase {
+  VEGETATIF
+  GENERATIF
+}
+
+enum DeviceType {
+  TANDON
+  IRRIGATION
+  SOIL
+  HYDROPONIC
+  GATEWAY
+}
+
+enum DeviceStatus {
+  ONLINE
+  OFFLINE
+  ERROR
+}
+
+enum SensorType {
+  WATER_LEVEL
+  SOLENOID
+  PH
+  NPK_N
+  NPK_P
+  NPK_K
+  EC
+  TDS_PPM
+  TEMP
+  HUMIDITY
+  SOIL_MOISTURE
+}
+
+enum IrrigationSource {
+  MANUAL
+  SCHEDULE
+  AUTO
+}
+
+enum IrrigationStatus {
+  SUKSES
+  GAGAL
+  BATAL_TANDON_KOSONG
+}
+
+enum AlertType {
+  WATER_LOW
+  PH_OUT_OF_RANGE
+  NPK_LOW
+  PPM_LOW
+  PPM_HIGH
+  DEVICE_OFFLINE
+  DISEASE_DETECTED
+  IRRIGATION_DONE
+}
