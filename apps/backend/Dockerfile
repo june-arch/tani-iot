@@ -1,15 +1,15 @@
 FROM node:22-alpine AS base
 WORKDIR /app
 
-# deps
+# deps - include dev deps (prisma is devDependency)
 COPY package.json package-lock.json* ./
-RUN npm ci --legacy-peer-deps
+RUN npm ci --legacy-peer-deps --include=dev
 
 # source
 COPY . .
 
-# prisma - pin to v6 to avoid Prisma 7 breaking schema (url env) and node 20 EBADENGINE
-RUN ./node_modules/.bin/prisma generate
+# prisma - pin to v6 to avoid Prisma 7 breaking schema
+RUN npx prisma@6.19.3 generate
 
 # build
 RUN npm run build
