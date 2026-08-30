@@ -23,13 +23,29 @@
   --accent-soft: #FFFBEB;
   --accent-soft-fg: #92400E;
 
+  --neutral-50: #FAFAF8;
+  --neutral-100: #F5F5F0;
+  --neutral-200: #E7E5E4;
+  --neutral-300: #D6D3D1;
+  --neutral-400: #A8A29E;
+  --neutral-500: #78716C;
+  --neutral-600: #57534E;
+  --neutral-700: #44403C;
+  --neutral-800: #292524;
+  --neutral-900: #1C1917;
+
   --success: #15803D;
+  --success-fg: #FFFFFF;
   --success-soft: #DCFCE7;
   --warning: #D97706;
+  --warning-fg: #FFFFFF;
   --warning-soft: #FEF3C7;
   --destructive: #DC2626;
+  --destructive-fg: #FFFFFF;
   --destructive-soft: #FEE2E2;
-  --info: #0284C7;
+  --info: #0369A1;
+  --info-fg: #FFFFFF;
+  --info-soft: #E0F2FE;
 }
 
 @theme inline {
@@ -52,13 +68,29 @@
   --color-accent-soft: var(--accent-soft);
   --color-accent-soft-fg: var(--accent-soft-fg);
 
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+
   --color-success: var(--success);
+  --color-success-fg: var(--success-fg);
   --color-success-soft: var(--success-soft);
   --color-warning: var(--warning);
+  --color-warning-fg: var(--warning-fg);
   --color-warning-soft: var(--warning-soft);
   --color-destructive: var(--destructive);
+  --color-destructive-fg: var(--destructive-fg);
   --color-destructive-soft: var(--destructive-soft);
   --color-info: var(--info);
+  --color-info-fg: var(--info-fg);
+  --color-info-soft: var(--info-soft);
 
   --font-sans: var(--font-outfit);
   --font-body: var(--font-instrument);

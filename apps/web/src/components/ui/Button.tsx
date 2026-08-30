@@ -14,7 +14,7 @@ const variantCls: Record<Variant, string> = {
   ghost:
     "bg-transparent text-foreground hover:bg-muted focus-visible:ring-ring disabled:opacity-50",
   destructive:
-    "bg-destructive text-white hover:bg-red-700 focus-visible:ring-destructive disabled:opacity-50",
+    "bg-destructive text-destructive-fg hover:bg-[#B91C1C] focus-visible:ring-destructive disabled:opacity-50",
 };
 
 const sizeCls: Record<Size, string> = {

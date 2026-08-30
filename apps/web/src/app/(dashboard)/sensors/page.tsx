@@ -79,7 +79,7 @@ export default function SensorsPage() {
               key={t}
               onClick={() => setFilter(t)}
               className={[
-                "h-9 rounded-pill border px-3 text-xs font-semibold transition-colors",
+                "h-11 rounded-pill border px-3 text-xs font-semibold transition-colors",
                 filter === t ? "bg-primary text-primary-fg border-primary" : "bg-background hover:bg-muted",
               ].join(" ")}
             >
