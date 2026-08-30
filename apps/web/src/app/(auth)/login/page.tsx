@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "motion/react";
+import { Leaf, AlertTriangle } from "lucide-react";
 import { api } from "@/lib/api";
 import { setToken } from "@/lib/auth";
 import { Card } from "@/components/ui/Card";
@@ -103,13 +104,13 @@ export default function LoginPage() {
       >
         <div className="mb-6 text-center">
           <Link href="/" className="inline-flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-sm font-bold text-primary-fg">T</span>
-            <span className="font-sans text-lg font-bold tracking-tight">Tani IoT</span>
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-fg shadow-sm"><Leaf className="h-4 w-4" /></span>
+            <span className="font-sans text-lg font-bold tracking-tight [text-wrap:balance]">Tani IoT</span>
           </Link>
-          <h1 className="mt-4 font-sans text-2xl font-bold tracking-tight">
+          <h1 className="mt-4 font-sans text-2xl font-bold tracking-tight [text-wrap:balance]">
             {mode === "login" ? "Masuk ke Tani IoT" : "Buat akun baru"}
           </h1>
-          <p className="mt-1 text-sm text-muted-fg">
+          <p className="mt-1 text-sm leading-6 text-muted-fg [text-wrap:pretty]">
             {mode === "login" ? "Masuk untuk kelola kebun, lahan, dan sensor." : "Daftar petani — mulai kelola kebun multi-lokasi."}
           </p>
         </div>
@@ -164,8 +165,8 @@ export default function LoginPage() {
             />
 
             {err && (
-              <div className="rounded-lg bg-destructive-soft px-3 py-2.5 text-sm font-medium text-[#991B1B]">
-                ⚠️ {err}
+              <div className="flex items-center gap-1.5 rounded-lg bg-destructive-soft px-3 py-2.5 text-sm font-medium text-[#991B1B]">
+                <AlertTriangle className="h-4 w-4 shrink-0" /> {err}
               </div>
             )}
 
