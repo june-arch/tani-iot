@@ -28,18 +28,19 @@ model User {
 }
 
 model Kebun {
-  id        String        @id @default(cuid())
-  nama      String
-  lokasi    String
-  luas      Float?
-  deskripsi String?
-  pemilikId String
-  pemilik   User          @relation("KebunPemilik", fields: [pemilikId], references: [id])
-  members   KebunMember[]
-  lahans    Lahan[]
-  devices   Device[]
-  createdAt DateTime      @default(now())
-  updatedAt DateTime      @updatedAt
+  id              String          @id @default(cuid())
+  nama            String
+  lokasi          String
+  luas            Float?
+  deskripsi       String?
+  pemilikId       String
+  pemilik         User            @relation("KebunPemilik", fields: [pemilikId], references: [id])
+  members         KebunMember[]
+  lahans          Lahan[]
+  devices         Device[]
+  irrigationLogs  IrrigationLog[]
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
 
   @@index([pemilikId])
   @@map("kebuns")
@@ -62,17 +63,18 @@ model KebunMember {
 // Lahan & Planting
 // =====================
 model Lahan {
-  id        String     @id @default(cuid())
-  kebunId   String
-  kebun     Kebun      @relation(fields: [kebunId], references: [id], onDelete: Cascade)
-  nama      String
-  tipe      LahanType
-  luas      Float
-  lokasi    String?
-  createdAt DateTime   @default(now())
-  updatedAt DateTime   @updatedAt
-  devices   Device[]
-  plantings Planting[]
+  id              String          @id @default(cuid())
+  kebunId         String
+  kebun           Kebun           @relation(fields: [kebunId], references: [id], onDelete: Cascade)
+  nama            String
+  tipe            LahanType
+  luas            Float
+  lokasi          String?
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  devices         Device[]
+  plantings       Planting[]
+  irrigationLogs  IrrigationLog[]
 
   @@index([kebunId])
   @@map("lahans")
@@ -174,20 +176,21 @@ model HydroponicGuide {
 // Device & Sensor
 // =====================
 model Device {
-  id        String       @id @default(cuid())
-  kebunId   String
-  kebun     Kebun        @relation(fields: [kebunId], references: [id], onDelete: Cascade)
-  lahanId   String?
-  lahan     Lahan?       @relation(fields: [lahanId], references: [id])
-  nama      String
-  type      DeviceType
-  lokasi    String?
-  status    DeviceStatus @default(OFFLINE)
-  mqttTopic String       @unique
-  lastSeen  DateTime?
-  createdAt DateTime     @default(now())
-  updatedAt DateTime     @updatedAt
-  sensors   Sensor[]
+  id              String          @id @default(cuid())
+  kebunId         String
+  kebun           Kebun           @relation(fields: [kebunId], references: [id], onDelete: Cascade)
+  lahanId         String?
+  lahan           Lahan?          @relation(fields: [lahanId], references: [id])
+  nama            String
+  type            DeviceType
+  lokasi          String?
+  status          DeviceStatus    @default(OFFLINE)
+  mqttTopic       String          @unique
+  lastSeen        DateTime?
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  sensors         Sensor[]
+  irrigationLogs  IrrigationLog[]
 
   @@index([kebunId])
   @@index([lahanId])
@@ -228,16 +231,22 @@ model Telemetry {
 // Irrigation Logs
 // =====================
 model IrrigationLog {
-  id         String           @id @default(cuid())
-  kebunId    String
-  lahanId    String?
-  deviceId   String?
+  id          String           @id @default(cuid())
+  kebunId     String
+  kebun       Kebun            @relation(fields: [kebunId], references: [id], onDelete: Cascade)
+  lahanId     String?
+  lahan       Lahan?           @relation(fields: [lahanId], references: [id], onDelete: SetNull)
+  deviceId    String?
+  device      Device?          @relation(fields: [deviceId], references: [id], onDelete: SetNull)
   durationSec Int
-  source     IrrigationSource
-  status     IrrigationStatus @default(SUKSES)
-  createdAt  DateTime         @default(now())
+  source      IrrigationSource
+  status      IrrigationStatus @default(SUKSES)
+  createdAt   DateTime         @default(now())
 
   @@index([kebunId])
+  @@index([lahanId])
+  @@index([deviceId])
+  @@index([createdAt])
   @@map("irrigation_logs")
 }
 

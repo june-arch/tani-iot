@@ -6,6 +6,8 @@ import { QueryCropDto } from './dto/create-crop.dto';
 export class CropsController {
   constructor(private readonly cropsService: CropsService) {}
 
+  // Public: daftar komoditas — tidak butuh login.
+  // TODO(rate-limit): tambahkan ThrottlerGuard (mis. 30 req/menit per IP) untuk cegah abuse katalog publik.
   @Get()
   async findAll(@Query() query: QueryCropDto) {
     const data = await this.cropsService.findAll(query);
@@ -16,6 +18,8 @@ export class CropsController {
     };
   }
 
+  // Public: timeline budidaya per komoditas — tidak butuh login.
+  // TODO(rate-limit): pertimbangkan ThrottlerGuard serupa untuk endpoint publik ini.
   @Get(':slug/timeline')
   async getTimeline(@Param('slug') slug: string) {
     const data = await this.cropsService.getTimeline(slug);
@@ -26,6 +30,9 @@ export class CropsController {
     };
   }
 
+  // Public: detail komoditas — tidak butuh login.
+  // TODO(rate-limit): pertimbangkan ThrottlerGuard serupa untuk endpoint publik ini.
+  // Jika butuh proteksi opsional: @UseGuards(OptionalJwtAuthGuard) untuk personalisasi tanpa wajib login.
   @Get(':slug')
   async findBySlug(@Param('slug') slug: string) {
     const data = await this.cropsService.findBySlug(slug);

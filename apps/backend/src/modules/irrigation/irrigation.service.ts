@@ -1,4 +1,4 @@
-import { Injectable, Logger, NotFoundException } from '@nestjs/common';
+import { Injectable, Logger, NotFoundException, ServiceUnavailableException } from '@nestjs/common';
 import { SchedulerRegistry } from '@nestjs/schedule';
 import { CronJob } from 'cron';
 import { PrismaService } from '../../prisma/prisma.service';
@@ -94,8 +94,22 @@ export class IrrigationService {
       ? `tani/${dto.kebunId}/${targetDeviceId}/solenoid/set`
       : `tani/${dto.kebunId}/unknown/solenoid/set`;
 
-    // Publish OPEN
-    this.mqttService.publish(topic, { action: 'OPEN', durationSec: dto.durationSec });
+    // Publish OPEN — cek return boolean; jika false → MQTT offline
+    const opened = this.mqttService.publish(topic, { action: 'OPEN', durationSec: dto.durationSec });
+    if (!opened) {
+      this.logger.error(`Gagal membuka valve — MQTT offline, topic=${topic}`);
+      const log = await this.prisma.irrigationLog.create({
+        data: {
+          kebunId: dto.kebunId,
+          lahanId: dto.lahanId,
+          deviceId: targetDeviceId,
+          durationSec: dto.durationSec,
+          source: (dto.source as any) ?? 'MANUAL',
+          status: 'GAGAL' as any,
+        },
+      });
+      throw new ServiceUnavailableException('Gagal membuka valve — MQTT offline');
+    }
     this.logger.log(`Irigasi OPEN dikirim ke ${topic} durasi ${dto.durationSec}s`);
 
     const log = await this.prisma.irrigationLog.create({
@@ -109,10 +123,14 @@ export class IrrigationService {
       },
     });
 
-    // Auto-close setelah durationSec
+    // Auto-close setelah durationSec — cek publish juga
     setTimeout(() => {
-      this.mqttService.publish(topic, { action: 'CLOSE' });
-      this.logger.log(`Irigasi CLOSE otomatis dikirim ke ${topic} setelah ${dto.durationSec}s`);
+      const closed = this.mqttService.publish(topic, { action: 'CLOSE' });
+      if (!closed) {
+        this.logger.error(`Gagal menutup valve — MQTT offline, topic=${topic}`);
+      } else {
+        this.logger.log(`Irigasi CLOSE otomatis dikirim ke ${topic} setelah ${dto.durationSec}s`);
+      }
     }, dto.durationSec * 1000);
 
     return { status: 'SUKSES', message: 'Irigasi dimulai', topic, log };

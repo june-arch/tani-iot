@@ -10,7 +10,6 @@ import {
   BadRequestException,
   Req,
   UseGuards,
-  Optional,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
@@ -32,6 +31,7 @@ export class AiController {
   constructor(private readonly aiService: AiService) {}
 
   @Post('diagnose')
+  @UseGuards(JwtAuthGuard)
   @UseInterceptors(
     FileInterceptor('image', {
       storage: diskStorage({
@@ -85,19 +85,17 @@ export class AiController {
   }
 
   @Get('history')
+  @UseGuards(JwtAuthGuard)
   async history(
     @Query('lahanId') lahanId?: string,
     @Query('plantingId') plantingId?: string,
     @Query('limit') limit?: string,
     @Req() req?: any,
   ) {
-    // Jika ada user login, filter by user; jika tidak, tampilkan semua
     const userId = req?.user?.userId ?? req?.user?.id ?? undefined;
     const parsedLimit = limit ? parseInt(limit, 10) : undefined;
 
     const data = await this.aiService.getHistory({
-      // jangan filter userId jika tidak ada auth — tampilkan semua
-      // userId hanya dipakai jika endpoint diproteksi
       lahanId,
       plantingId,
       limit: parsedLimit,
@@ -111,6 +109,7 @@ export class AiController {
   }
 
   @Post(':id/feedback')
+  @UseGuards(JwtAuthGuard)
   async feedback(
     @Param('id') id: string,
     @Body() body: { helpful: boolean; catatan?: string },
