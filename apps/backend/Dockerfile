@@ -1,4 +1,4 @@
-FROM node:20-alpine AS base
+FROM node:22-alpine AS base
 WORKDIR /app
 
 # deps
@@ -8,8 +8,8 @@ RUN npm ci --legacy-peer-deps
 # source
 COPY . .
 
-# prisma
-RUN npx prisma generate
+# prisma - pin to v6 to avoid Prisma 7 breaking schema (url env) and node 20 EBADENGINE
+RUN ./node_modules/.bin/prisma generate
 
 # build
 RUN npm run build
