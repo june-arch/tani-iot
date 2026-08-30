@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import { useEffect, useState, useMemo } from "react";
-import { Sprout, Leaf, SearchX, AlertTriangle } from "lucide-react";
+import { Sprout, Leaf, SearchX, AlertTriangle, Beaker } from "lucide-react";
 import { api, type Crop } from "@/lib/api";
 import { Card, CardTitle, CardDesc } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
@@ -17,6 +17,9 @@ export default function TanamanPage() {
   const [q, setQ] = useState("");
   const [crops, setCrops] = useState<Crop[] | null>(null);
   const [err, setErr] = useState<string | null>(null);
+  const [selected, setSelected] = useState<Crop | null>(null);
+  const [detail, setDetail] = useState<Crop | null>(null);
+  const [detailLoading, setDetailLoading] = useState(false);
 
   useEffect(() => {
     let alive = true;
@@ -32,6 +35,20 @@ export default function TanamanPage() {
       alive = false;
     };
   }, []);
+
+  async function openDetail(c: Crop) {
+    setSelected(c);
+    setDetail(null);
+    setDetailLoading(true);
+    try {
+      const d = await api.get<Crop>(`/crops/${c.slug}`);
+      setDetail(d);
+    } catch {
+      setDetail(c);
+    } finally {
+      setDetailLoading(false);
+    }
+  }
 
   const filtered = useMemo(() => {
     if (!crops) return [];
@@ -126,7 +143,7 @@ export default function TanamanPage() {
                   {c.iklimOptimal && <span className="rounded-full bg-muted px-2.5 py-1 text-xs font-medium">{c.iklimOptimal}</span>}
                 </div>
                 <div className="mt-auto pt-4">
-                  <Button variant="secondary" className="w-full gap-1.5">
+                  <Button variant="secondary" className="w-full gap-1.5" onClick={() => openDetail(c)}>
                     <Leaf className="h-4 w-4" /> Lihat Panduan
                   </Button>
                 </div>
@@ -134,6 +151,113 @@ export default function TanamanPage() {
             </motion.div>
           ))}
         </motion.div>
+      )}
+
+      {selected && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" onClick={() => setSelected(null)}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.97 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="max-h-[85vh] w-full max-w-2xl overflow-auto rounded-card border bg-background shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="sticky top-0 flex items-start justify-between gap-3 border-b bg-background p-5">
+              <div>
+                <h3 className="flex items-center gap-2 font-sans text-lg font-bold [text-wrap:balance]">
+                  <Sprout className="h-5 w-5 text-primary" /> {selected.name}
+                  <Badge variant="neutral">{selected.category}</Badge>
+                </h3>
+                {selected.scientificName && <p className="mt-1 font-mono text-xs italic text-muted-fg">{selected.scientificName}</p>}
+                <p className="mt-2 text-sm leading-6 text-muted-fg [text-wrap:pretty]">{selected.description}</p>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {selected.iklimOptimal && <span className="rounded-full bg-muted px-2.5 py-1 text-xs">{selected.iklimOptimal}</span>}
+                  {selected.ketinggianOptimal && <span className="rounded-full bg-primary-soft px-2.5 py-1 text-xs font-medium text-primary-soft-fg">{selected.ketinggianOptimal}</span>}
+                </div>
+              </div>
+              <button onClick={() => setSelected(null)} className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border hover:bg-muted">
+                ✕
+              </button>
+            </div>
+
+            <div className="p-5">
+              {detailLoading ? (
+                <div className="space-y-3">
+                  <Skeleton className="h-20" />
+                  <Skeleton className="h-20" />
+                  <Skeleton className="h-20" />
+                </div>
+              ) : detail ? (
+                <div className="space-y-6">
+                  {(detail as any).sowingGuides?.length > 0 && (
+                    <div className="rounded-lg border bg-muted/30 p-4">
+                      <h4 className="flex items-center gap-2 font-semibold text-sm">
+                        <Leaf className="h-4 w-4 text-primary" /> Penyemaian — Media & Langkah
+                      </h4>
+                      {(detail as any).sowingGuides.map((s: any) => (
+                        <div key={s.id} className="mt-3 space-y-2 text-sm leading-6">
+                          <p>
+                            <span className="font-semibold">Media tanam:</span> {s.mediaTanam}
+                          </p>
+                          <p>
+                            <span className="font-semibold">Durasi:</span> {s.durasiHari} hari · <span className="font-semibold">Suhu:</span> {s.suhuOptimal} ·{" "}
+                            <span className="font-semibold">Kelembapan:</span> {s.kelembaban}
+                          </p>
+                          <ol className="list-decimal pl-5">
+                            {(s.langkah as string[]).map((l: string, i: number) => (
+                              <li key={i}>{l}</li>
+                            ))}
+                          </ol>
+                          <p className="rounded bg-primary-soft px-3 py-2 text-xs font-medium text-primary-soft-fg">Siap tanam: {s.siapTanamIndikator}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {(detail as any).growingGuides?.length > 0 && (
+                    <div className="space-y-3">
+                      {(detail as any).growingGuides.map((g: any) => (
+                        <div key={g.id} className="rounded-lg border p-4">
+                          <h4 className="font-semibold text-sm flex items-center gap-2">
+                            {g.fase === "VEGETATIF" ? <Sprout className="h-4 w-4 text-success" /> : <Leaf className="h-4 w-4 text-accent" />}
+                            Fase {g.fase} — {g.panenHariRange}
+                          </h4>
+                          <p className="mt-1 text-xs text-muted-fg">Penyiraman: {g.penyiraman}</p>
+                          <div className="mt-2 space-y-1.5">
+                            {(g.pupuk as any[]).map((p: any, i: number) => (
+                              <div key={i} className="rounded bg-muted px-3 py-2 text-xs">
+                                <span className="font-semibold">{p.nama}</span> — {p.takaran} · tiap {p.intervalHari} hari · {p.cara}
+                              </div>
+                            ))}
+                          </div>
+                          {g.hama?.length > 0 && <p className="mt-2 text-xs text-muted-fg">Hama: {(g.hama as string[]).join(", ")}</p>}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {(detail as any).hydroponicGuides?.length > 0 && (
+                    <div className="rounded-lg border bg-accent-soft/30 p-4">
+                      <h4 className="font-semibold text-sm flex items-center gap-2">
+                        <Beaker className="h-4 w-4 text-accent" /> Hidroponik
+                      </h4>
+                      {(detail as any).hydroponicGuides.map((h: any) => (
+                        <div key={h.id} className="mt-2 text-sm leading-6">
+                          <p>
+                            <span className="font-semibold">Sistem:</span> {h.sistem} · <span className="font-semibold">PPM:</span> {h.ppmRange} ·{" "}
+                            <span className="font-semibold">pH:</span> {h.phRange}
+                          </p>
+                          <p className="text-xs text-muted-fg">Nutrisi: {(h.nutrisi as string[]).join(", ")} · Durasi {h.durasiHari} hari</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <p className="text-sm text-muted-fg">Gagal memuat panduan.</p>
+              )}
+            </div>
+          </motion.div>
+        </div>
       )}
     </motion.div>
   );
