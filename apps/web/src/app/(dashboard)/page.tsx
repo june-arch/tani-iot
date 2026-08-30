@@ -1,10 +1,12 @@
 "use client";
+import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Card, CardHeader, CardTitle, CardDesc } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Skeleton } from "@/components/ui/Skeleton";
 import Link from "next/link";
+import { api, type Kebun, type Device } from "@/lib/api";
 
 const container = {
   hidden: {},
@@ -37,12 +39,176 @@ function StatCard({
   );
 }
 
+type DashboardState = {
+  kebuns: Kebun[];
+  totalLahan: number;
+  totalDevices: number;
+  onlineDevices: number;
+  totalSensors: number;
+  tandonPersen: number | null;
+};
+
 export default function OverviewPage() {
-  // mock – nanti ganti fetch realtime
-  const loading = false;
+  const [data, setData] = useState<DashboardState | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [err, setErr] = useState<string | null>(null);
+  const [toast, setToast] = useState<string | null>(null);
+
+  function showToast(m: string) {
+    setToast(m);
+    setTimeout(() => setToast(null), 3500);
+  }
+
+  useEffect(() => {
+    let alive = true;
+    async function load() {
+      setLoading(true);
+      setErr(null);
+      try {
+        // 1) kebuns
+        const kebuns = await api.get<Kebun[]>("/kebuns/my");
+        if (!alive) return;
+
+        if (kebuns.length === 0) {
+          setData({ kebuns: [], totalLahan: 0, totalDevices: 0, onlineDevices: 0, totalSensors: 0, tandonPersen: null });
+          setLoading(false);
+          return;
+        }
+
+        // parallel fetch lahans & devices per kebun
+        const perKebun = await Promise.all(
+          kebuns.map(async (k) => {
+            const id = k.id as string;
+            try {
+              const [lahans, devices] = await Promise.all([
+                api.get<unknown[]>(`/kebuns/${id}/lahans`).catch(() => [] as unknown[]),
+                api.get<Device[]>(`/kebuns/${id}/devices`).catch(() => [] as Device[]),
+              ]);
+              return { lahans: (lahans as unknown[]).length, devices: devices as Device[] };
+            } catch {
+              return { lahans: 0, devices: [] as Device[] };
+            }
+          })
+        );
+
+        const totalLahan = perKebun.reduce((a, b) => a + b.lahans, 0);
+        const allDevices = perKebun.flatMap((x) => x.devices);
+        const totalDevices = allDevices.length;
+        const onlineDevices = allDevices.filter((d) => (d.status ?? "").toLowerCase() === "online").length;
+        const totalSensors = allDevices.reduce((a, d) => a + (d.sensors?.length ?? 0), 0);
+
+        // tandon: cari sensor WATER_LEVEL / tandon; ambil telemetry terakhir
+        let tandonPersen: number | null = null;
+        const tandonSensor = allDevices
+          .flatMap((d) => d.sensors ?? [])
+          .find((s) => {
+            const t = (s.type ?? s.tipe ?? "").toString().toLowerCase();
+            return t.includes("water") || t.includes("tandon") || t.includes("level");
+          });
+        if (tandonSensor) {
+          try {
+            const tel = await api.get<{ data: { value: number }[] }>(`/sensors/${tandonSensor.id}/telemetry?limit=1`).catch(() => null);
+            const raw = tel as unknown;
+            // unwrap berbagai bentuk
+            let val: number | null = null;
+            if (raw && typeof raw === "object") {
+              const r = raw as Record<string, unknown>;
+              if (Array.isArray(r["data"])) val = (r["data"] as { value: number }[])[0]?.value ?? null;
+              else if (Array.isArray(r["data"] as unknown)) val = null;
+            }
+            if (val !== null) tandonPersen = Math.round(val);
+          } catch {}
+        }
+
+        if (!alive) return;
+        setData({ kebuns, totalLahan, totalDevices, onlineDevices, totalSensors, tandonPersen });
+      } catch (e: unknown) {
+        const status = (e as { status?: number })?.status;
+        if (status === 401) return; // api.ts sudah redirect
+        const msg = (e as { message?: string })?.message ?? "Gagal memuat ringkasan.";
+        if (alive) {
+          setErr(msg);
+          showToast(msg);
+        }
+      } finally {
+        if (alive) setLoading(false);
+      }
+    }
+    load();
+    return () => { alive = false; };
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="space-y-6 pb-20 lg:pb-0">
+        <div className="flex items-start justify-between gap-3">
+          <div className="space-y-2">
+            <Skeleton className="h-7 w-44" />
+            <Skeleton className="h-4 w-80" />
+          </div>
+          <Skeleton className="h-6 w-16 rounded-full" />
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <Skeleton key={i} className="h-28" />
+          ))}
+        </div>
+        <div className="grid gap-4 lg:grid-cols-3">
+          {Array.from({ length: 3 }).map((_, i) => (
+            <Skeleton key={i} className="h-64" />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (err) {
+    return (
+      <div className="space-y-4 pb-20 lg:pb-0">
+        {toast && <div className="fixed top-4 left-1/2 z-50 -translate-x-1/2 rounded-full bg-destructive px-4 py-2.5 text-sm font-semibold text-destructive-fg shadow-lg">{toast}</div>}
+        <Card className="py-10 text-center">
+          <p className="text-3xl">⚠️</p>
+          <h3 className="mt-2 font-sans font-semibold">Gagal memuat ringkasan</h3>
+          <p className="mx-auto mt-1 max-w-md text-sm text-muted-fg">{err}</p>
+          <div className="mt-4 flex justify-center gap-2">
+            <Button onClick={() => location.reload()}>Muat Ulang</Button>
+            <Link href="/login" className="inline-flex h-11 items-center justify-center rounded-button border bg-background px-5 text-sm font-semibold hover:bg-muted">Masuk</Link>
+          </div>
+        </Card>
+      </div>
+    );
+  }
+
+  if (!data || data.kebuns.length === 0) {
+    return (
+      <motion.div variants={container} initial="hidden" animate="show" className="space-y-6 pb-20 lg:pb-0">
+        <motion.div variants={item} className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h1 className="font-sans text-2xl font-bold tracking-tight">Ringkasan Kebun</h1>
+            <p className="mt-1 text-sm text-muted-fg">Pantau tandon, pH/NPK, dan PPM hidroponik — semua kebun dalam satu layar.</p>
+          </div>
+          <Badge variant="success">● Live</Badge>
+        </motion.div>
+        <motion.div variants={item}>
+          <Card className="py-16 text-center">
+            <p className="text-4xl">🏡</p>
+            <h3 className="mt-3 font-sans text-lg font-bold">Belum ada kebun</h3>
+            <p className="mx-auto mt-1 max-w-md text-sm text-muted-fg">Buat kebun pertama untuk mulai melihat ringkasan lahan, device, dan sensor.</p>
+            <Link href="/kebuns" className="mt-4 inline-flex h-11 items-center justify-center rounded-button bg-primary px-5 text-sm font-semibold text-primary-fg hover:bg-primary-hover">
+              ＋ Buat Kebun
+            </Link>
+          </Card>
+        </motion.div>
+      </motion.div>
+    );
+  }
+
+  const sensorLabel = data.totalSensors === 0 ? "0" : `${data.onlineDevices} / ${data.totalDevices} device`;
+  const tandonVal = data.tandonPersen !== null ? String(data.tandonPersen) : "—";
 
   return (
     <motion.div variants={container} initial="hidden" animate="show" className="space-y-6 pb-20 lg:pb-0">
+      {toast && <div className="fixed top-4 left-1/2 z-50 -translate-x-1/2 rounded-full bg-destructive px-4 py-2.5 text-sm font-semibold text-destructive-fg shadow-lg">{toast}</div>}
       <motion.div variants={item} className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h1 className="font-sans text-2xl font-bold tracking-tight">Ringkasan Kebun</h1>
@@ -53,44 +219,38 @@ export default function OverviewPage() {
         <Badge variant="success">● Live</Badge>
       </motion.div>
 
-      {/* Stat grid */}
-      {loading ? (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {Array.from({ length: 4 }).map((_, i) => (
-            <Skeleton key={i} className="h-28" />
-          ))}
-        </div>
-      ) : (
-        <motion.div variants={item} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <StatCard label="Total Kebun" value="1" unit="kebun" trend="↗ +1 bulan ini" />
-          <StatCard label="Lahan Aktif" value="3" unit="lahan" />
-          <StatCard label="Sensor Online" value="5 / 6" unit="sensor" trend="1 perlu kalibrasi" />
-          <StatCard label="Tandon Terisi" value="68" unit="%" />
-        </motion.div>
-      )}
+      <motion.div variants={item} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <StatCard label="Total Kebun" value={String(data.kebuns.length)} unit="kebun" />
+        <StatCard label="Lahan Aktif" value={String(data.totalLahan)} unit="lahan" />
+        <StatCard label="Device" value={sensorLabel} unit="online" />
+        <StatCard label="Tandon Terisi" value={tandonVal} unit={data.tandonPersen !== null ? "%" : ""} />
+      </motion.div>
 
-      {/* Tandon + pH/NPK + PPM */}
       <div className="grid gap-4 lg:grid-cols-3">
         <motion.div variants={item}>
           <Card>
             <CardHeader>
               <CardTitle>💧 Tandon Air</CardTitle>
-              <Badge variant="success">Aman</Badge>
+              <Badge variant={data.tandonPersen !== null && data.tandonPersen < 20 ? "destructive" : "success"}>
+                {data.tandonPersen === null ? "Tidak ada data" : data.tandonPersen < 20 ? "Rendah" : "Aman"}
+              </Badge>
             </CardHeader>
             <div className="mt-4">
               <div className="flex items-baseline gap-2">
-                <span className="font-mono text-3xl font-bold">68%</span>
-                <span className="text-sm text-muted-fg">· 680 L / 1000 L</span>
+                <span className="font-mono text-3xl font-bold">{tandonVal}{data.tandonPersen !== null ? "%" : ""}</span>
+                {data.tandonPersen !== null && <span className="text-sm text-muted-fg">· live telemetry</span>}
               </div>
               <div className="mt-3 h-3 overflow-hidden rounded-full bg-muted">
-                <div className="h-full w-[68%] rounded-full bg-primary" />
+                <div className="h-full rounded-full bg-primary" style={{ width: `${Math.max(0, Math.min(100, data.tandonPersen ?? 0))}%` }} />
               </div>
-              <p className="mt-2 text-xs text-muted-fg">Update 2 menit lalu · estimasi habis 4 hari</p>
+              <p className="mt-2 text-xs text-muted-fg">{data.kebuns[0]?.lokasi ? String(data.kebuns[0].lokasi) : "—"} · {data.totalDevices} device terdaftar</p>
               <div className="mt-4 flex gap-2">
                 <Link href="/sensors" className="inline-flex h-11 flex-1 items-center justify-center rounded-button bg-primary px-4 text-sm font-semibold text-primary-fg hover:bg-primary-hover">
                   Lihat Sensor
                 </Link>
-                <Button variant="secondary">Atur Alert</Button>
+                <Link href="/kebuns" className="inline-flex h-11 items-center justify-center rounded-button border bg-background px-4 text-sm font-semibold hover:bg-muted">
+                  Kelola Kebun
+                </Link>
               </div>
             </div>
           </Card>
@@ -100,18 +260,17 @@ export default function OverviewPage() {
           <Card>
             <CardHeader>
               <CardTitle>🧪 pH & NPK Tanah</CardTitle>
-              <Badge variant="warning">Perlu Perhatian</Badge>
+              <Badge variant="warning">Butuh device</Badge>
             </CardHeader>
             <div className="mt-4 space-y-3">
-              <div className="flex justify-between rounded-lg bg-muted px-3 py-2.5">
-                <span className="text-sm font-medium">pH</span>
-                <span className="font-mono text-sm font-bold">6.2 <span className="text-muted-fg">/ 5.5–6.5 ideal</span></span>
+              <div className="rounded-lg bg-muted px-3 py-3 text-sm text-muted-fg">
+                Data pH/NPK muncul setelah sensor terpasang di lahan. Tambahkan device lalu sensor pH/NPK.
               </div>
               <div className="grid grid-cols-3 gap-2">
                 {[
-                  { k: "N", v: "18", u: "ppm" },
-                  { k: "P", v: "22", u: "ppm" },
-                  { k: "K", v: "15", u: "ppm" },
+                  { k: "N", v: "—", u: "ppm" },
+                  { k: "P", v: "—", u: "ppm" },
+                  { k: "K", v: "—", u: "ppm" },
                 ].map((x) => (
                   <div key={x.k} className="rounded-lg border bg-background px-3 py-3 text-center">
                     <p className="text-xs font-semibold text-muted-fg">{x.k}</p>
@@ -120,7 +279,7 @@ export default function OverviewPage() {
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-muted-fg">Lahan A1 — Sawah Teras · 10 menit lalu</p>
+              <p className="text-xs text-muted-fg">{data.kebuns.length} kebun · {data.totalLahan} lahan · {data.totalSensors} sensor</p>
             </div>
           </Card>
         </motion.div>
@@ -129,27 +288,23 @@ export default function OverviewPage() {
           <Card>
             <CardHeader>
               <CardTitle>🥬 PPM Hidroponik</CardTitle>
-              <Badge variant="primary">NFT · Kangkung</Badge>
+              <Badge variant="primary">TDS</Badge>
             </CardHeader>
             <div className="mt-4">
-              <div className="flex items-baseline gap-2">
-                <span className="font-mono text-3xl font-bold">980</span>
-                <span className="text-sm text-muted-fg">ppm · target 800–1200</span>
-              </div>
-              <div className="mt-2 flex gap-2 text-xs">
-                <span className="rounded-full bg-success-soft px-2 py-1 font-semibold text-success">pH air 6.0</span>
-                <span className="rounded-full bg-muted px-2 py-1">Suhu 27°C</span>
+              <p className="text-sm text-muted-fg">Nilai PPM/TDS tampil setelah sensor hidroponik mengirim telemetry.</p>
+              <div className="mt-3 flex items-baseline gap-2">
+                <span className="font-mono text-3xl font-bold">—</span>
+                <span className="text-sm text-muted-fg">ppm</span>
               </div>
               <div className="mt-3 h-3 overflow-hidden rounded-full bg-muted">
-                <div className="h-full w-[72%] rounded-full bg-accent" />
+                <div className="h-full w-0 rounded-full bg-accent" />
               </div>
-              <p className="mt-2 text-xs text-muted-fg">Auto-dosing aktif · EC 1.4 mS/cm</p>
+              <p className="mt-2 text-xs text-muted-fg">{data.totalSensors} sensor terdaftar — pasang sensor PPM untuk melihat grafik.</p>
             </div>
           </Card>
         </motion.div>
       </div>
 
-      {/* Quick actions */}
       <motion.div variants={item} className="grid gap-4 sm:grid-cols-3">
         {[
           { title: "Kelola Kebun", desc: "Tambah lahan, atur anggota", href: "/kebuns", cta: "Buka Kebun" },

@@ -24,6 +24,37 @@ export type ApiError = {
   raw?: unknown;
 };
 
+function getAuthToken(): string | null {
+  if (typeof window === "undefined") return null;
+  // prioritas: tani_token (baru) lalu fallback
+  const t =
+    window.localStorage.getItem("tani_token") ??
+    window.localStorage.getItem("accessToken");
+  if (t) return t;
+  // cookie fallback
+  const m = document.cookie.match(/(?:^|; )tani_token=([^;]*)/);
+  if (m) {
+    try { return decodeURIComponent(m[1]); } catch { return m[1]; }
+  }
+  return null;
+}
+
+function handle401(status: number) {
+  if (status === 401 && typeof window !== "undefined") {
+    const path = window.location.pathname;
+    // jangan redirect jika sudah di login
+    if (!path.startsWith("/login")) {
+      // bersihkan token basi
+      try {
+        window.localStorage.removeItem("tani_token");
+        window.localStorage.removeItem("tani_refresh");
+      } catch {}
+      document.cookie = "tani_token=; Path=/; Max-Age=0";
+      window.location.href = "/login";
+    }
+  }
+}
+
 async function parseJson(res: Response): Promise<unknown> {
   const text = await res.text();
   if (!text) return null;
@@ -47,16 +78,12 @@ export async function apiFetch<T>(
     ...(opts.headers as Record<string, string> | undefined),
   };
 
-  // forward token jika ada di localStorage (client only)
-  if (typeof window !== "undefined") {
-    const token = window.localStorage.getItem("tani_token");
-    if (token) headers["Authorization"] = `Bearer ${token}`;
-  }
+  const token = getAuthToken();
+  if (token) headers["Authorization"] = `Bearer ${token}`;
 
   const res = await fetch(url, {
     ...opts,
     headers,
-    // cache default: no-store untuk dashboard realtime
     cache: opts.cache ?? "no-store",
   });
 
@@ -69,6 +96,7 @@ export async function apiFetch<T>(
       (body as { pesan?: string })?.pesan ??
       (body as { error?: string })?.error ??
       `Request gagal (${res.status})`;
+    handle401(res.status);
     throw { status: res.status, message: msg, raw: body } as ApiError;
   }
 
@@ -118,19 +146,53 @@ export type Crop = {
 
 export type Kebun = {
   id: string;
-  name: string;
+  nama?: string;
+  name?: string;
   lokasi?: string | null;
+  luas?: number | null;
   deskripsi?: string | null;
+  pemilikId?: string;
   createdAt?: string;
+  _count?: { lahans: number; devices: number; members: number };
+  lahans?: unknown[];
+  devices?: unknown[];
+  members?: unknown[];
+  // fallback fields
+  [k: string]: unknown;
 };
 
 export type Sensor = {
   id: string;
   name: string;
   tipe: string;
+  type?: string;
   deviceId: string;
-  config?: Record<string, unknown>;
+  unit?: string | null;
+  minThreshold?: number | null;
+  maxThreshold?: number | null;
+  isEnabled?: boolean;
+  config?: Record<string, unknown> | null;
   lastValue?: number | null;
   lastSeen?: string | null;
   status?: "online" | "offline" | "warning";
+};
+
+export type Device = {
+  id: string;
+  nama: string;
+  type?: string;
+  status?: string;
+  kebunId: string;
+  lahanId?: string | null;
+  mqttTopic?: string | null;
+  sensors: Sensor[];
+  lahan?: { id: string; nama: string } | null;
+};
+
+export type Telemetry = {
+  id: string;
+  sensorId: string;
+  value: number;
+  recordedAt: string;
+  raw?: unknown;
 };

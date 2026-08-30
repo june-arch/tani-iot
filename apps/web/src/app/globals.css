@@ -115,6 +115,29 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* === Tipografi — Impeccable === */
+h1, h2, h3, h4 {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  text-wrap: balance;
+  line-height: 1.2;
+}
+h1 { letter-spacing: -0.02em; }
+h2 { letter-spacing: -0.015em; }
+h3 { letter-spacing: -0.01em; }
+.display {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+p, li, dd {
+  text-wrap: pretty;
+}
+.font-sans { font-family: var(--font-outfit), system-ui, sans-serif; }
+.font-body { font-family: var(--font-instrument), system-ui, sans-serif; }
+
 /* Focus ring */
 *:focus-visible {
   outline: 2px solid var(--ring);

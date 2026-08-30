@@ -15,16 +15,33 @@ export default function TanamanPage() {
   const [q, setQ] = useState("");
   const [crops, setCrops] = useState<Crop[] | null>(null);
   const [err, setErr] = useState<string | null>(null);
+  const [toast, setToast] = useState<string | null>(null);
+
+  function showToast(m: string) {
+    setToast(m);
+    setTimeout(() => setToast(null), 3500);
+  }
 
   useEffect(() => {
     let alive = true;
+    // public endpoint — auth optional (api.ts kirim header jika ada token, tidak redirect untuk public)
     api
       .get<Crop[]>("/crops")
       .then((data) => {
         if (alive) setCrops(data);
       })
-      .catch((e: { message?: string }) => {
-        if (alive) setErr(e.message ?? "Gagal memuat tanaman");
+      .catch((e: unknown) => {
+        const status = (e as { status?: number })?.status;
+        // crops public: 401 tidak perlu redirect, cukup tampilkan error
+        if (status === 401) {
+          if (alive) setErr("Endpoint tanaman memerlukan autentikasi. Silakan login.");
+          return;
+        }
+        const msg = (e as { message?: string })?.message ?? "Gagal memuat tanaman";
+        if (alive) {
+          setErr(msg);
+          showToast(msg);
+        }
       });
     return () => {
       alive = false;
@@ -48,6 +65,8 @@ export default function TanamanPage() {
 
   return (
     <motion.div variants={container} initial="hidden" animate="show" className="space-y-6 pb-20 lg:pb-0">
+      {toast && <div className="fixed top-4 left-1/2 z-50 -translate-x-1/2 rounded-full bg-destructive px-4 py-2.5 text-sm font-semibold text-destructive-fg shadow-lg">{toast}</div>}
+
       <motion.div variants={item} className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="font-sans text-2xl font-bold tracking-tight">Tanaman</h1>
