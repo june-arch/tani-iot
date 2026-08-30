@@ -15,4 +15,4 @@ RUN npx prisma@6.19.3 generate
 RUN npm run build
 
 EXPOSE 3101
-CMD ["node", "dist/main.js"]
+CMD ["node", "dist/src/main.js"]
