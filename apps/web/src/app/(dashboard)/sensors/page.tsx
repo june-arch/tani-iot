@@ -1,11 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import { Activity, Droplets, Thermometer, Beaker, Leaf, AlertTriangle } from "lucide-react";
 import { Card, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Input, Select } from "@/components/ui/Input";
 import { Skeleton } from "@/components/ui/Skeleton";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { api, type Kebun, type Device, type Sensor } from "@/lib/api";
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.07 } } };
