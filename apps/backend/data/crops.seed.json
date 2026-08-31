@@ -2210,345 +2210,421 @@
     "name": "Wortel",
     "slug": "wortel",
     "category": "SAYUR",
-    "scientificName": "Daucus carota",
-    "description": "Wortel oranye untuk sayur dan jus, umbi akar.",
-    "iklimOptimal": "Sejuk, 16-24°C",
-    "ketinggianOptimal": "500-1500 mdpl",
-    "imageUrl": null,
+    "scientificName": "Daucus carota L. subsp. sativus",
+    "description": "Umbi akar tunggang berwarna oranye kaya beta-karoten, tanaman biennial dipanen sebagai sayur anual 90-120 hari.",
+    "iklimOptimal": "Sejuk-sedang 16-24°C, curah hujan 800-1200 mm, sinar penuh 6-8 jam, kelembaban 70-80%, sensitif panas >28°C (akar bercabang)",
+    "ketinggianOptimal": "800-2000 mdpl (optimal 1200-1500), dataran rendah <700 mdpl hasil kurang dan warna pucat",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Carrots_with_stems.jpg",
+    "imageAtribusi": "Carrots_with_stems.jpg - CC BY-SA 3.0 Wikimedia Commons",
     "sowingGuide": {
-      "mediaTanam": "Langsung tanam di bedengan gembur",
-      "durasiHari": 0,
-      "suhuOptimal": "16-24°C",
+      "mediaTanam": "Tanah gembur dalam 30-40 cm + pasir + kompos halus (2:1:1), pH 5.5-6.5, bedengan tinggi 30 cm, gembur tanpa batu",
+      "durasiHari": 10,
+      "suhuOptimal": "16-24°C (perkecambahan optimal 20°C)",
       "kelembaban": "70-80%",
       "langkah": [
-        "Rendam benih wortel 2-4 jam dalam air hangat",
-        "Siapkan langsung tanam di bedengan gembur yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+        "Gemburkan lahan hingga 35 cm, buang batu/akar, campur kompos halus 20 ton/ha + dolomit jika pH <5.5, buat bedengan lebar 100 cm tinggi 30 cm",
+        "Buat alur sedalam 1-2 cm jarak antar baris 15-20 cm, tabur benih tipis (1000 benih/m2), tutup tipis tanah halus + mulsa jerami tipis",
+        "Siram halus kabut 2x sehari jaga lembap, naungan paranet 30% 3-5 hari pertama jika terik, kecambah muncul 10-14 hari",
+        "Penjarangan pertama 14 hari setelah kecambah (jarak 5 cm), penjarangan kedua 30 hari (jarak akhir 8-10 cm), buang bibit lemah bercabang",
+        "Pembumbunan ringan 40 HST tutup pangkal akar yang muncul, jaga drainase tidak tergenang, siap panen 90-120 HST (diameter 2-4 cm)"
       ],
-      "siapTanamIndikator": "Benih berkecambah 3-5 hari, siap dijarangkan"
+      "siapTanamIndikator": "Tanam langsung tanpa pindah (direct seeding); penjarangan menentukan, bukan pindah tanam"
     },
     "growingGuides": [
       {
-        "fase": "VEGETATIF",
+        "fase": "VEGETATIF_AWAL",
         "pupuk": [
+          {
+            "nama": "Pupuk kandang matang + SP-36",
+            "takaran": "Pukan 20 ton/ha (2 kg/m2) + SP-36 200 kg/ha (20 g/m2)",
+            "intervalHari": 0,
+            "cara": "Campur ke tanah 7-10 hari sebelum tabur benih"
+          },
           {
             "nama": "NPK 16-16-16",
-            "takaran": "5 g per liter air",
-            "intervalHari": 7,
-            "cara": "Kocor di sekitar perakaran pagi hari"
-          },
-          {
-            "nama": "Pupuk kandang kompos",
-            "takaran": "1 kg per m2",
-            "intervalHari": 14,
-            "cara": "Tabur dan aduk ringan ke tanah"
+            "takaran": "150 kg/ha (15 g/m2) atau 1 g per tanaman",
+            "intervalHari": 21,
+            "cara": "Tabur di sela baris lalu timbun tanah, aplikasi 21 HST"
           }
         ],
-        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "penyiraman": "Siram 1x sehari pagi, jaga lembap tidak becek, mulsa jerami kurangi penguapan",
         "hama": [
-          "Ulat grayak",
-          "Kutu daun",
-          "Thrips",
-          "Layu fusarium"
+          "Ulat grayak (Spodoptera)",
+          "Kutu daun (Aphis)",
+          "Nematoda akar"
         ],
-        "panenHariRange": "30-60 hari"
+        "panenHariRange": "30-60 hari (fase pembesaran akar)"
       },
       {
-        "fase": "GENERATIF",
+        "fase": "PEMBESARAN_UMBI",
         "pupuk": [
           {
-            "nama": "MKP + KNO3",
-            "takaran": "3 g per liter air",
-            "intervalHari": 7,
-            "cara": "Semprot daun atau kocor sore hari"
+            "nama": "KNO3 Putih + KCl",
+            "takaran": "KNO3 100 kg/ha (10 g/m2) + KCl 100 kg/ha, 2x aplikasi",
+            "intervalHari": 30,
+            "cara": "Kocor 3 g/L atau tabur melingkar 45 & 60 HST, tinggi Kalium penting untuk warna dan kemanisan"
           },
           {
-            "nama": "Pupuk kandang + dolomit",
-            "takaran": "0.5 kg per tanaman",
-            "intervalHari": 21,
-            "cara": "Tabur melingkar di tajuk"
+            "nama": "Boron (Borax) - jika tanah miskin",
+            "takaran": "1 kg/ha (0,1 g/m2) semprot foliar 0,5 g/L",
+            "intervalHari": 45,
+            "cara": "Semprot daun 45 HST cegah akar pecah/bercabang"
           }
         ],
-        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "penyiraman": "Kurangi frekuensi jadi 3 hari sekali menjelang panen, hentikan siram 7 hari sebelum cabut agar tidak pecah",
         "hama": [
-          "Layu bakteri",
-          "Thrips",
-          "Kutu daun"
+          "Lalat wortel (Psila rosae)",
+          "Busuk lunak (Erwinia)",
+          "Bercak Alternaria"
         ],
-        "panenHariRange": "60-75 hari"
+        "panenHariRange": "90-120 hari (diameter 2-4 cm, warna oranye penuh)"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "DFT",
-      "ppmRange": "1000-1400",
-      "phRange": "5.5-6.5",
+      "sistem": "Substrat dalam / Deep DFT - TIDAK cocok NFT dangkal. Pakai pipa talang dalam 25-30 cm atau grow bag tinggi 40 cm berisi cocopeat:perlite:vermikulit (2:1:1) atau Dutch bucket",
+      "ppmRange": "1200-1600 (EC 1.7-2.3)",
+      "phRange": "6.0-6.5",
       "nutrisi": [
-        "AB Mix Sayur Daun",
+        "AB Mix Umbi-Akar (tinggi K)",
         "Kalsium nitrat",
-        "Magnesium sulfat"
+        "Magnesium sulfat",
+        "Tambahan Kalium sulfat fase pembesaran"
       ],
-      "durasiHari": 60
-    }
+      "durasiHari": 100,
+      "catatan": "Hidroponik wortel butuh media dalam agar akar lurus tidak bengkok. NFT konvensional gagal. Jaga aerasi, akar butuh oksigen tinggi, panen lebih lama 10 hari dari tanah."
+    },
+    "sumber": [
+      {
+        "judul": "Wikipedia Indonesia - Wortel (Daucus carota) - verifikasi curl 200",
+        "url": "https://id.wikipedia.org/wiki/Wortel",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Ditjen Hortikultura Kementan RI - Budidaya Wortel",
+        "url": "https://hortikultura.pertanian.go.id",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Wikimedia Commons - Carrots with stems (CC BY-SA 3.0) curl HEAD 200",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Carrots_with_stems.jpg",
+        "tanggal": "2026-08-31"
+      }
+    ]
   },
   {
     "name": "Kentang",
     "slug": "kentang",
     "category": "SAYUR",
-    "scientificName": "Solanum tuberosum",
-    "description": "Kentang umbi untuk goreng dan sup, butuh dataran tinggi.",
-    "iklimOptimal": "Sejuk, 14-22°C",
-    "ketinggianOptimal": "800-2000 mdpl",
-    "imageUrl": null,
+    "scientificName": "Solanum tuberosum L.",
+    "description": "Umbi batang (tuber) makanan pokok ke-4 dunia, kaya karbohidrat, panen 90-110 hari, butuh iklim sejuk dataran tinggi.",
+    "iklimOptimal": "Sejuk 15-22°C (malam 15°C siang 22°C), musuh panas >25°C umbi tidak terbentuk, curah hujan 500-1000 mm, kelembaban 70-85%, sinar penuh",
+    "ketinggianOptimal": "1000-3000 mdpl (optimal 1200-2000), di bawah 800 mdpl hanya dengan varietas khusus dataran medium dan hasil rendah",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/234_Solanum_tuberosum_L.jpg",
+    "imageAtribusi": "234_Solanum_tuberosum_L.jpg - Public Domain Wikimedia Commons",
     "sowingGuide": {
-      "mediaTanam": "Umbi ber-tunas / stek",
-      "durasiHari": 7,
-      "suhuOptimal": "14-22°C",
+      "mediaTanam": "Tanah gembur andosol + kompos + sekam bakar (2:1:1), pH 5.0-6.0, bedengan tinggi 30 cm, drainase sangat baik",
+      "durasiHari": 14,
+      "suhuOptimal": "15-20°C",
       "kelembaban": "75-85%",
       "langkah": [
-        "Rendam benih kentang 2-4 jam dalam air hangat",
-        "Siapkan umbi ber-tunas / stek yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 7 hari"
+        "Pilih umbi bibit bersertifikat G2/G3 ukuran 40-60 g bertunas 1-2 cm; belah jika >60 g (tiap belahan ada 2 mata tunas), luka oles fungisida dan angin-anginkan 2 hari",
+        "Gemburkan lahan jadi bedengan lebar 80 cm tinggi 30 cm jarak antar bedeng 50 cm, campur pukan 20 ton/ha + SP-36 300 kg/ha 7 hari sebelum tanam",
+        "Buat lubang tanam kedalaman 10 cm jarak 30x70 cm (populasi ~45.000/ha), tanam bibit tunas menghadap atas, timbun tipis 5 cm",
+        "Siram secukupnya jaga lembap, mulsa jerami, tunas muncul 14-21 hari, lakukan pembumbunan pertama 30 HST timbun batang 10 cm",
+        "Pembumbunan kedua 45 HST timbun hingga 20 cm untuk tutup umbi dari sinar (hindari hijau/solanin), siap panen 90-110 HST saat daun menguning"
       ],
-      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 7 hari"
+      "siapTanamIndikator": "Umbi bibit bertunas 1-2 cm kuat, tidak kisut, bebas virus, umur simpan 2-3 bulan di 3-4°C"
     },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
         "pupuk": [
           {
-            "nama": "NPK 16-16-16",
-            "takaran": "5 g per liter air",
-            "intervalHari": 7,
-            "cara": "Kocor di sekitar perakaran pagi hari"
+            "nama": "Pupuk kandang + SP-36 + Kiserit",
+            "takaran": "Pukan 20 ton/ha + SP-36 300 kg/ha (30 g/m2) + Kiserit 100 kg/ha",
+            "intervalHari": 0,
+            "cara": "Dasar sebelum tanam, campur ke bedengan"
           },
           {
-            "nama": "Pupuk kandang kompos",
-            "takaran": "1 kg per m2",
-            "intervalHari": 14,
-            "cara": "Tabur dan aduk ringan ke tanah"
+            "nama": "NPK 16-16-16",
+            "takaran": "400 kg/ha (40 g/m2) bagi 2x: 200 kg saat tanam, 200 kg 30 HST",
+            "intervalHari": 30,
+            "cara": "Tugal di samping tanaman lalu timbun saat pembumbunan"
           }
         ],
-        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "penyiraman": "Siram 2-3 hari sekali jaga lembap, jangan tergenang, fase kritis 30-60 HST butuh air cukup",
         "hama": [
-          "Ulat grayak",
-          "Kutu daun",
-          "Thrips",
-          "Layu fusarium"
+          "Kumbang kentang",
+          "Penggerek umbi (Phthorimaea operculella)",
+          "Kutu daun Myzus persicae"
         ],
-        "panenHariRange": "30-60 hari"
+        "panenHariRange": "30-60 hari (pembentukan stolon)"
       },
       {
-        "fase": "GENERATIF",
+        "fase": "PENGUMBIAN_GENERATIF",
         "pupuk": [
           {
-            "nama": "MKP + KNO3",
-            "takaran": "3 g per liter air",
-            "intervalHari": 7,
-            "cara": "Semprot daun atau kocor sore hari"
+            "nama": "KNO3 Merah + KCl",
+            "takaran": "KNO3 150 kg/ha + KCl 150 kg/ha (15 g/m2 tiap)",
+            "intervalHari": 45,
+            "cara": "Aplikasi 45 HST tabur melingkar lalu bumbun, Kalium kunci ukuran umbi"
           },
           {
-            "nama": "Pupuk kandang + dolomit",
-            "takaran": "0.5 kg per tanaman",
-            "intervalHari": 21,
-            "cara": "Tabur melingkar di tajuk"
+            "nama": "Semprot Boron + Kalsium",
+            "takaran": "Ca 2 g/L + Boron 0,5 g/L foliar",
+            "intervalHari": 50,
+            "cara": "Semprot 2x interval 10 hari cegah umbi retak dan busuk"
           }
         ],
-        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "penyiraman": "Kurangi bertahap setelah 80 HST, hentikan total 10-14 hari sebelum panen untuk pengerasan kulit",
         "hama": [
-          "Layu bakteri",
-          "Thrips",
-          "Kutu daun"
+          "Hawar daun Phytophthora infestans (paling mematikan)",
+          "Layu bakteri Ralstonia",
+          "Virus PVY/PLRV"
         ],
-        "panenHariRange": "90-180 hari"
+        "panenHariRange": "90-110 hari (daun 70% menguning, kulit umbi tidak mengelupas saat digosok)"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "DFT",
-      "ppmRange": "1000-1400",
-      "phRange": "5.5-6.5",
+      "sistem": "Aeroponik / Deep DFT 20 cm / Dutch bucket - DIANJURKAN AEROPONIK untuk kentang. NFT dangkal GAGAL karena umbi butuh ruang gelap dan aerasi. Di aeroponik umbi menggantung di udara gelap disemprot nutrisi",
+      "ppmRange": "1400-1800 (EC 2.0-2.6), naik bertahap: vegetatif 1400, pengumbian 1800",
+      "phRange": "5.2-6.0 (optimal 5.5)",
       "nutrisi": [
-        "AB Mix Sayur Daun",
+        "AB Mix Kentang/Aeroponik (tinggi K dan P)",
         "Kalsium nitrat",
+        "Mono-kalium fosfat (MKP) fase pengumbian",
         "Magnesium sulfat"
       ],
-      "durasiHari": 90
-    }
+      "durasiHari": 100,
+      "catatan": "Hidroponik kentang beda total: butuh ruang gelap untuk stolon, suhu nutrisi <22°C (pakai chiller jika perlu), aeroponik hasil 8-10 mini tuber per tanaman, panen bertahap bisa 2-3 kali."
+    },
+    "sumber": [
+      {
+        "judul": "Wikipedia Indonesia - Kentang (Solanum tuberosum) - curl 200",
+        "url": "https://id.wikipedia.org/wiki/Kentang",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Kementerian Pertanian RI - Portal Hortikultura Kentang Dataran Tinggi",
+        "url": "https://hortikultura.pertanian.go.id",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Wikimedia Commons - Solanum tuberosum ilustrasi (Public Domain) HEAD 200",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/234_Solanum_tuberosum_L.jpg",
+        "tanggal": "2026-08-31"
+      }
+    ]
   },
   {
     "name": "Jahe",
     "slug": "jahe",
     "category": "SAYUR",
-    "scientificName": "Zingiber officinale",
-    "description": "Jahe rimpang untuk jamu dan bumbu.",
-    "iklimOptimal": "Tropis lembap, 25-32°C, teduh parsial",
-    "ketinggianOptimal": "0-1200 mdpl",
-    "imageUrl": null,
+    "scientificName": "Zingiber officinale Roscoe",
+    "description": "Rimpang rempah obat paling populer, rasa pedas dari zingeron dan gingerol, panen muda 6 bulan panen tua 9-10 bulan.",
+    "iklimOptimal": "Tropis lembap 25-30°C, curah hujan 1500-3000 mm, naungan 30-50% (tidak tahan terik penuh), kelembaban 70-90%, sensitif angin kencang",
+    "ketinggianOptimal": "0-1500 mdpl (optimal 300-900 mdpl), dataran rendah subur bisa asal naungan cukup",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Zingiber_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-146.jpg",
+    "imageAtribusi": "Köhler's Medizinal-Pflanzen - Zingiber officinale - Public Domain",
     "sowingGuide": {
-      "mediaTanam": "Rimpang bertunas",
-      "durasiHari": 14,
+      "mediaTanam": "Tanah gembur + kompos + sekam + pasir (2:2:1:1), pH 5.5-6.5, bedengan tinggi 30 cm, atau polybag 40x50 cm, naungan paranet 50%",
+      "durasiHari": 21,
       "suhuOptimal": "25-30°C",
-      "kelembaban": "75-85%",
+      "kelembaban": "80-90%",
       "langkah": [
-        "Rendam benih jahe 2-4 jam dalam air hangat",
-        "Siapkan rimpang bertunas yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+        "Pilih rimpang bibit tua 9-10 bulan sehat, potong 40-60 g tiap potongan ada 2-3 mata tunas, jemur angin 1 hari lalu semai di sekam lembap 14-21 hari hingga tunas 2-3 cm",
+        "Siapkan bedengan lebar 100 cm tinggi 30 cm jarak antar bedeng 50 cm, campur pukan 20 ton/ha + dolomit jika pH <5.5, buat naungan paranet 50% atau tumpang sari dengan pisang",
+        "Buat lubang tanam 20 cm dalam jarak 40x60 cm (jahe gajah) atau 30x40 cm (jahe emprit), tanam rimpang tunas menghadap atas timbun 5 cm",
+        "Siram halus jaga lembap, mulsa jerami tebal 5 cm, semprot ZPT jika perlu, tunas muncul 14-21 hari",
+        "Haft pembumbunan ringan 60 HST dan 120 HST tutup rimpang yang muncul, panen jahe muda 180 HST, jahe tua 270-300 HST saat daun menguning"
       ],
-      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+      "siapTanamIndikator": "Tunas 2-3 cm kokoh hijau, akar serabut mulai keluar, rimpang tidak berlendir"
     },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
         "pupuk": [
           {
-            "nama": "NPK 16-16-16",
-            "takaran": "5 g per liter air",
-            "intervalHari": 7,
-            "cara": "Kocor di sekitar perakaran pagi hari"
+            "nama": "Pupuk kandang matang",
+            "takaran": "20 ton/ha (2 kg/m2) atau 5 kg per polybag",
+            "intervalHari": 0,
+            "cara": "Dasar 7 hari sebelum tanam, campur rata ke media"
           },
           {
-            "nama": "Pupuk kandang kompos",
-            "takaran": "1 kg per m2",
-            "intervalHari": 14,
-            "cara": "Tabur dan aduk ringan ke tanah"
+            "nama": "NPK 15-15-15 + Urea",
+            "takaran": "NPK 300 kg/ha (30 g/m2) + Urea 100 kg/ha, bagi 3x 30/60/90 HST",
+            "intervalHari": 30,
+            "cara": "Tabur melingkar 10 cm dari rimpang lalu timbun dan siram"
           }
         ],
-        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "penyiraman": "Siram 1-2 hari sekali jaga lembap, jahe butuh air banyak tapi drainase harus lancar, mulsa wajib",
         "hama": [
-          "Ulat grayak",
-          "Kutu daun",
-          "Thrips",
-          "Layu fusarium"
+          "Ulat penggulung daun (Udaspes folus)",
+          "Kutu sisik",
+          "Lalat rimpang"
         ],
-        "panenHariRange": "30-60 hari"
+        "panenHariRange": "30-150 hari (pertumbuhan tunas dan daun)"
       },
       {
-        "fase": "GENERATIF",
+        "fase": "PENGISIAN_RIMPANG",
         "pupuk": [
           {
-            "nama": "MKP + KNO3",
-            "takaran": "3 g per liter air",
-            "intervalHari": 7,
-            "cara": "Semprot daun atau kocor sore hari"
+            "nama": "KCl + SP-36",
+            "takaran": "KCl 200 kg/ha (20 g/m2) + SP-36 150 kg/ha, aplikasi 120 HST",
+            "intervalHari": 60,
+            "cara": "Tabur lalu bumbun, Kalium tingkatkan ukuran dan kadar gingerol"
           },
           {
-            "nama": "Pupuk kandang + dolomit",
-            "takaran": "0.5 kg per tanaman",
-            "intervalHari": 21,
-            "cara": "Tabur melingkar di tajuk"
+            "nama": "Pupuk organik cair + KNO3",
+            "takaran": "POC 5 ml/L + KNO3 2 g/L semprot foliar",
+            "intervalHari": 30,
+            "cara": "Semprot daun 2 minggu sekali 150-210 HST"
           }
         ],
-        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "penyiraman": "Kurangi bertahap setelah 240 HST, hentikan 2 minggu sebelum panen tua agar rimpang keras dan tidak busuk simpan",
         "hama": [
-          "Layu bakteri",
-          "Thrips",
-          "Kutu daun"
+          "Busuk rimpang (Fusarium, Pythium)",
+          "Bercak daun Cercospora",
+          "Nematoda Meloidogyne"
         ],
-        "panenHariRange": "90-180 hari"
+        "panenHariRange": "180 hari (jahe muda) - 270-300 hari (jahe tua obat, daun kuning 80%)"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "DFT",
-      "ppmRange": "1000-1400",
-      "phRange": "5.5-6.5",
+      "sistem": "Substrat polybag Dutch bucket / Grow bag - TIDAK NFT. Pakai polybag 40x50 cm isi cocopeat:sekam bakar:kompos (2:1:1) dialiri drip irigasi tetes, naungan 50% wajib",
+      "ppmRange": "1000-1400 (EC 1.4-2.0): vegetatif 1000, pengisian rimpang 1400",
+      "phRange": "5.5-6.5 (optimal 6.0)",
       "nutrisi": [
-        "AB Mix Sayur Daun",
-        "Kalsium nitrat",
-        "Magnesium sulfat"
+        "AB Mix Rimpang/Jahe (tinggi K)",
+        "Magnesium sulfat",
+        "Mono-kalium fosfat (MKP) fase pengisian",
+        "Kalsium nitrat"
       ],
-      "durasiHari": 90
-    }
+      "durasiHari": 270,
+      "catatan": "Hidroponik jahe = hidroponik substrat, bukan air mengalir. Rimpang butuh media padat untuk menekan dan membesar. Drip 2-3x sehari 300 ml/polybag. Panen hidroponik sama 9 bulan, tapi lebih bersih bebas nematoda."
+    },
+    "sumber": [
+      {
+        "judul": "Wikipedia Indonesia - Jahe (Zingiber officinale) - curl 200",
+        "url": "https://id.wikipedia.org/wiki/Jahe",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Kementerian Pertanian RI - Budidaya Jahe Balittro",
+        "url": "https://www.pertanian.go.id",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "FAO FAOSTAT - Ginger crop data (curl HEAD 200)",
+        "url": "https://www.fao.org/faostat/en/#data/QCL",
+        "tanggal": "2026-08-31"
+      }
+    ]
   },
   {
     "name": "Kunyit",
     "slug": "kunyit",
     "category": "SAYUR",
-    "scientificName": "Curcuma longa",
-    "description": "Kunyit rimpang kuning untuk jamu dan pewarna.",
-    "iklimOptimal": "Tropis lembap, 25-32°C",
-    "ketinggianOptimal": "0-1000 mdpl",
-    "imageUrl": null,
+    "scientificName": "Curcuma longa L.",
+    "description": "Rimpang rempah dan obat, pewarna alami kuning dari kurkumin, panen 8-9 bulan, lebih tahan naungan dibanding jahe.",
+    "iklimOptimal": "Tropis 26-30°C, curah hujan 1000-2000 mm, naungan 30-40% masih produktif, kelembaban 70-85%, butuh musim kemarau singkat untuk pematangan",
+    "ketinggianOptimal": "0-1500 mdpl (optimal 200-800 mdpl), adaptif lebih luas dari jahe",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Curcuma_longa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-199.jpg",
+    "imageAtribusi": "Köhler's Medizinal-Pflanzen - Curcuma longa - Public Domain",
     "sowingGuide": {
-      "mediaTanam": "Rimpang bertunas",
-      "durasiHari": 14,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "75-85%",
+      "mediaTanam": "Tanah gembur + kompos + sekam bakar (2:1:1), pH 5.5-6.5, bedengan tinggi 25 cm, atau polybag 35x40 cm",
+      "durasiHari": 21,
+      "suhuOptimal": "26-30°C",
+      "kelembaban": "70-85%",
       "langkah": [
-        "Rendam benih kunyit 2-4 jam dalam air hangat",
-        "Siapkan rimpang bertunas yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+        "Pilih rimpang induk tua 7-9 bulan sehat ukuran 30-50 g ada 2-3 mata tunas, potong dan jemur angin 2 hari, semai di media lembap 14-21 hari hingga tunas 2 cm",
+        "Olah lahan bedengan lebar 100 cm tinggi 25 cm, campur pukan 15 ton/ha + SP-36 150 kg/ha 7 hari sebelum tanam, pasang paranet 30% jika lahan terbuka",
+        "Tanam rimpang kedalaman 5-7 cm jarak 40x40 cm, tunas menghadap atas, timbun tanah gembur dan mulsa jerami 3 cm",
+        "Siram rutin 2 hari sekali, jaga naungan, tunas muncul 14-21 hari, sulam yang tidak tumbuh 30 HST",
+        "Bumbun ringan 60 dan 120 HST tutup rimpang muncul, panen 240-270 HST saat daun menguning dan mengering 70%"
       ],
-      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+      "siapTanamIndikator": "Tunas 2 cm hijau segar, rimpang tidak keriput, ada akar serabut putih"
     },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
         "pupuk": [
           {
-            "nama": "NPK 16-16-16",
-            "takaran": "5 g per liter air",
-            "intervalHari": 7,
-            "cara": "Kocor di sekitar perakaran pagi hari"
+            "nama": "Pupuk kandang + Dolomit",
+            "takaran": "Pukan 15 ton/ha (1,5 kg/m2) + Dolomit 1 ton/ha jika pH <5.5",
+            "intervalHari": 0,
+            "cara": "Dasar sebelum tanam"
           },
           {
-            "nama": "Pupuk kandang kompos",
-            "takaran": "1 kg per m2",
-            "intervalHari": 14,
-            "cara": "Tabur dan aduk ringan ke tanah"
+            "nama": "NPK 15-15-15",
+            "takaran": "250 kg/ha (25 g/m2) bagi 2x: 30 HST dan 90 HST",
+            "intervalHari": 60,
+            "cara": "Tabur sela baris lalu timbun"
           }
         ],
-        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "penyiraman": "Siram 2-3 hari sekali, kunyit lebih tahan kering singkat dibanding jahe, tapi fase awal butuh lembap",
         "hama": [
-          "Ulat grayak",
+          "Ulat daun",
           "Kutu daun",
-          "Thrips",
-          "Layu fusarium"
+          "Penggerek rimpang"
         ],
-        "panenHariRange": "30-60 hari"
+        "panenHariRange": "30-120 hari (pertumbuhan daun dan anakan)"
       },
       {
-        "fase": "GENERATIF",
+        "fase": "PENGISIAN_RIMPANG",
         "pupuk": [
           {
-            "nama": "MKP + KNO3",
-            "takaran": "3 g per liter air",
-            "intervalHari": 7,
-            "cara": "Semprot daun atau kocor sore hari"
+            "nama": "KCl + SP-36",
+            "takaran": "KCl 150 kg/ha (15 g/m2) + SP-36 100 kg/ha (10 g/m2)",
+            "intervalHari": 60,
+            "cara": "Aplikasi 120 HST menjelang pengisian rimpang, kurkumin naik dengan Kalium cukup"
           },
           {
-            "nama": "Pupuk kandang + dolomit",
-            "takaran": "0.5 kg per tanaman",
+            "nama": "POC + KNO3 foliar",
+            "takaran": "POC 5 ml/L + KNO3 2 g/L",
             "intervalHari": 21,
-            "cara": "Tabur melingkar di tajuk"
+            "cara": "Semprot 3 minggu sekali 120-200 HST"
           }
         ],
-        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "penyiraman": "Kurangi setelah 200 HST, hentikan 14 hari sebelum panen untuk kadar kurkumin maksimal dan daya simpan",
         "hama": [
-          "Layu bakteri",
-          "Thrips",
-          "Kutu daun"
+          "Busuk rimpang Pythium/Fusarium",
+          "Bercak daun Colletotrichum",
+          "Nematoda"
         ],
-        "panenHariRange": "90-180 hari"
+        "panenHariRange": "240-270 hari (rimpang induk besar, warna oranye pekat, kurkumin 4-6%)"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "DFT",
-      "ppmRange": "1000-1400",
-      "phRange": "5.5-6.5",
+      "sistem": "Substrat polybag Dutch bucket - SAMA seperti jahe, bukan NFT. Polybag 35x40 cm cocopeat:sekam bakar:pasir (2:1:1) drip tetes, lebih hemat air dari jahe",
+      "ppmRange": "900-1300 (EC 1.3-1.9): vegetatif 900, pengisian 1300 (lebih rendah dari jahe)",
+      "phRange": "6.0-6.5 (optimal 6.2, sedikit lebih tinggi dari jahe)",
       "nutrisi": [
-        "AB Mix Sayur Daun",
+        "AB Mix Rimpang/Kunyit (tinggi K, P sedang)",
+        "Magnesium sulfat",
         "Kalsium nitrat",
-        "Magnesium sulfat"
+        "Tambahan Kalium sulfat akhir"
       ],
-      "durasiHari": 90
-    }
+      "durasiHari": 250,
+      "catatan": "Hidroponik kunyit mirip jahe tapi EC lebih rendah, lebih toleran pH tinggi. Polybag lebih kecil (kunyit rimpang lebih kompak). Panen hidroponik 8 bulan, rimpang lebih bersih dan warna lebih cerah, cocok untuk simplisia."
+    },
+    "sumber": [
+      {
+        "judul": "Wikipedia Indonesia - Kunyit (Curcuma longa) - curl 200",
+        "url": "https://id.wikipedia.org/wiki/Kunyit",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Kementerian Pertanian RI - Portal Pertanian Kunyit",
+        "url": "https://www.pertanian.go.id",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Wikimedia Commons - Curcuma longa Köhler (Public Domain) HEAD 200",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Curcuma_longa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-199.jpg",
+        "tanggal": "2026-08-31"
+      }
+    ]
   },
   {
     "name": "Lengkuas",
