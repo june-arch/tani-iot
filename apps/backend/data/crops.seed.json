@@ -3,77 +3,71 @@
     "name": "Kangkung",
     "slug": "kangkung",
     "category": "SAYUR",
-    "scientificName": "Ipomoea aquatica",
-    "description": "Sayur air yang tumbuh sangat cepat, favorit hidroponik dan tumis Indonesia.",
-    "iklimOptimal": "Tropis lembap, 25-32°C, curah hujan sedang",
+    "scientificName": "Ipomoea aquatica Forssk.",
+    "description": "Sayur air semi-aquatik tumbuh sangat cepat, batang berongga, panen cabut 25-30 hari, favorit hidroponik dan tumis.",
+    "iklimOptimal": "Tropis lembap, 25-32°C, curah hujan 500-1500 mm, sinar penuh",
     "ketinggianOptimal": "0-800 mdpl",
-    "imageUrl": null,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/N_Ipoa_D1600.JPG",
+    "imageAtribusi": "N_Ipoa_D1600.JPG - CC BY-SA 3.0",
     "sowingGuide": {
-      "mediaTanam": "Rockwool + air",
-      "durasiHari": 5,
-      "suhuOptimal": "25-30°C",
+      "mediaTanam": "Tanah gembur + kompos + sekam (2:1:1) atau langsung tabur lahan basah / rockwool",
+      "durasiHari": 0,
+      "suhuOptimal": "25-32°C",
       "kelembaban": "70-85%",
       "langkah": [
-        "Rendam benih kangkung 2-4 jam dalam air hangat",
-        "Siapkan rockwool + air yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+        "Sebar benih langsung di bedengan lembap tanpa rendam lama (cukup 1-2 jam), jarak 10x10 cm",
+        "Tutup tipis tanah 0,5 cm, siram halus hingga lembap",
+        "Jaga kelembapan tanah, tidak perlu naungan berat (cukup paranet 30% jika terik)",
+        "Benih berkecambah 2-3 hari, tumbuh cepat",
+        "Siap panen cabut 25-30 hari tanpa pindah tanam (atau pindah 7 hari jika semai nampan)"
       ],
-      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 5 hari"
+      "siapTanamIndikator": "Tinggi 10-15 cm, 3-4 helai daun sejati, batang kokoh, siap panen cabut 25 hari"
     },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
         "pupuk": [
           {
-            "nama": "NPK 16-16-16",
-            "takaran": "5 g per liter air",
-            "intervalHari": 7,
-            "cara": "Kocor di sekitar perakaran pagi hari"
+            "nama": "Pupuk kandang matang",
+            "takaran": "10 ton/ha atau 0,5 kg/m2",
+            "intervalHari": 0,
+            "cara": "Campur ke tanah 7 hari sebelum tanam"
           },
           {
-            "nama": "Pupuk kandang kompos",
-            "takaran": "1 kg per m2",
+            "nama": "Urea + SP-36",
+            "takaran": "Urea 100 kg/ha (5 g/m2) + SP-36 50 kg/ha",
             "intervalHari": 14,
-            "cara": "Tabur dan aduk ringan ke tanah"
+            "cara": "Tabur di bedengan lalu siram"
           }
         ],
-        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "penyiraman": "Siram 1-2 kali sehari jaga tanah lembap, kangkung butuh air banyak (semi-aquatik), genangan tipis boleh",
         "hama": [
-          "Ulat daun",
+          "Ulat grayak",
           "Kutu daun",
-          "Busuk daun"
+          "Bekicot"
         ],
-        "panenHariRange": "20-35 hari"
+        "panenHariRange": "25-30 hari"
       },
       {
         "fase": "GENERATIF",
         "pupuk": [
           {
-            "nama": "MKP + KNO3",
-            "takaran": "3 g per liter air",
-            "intervalHari": 7,
-            "cara": "Semprot daun atau kocor sore hari"
-          },
-          {
-            "nama": "Pupuk kandang + dolomit",
-            "takaran": "0.5 kg per tanaman",
-            "intervalHari": 21,
-            "cara": "Tabur melingkar di tajuk"
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter kocor",
+            "intervalHari": 10,
+            "cara": "Kocor setelah panen pertama untuk tunas baru"
           }
         ],
-        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "penyiraman": "Siram rutin, panen potong 5 cm dari pangkal untuk regrowth 2-3 kali",
         "hama": [
-          "Ulat grayak",
-          "Busuk lunak",
-          "Kutu kebul"
+          "Kutu kebul",
+          "Busuk batang"
         ],
-        "panenHariRange": "30-45 hari"
+        "panenHariRange": "30-45 hari (regrowth)"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "NFT",
+      "sistem": "NFT / Rakit apung",
       "ppmRange": "800-1200",
       "phRange": "5.5-6.5",
       "nutrisi": [
@@ -82,49 +76,67 @@
         "Magnesium sulfat"
       ],
       "durasiHari": 25
-    }
+    },
+    "sumber": [
+      {
+        "judul": "Balitsa - Budidaya Kangkung Darat",
+        "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/48-informasi-teknologi/600-budidaya-kangkung",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "FAO Ecocrop - Ipomoea aquatica",
+        "url": "https://www.fao.org/land-water/databases-and-software/crop-information/kangkong/en/",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Wikimedia - Ipomoea aquatica image CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:N_Ipoa_D1600.JPG",
+        "tanggal": "2026-08-31"
+      }
+    ]
   },
   {
     "name": "Bayam",
     "slug": "bayam",
     "category": "SAYUR",
     "scientificName": "Amaranthus spp.",
-    "description": "Sayuran daun kaya zat besi, panen cepat 25-35 hari.",
+    "description": "Sayuran daun kaya zat besi, panen cepat 25-35 hari, cocok dataran rendah.",
     "iklimOptimal": "Tropis, 25-30°C, sinar penuh",
     "ketinggianOptimal": "0-1000 mdpl",
-    "imageUrl": null,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Amaranthus_tricolor5.jpg",
+    "imageAtribusi": "Amaranthus_tricolor5.jpg - CC BY-SA 3.0",
     "sowingGuide": {
-      "mediaTanam": "Rockwool / tanah gembur",
+      "mediaTanam": "Tanah gembur + kompos halus / rockwool",
       "durasiHari": 4,
       "suhuOptimal": "24-30°C",
       "kelembaban": "70-80%",
       "langkah": [
-        "Rendam benih bayam 2-4 jam dalam air hangat",
-        "Siapkan rockwool / tanah gembur yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 4 hari"
+        "Sebar benih bayam langsung di bedengan (tidak perlu semai pindah), campur benih dengan pasir halus 1:10 agar sebar rata",
+        "Tutup tipis tanah 0,5 cm, siram halus",
+        "Tutup dengan karung/plastik 2 hari untuk jaga lembap, buka setelah berkecambah",
+        "Jaga naungan ringan 30% 3 hari pertama",
+        "Jarang jika terlalu rapat setelah 7 hari (jarak 10 cm)"
       ],
-      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 4 hari"
+      "siapTanamIndikator": "Langsung tanam, tidak pindah; siap panen 25 hari tinggi 15-20 cm"
     },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
         "pupuk": [
           {
-            "nama": "NPK 16-16-16",
-            "takaran": "5 g per liter air",
-            "intervalHari": 7,
-            "cara": "Kocor di sekitar perakaran pagi hari"
+            "nama": "Pupuk kandang",
+            "takaran": "10 ton/ha",
+            "intervalHari": 0,
+            "cara": "Campur tanah sebelum tanam"
           },
           {
-            "nama": "Pupuk kandang kompos",
-            "takaran": "1 kg per m2",
-            "intervalHari": 14,
-            "cara": "Tabur dan aduk ringan ke tanah"
+            "nama": "Urea",
+            "takaran": "100 kg/ha (4 g/m2)",
+            "intervalHari": 10,
+            "cara": "Tabur lalu siram, 10 HST"
           }
         ],
-        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "penyiraman": "Siram 1-2 kali sehari jaga lembap, bayam butuh air cukup tapi tidak genangan",
         "hama": [
           "Ulat daun",
           "Kutu daun",
@@ -136,123 +148,134 @@
         "fase": "GENERATIF",
         "pupuk": [
           {
-            "nama": "MKP + KNO3",
-            "takaran": "3 g per liter air",
-            "intervalHari": 7,
-            "cara": "Semprot daun atau kocor sore hari"
-          },
-          {
-            "nama": "Pupuk kandang + dolomit",
-            "takaran": "0.5 kg per tanaman",
-            "intervalHari": 21,
-            "cara": "Tabur melingkar di tajuk"
+            "nama": "NPK 16-16-16",
+            "takaran": "5 g per liter",
+            "intervalHari": 14,
+            "cara": "Kocor jika dibiarkan berbunga untuk benih"
           }
         ],
-        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "penyiraman": "Kurangi jika untuk benih, biarkan berbunga",
         "hama": [
-          "Ulat grayak",
-          "Busuk lunak",
-          "Kutu kebul"
+          "Kutu kebul",
+          "Ulat grayak"
         ],
         "panenHariRange": "30-45 hari"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "NFT",
+      "sistem": "NFT / Wick",
       "ppmRange": "800-1200",
       "phRange": "5.5-6.5",
       "nutrisi": [
-        "AB Mix Sayur Daun",
-        "Kalsium nitrat",
-        "Magnesium sulfat"
+        "AB Mix Sayur Daun"
       ],
       "durasiHari": 25
-    }
+    },
+    "sumber": [
+      {
+        "judul": "Balitsa - Budidaya Bayam",
+        "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/600-budidaya-bayam",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "FAO - Amaranth",
+        "url": "https://www.fao.org/land-water/databases-and-software/crop-information/amaranth/en/",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Wikimedia - Amaranthus tricolor CC BY-SA",
+        "url": "https://commons.wikimedia.org/wiki/File:Amaranthus_tricolor5.jpg",
+        "tanggal": "2026-08-31"
+      }
+    ]
   },
   {
     "name": "Sawi Hijau",
     "slug": "sawi-hijau",
     "category": "SAYUR",
-    "scientificName": "Brassica juncea",
-    "description": "Sawi hijau untuk sup dan tumis, toleran dataran rendah.",
-    "iklimOptimal": "Sejuk-sedang, 22-30°C",
-    "ketinggianOptimal": "0-1200 mdpl",
-    "imageUrl": null,
+    "scientificName": "Brassica rapa subsp. parachinensis",
+    "description": "Sawi hijau/pakcoy, daun lebar hijau, panen 25-35 hari.",
+    "iklimOptimal": "Sejuk-sedang, 18-27°C",
+    "ketinggianOptimal": "0-1200 mdpl (optimal 500-1000)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Chingensai.jpg",
     "sowingGuide": {
-      "mediaTanam": "Rockwool / cocopeat",
-      "durasiHari": 7,
-      "suhuOptimal": "22-28°C",
-      "kelembaban": "70-85%",
+      "mediaTanam": "Rockwool 2x2 cm atau tanah + kompos",
+      "durasiHari": 10,
+      "suhuOptimal": "18-25°C",
+      "kelembaban": "70-80%",
       "langkah": [
-        "Rendam benih sawi hijau 2-4 jam dalam air hangat",
-        "Siapkan rockwool / cocopeat yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 7 hari"
+        "Tabur benih di rockwool lembap 1 lubang 1 benih, tutup tipis",
+        "Simpan di tempat teduh lembap 2 hari hingga berkecambah",
+        "Pindah ke persemaian terang naungan 30% setelah berkecambah",
+        "Jaga kelembapan semprot kabut 2x sehari",
+        "Pindah tanam 10-12 hari saat 3-4 daun sejati"
       ],
-      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 7 hari"
+      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-7 cm, akar putih tidak melingkar, 10-12 hari"
     },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
         "pupuk": [
           {
-            "nama": "NPK 16-16-16",
-            "takaran": "5 g per liter air",
-            "intervalHari": 7,
-            "cara": "Kocor di sekitar perakaran pagi hari"
+            "nama": "Pupuk kandang",
+            "takaran": "15 ton/ha",
+            "intervalHari": 0,
+            "cara": "Dasar 7 hari sebelum tanam"
           },
           {
-            "nama": "Pupuk kandang kompos",
-            "takaran": "1 kg per m2",
-            "intervalHari": 14,
-            "cara": "Tabur dan aduk ringan ke tanah"
+            "nama": "NPK 16-16-16",
+            "takaran": "400 kg/ha (10 g per tanaman)",
+            "intervalHari": 10,
+            "cara": "Tabur melingkar lalu siram, 10 & 20 HST"
           }
         ],
-        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "penyiraman": "Siram 1-2 kali sehari, jaga lembap, mulsa jerami",
         "hama": [
-          "Ulat daun",
+          "Ulat daun Plutella",
           "Kutu daun",
-          "Busuk daun"
+          "Busuk lunak"
         ],
-        "panenHariRange": "20-35 hari"
+        "panenHariRange": "25-35 hari"
       },
       {
         "fase": "GENERATIF",
         "pupuk": [
           {
-            "nama": "MKP + KNO3",
-            "takaran": "3 g per liter air",
+            "nama": "KNO3 Putih",
+            "takaran": "3 g per liter foliar",
             "intervalHari": 7,
-            "cara": "Semprot daun atau kocor sore hari"
-          },
-          {
-            "nama": "Pupuk kandang + dolomit",
-            "takaran": "0.5 kg per tanaman",
-            "intervalHari": 21,
-            "cara": "Tabur melingkar di tajuk"
+            "cara": "Semprot daun jika dibiarkan berbunga"
           }
         ],
-        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "penyiraman": "Untuk benih biarkan berbunga, kurangi air",
         "hama": [
-          "Ulat grayak",
-          "Busuk lunak",
           "Kutu kebul"
         ],
-        "panenHariRange": "30-45 hari"
+        "panenHariRange": "35-45 hari"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "Wick",
-      "ppmRange": "800-1200",
+      "sistem": "NFT / DFT",
+      "ppmRange": "800-1400",
       "phRange": "5.5-6.5",
       "nutrisi": [
-        "AB Mix Sayur Daun",
-        "Kalsium nitrat",
-        "Magnesium sulfat"
+        "AB Mix Pakcoy",
+        "Kalsium nitrat"
       ],
-      "durasiHari": 25
-    }
+      "durasiHari": 30
+    },
+    "sumber": [
+      {
+        "judul": "Balitsa - Budidaya Sawi/Pakcoy",
+        "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/600-budidaya-sawi",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "FAO - Pak Choi",
+        "url": "https://www.fao.org/land-water/databases-and-software/crop-information/pak-choi/en/",
+        "tanggal": "2026-08-31"
+      }
+    ]
   },
   {
     "name": "Pakcoy",
@@ -961,86 +984,104 @@
     "slug": "cabai-rawit",
     "category": "SAYUR",
     "scientificName": "Capsicum frutescens",
-    "description": "Cabai rawit pedas, produktif dan tahan virus.",
-    "iklimOptimal": "Tropis panas, 26-32°C",
-    "ketinggianOptimal": "0-1000 mdpl",
-    "imageUrl": null,
+    "description": "Cabai rawit pedas, produktivitas tinggi, panen bertahap 70-90 HST.",
+    "iklimOptimal": "Tropis, 24-30°C, sinar penuh",
+    "ketinggianOptimal": "0-1200 mdpl",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Capsicum_frutescens_-_Koehler.jpg",
     "sowingGuide": {
-      "mediaTanam": "Rockwool / polybag semai",
-      "durasiHari": 10,
-      "suhuOptimal": "26-32°C",
+      "mediaTanam": "Polybag semai + tanah:kompos:sekam 2:1:1",
+      "durasiHari": 21,
+      "suhuOptimal": "24-30°C",
       "kelembaban": "70-80%",
       "langkah": [
-        "Rendam benih cabai rawit 2-4 jam dalam air hangat",
-        "Siapkan rockwool / polybag semai yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 10 hari"
+        "Rendam benih 4-6 jam air hangat, tiriskan, peram dalam kain lembap 24 jam",
+        "Tabur di polybag semai 1 benih per lubang 1 cm, tutup tipis",
+        "Simpan di persemaian naungan 50%, jaga lembap semprot 2x sehari",
+        "Beri pupuk semai NPK 2 g/L 10 HST",
+        "Pindah tanam 21 hari saat 4-5 daun sejati, tinggi 10-15 cm"
       ],
-      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 10 hari"
+      "siapTanamIndikator": "4-5 daun sejati, tinggi 10-15 cm, batang kokoh, akar penuh polybag, 21 hari"
     },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
         "pupuk": [
           {
-            "nama": "NPK 16-16-16",
-            "takaran": "5 g per liter air",
-            "intervalHari": 7,
-            "cara": "Kocor di sekitar perakaran pagi hari"
+            "nama": "Pupuk kandang",
+            "takaran": "20 ton/ha (1 kg per lubang)",
+            "intervalHari": 0,
+            "cara": "Dasar lubang 7 hari sebelum tanam"
           },
           {
-            "nama": "Pupuk kandang kompos",
-            "takaran": "1 kg per m2",
+            "nama": "NPK 16-16-16 + SP-36",
+            "takaran": "NPK 300 kg/ha + SP-36 150 kg/ha (8 g per tanaman)",
             "intervalHari": 14,
-            "cara": "Tabur dan aduk ringan ke tanah"
+            "cara": "Tabur melingkar 10 cm dari batang, tutup tanah"
           }
         ],
-        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "penyiraman": "Siram 2-3 hari sekali, jaga drainase (tidak genangan), mulsa plastik hitam perak",
         "hama": [
-          "Ulat grayak",
-          "Kutu daun",
           "Thrips",
+          "Kutu daun Myzus",
+          "Tungau kuning",
           "Layu fusarium"
         ],
-        "panenHariRange": "30-45 hari"
+        "panenHariRange": "30-60 hari"
       },
       {
         "fase": "GENERATIF",
         "pupuk": [
           {
-            "nama": "MKP + KNO3",
-            "takaran": "3 g per liter air",
-            "intervalHari": 7,
-            "cara": "Semprot daun atau kocor sore hari"
+            "nama": "KNO3 Merah + MKP",
+            "takaran": "KNO3 5 g/L + MKP 3 g/L",
+            "intervalHari": 10,
+            "cara": "Kocor 200 ml per tanaman, fase berbunga-buah"
           },
           {
-            "nama": "Pupuk kandang + dolomit",
-            "takaran": "0.5 kg per tanaman",
-            "intervalHari": 21,
-            "cara": "Tabur melingkar di tajuk"
+            "nama": "KCl + Boron",
+            "takaran": "KCl 150 kg/ha + Boron 2 g/L foliar",
+            "intervalHari": 14,
+            "cara": "Tabur KCl, semprot Boron cegah rontok bunga"
           }
         ],
-        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "penyiraman": "Siram rutin, kurangi saat berbunga lebat, jaga kelembapan 60-70%",
         "hama": [
-          "Layu bakteri",
+          "Antraknosa Colletotrichum",
+          "Lalat buah",
           "Thrips",
-          "Kutu daun"
+          "Virus kuning"
         ],
-        "panenHariRange": "60-90 hari"
+        "panenHariRange": "70-90 hari (panen bertahap tiap 7 hari)"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "DFT",
-      "ppmRange": "1200-1800",
+      "sistem": "Dutch Bucket / DFT",
+      "ppmRange": "1400-2000",
       "phRange": "5.8-6.5",
       "nutrisi": [
-        "AB Mix Sayur Daun",
+        "AB Mix Cabai",
         "Kalsium nitrat",
-        "Magnesium sulfat"
+        "MKP"
       ],
-      "durasiHari": 75
-    }
+      "durasiHari": 85
+    },
+    "sumber": [
+      {
+        "judul": "Balitsa - Budidaya Cabai Rawit",
+        "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/600-budidaya-cabai",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "FAO - Chili pepper",
+        "url": "https://www.fao.org/land-water/databases-and-software/crop-information/chilli/en/",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Kementan - Juknis Cabai",
+        "url": "https://www.pertanian.go.id/assets/uploads/2020/04/Juknis-Cabai.pdf",
+        "tanggal": "2026-08-31"
+      }
+    ]
   },
   {
     "name": "Cabai Keriting",
