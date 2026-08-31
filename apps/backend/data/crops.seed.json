@@ -1741,6 +1741,11 @@
         "judul": "FAO - Luffa",
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/luffa/en/",
         "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Balitsa - Oyong/Gambas",
+        "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/600-oyong",
+        "tanggal": "2026-08-31"
       }
     ]
   },
@@ -1814,6 +1819,11 @@
       {
         "judul": "FAO - Chayote",
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/chayote/en/",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Balitsa - Labu Siam",
+        "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/600-labu-siam",
         "tanggal": "2026-08-31"
       }
     ]
@@ -1896,6 +1906,11 @@
         "judul": "FAO - Yardlong bean",
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/yardlong-bean/en/",
         "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Balitsa - Kacang Panjang",
+        "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/600-kacang-panjang",
+        "tanggal": "2026-08-31"
       }
     ]
   },
@@ -1970,6 +1985,11 @@
       {
         "judul": "FAO - French bean",
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/french-bean/en/",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Balitsa - Buncis",
+        "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/600-buncis",
         "tanggal": "2026-08-31"
       }
     ]
@@ -2173,6 +2193,11 @@
       {
         "judul": "FAO - Garlic",
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/garlic/en/",
+        "tanggal": "2026-08-31"
+      },
+      {
+        "judul": "Balitsa - Bawang Putih",
+        "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/600-bawang-putih",
         "tanggal": "2026-08-31"
       }
     ]
