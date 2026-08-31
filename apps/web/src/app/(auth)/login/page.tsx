@@ -119,12 +119,6 @@ export default function LoginPage() {
             </Link>
           </div>
         </Card>
-
-        <p className="mt-4 text-center text-xs leading-4 text-muted-fg">
-          Pendaftaran akun baru hanya via Admin. <br />
-          Hubungi admin kebun untuk dibuatkan akun.
-        </p>
-        <p className="mt-2 text-center text-xs text-muted-fg">Kredensial: admin@tani-iot.local / Admin123! (SUPERADMIN)</p>
       </motion.div>
     </div>
   );
