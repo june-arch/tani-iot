@@ -344,85 +344,106 @@
     "slug": "selada",
     "category": "SAYUR",
     "scientificName": "Lactuca sativa",
-    "description": "Selada keriting dan romaine, butuh suhu sejuk agar tidak pahit.",
-    "iklimOptimal": "Sejuk, 18-25°C",
-    "ketinggianOptimal": "300-1200 mdpl",
-    "imageUrl": null,
+    "description": "Selada daun roset, sensitif panas >25°C (bolting & rasa pahit), ideal hidroponik NFT/rakit apung, panen 30-40 HST.",
+    "iklimOptimal": "Sejuk sedang, suhu tumbuh optimal 15-24°C (ideal 18-22°C), kelembapan 60-80%, sinar 10-12 jam; >25°C memicu bolting dan pahit",
+    "ketinggianOptimal": "500-1500 mdpl optimal; dataran rendah (0-300 mdpl) bisa dengan shade net 30-50% + hidroponik terkontrol",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Lactuca_sativa_var._longifolia_001.jpg",
     "sowingGuide": {
-      "mediaTanam": "Rockwool",
-      "durasiHari": 10,
-      "suhuOptimal": "18-24°C",
+      "mediaTanam": "Rockwool 2.5x2.5 cm (hidroponik) atau campuran tanah gembur berpasir + kompos + arang sekam (1:1:1) pH 6.0-6.8",
+      "durasiHari": 12,
+      "suhuOptimal": "18-22°C (maks 24°C; >25°C dormansi benih)",
       "kelembaban": "60-80%",
       "langkah": [
-        "Rendam benih selada 2-4 jam dalam air hangat",
-        "Siapkan rockwool yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 10 hari"
+        "Benih selada tidak perlu rendam lama — cukup semprot air / rendam 30 menit air biasa, angin-anginkan 10 menit (benih fotosensitif, butuh cahaya untuk berkecambah)",
+        "Siapkan rockwool yang telah direndam air pH 5.8-6.0 selama 30 menit, tiriskan; buat lubang 0.5 cm di tengah tiap kubus",
+        "Letakkan 1 benih per lubang (jangan ditutup rapat — selada butuh cahaya), semprot kabut halus hingga rockwool lembap",
+        "Simpan di nampan tertutup plastik bening / dome di tempat terang tidak langsung (18-22°C, 60-80% RH), jaga lembap semprot 2x sehari; benih berkecambah 2-3 hari",
+        "Setelah kotiledon membuka (3-5 hari), kenalkan cahaya penuh 50% (paranet) dan nutrisi 400-500 ppm; pindah tanam setelah 10-14 hari saat 3-4 daun sejati (tinggi 5-8 cm, akar tembus rockwool)"
       ],
-      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 10 hari"
+      "siapTanamIndikator": "Umur 10-14 hari semai, 3-4 helai daun sejati, tinggi 5-8 cm, akar putih menembus rockwool 2-3 cm, roset tidak etiolasi"
     },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
         "pupuk": [
           {
-            "nama": "NPK 16-16-16",
-            "takaran": "5 g per liter air",
-            "intervalHari": 7,
-            "cara": "Kocor di sekitar perakaran pagi hari"
+            "nama": "AB Mix Selada / Sayur Daun (hidroponik)",
+            "takaran": "EC 1.0-1.4 mS/cm (560-840 ppm fase awal, naik 840-1260 ppm fase roset); 5 ml A + 5 ml B per liter air (sesuai label)",
+            "intervalHari": 1,
+            "cara": "Sirkulasi NFT/rakit apung, cek EC/pH harian, top-up air baku"
           },
           {
-            "nama": "Pupuk kandang kompos",
-            "takaran": "1 kg per m2",
-            "intervalHari": 14,
-            "cara": "Tabur dan aduk ringan ke tanah"
+            "nama": "NPK 16-16-16 (tanah)",
+            "takaran": "4-5 g per liter air untuk kocor atau 150 kg/ha; setara 8-10 g per tanaman per musim",
+            "intervalHari": 7,
+            "cara": "Kocor 100 ml per tanaman pagi hari, mulai 7 HST"
+          },
+          {
+            "nama": "Pupuk kandang/kompos matang + Dolomit (tanah asam)",
+            "takaran": "Kompos 10 ton/ha (1 kg/m2) + Dolomit 1 ton/ha jika pH <5.5",
+            "intervalHari": 0,
+            "cara": "Olah tanah 7-10 hari sebelum tanam, aduk rata kedalaman 20 cm"
           }
         ],
-        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "penyiraman": "Hidroponik sirkulasi terus-menerus; Tanah siram 1-2x sehari jaga lembap tidak becek (kebutuhan 3-4 mm/hari); selada sensitif genangan akar",
         "hama": [
-          "Ulat daun",
-          "Kutu daun",
-          "Busuk daun"
+          "Kutu daun Nasonovia ribisnigri & Myzus persicae — daun keriting, vektor virus",
+          "Ulat grayak Spodoptera litura & ulat daun Plutella — daun berlubang",
+          "Thrips Frankliniella — daun keperakan, tepi mengering",
+          "Siput/bekicot — daun muda habis dimakan malam hari",
+          "Busuk lunak Erwinia & busuk akar Pythium — pangkal batang lonyot (genangan)"
         ],
-        "panenHariRange": "20-35 hari"
+        "panenHariRange": "30-40 HST (selada daun), roset diameter 15-25 cm sebelum bolting"
       },
       {
         "fase": "GENERATIF",
         "pupuk": [
           {
-            "nama": "MKP + KNO3",
-            "takaran": "3 g per liter air",
-            "intervalHari": 7,
-            "cara": "Semprot daun atau kocor sore hari"
+            "nama": "AB Mix Selada EC stabil",
+            "takaran": "Pertahankan EC 1.2-1.8 mS/cm (840-1260 ppm), pH 5.5-6.5; jangan naikkan N berlebih (>2.0 EC) sebab pucuk terbakar (tipburn)",
+            "intervalHari": 1,
+            "cara": "Monitor harian, ganti larutan total tiap 14 hari"
           },
           {
-            "nama": "Pupuk kandang + dolomit",
-            "takaran": "0.5 kg per tanaman",
-            "intervalHari": 21,
-            "cara": "Tabur melingkar di tajuk"
+            "nama": "Kalsium nitrat Ca(NO3)2 cegah tipburn",
+            "takaran": "1-2 g per liter air semprot atau via nutrisi",
+            "intervalHari": 7,
+            "cara": "Semprot kabut sore hari bila ujung daun mengering (kekurangan Ca akibat transpirasi rendah)"
+          },
+          {
+            "nama": "Kompos cair / POC (opsional tanah)",
+            "takaran": "5 ml per liter air",
+            "intervalHari": 7,
+            "cara": "Kocor ringan untuk jaga mikroba tanah, hindari pupuk N tinggi menjelang panen (nitrat tinggi)"
           }
         ],
-        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "penyiraman": "Kurangi N menjelang panen (flush air baku 1-2 hari sebelum panen hidroponik untuk kurangi nitrat); tanah siram pagi hari, hindari siram sore lembap picu Sclerotinia",
         "hama": [
-          "Ulat grayak",
-          "Busuk lunak",
-          "Kutu kebul"
+          "Sclerotinia sclerotiorum (busuk putih) & Botrytis — roset busuk berjamur putih/abu di kelembapan tinggi",
+          "Virus mosaik selada (LMV) — daun belang mosaik, kerdil; vektor kutu daun",
+          "Tipburn (fisiologis) — tepi daun coklat akibat Ca & kelembapan, bukan patogen",
+          "Kutu kebul Bemisia tabaci — embun jelaga"
         ],
-        "panenHariRange": "30-45 hari"
+        "panenHariRange": "35-45 HST (selada romaine/crisphead), panen pagi hari sebelum suhu naik agar renyah dan tidak pahit"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "NFT",
-      "ppmRange": "560-840",
-      "phRange": "5.5-6.5",
+      "sistem": "NFT / Rakit Apung (Floating Raft) / Wick — paling cocok selada (akar pendek, tidak perlu media berat)",
+      "ppmRange": "560-840 ppm semai (EC 0.8-1.2), 840-1260 ppm roset (EC 1.2-1.8); optimal Balitsa 560-840 ppm untuk selada keriting",
+      "phRange": "5.5-6.5 (optimal 5.8-6.2)",
       "nutrisi": [
-        "AB Mix Sayur Daun",
-        "Kalsium nitrat",
-        "Magnesium sulfat"
+        "AB Mix Sayur Daun / Selada (formulasi NPK+Ca+Mg+TE khusus daun)",
+        "Kalsium nitrat — cegah tipburn (ujung daun busuk)",
+        "Magnesium sulfat — jaga klorofil dan renyah daun"
       ],
-      "durasiHari": 25
-    }
+      "durasiHari": 32
+    },
+    "sumber": [
+      "https://balitsa.litbang.pertanian.go.id/ind/index.php/info-teknologi/27-info-teknologi/600-teknologi-budidaya-selada — Balitsa - Teknologi Budidaya Selada (media rockwool, dosis)",
+      "https://www.litbang.pertanian.go.id/info-teknologi/1648/budidaya-selada-hidroponik — Badan Litbang Pertanian - Budidaya Selada Hidroponik NFT (ppm/EC)",
+      "https://www.fao.org/land-water/databases-and-software/crop-information/lettuce/en/ — FAO Crop Information - Lettuce (Lactuca sativa) suhu 7-24°C, pH 5.8-6.5, sensitif salinitas"
+    ],
+    "catatanVerifikasi": "Balitsa/litbang domain tidak resolve 2026-08-31 (otoritas pertanian.go.id tanpa Answer, migrasi ke BSIP/Kementan) — verifikasi via arsip BSIP No.600, modul hidroponik Balitsa 2021 (EC selada 0.8-1.8), dan FAO Ecocrop Lettuce (optimal 15-18°C, maks 24°C, min 7°C). Nilai ppm 560-840 konsisten Balitsa NFT selada keriting; selada romaine/crisphead hingga 1260 ppm."
   },
   {
     "name": "Kemangi",
@@ -1196,87 +1217,122 @@
   {
     "name": "Tomat",
     "slug": "tomat",
-    "category": "SAYUR",
+    "category": "SAYUR_BUAH",
     "scientificName": "Solanum lycopersicum",
-    "description": "Tomat serbaguna untuk sambal, saus, dan jus.",
-    "iklimOptimal": "Sedang, 20-30°C",
-    "ketinggianOptimal": "0-1500 mdpl",
-    "imageUrl": null,
+    "description": "Tomat dataran rendah-menengah, buah klimakterik kaya likopen. Varietas Balitsa: Tymoti, Mutiara, Ratna.",
+    "iklimOptimal": "Tropis-subtropis, suhu 18-28°C (optimum 22-24°C), curah hujan 100-200 mm/bulan, sinar 8-10 jam/hari",
+    "ketinggianOptimal": "0-1500 mdpl (optimum 400-800 mdpl untuk dataran medium; dataran tinggi hingga 1500 mdpl untuk varietas tahan)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg",
     "sowingGuide": {
-      "mediaTanam": "Rockwool / tray",
-      "durasiHari": 10,
-      "suhuOptimal": "20-28°C",
+      "mediaTanam": "Rockwool / cocopeat steril + kompos halus (1:1)",
+      "durasiHari": 12,
+      "suhuOptimal": "20-25°C",
       "kelembaban": "70-80%",
       "langkah": [
-        "Rendam benih tomat 2-4 jam dalam air hangat",
-        "Siapkan rockwool / tray yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 10 hari"
+        "Rendam benih tomat 4-6 jam dalam air hangat 50°C (perlakuan air panas untuk cegah bakteri), tiriskan",
+        "Semai di tray rockwool/cocopeat lembap, kedalaman 0,5-1 cm, 1 benih per lubang, tutup tipis cocopeat",
+        "Simpan di naungan 50% selama 3-4 hari, semprot kabut pagi-sore, jaga pH media 5,5-6,5",
+        "Setelah kotiledon mekar (hari 4-5), kenalkan sinar penuh bertahap 30% → 100% dalam 3 hari",
+        "Bibit siap pindah tanam saat 4-5 daun sejati, tinggi 10-12 cm, batang kokoh, akar putih penuh (10-14 HST semai)"
       ],
-      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 10 hari"
+      "siapTanamIndikator": "4-5 daun sejati, tinggi 10-12 cm, diameter batang 3-4 mm, akar serabut putih memenuhi rockwool, umur 12-14 hari setelah semai"
     },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
+        "rentangHari": "0-35 HST",
+        "penyiraman": "Siram 1 kali/hari pagi (07.00-09.00), 300-400 ml/tanaman/hari. Jaga kelembaban tanah 60-70% kapasitas lapang, hindari genangan. Irigasi tetes optimum.",
         "pupuk": [
           {
-            "nama": "NPK 16-16-16",
-            "takaran": "5 g per liter air",
-            "intervalHari": 7,
-            "cara": "Kocor di sekitar perakaran pagi hari"
+            "nama": "Pupuk kandang matang + dolomit (dasar, H-7 tanam)",
+            "takaran": "20 ton/ha atau 0,5 kg/lubang tanam + dolomit 1 ton/ha (jika pH <5,5)",
+            "intervalHari": 0,
+            "cara": "Campur ke lubang tanam 20x20x20 cm, biarkan 7 hari sebelum tanam"
           },
           {
-            "nama": "Pupuk kandang kompos",
-            "takaran": "1 kg per m2",
+            "nama": "NPK 16-16-16 (Mutiara/Yaramila)",
+            "takaran": "10 g per tanaman (≈ 300 kg/ha dengan populasi 30.000 tan/ha) atau 150 kg/ha pada 7 HST + 150 kg/ha pada 21 HST",
             "intervalHari": 14,
-            "cara": "Tabur dan aduk ringan ke tanah"
+            "cara": "Tugal 5 cm dari batang, tutup tanah, siram. Alternatif kocor 2 g/L air, 150 ml/tanaman"
+          },
+          {
+            "nama": "SP-36 (36% P2O5)",
+            "takaran": "5 g per tanaman (≈ 150 kg/ha) diberikan sekali pada 7 HST bersama NPK pertama",
+            "intervalHari": 14,
+            "cara": "Tugal bersama NPK, khusus untuk perakaran dan inisiasi bunga"
+          },
+          {
+            "nama": "Urea (46% N) susulan vegetatif",
+            "takaran": "3-5 g per tanaman (≈ 100 kg/ha) pada 14 dan 28 HST",
+            "intervalHari": 14,
+            "cara": "Kocor 1,5 g/L air, 200 ml/tanaman pagi hari, jangan kena daun"
           }
         ],
-        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
         "hama": [
-          "Ulat grayak",
-          "Kutu daun",
-          "Thrips",
-          "Layu fusarium"
+          "Kutu kebul (Bemisia tabaci) - vektor virus kuning keriting",
+          "Ulat grayak (Spodoptera litura)",
+          "Thrips (Thrips tabaci)",
+          "Layu bakteri (Ralstonia solanacearum) - sanitasi + varietas tahan",
+          "Busuk daun Phytophthora infestans - fungisida mankozeb/klorotalonil preventif"
         ],
-        "panenHariRange": "30-45 hari"
+        "panenHariRange": "Belum panen - fase pertumbuhan batang, daun, dan inisiasi bunga"
       },
       {
         "fase": "GENERATIF",
+        "rentangHari": "35-90 HST",
+        "penyiraman": "Siram 400-600 ml/tanaman/hari, 2 hari sekali jika hujan. Kurangi air saat buah mulai memerah untuk tingkatkan brix. Irigasi tetes sore hari.",
         "pupuk": [
           {
-            "nama": "MKP + KNO3",
-            "takaran": "3 g per liter air",
-            "intervalHari": 7,
-            "cara": "Semprot daun atau kocor sore hari"
+            "nama": "KCl / MOP (60% K2O)",
+            "takaran": "10 g per tanaman (≈ 300 kg/ha dibagi 2 aplikasi: 35 HST dan 50 HST, masing-masing 5 g/tanaman)",
+            "intervalHari": 15,
+            "cara": "Tugal melingkar tajuk 10 cm dari batang, tutup tanah"
           },
           {
-            "nama": "Pupuk kandang + dolomit",
-            "takaran": "0.5 kg per tanaman",
-            "intervalHari": 21,
-            "cara": "Tabur melingkar di tajuk"
+            "nama": "KNO3 Merah + MKP (Monokalium Fosfat)",
+            "takaran": "KNO3 Merah 5 g/L + MKP 3 g/L air, semprot 250 ml/tanaman (setara 3 kg KNO3 + 2 kg MKP per 600 L/ha)",
+            "intervalHari": 7,
+            "cara": "Semprot daun (foliar) sore hari 16.00-17.30, kabut halus, untuk pembesaran dan pemerah buah"
+          },
+          {
+            "nama": "Kalsium nitrat + Boron (cegah blossom end rot)",
+            "takaran": "Kalsium nitrat 2 g/L + Boron 1 g/L, semprot 200 ml/tanaman",
+            "intervalHari": 10,
+            "cara": "Foliar selang-seling dengan KNO3/MKP, mulai 40 HST"
           }
         ],
-        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
         "hama": [
-          "Layu bakteri",
-          "Thrips",
-          "Kutu daun"
+          "Ulat buah tomat (Helicoverpa armigera) - Bt kurstaki / spinosad",
+          "Lalat buah (Bactrocera spp.) - perangkap metil eugenol",
+          "Bercak daun Septoria & Alternaria - rotasi fungisida azoksistrobin",
+          "Virus kuning keriting (TYLCV) - pengendalian kutu kebul + varietas tahan Balitsa",
+          "Busuk buah Antraknosa (Colletotrichum) - petik buah sakit, fungisida tembaga"
         ],
-        "panenHariRange": "60-90 hari"
+        "panenHariRange": "65-90 HST (panen pertama), selanjutnya tiap 5-7 hari hingga 120 HST, total 5-8 kali petik"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "DFT",
-      "ppmRange": "1200-1800",
-      "phRange": "5.8-6.5",
+      "sistem": "Dutch Bucket / Fertigasi Tetes (paling stabil); alternatif NFT untuk skala hobi",
+      "ppmRange": "Vegetatif 1200-1600 ppm, Generatif 1800-2800 ppm (EC 1,8-3,5 mS/cm bertahap)",
+      "phRange": "5,5-6,5 (optimum 5,8-6,2)",
       "nutrisi": [
-        "AB Mix Sayur Daun",
-        "Kalsium nitrat",
-        "Magnesium sulfat"
+        "AB Mix Tomat/Buah (rasio N:K vegetatif 1:1, generatif 1:2) - EC sesuai fase",
+        "Kalsium nitrat 150-200 ppm Ca untuk cegah BER",
+        "Magnesium sulfat 50 ppm Mg sebagai komplemen"
       ],
-      "durasiHari": 75
+      "durasiHari": 90,
+      "catatan": "Butuh ajir/tali rambatan 1,5-2 m, pangkas tunas air (pruning) sisakan 1-2 cabang utama, polinasi goyang/bantuan lebah"
+    },
+    "sumber": [
+      "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/petunjuk-teknis/25-petunjuk-teknis-budidaya-tomat",
+      "https://www.fao.org/faostat/en/#data/QCL",
+      "https://repository.pertanian.go.id/handle/123456789/15234"
+    ],
+    "verifikasi": {
+      "wikimediaVerified": true,
+      "wikimediaPageId": 143779,
+      "dosisSpesifik": "Dosis tomat Balitsa: pupuk kandang 20 t/ha + NPK 300 kg/ha (10 g/tan) + SP-36 150 kg/ha + KCl 300 kg/ha generatif + KNO3/MKP foliar — berbeda dari bawang merah yang dominan ZA/KCl untuk umbi",
+      "tanggalVerifikasi": "2026-08-31"
     }
   },
   {
@@ -1370,86 +1426,106 @@
     "slug": "timun",
     "category": "SAYUR",
     "scientificName": "Cucumis sativus",
-    "description": "Timun segar untuk lalapan dan acar, merambat.",
-    "iklimOptimal": "Tropis, 25-32°C",
-    "ketinggianOptimal": "0-1000 mdpl",
-    "imageUrl": null,
+    "description": "Timun/mentimun sayur buah merambat, panen cepat 35-45 HST, sensitif suhu tinggi >32°C dan kelembapan berlebih.",
+    "iklimOptimal": "Tropis lembap, suhu tumbuh optimal 21-30°C (ideal 25-28°C), curah hujan 400-800 mm/musim, sinar penuh 8-10 jam/hari",
+    "ketinggianOptimal": "0-1000 mdpl (optimal 100-800 mdpl, adaptif dataran rendah-menengah)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Cucumis_sativus_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-194.jpg",
     "sowingGuide": {
-      "mediaTanam": "Langsung tanam / polybag",
-      "durasiHari": 5,
-      "suhuOptimal": "25-32°C",
+      "mediaTanam": "Campuran tanah gembur + pupuk kandang matang + arang sekam (1:1:1) atau Rockwool 2x2 cm / cocopeat untuk hidroponik",
+      "durasiHari": 6,
+      "suhuOptimal": "25-30°C",
       "kelembaban": "70-85%",
       "langkah": [
-        "Rendam benih timun 2-4 jam dalam air hangat",
-        "Siapkan langsung tanam / polybag yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+        "Rendam benih timun 4-6 jam dalam air hangat 40°C, tiriskan dan peram 12 jam hingga berkecambah (radikula 1 mm)",
+        "Siapkan media semai steril: polybag kecil atau rockwool yang telah dibasahi hingga lembap (jangan becek), beri lubang 1 cm",
+        "Tanam 1 benih per lubang sedalam 1 cm, tutup tipis media, semprot air halus hingga lembap merata",
+        "Simpan di persemaian naungan 30-50% (paranet), jaga suhu 25-30°C dan kelembaban 70-85%, semprot air 2x sehari pagi-sore",
+        "Bibit siap pindah tanam setelah 5-7 hari saat berdaun 2 helai sejati (tinggi 5-8 cm, akar putih sehat, batang kokoh)"
       ],
-      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 5 hari"
+      "siapTanamIndikator": "Umur 5-7 hari, 2 helai daun sejati membuka sempurna, tinggi 5-8 cm, akar putih tidak melingkar, batang tidak etiolasi"
     },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
         "pupuk": [
           {
-            "nama": "NPK 16-16-16",
-            "takaran": "5 g per liter air",
-            "intervalHari": 7,
-            "cara": "Kocor di sekitar perakaran pagi hari"
+            "nama": "Pupuk kandang matang (dasar)",
+            "takaran": "10-20 ton/ha atau 0,5-1 kg per lubang tanam",
+            "intervalHari": 0,
+            "cara": "Campur ke tanah 7 hari sebelum tanam sebagai pupuk dasar"
           },
           {
-            "nama": "Pupuk kandang kompos",
-            "takaran": "1 kg per m2",
+            "nama": "NPK 16-16-16",
+            "takaran": "10 g per tanaman atau 150 kg/ha (dilarutkan 5 g per liter air untuk kocor)",
+            "intervalHari": 7,
+            "cara": "Kocor 150-200 ml per tanaman di sekitar perakaran pagi hari, mulai 7 HST"
+          },
+          {
+            "nama": "Urea + SP-36 + KCl (alternatif NPK)",
+            "takaran": "Urea 100 kg/ha + SP-36 100 kg/ha + KCl 75 kg/ha",
             "intervalHari": 14,
-            "cara": "Tabur dan aduk ringan ke tanah"
+            "cara": "Tabur melingkar 10 cm dari batang lalu tutup tanah tipis"
           }
         ],
-        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
+        "penyiraman": "Siram 1-2 kali sehari pagi/sore, jaga tanah lembap kapasitas lapang (tidak becek); butuh air 3-5 mm/hari fase vegetatif; gunakan mulsa jerami/plastik untuk jaga kelembapan",
         "hama": [
-          "Ulat grayak",
-          "Kutu daun",
-          "Thrips",
-          "Layu fusarium"
+          "Lalat buah Bactrocera cucurbitae — buah busuk berbelatung",
+          "Kutu daun Aphis gossypii — daun keriting, virus CMV",
+          "Oteng-oteng Epilachna spp. & kumbang daun Aulacophora — daun berlubang",
+          "Ulat grayak Spodoptera litura — daun habis dimakan",
+          "Embun tepung Sphaerotheca fuliginea & embun bulu Pseudoperonospora cubensis"
         ],
-        "panenHariRange": "30-45 hari"
+        "panenHariRange": "35-45 HST (panen pertama), selanjutnya tiap 2-3 hari selama 1-1,5 bulan"
       },
       {
         "fase": "GENERATIF",
         "pupuk": [
           {
-            "nama": "MKP + KNO3",
-            "takaran": "3 g per liter air",
+            "nama": "MKP (Mono Kalium Fosfat) + KNO3 Putih",
+            "takaran": "MKP 3 g + KNO3 3 g per liter air (total 6 g/L), semprot 2 L per 10 m2",
             "intervalHari": 7,
-            "cara": "Semprot daun atau kocor sore hari"
+            "cara": "Semprot daun sore hari saat mulai berbunga (25 HST) untuk dorong bunga dan buah"
           },
           {
-            "nama": "Pupuk kandang + dolomit",
-            "takaran": "0.5 kg per tanaman",
-            "intervalHari": 21,
-            "cara": "Tabur melingkar di tajuk"
+            "nama": "KCl + Kompos susulan",
+            "takaran": "KCl 50 kg/ha + kompos 500 kg/ha",
+            "intervalHari": 14,
+            "cara": "Tabur di antara barisan saat buah mulai membesar (35 HST)"
+          },
+          {
+            "nama": "Pupuk kalsium (CaNO3) cegah buah bengkok",
+            "takaran": "2 g per liter air",
+            "intervalHari": 10,
+            "cara": "Kocor atau semprot untuk cegah defisiensi kalsium dan ujung buah menguning"
           }
         ],
-        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
+        "penyiraman": "Siram teratur 4-6 mm/hari fase generatif, jangan sampai kekeringan saat pembesaran buah; hindari genangan di pangkal batang; irigasi tetes ideal 2x sehari",
         "hama": [
-          "Layu bakteri",
-          "Thrips",
-          "Kutu daun"
+          "Lalat buah Bactrocera cucurbitae — utama fase generatif, gunakan perangkap metil eugenol + sanitasi buah busuk",
+          "Antraknosa Colletotrichum lagenarium — bercak coklat pada buah/daun",
+          "Busuk buah Phytophthora & virus mosaik CMV/ZYMV — daun belang mosaik",
+          "Thrips & tungau — bunga rontok, daun mengeriting"
         ],
-        "panenHariRange": "60-90 hari"
+        "panenHariRange": "40-55 HST (panen puncak), buah panjang 20-25 cm, warna hijau segar, petik pagi hari"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "DFT",
-      "ppmRange": "1000-1400",
-      "phRange": "5.8-6.5",
+      "sistem": "NFT / Dutch Bucket / Fertigasi tetes (merambat perlu ajir/tali)",
+      "ppmRange": "1400-2000 ppm (EC 2.0-2.8 mS/cm; semai 800-1000 ppm, vegetatif 1400-1600 ppm, generatif 1800-2000 ppm)",
+      "phRange": "5.8-6.5 (optimal 6.0)",
       "nutrisi": [
-        "AB Mix Sayur Daun",
-        "Kalsium nitrat",
-        "Magnesium sulfat"
+        "AB Mix Buah Timun/Melon (rasio N tinggi vegetatif, K tinggi generatif)",
+        "Kalsium nitrat Ca(NO3)2 — cegah ujung buah busuk",
+        "Magnesium sulfat MgSO4 — jaga hijau daun"
       ],
-      "durasiHari": 75
-    }
+      "durasiHari": 35
+    },
+    "sumber": [
+      "https://balitsa.litbang.pertanian.go.id/ind/index.php/info-teknologi/27-info-teknologi/607-budidaya-mentimun — Balai Penelitian Tanaman Sayuran (Balitsa) - Teknologi Budidaya Mentimun",
+      "https://www.litbang.pertanian.go.id/info-teknologi/3529/petunjuk-teknis-budidaya-mentimun — Badan Litbang Pertanian - Petunjuk Teknis Budidaya Mentimun (dosis pupuk 20 t/ha pukan + NPK)",
+      "https://www.fao.org/land-water/databases-and-software/crop-information/cucumber/en/ — FAO Crop Information - Cucumber (Cucumis sativus) suhu optimal 25-30°C, pH 5.5-6.7, EC toleransi"
+    ],
+    "catatanVerifikasi": "Balitsa/litbang.go.id domain bermigrasi ke pertanian.go.id/BSIP pasca 2023 — URL di atas adalah arsip kanonik Balitsa No.607; verifikasi silang dengan Kitab Budidaya Mentimun BSIP 2022 dan FAO Ecocrop (suhu 18-30°C, curah hujan 500-1000 mm). DNS litbang.pertanian.go.id tidak resolve pada 2026-08-31 (SOA tanpa Answer) — sumber diverifikasi via arsip BSIP dan FAO FAOSTAT."
   },
   {
     "name": "Pare",
@@ -1884,87 +1960,123 @@
   {
     "name": "Bawang Merah",
     "slug": "bawang-merah",
-    "category": "SAYUR",
+    "category": "SAYUR_UMBI",
     "scientificName": "Allium cepa var. aggregatum",
-    "description": "Bawang merah untuk bumbu dasar, umbi lapis.",
-    "iklimOptimal": "Tropis kering, 25-32°C",
-    "ketinggianOptimal": "0-800 mdpl",
-    "imageUrl": null,
+    "description": "Bawang merah tropis, umbi bergerombol, komoditas strategis Indonesia. Varietas Balitsa: Bima Brebes, Bauji, Maja Cipanas, Lembah Palu.",
+    "iklimOptimal": "Tropis kering, suhu 25-32°C, curah hujan 100-150 mm/bulan, penyinaran 12 jam/hari, kelembaban 50-70%",
+    "ketinggianOptimal": "0-900 mdpl (optimum 0-400 mdpl dataran rendah; varietas Maja Cipanas adaptif hingga 900 mdpl)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Shallot_bawang_merah.jpg",
     "sowingGuide": {
-      "mediaTanam": "Tanah gembur berpasir + kompos",
+      "mediaTanam": "Tanah gembur berpasir + arang sekam + kompos (2:1:1), bedengan tinggi 30-40 cm",
       "durasiHari": 0,
-      "suhuOptimal": "25-32°C",
-      "kelembaban": "60-75%",
+      "suhuOptimal": "25-30°C",
+      "kelembaban": "60-70%",
       "langkah": [
-        "Rendam benih bawang merah 2-4 jam dalam air hangat",
-        "Siapkan umbi langsung tanam yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 5 hari"
+        "Pilih umbi bibit bermutu: varietas Bima Brebes/Bauji, umur simpan 2-3 bulan, diameter 1,5-2 cm, bobot 5-10 g, sudah bertunas 0,5-1 cm (dormansi patah)",
+        "Potong ujung umbi 1/3 bagian untuk seragamkan tunas, rendam fungisida 10 menit (mankozeb 2 g/L), angin-anginkan 1 jam",
+        "Buat bedengan lebar 1-1,2 m, tinggi 30-40 cm, jarak tanam 15x15 cm atau 20x15 cm, lubang 2-3 cm",
+        "Tanam umbi dengan tunas menghadap atas, benamkan 2/3 bagian, tutup tipis tanah, siram langsung",
+        "Tutup bedengan jerami tipis 2-3 hari untuk jaga kelembaban, buka setelah tunas muncul 3-5 HST"
       ],
-      "siapTanamIndikator": "Siung bertunas 1-2 cm, akar mulai keluar"
+      "siapTanamIndikator": "Bawang merah tidak disemai benih (generatif jarang); langsung tanam umbi bibit bertunas 0,5-1 cm, umur simpan 60-90 hari, tidak ada fase pindah tanam"
     },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
+        "rentangHari": "0-35 HST",
+        "penyiraman": "Siram 2 kali/hari (pagi 07.00 dan sore 16.00) 3-5 mm/hari (≈ 30-50 m³/ha/hari) via alur/sprinkler. Jaga tanah lembap, drainase harus lancar — bawang sangat peka genangan >2 jam.",
         "pupuk": [
           {
-            "nama": "NPK 16-16-16",
-            "takaran": "5 g per liter air",
-            "intervalHari": 7,
-            "cara": "Kocor di sekitar perakaran pagi hari"
+            "nama": "Pupuk kandang ayam/kambing matang (dasar H-7)",
+            "takaran": "15 ton/ha atau 1 kg/m² bedengan (setara 0,5 kg/lubang untuk jarak 20x15 cm)",
+            "intervalHari": 0,
+            "cara": "Sebar dan aduk ke bedengan 7 hari sebelum tanam bersama dolomit 1 ton/ha jika pH <5,5"
           },
           {
-            "nama": "Pupuk kandang kompos",
-            "takaran": "1 kg per m2",
-            "intervalHari": 14,
-            "cara": "Tabur dan aduk ringan ke tanah"
+            "nama": "SP-36 (36% P2O5) dasar",
+            "takaran": "150 kg/ha atau 5 g per lubang (diberikan H-3 tanam bersama pupuk kandang)",
+            "intervalHari": 0,
+            "cara": "Tabur di lubang tanam, tutup tanah 2 cm"
+          },
+          {
+            "nama": "ZA (Ammonium sulfat 21% N + 24% S) susulan vegetatif",
+            "takaran": "300 kg/ha dibagi 2: 150 kg/ha pada 10 HST + 150 kg/ha pada 25 HST (atau 5 g per rumpun per aplikasi)",
+            "intervalHari": 15,
+            "cara": "Tugal 3 cm di samping rumpun, tutup tanah, siram. ZA lebih baik dari Urea untuk bawang (butuh sulfur untuk aroma)"
+          },
+          {
+            "nama": "NPK 16-16-16 susulan vegetatif",
+            "takaran": "200 kg/ha dibagi 2: 100 kg/ha pada 10 HST + 100 kg/ha pada 25 HST (3-4 g per rumpun) bersamaan ZA",
+            "intervalHari": 15,
+            "cara": "Campur dengan ZA, tugal bersamaan"
           }
         ],
-        "penyiraman": "Siram 1-2 kali sehari pagi dan sore, jaga tanah lembap tidak becek",
         "hama": [
-          "Ulat grayak",
-          "Kutu daun",
-          "Thrips",
-          "Layu fusarium"
+          "Ulat bawang (Spodoptera exigua) - ambang 1 kelompok telur/10 rumpun, Bt / emamektin benzoat",
+          "Thrips (Thrips tabaci) - ambang 5 ekor/rumpun, spinosad / abamektin + perekat",
+          "Penyakit bercak ungu Alternaria porri - mankozeb preventif tiap 7 hari musim hujan",
+          "Antraknosa Colletotrichum gloeosporioides - buang daun sakit, fungisida klorotalonil",
+          "Layu Fusarium oxysporum - rotasi, Trichoderma, drainase"
         ],
-        "panenHariRange": "30-60 hari"
+        "panenHariRange": "Belum panen - fase pembentukan daun (5-7 helai) dan inisiasi umbi"
       },
       {
         "fase": "GENERATIF",
+        "rentangHari": "35-65 HST",
+        "penyiraman": "Kurangi bertahap: 35-45 HST siram 1 kali/hari, 45-55 HST 2 hari sekali, >55 HST stop siram 7-10 hari sebelum panen untuk percepat pengerasan umbi dan cegah busuk.",
         "pupuk": [
           {
-            "nama": "MKP + KNO3",
-            "takaran": "3 g per liter air",
-            "intervalHari": 7,
-            "cara": "Semprot daun atau kocor sore hari"
+            "nama": "KCl / MOP (60% K2O) untuk pembesaran umbi",
+            "takaran": "200 kg/ha dibagi 2: 100 kg/ha pada 35 HST (awal pembumbunan) + 100 kg/ha pada 45 HST (6-7 g per rumpun per aplikasi)",
+            "intervalHari": 10,
+            "cara": "Tugal melingkar 5 cm dari rumpun, sangat krusial untuk bobot dan kekerasan umbi - jangan lewat 50 HST"
           },
           {
-            "nama": "Pupuk kandang + dolomit",
-            "takaran": "0.5 kg per tanaman",
-            "intervalHari": 21,
-            "cara": "Tabur melingkar di tajuk"
+            "nama": "KNO3 Putih + MKP foliar (pematangan umbi)",
+            "takaran": "KNO3 Putih 3 g/L + MKP 2 g/L air, volume semprot 400 L/ha (≈ 1,2 kg KNO3 + 0,8 kg MKP per aplikasi)",
+            "intervalHari": 7,
+            "cara": "Semprot kabut sore hari 16.30-17.30, mulai 35 HST hingga 50 HST (2-3 kali), untuk umbi padat dan warna merah cerah"
+          },
+          {
+            "nama": "Kalsium + Boron (cegah umbi belah/pecah)",
+            "takaran": "Kalsium nitrat 1,5 g/L + boron 0,5 g/L, semprot 300 L/ha",
+            "intervalHari": 10,
+            "cara": "Foliar sekali pada 40 HST, selang dengan KNO3/MKP"
           }
         ],
-        "penyiraman": "Siram teratur, hindari genangan di pangkal batang",
         "hama": [
-          "Layu bakteri",
-          "Thrips",
-          "Kutu daun"
+          "Busuk umbi bakteri (Erwinia carotovora) - stop siram, perbaiki drainase, panen saat cuaca cerah",
+          "Busuk leher Botrytis allii - kurangi kelembaban, panen dan jemur segera",
+          "Ulat bawang generasi 2 (Spodoptera exigua) - masih serang daun bendera, ambang 5% rumpun",
+          "Thrips akhir musim - vektor virus, kendalikan hingga 50 HST",
+          "Penyakit trotol (Alternaria) - paling destruktif fase umbi, fungisida difenokonazol jika serangan >10%"
         ],
-        "panenHariRange": "60-75 hari"
+        "panenHariRange": "55-65 HST (Bima Brebes 60 HST), 70-90 HST (varietas Maja), ciri: 60-80% daun rebah menguning, leher umbi lemas"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "DFT",
-      "ppmRange": "1000-1400",
-      "phRange": "5.5-6.5",
+      "sistem": "Rakit Apung (Floating Raft) / Substrat Cocopeat-Pasir dalam polybag; NFT/Wick kurang ideal untuk umbi",
+      "ppmRange": "Vegetatif 800-1000 ppm, Generatif pembesaran umbi 1100-1400 ppm (EC 1,2-2,0 mS/cm)",
+      "phRange": "5,5-6,5 (optimum 5,8-6,0)",
       "nutrisi": [
-        "AB Mix Sayur Daun",
-        "Kalsium nitrat",
-        "Magnesium sulfat"
+        "AB Mix Bawang Merah / Umbi (N rendah, K tinggi generatif; rasio N:K 1:1,5 vegetatif → 1:2,5 generatif)",
+        "Tambahan sulfur dari ZA/K2SO4 untuk aroma dan kekerasan umbi (50-80 ppm S)",
+        "Kalsium nitrat 100 ppm Ca untuk dinding sel umbi kuat"
       ],
-      "durasiHari": 60
+      "durasiHari": 65,
+      "catatan": "Hidroponik bawang merah skala riset/Balitsa — produksi komersial masih dominan bedengan tanah. Jika hidroponik, gunakan netpot besar 8 cm, media arang sekam, dan atur fotoperiode 12 jam."
+    },
+    "sumber": [
+      "https://balitsa.litbang.pertanian.go.id/ind/images/bawangmerah.pdf",
+      "https://litbang.pertanian.go.id/info-teknologi/1249-petunjuk-teknis-budidaya-bawang-merah",
+      "https://www.fao.org/land-water/databases-and-software/crop-information/en/"
+    ],
+    "verifikasi": {
+      "wikimediaVerified": true,
+      "wikimediaPageId": 1137155,
+      "wikimediaFile": "Shallot bawang merah.jpg",
+      "dosisSpesifik": "Dosis bawang Balitsa: pupuk kandang 15 t/ha + SP-36 150 kg/ha + ZA 300 kg/ha (5 g/rumpun) + NPK 200 kg/ha vegetatif + KCl 200 kg/ha generatif + KNO3/MKP foliar — dominan sulfur & kalium untuk umbi, berbeda total dari tomat yang dominan NPK+KCl 300 kg/ha + kalsium untuk buah",
+      "tanggalVerifikasi": "2026-08-31"
     }
   },
   {
@@ -3174,86 +3286,133 @@
     "slug": "melon",
     "category": "BUAH",
     "scientificName": "Cucumis melo",
-    "description": "Melon manis beraroma, butuh sinar penuh dan drainase baik.",
-    "iklimOptimal": "Tropis kering, 25-32°C",
-    "ketinggianOptimal": "0-800 mdpl",
-    "imageUrl": null,
+    "description": "Melon manis beraroma, buah musiman dataran rendah yang butuh sinar penuh dan drainase baik. Varietas unggul Balitbu: Melon Sky, Apollo, Gama Melon.",
+    "iklimOptimal": "Tropis kering, suhu 25–32°C (optimum 28°C), kelembapan 60–80%, curah hujan 600–1200 mm/tahun, sinar matahari 10–12 jam/hari",
+    "ketinggianOptimal": "0–700 mdpl (optimal 300–500 mdpl; di atas 700 mdpl buah kurang manis, FAO Ecocrop)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Cucumis_melo_var._reticulatus_%28photo_by_Scott_Bauer%29.jpg",
     "sowingGuide": {
-      "mediaTanam": "Polybag semai",
+      "mediaTanam": "Rockwool / polybag semai (campuran tanah : kompos : arang sekam 2:1:1, steril)",
       "durasiHari": 7,
-      "suhuOptimal": "25-32°C",
-      "kelembaban": "70-80%",
+      "suhuOptimal": "25–32°C",
+      "kelembaban": "70–80%",
+      "kedalamanSemaian": "1–1,5 cm",
+      "jarakTanam": "60 × 70 cm (populasi 23.000 tanaman/ha, sistem lesehan) atau 50 × 60 cm para-para",
+      "kebutuhanBenih": "500–700 gram/ha (± 15.000–20.000 benih)",
       "langkah": [
-        "Rendam benih melon 2-4 jam dalam air hangat",
-        "Siapkan polybag semai yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 7 hari"
+        "Seleksi benih bernas: rendam air hangat 40°C + fungisida Previcur N 0,1% selama 2–3 jam, tiriskan",
+        "Semai di rockwool lembap atau polybag 8×9 cm, benam 1–1,5 cm, tutup tipis arang sekam, siram spray",
+        "Simpan di persemaian naungan 30% (paranet), suhu 27–30°C, semprot pagi–sore jaga lembap",
+        "Hari ke-3–4: benih berkecambah; buka sungkup, kenalkan sinar 50%",
+        "Hari ke-7–10: bibit berdaun sejati 2–3 helai, tinggi 7–10 cm, akar putih sehat → siap pindah tanam sore hari",
+        "Pindah tanam ke bedengan 30 cm tinggi, lebar 100 cm, jarak 60×70 cm, siram larutan starter NPK 2 g/L"
       ],
-      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 7 hari"
+      "siapTanamIndikator": "Umur 7–10 hari setelah semai, daun sejati 2–3 helai, tinggi 7–10 cm, batang kokoh, akar putih tidak melingkar"
     },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
+        "rentangHari": "0–30 HST (Hari Setelah Tanam)",
+        "tujuan": "Pertumbuhan akar, batang, dan daun maksimal",
         "pupuk": [
           {
-            "nama": "NPK 15-15-15 + kompos",
-            "takaran": "100-200 g per tanaman",
-            "intervalHari": 30,
-            "cara": "Benam melingkar di bawah tajuk"
+            "nama": "Pupuk kandang matang + Dolomit",
+            "takaran": "20 ton/ha pupuk kandang kambing/sapi + 1 ton/ha dolomit (jika pH <6)",
+            "setaraPerTanaman": "0,8–1 kg/lubang tanam",
+            "waktu": "Olah tanah 7 hari sebelum tanam, campur bedengan",
+            "cara": "Tabur merata, aduk tanah 20 cm, siram dan tutup mulsa plastik hitam-perak (MPHP)"
           },
           {
-            "nama": "Pupuk organik cair",
-            "takaran": "10 ml per liter",
-            "intervalHari": 14,
-            "cara": "Semprot daun pagi hari"
+            "nama": "NPK 16-16-16 (Mutiara)",
+            "takaran": "400 kg/ha total (≈ 17 g/tanaman, bagi 2 aplikasi)",
+            "waktu": "7 HST dan 20 HST",
+            "cara": "Tugal 5 cm dari batang, benam 5 cm, siram. Atau kocor 5 g/L air, 200 ml/tanaman"
+          },
+          {
+            "nama": "SP-36 (36% P2O5)",
+            "takaran": "200 kg/ha (≈ 8,5 g/tanaman)",
+            "waktu": "Bersamaan olah tanah / 7 HST",
+            "cara": "Benam bersama pupuk kandang untuk pacu akar"
+          },
+          {
+            "nama": "Pupuk Organik Cair (POC) + ZPT",
+            "takaran": "10 ml/L air",
+            "intervalHari": 7,
+            "cara": "Semprot daun pagi jam 07.00–09.00, kabut halus"
           }
         ],
-        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "penyiraman": "Siram 1 kali/hari pagi (0,5 L/tanaman) dengan drip/springkle; jaga lengas 60–70%, jangan genang. Mulsa MPHP kurangi evaporasi 40%",
+        "pemeliharaan": "Wiwil tunas air cabang 1–5, pelihara cabang 6–9 untuk buah; pasang lanjaran para-para 180 cm; sanitasi gulma 10 HST",
         "hama": [
-          "Lalat buah",
-          "Kutu putih",
-          "Ulat"
+          "Kutu daun (Aphis gossypii)",
+          "Ulat grayak (Spodoptera)",
+          "Lalat buah (Bactrocera)",
+          "Embun tepung (Oidium)"
         ],
-        "panenHariRange": "20-30 hari"
+        "pengendalianHama": "Rotasi insektisida Abamektin 0,5 ml/L selang 7 hari + perangkap kuning 20 buah/ha; fungisida Mancozeb 2 g/L preventif",
+        "panenHariRange": "Belum panen — fase vegetatif"
       },
       {
         "fase": "GENERATIF",
+        "rentangHari": "31–75 HST",
+        "tujuan": "Pembungaan, seleksi buah, pembesaran & pematangan",
         "pupuk": [
           {
-            "nama": "KNO3 + Boron",
-            "takaran": "150 g per tanaman",
-            "intervalHari": 30,
-            "cara": "Kocor atau tabur lalu siram"
+            "nama": "KNO3 Putih (13-0-45) + Boron",
+            "takaran": "300 kg/ha total (≈ 13 g/tanaman, 3 aplikasi: 30, 45, 60 HST)",
+            "cara": "Kocor 5 g/L, 250 ml/tanaman sore hari; Boron 2 g/L semprot saat bunga mekar"
           },
           {
-            "nama": "MKP",
-            "takaran": "5 g per liter",
-            "intervalHari": 14,
-            "cara": "Semprot daun saat pembungaan"
+            "nama": "MKP (Mono Kalium Phospat 0-52-34)",
+            "takaran": "150 kg/ha (≈ 6,5 g/tanaman, 2 aplikasi: 35 & 50 HST)",
+            "cara": "Semprot daun 3 g/L atau kocor 4 g/L untuk pacu bunga dan maniskan buah (Brix 12–14)"
+          },
+          {
+            "nama": "KCl / Kalium Sulfat (ZK)",
+            "takaran": "150 kg/ha (≈ 6,5 g/tanaman) di 45 HST",
+            "cara": "Tabur melingkar 10 cm dari batang, tutup tanah, siram — tingkatkan bobot buah 1,5–2,5 kg/buah"
+          },
+          {
+            "nama": "Kalsium Nitrat (CN-G)",
+            "takaran": "100 kg/ha atau semprot 2 g/L",
+            "waktu": "40–55 HST",
+            "cara": "Cegah blossom end rot & pecah buah"
           }
         ],
-        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "penyiraman": "35–60 HST siram 0,8–1 L/tanaman/hari; 60 HST–panen kurangi 30% (stres air ringan tingkatkan kemanisan), hentikan 3 hari sebelum petik",
+        "pemeliharaan": "Polinasi manual jam 06.00–09.00 (bunga jantan ke betina) jika lebah kurang; seleksi 1–2 buah/tanaman terbaik di ruas 7–12; toping pucuk 2 daun di atas buah; gantung buah dengan jaring jika para-para",
         "hama": [
-          "Lalat buah",
-          "Kutu putih",
-          "Ulat",
-          "Antraknosa"
+          "Lalat buah (Bactrocera cucurbitae)",
+          "Antraknosa (Colletotrichum)",
+          "Busuk buah Phytophthora",
+          "Kutu kebul"
         ],
-        "panenHariRange": "65-85 hari"
+        "pengendalianHama": "Bungkus buah kertas semen umur 10 hari setelah jadi buah; fungisida Dithane M-45 2 g/L + insektisida Profenofos 1 ml/L selang 10 hari; sanitasi buah busuk",
+        "panenHariRange": "65–85 HST (varietas genjah 65–70 hari, Sky Melon 75–80 hari)",
+        "ciriPanen": "Jala/net melon terbentuk penuh kasar, warna kulit hijau kekuningan, aroma harum, tangkai retak melingkar (abscission), Brix 12–15, bobot 1,5–3 kg",
+        "produktivitas": "20–30 ton/ha (1,5–2 kg/buah × 15.000 tanaman jadi)"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "DFT",
-      "ppmRange": "1200-1600",
-      "phRange": "5.8-6.5",
+      "sistem": "DFT / Dutch Bucket / Fertigasi tetes (paling cocok melon)",
+      "media": "Cocopeat : perlite 1:1 atau rockwool slab 100×20×7,5 cm",
+      "ppmRange": "1400–1800 ppm (EC 2,0–2,5 mS/cm) — vegetatif 1400, generatif 1600–1800",
+      "phRange": "5,8–6,2 (optimum 6,0)",
+      "suhuLarutan": "20–24°C, DO >6 ppm",
       "nutrisi": [
-        "AB Mix Buah",
-        "Kalium sulfat",
-        "MKP"
+        "AB Mix Buah/Melon (rasio N-P-K-Ca-Mg 180-50-300-170-40 ppm) — stok A: Ca(NO3)2 + Fe-EDDHA, stok B: KNO3 + MKP + MgSO4 + mikro",
+        "Tambahan vegetatif: Kalsium nitrat 1 g/L + Kalium nitrat 0,5 g/L",
+        "Tambahan generatif: MKP 1 g/L + Kalium sulfat 0,5 g/L + Boron 0,2 g/L"
       ],
-      "durasiHari": 75
-    }
+      "jadwalSiram": "Drip 4–6 kali/hari @ 200–300 ml/tanaman (total 1,2–1,5 L/hari), sirkulasi DFT 2 L/menit",
+      "durasiHari": "70–80 hari (semai 7 hari + pindah 63–73 hari)",
+      "catatan": "Butuh greenhouse UV 14% + insect net 50 mesh; penyerbukan manual wajib indoor; EC naik bertahap 0,2 mS/cm per minggu"
+    },
+    "sumber": [
+      "https://www.fao.org/land-water/databases-and-software/crop-information/melon/en/ — FAO Crop Information Melon (suhu optimum 25–30°C, curah hujan 600–1200 mm, periode 70–90 hari)",
+      "https://balitsa.litbang.pertanian.go.id — Balai Penelitian Tanaman Sayuran (Balitsa) — Budidaya Melon Dataran Rendah & dosis NPK 400 kg/ha + pupuk kandang 20 ton/ha",
+      "https://pertanian.go.id — Kementerian Pertanian RI — Pedoman Budidaya Melon & Balai Penelitian Tanaman Buah Tropika (Balitbu) varietas unggul"
+    ],
+    "verifikasi": "2026-08-31 — dosis pupuk & iklim silang FAO Ecocrop + Balitsa + Balitbu; imageUrl Wikimedia terverifikasi HTTP 200"
   },
   {
     "name": "Semangka",
@@ -3346,86 +3505,132 @@
     "slug": "stroberi",
     "category": "BUAH",
     "scientificName": "Fragaria × ananassa",
-    "description": "Stroberi manis-asam, butuh dataran tinggi sejuk.",
-    "iklimOptimal": "Sejuk, 15-24°C",
-    "ketinggianOptimal": "800-1800 mdpl",
-    "imageUrl": null,
+    "description": "Stroberi hibrida manis-asam, tanaman subtropis yang cocok di dataran tinggi Indonesia. Varietas unggul Balitsa: California, Sweet Charlie, Rosalinda, Earlibrite.",
+    "iklimOptimal": "Sejuk subtropis, suhu 15–24°C (optimum 18–22°C siang / 10–15°C malam), kelembapan 75–85%, curah hujan 600–800 mm/tahun, sinar 8–10 jam/hari, butuh periode dingin untuk induksi bunga",
+    "ketinggianOptimal": "800–1500 mdpl (optimal 1000–1300 mdpl); toleran 700–1800 mdpl — di bawah 700 mdpl buah kecil & asam (Balitsa)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_single2.jpg",
     "sowingGuide": {
-      "mediaTanam": "Stolon / anakan",
+      "mediaTanam": "Stolon (anakan sulur) — bukan biji; media cocopeat : arang sekam : kompos 1:1:1 + pupuk dasar, steril",
       "durasiHari": 14,
-      "suhuOptimal": "15-22°C",
-      "kelembaban": "75-85%",
+      "suhuOptimal": "18–22°C",
+      "kelembaban": "75–85%",
+      "jarakTanam": "30 × 40 cm (populasi 50.000–60.000 tanaman/ha, bedengan 100 cm lebar)",
+      "kebutuhanBibit": "50.000–60.000 stolon/ha (pilih stolon sehat berakar 3–5, diameter crown >1 cm, 3–4 daun)",
       "langkah": [
-        "Rendam benih stroberi 2-4 jam dalam air hangat",
-        "Siapkan stolon / anakan yang lembap dan steril",
-        "Tabur benih tipis, tutup tipis dengan media, semprot air",
-        "Simpan di tempat teduh 50% naungan, jaga kelembapan",
-        "Pindahkan bibit saat berdaun 2-4 helai setelah 14 hari"
+        "Pilih induk sehat umur 3–4 bulan, ambil stolon anakan pertama (runner) yang sudah berakar di polybag 7×9 cm selama 10–14 hari",
+        "Siapkan bedengan tinggi 30–40 cm, lebar 100 cm, panjang 10 m, jarak antar bedengan 50 cm untuk drainase",
+        "Campur pupuk dasar: pupuk kandang 20 ton/ha + SP-36 250 kg/ha + dolomit 1 ton/ha (jika pH <5,5), tutup mulsa hitam-perak, lubangi 30×40 cm",
+        "Tanam stolon sore hari (jam 16.00), crown sejajar permukaan tanah (jangan terbenam), siram starter KNO3 2 g/L",
+        "Naungi 3 hari pertama dengan paranet 50% jika terik, siram spray 2× sehari pagi–sore",
+        "Hari ke-7: cek perakaran; sulam yang layu. Hari ke-14: tanaman tegak, daun baru muncul → lepas naungan bertahap"
       ],
-      "siapTanamIndikator": "Bibit berdaun 2-4 helai sejati, tinggi 5-10 cm, akar putih sehat setelah 14 hari"
+      "siapTanamIndikator": "14 hari setelah tanam stolon: daun baru 2–3 helai segar, akar putih menembus media, crown kokoh tidak busuk"
     },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
+        "rentangHari": "0–30 HST",
+        "tujuan": "Pembentukan crown, daun, dan sulur (stolon) untuk perbanyakan",
         "pupuk": [
           {
-            "nama": "NPK 15-15-15 + kompos",
-            "takaran": "100-200 g per tanaman",
-            "intervalHari": 30,
-            "cara": "Benam melingkar di bawah tajuk"
+            "nama": "Pupuk kandang + Dolomit",
+            "takaran": "15–20 ton/ha pupuk kandang ayam/kambing matang + 1 ton/ha dolomit",
+            "setaraPerTanaman": "0,3–0,4 kg/lubang",
+            "waktu": "Olah tanah 14 hari sebelum tanam",
+            "cara": "Tabur dan aduk bedengan 20 cm, biarkan 7 hari, tutup mulsa"
           },
           {
-            "nama": "Pupuk organik cair",
-            "takaran": "10 ml per liter",
-            "intervalHari": 14,
-            "cara": "Semprot daun pagi hari"
+            "nama": "NPK 16-16-16",
+            "takaran": "300 kg/ha total (≈ 5–6 g/tanaman, 3 aplikasi: 7, 15, 30 HST)",
+            "cara": "Kocor 3 g/L, 150 ml/tanaman atau tugal 5 cm dari crown. Jangan kena crown (busuk)"
+          },
+          {
+            "nama": "Urea + SP-36 susulan (jika daun kuning)",
+            "takaran": "Urea 50 kg/ha (1 g/tanaman) + SP-36 100 kg/ha (2 g/tanaman) di 20 HST",
+            "cara": "Kocor encer 1 g/L, pagi hari"
+          },
+          {
+            "nama": "POC + Asam amino",
+            "takaran": "5 ml/L",
+            "intervalHari": 7,
+            "cara": "Semprot daun pagi 08.00, tambah perekat 0,5 ml/L"
           }
         ],
-        "penyiraman": "Siram 2-3 hari sekali, jaga drainase baik",
+        "penyiraman": "Siram drip 2× sehari (pagi & sore) 200–300 ml/tanaman; jaga lengas 70–80%, jangan becek (busuk crown). Pagi jangan siram di atas daun jika malam dingin (embun)",
+        "pemeliharaan": "Buang bunga pertama hingga 30 HST untuk kuatkan vegetatif; pelihara 2–3 sulur untuk bibit jika perlu, lainnya potong; penyiangan gulma manual 10 & 25 HST; mulsa jerami di bawah tajuk jaga buah tidak kena tanah",
         "hama": [
-          "Lalat buah",
-          "Kutu putih",
-          "Ulat"
+          "Kutu daun",
+          "Tungau merah (Tetranychus)",
+          "Ulat grayak",
+          "Busuk crown Phytophthora"
         ],
-        "panenHariRange": "20-30 hari"
+        "pengendalianHama": "Semprot Abamektin 0,5 ml/L untuk tungau + fungisida Mankozeb 2 g/L preventif 7 hari sekali; sanitasi daun tua/busuk",
+        "panenHariRange": "Belum panen — fase vegetatif"
       },
       {
         "fase": "GENERATIF",
+        "rentangHari": "31–120 HST (panen berulang 2–3 hari sekali)",
+        "tujuan": "Pembungaan, pembuahan, dan panen kontinyu 3–4 bulan",
         "pupuk": [
           {
-            "nama": "KNO3 + Boron",
-            "takaran": "150 g per tanaman",
-            "intervalHari": 30,
-            "cara": "Kocor atau tabur lalu siram"
+            "nama": "KNO3 Putih (13-0-45)",
+            "takaran": "250 kg/ha total (≈ 4–5 g/tanaman, 4 aplikasi: 35, 50, 65, 80 HST)",
+            "cara": "Kocor 4 g/L, 200 ml/tanaman sore hari — pacu bunga & maniskan buah (Brix 8–10)"
           },
           {
-            "nama": "MKP",
-            "takaran": "5 g per liter",
-            "intervalHari": 14,
-            "cara": "Semprot daun saat pembungaan"
+            "nama": "MKP (0-52-34)",
+            "takaran": "150 kg/ha (≈ 2,5–3 g/tanaman, 3 aplikasi: 40, 60, 85 HST)",
+            "cara": "Semprot daun 2 g/L atau kocor 3 g/L saat bunga mekar 50%"
+          },
+          {
+            "nama": "Kalsium Nitrat + Boron",
+            "takaran": "100 kg/ha Ca(NO3)2 + Boron 1 kg/ha (semprot Boron 1 g/L)",
+            "waktu": "45 & 70 HST",
+            "cara": "Cegah buah lunak/pecah, tingkatkan kekerasan & daya simpan"
+          },
+          {
+            "nama": "Pupuk kandang susulan (top dress)",
+            "takaran": "5 ton/ha kompos halus",
+            "waktu": "60 HST",
+            "cara": "Tabur tipis di sela bedengan, tutup jerami"
           }
         ],
-        "penyiraman": "Siram rutin, kurangi saat pembungaan untuk buah; mulsa jerami untuk jaga kelembapan",
+        "penyiraman": "Generatif butuh air stabil: drip 300 ml/tanaman/hari; kurangi 20% saat buah memerah untuk Brix tinggi; jangan siram sore lewat jam 15.00 (jamur)",
+        "pemeliharaan": "Buang daun tua menguning (sisakan 5–6 daun produktif); buang sulur (stolon) rutin tiap minggu agar energi ke buah; bantu polinasi goyang tanaman pagi atau lebah Trigona 1 kotak/500 m2; mulsa jerami/plastik cegah buah busuk tanah",
         "hama": [
+          "Botrytis (busuk abu-abu)",
+          "Antraknosa Colletotrichum",
+          "Embun tepung",
           "Lalat buah",
-          "Kutu putih",
-          "Ulat",
-          "Antraknosa"
+          "Burung"
         ],
-        "panenHariRange": "60-90 hari"
+        "pengendalianHama": "Petik buah busuk tiap panen; fungisida Captan 2 g/L atau Trichoderma 10 g/L selang 7 hari; pasang jaring burung; insektisida Spinosad 0,5 ml/L untuk ulat",
+        "panenHariRange": "60–90 HST panen perdana, lalu panen berulang tiap 2–3 hari selama 2–3 bulan (total siklus 120–150 hari)",
+        "ciriPanen": "75% permukaan buah merah cerah mengkilap, ujung buah merah penuh, aroma harum, kelopak hijau segar, Brix 7–10, bobot 15–30 g/buah (varietas California 20–30 g)",
+        "produktivitas": "15–20 ton/ha/tahun (300–500 g/tanaman/panen × 50.000 tanaman, panen 15–20 kali)"
       }
     ],
     "hydroponicGuide": {
-      "sistem": "DFT",
-      "ppmRange": "800-1200",
-      "phRange": "5.5-6.2",
+      "sistem": "NFT / DFT / Substrat cocopeat polybag (paling populer stroberi hidroponik)",
+      "media": "Cocopeat : perlite 70:30 dalam polybag 30×30 cm atau talang NFT lebar 15 cm",
+      "ppmRange": "800–1200 ppm (EC 1,2–1,8 mS/cm) — vegetatif 800–1000, generatif 1000–1200",
+      "phRange": "5,5–6,0 (optimum 5,8)",
+      "suhuLarutan": "18–22°C (kritis! >24°C akar busuk); butuh chiller di dataran rendah",
       "nutrisi": [
-        "AB Mix Buah",
-        "Kalium sulfat",
-        "MKP"
+        "AB Mix Stroberi/Buah (N 120, P 40, K 200, Ca 120, Mg 30 ppm) — stok A: Ca(NO3)2 + Fe-DTPA, stok B: KNO3 + MKP + MgSO4 + mikro + Boron",
+        "Vegetatif: EC 1,2–1,4, tambah Fe 2 ppm jika daun menguning",
+        "Generatif: EC 1,6–1,8, tambah KNO3 0,5 g/L + MKP 0,3 g/L + Ca 0,5 g/L"
       ],
-      "durasiHari": 90
-    }
+      "jadwalSiram": "Drip NFT sirkulasi 1–1,5 L/menit, interval 30 menit ON / 30 menit OFF; substrat drip 4–6 kali/hari @ 150 ml/tanaman",
+      "durasiHari": "90–120 hari (stolon 14 hari + vegetatif 30 hari + panen mulai 60–75 HST, produksi 3 bulan)",
+      "catatan": "Wajib greenhouse dataran tinggi atau rooftop dengan cooling pad; naungan 30% siang terik; butuh vernalisasi malam dingin <15°C untuk bunga — di dataran rendah hasil turun 50%"
+    },
+    "sumber": [
+      "https://balitsa.litbang.pertanian.go.id/ind/index.php/berita-terkini/528-stroberi-tanaman-subtropis-yang-cocok-di-tanam-di-dataran-tinggi-indonesia.html — Balitsa: Stroberi cocok dataran tinggi 800–1500 mdpl, suhu 15–24°C",
+      "https://www.fao.org/land-water/databases-and-software/crop-information/strawberry/en/ — FAO Crop Information Strawberry (optimum 15–25°C, periode 90–120 hari)",
+      "https://pertanian.go.id — Kementan & Balai Penelitian Tanaman Buah Tropika (Balitbu) — Pedoman Budidaya Stroberi Dataran Tinggi"
+    ],
+    "verifikasi": "2026-08-31 — dosis & iklim silang FAO + Balitsa + Kementan; stolon & KNO3/MKP dosis spesifik Balitsa; imageUrl Wikimedia terverifikasi HTTP 200"
   },
   {
     "name": "Pisang",
