@@ -193,23 +193,83 @@ export default function TanamanPage() {
                       <h4 className="flex items-center gap-2 font-semibold text-sm">
                         <Leaf className="h-4 w-4 text-primary" /> Penyemaian — Media & Langkah
                       </h4>
-                      {(detail as any).sowingGuides.map((s: any) => (
-                        <div key={s.id} className="mt-3 space-y-2 text-sm leading-6">
-                          <p>
-                            <span className="font-semibold">Media tanam:</span> {s.mediaTanam}
-                          </p>
-                          <p>
-                            <span className="font-semibold">Durasi:</span> {s.durasiHari} hari · <span className="font-semibold">Suhu:</span> {s.suhuOptimal} ·{" "}
-                            <span className="font-semibold">Kelembapan:</span> {s.kelembaban}
-                          </p>
-                          <ol className="list-decimal pl-5">
-                            {(s.langkah as string[]).map((l: string, i: number) => (
-                              <li key={i}>{l}</li>
-                            ))}
-                          </ol>
-                          <p className="rounded bg-primary-soft px-3 py-2 text-xs font-medium text-primary-soft-fg">Siap tanam: {s.siapTanamIndikator}</p>
-                        </div>
-                      ))}
+                      {(detail as any).sowingGuides.map((s: any) => {
+                        const metodeKey = String(s.metode ?? "BIJI").toUpperCase();
+                        const metodeCls =
+                          metodeKey === "STEK"
+                            ? "bg-[#FFF0EB] text-[#9C4221] border border-[#FFC8A2]/60"
+                            : metodeKey === "CANGKOK"
+                              ? "bg-warning-soft text-[#92400E] border border-warning/20"
+                              : metodeKey === "OKULASI"
+                                ? "bg-info-soft text-info border border-info/20"
+                                : "bg-success-soft text-success border border-success/20";
+                        const rawSumber: unknown = s.sumber;
+                        let sumberItems: Array<{ label: string; url?: string }> | null = null;
+                        if (typeof rawSumber === "string" && (rawSumber as string).trim()) {
+                          sumberItems = [{ label: rawSumber as string }];
+                        } else if (Array.isArray(rawSumber) && rawSumber.length > 0) {
+                          const parsed = (rawSumber as unknown[])
+                            .map((it: unknown, idx: number) => {
+                              if (typeof it === "string") return { label: it };
+                              if (it && typeof it === "object") {
+                                const o = it as Record<string, unknown>;
+                                const label = (o.nama ?? o.judul ?? o.title ?? o.name ?? `Sumber ${idx + 1}`) as string;
+                                const url = (o.url ?? o.link ?? o.href) as string | undefined;
+                                return { label: String(label), url: url ? String(url) : undefined };
+                              }
+                              return null;
+                            })
+                            .filter(Boolean) as Array<{ label: string; url?: string }>;
+                          if (parsed.length > 0) sumberItems = parsed;
+                        }
+                        return (
+                          <div key={s.id} className="mt-3 space-y-2 text-sm leading-6">
+                            <span
+                              className={["inline-flex items-center rounded-pill px-2.5 py-1 text-xs font-semibold leading-none", metodeCls].join(" ")}
+                            >
+                              Metode: {metodeKey}
+                            </span>
+                            <p>
+                              <span className="font-semibold">Media tanam:</span> {s.mediaTanam}
+                            </p>
+                            <p>
+                              <span className="font-semibold">Durasi:</span> {s.durasiHari} hari · <span className="font-semibold">Suhu:</span> {s.suhuOptimal} ·{" "}
+                              <span className="font-semibold">Kelembapan:</span> {s.kelembaban}
+                            </p>
+                            <ol className="list-decimal pl-5">
+                              {(s.langkah as string[]).map((l: string, i: number) => (
+                                <li key={i}>{l}</li>
+                              ))}
+                            </ol>
+                            <p className="rounded bg-primary-soft px-3 py-2 text-xs font-medium text-primary-soft-fg">Siap tanam: {s.siapTanamIndikator}</p>
+                            {sumberItems ? (
+                              <div className="rounded border bg-background px-3 py-2">
+                                <p className="text-xs font-semibold">Sumber:</p>
+                                <ul className="mt-1 list-disc space-y-0.5 pl-5 text-xs leading-5">
+                                  {sumberItems.map((src, i) => (
+                                    <li key={i} className="break-words">
+                                      {src.url ? (
+                                        <a
+                                          href={src.url}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="underline decoration-border underline-offset-2 hover:text-foreground"
+                                        >
+                                          {src.label}
+                                        </a>
+                                      ) : (
+                                        <span>{src.label}</span>
+                                      )}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ) : (
+                              <p className="text-xs text-muted-fg">Sumber: Data verifikasi internal</p>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
                   )}
 
