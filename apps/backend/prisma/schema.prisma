@@ -28,19 +28,19 @@ model User {
 }
 
 model Kebun {
-  id              String          @id @default(cuid())
-  nama            String
-  lokasi          String
-  luas            Float?
-  deskripsi       String?
-  pemilikId       String
-  pemilik         User            @relation("KebunPemilik", fields: [pemilikId], references: [id])
-  members         KebunMember[]
-  lahans          Lahan[]
-  devices         Device[]
-  irrigationLogs  IrrigationLog[]
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
+  id             String          @id @default(cuid())
+  nama           String
+  lokasi         String
+  luas           Float?
+  deskripsi      String?
+  pemilikId      String
+  pemilik        User            @relation("KebunPemilik", fields: [pemilikId], references: [id])
+  members        KebunMember[]
+  lahans         Lahan[]
+  devices        Device[]
+  irrigationLogs IrrigationLog[]
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
 
   @@index([pemilikId])
   @@map("kebuns")
@@ -63,38 +63,38 @@ model KebunMember {
 // Lahan & Planting
 // =====================
 model Lahan {
-  id              String          @id @default(cuid())
-  kebunId         String
-  kebun           Kebun           @relation(fields: [kebunId], references: [id], onDelete: Cascade)
-  nama            String
-  tipe            LahanType
-  luas            Float
-  lokasi          String?
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
-  devices         Device[]
-  plantings       Planting[]
-  irrigationLogs  IrrigationLog[]
+  id             String          @id @default(cuid())
+  kebunId        String
+  kebun          Kebun           @relation(fields: [kebunId], references: [id], onDelete: Cascade)
+  nama           String
+  tipe           LahanType
+  luas           Float
+  lokasi         String?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  devices        Device[]
+  plantings      Planting[]
+  irrigationLogs IrrigationLog[]
 
   @@index([kebunId])
   @@map("lahans")
 }
 
 model Planting {
-  id           String        @id @default(cuid())
+  id           String         @id @default(cuid())
   lahanId      String
-  lahan        Lahan         @relation(fields: [lahanId], references: [id], onDelete: Cascade)
+  lahan        Lahan          @relation(fields: [lahanId], references: [id], onDelete: Cascade)
   cropId       String
-  crop         Crop          @relation(fields: [cropId], references: [id])
+  crop         Crop           @relation(fields: [cropId], references: [id])
   metode       LahanType
-  fase         PlantingFase  @default(SEMAI)
+  fase         PlantingFase   @default(SEMAI)
   jumlah       Int?
   tanggalSemai DateTime?
   tanggalTanam DateTime?
   status       PlantingStatus @default(AKTIF)
   catatan      String?
-  createdAt    DateTime      @default(now())
-  updatedAt    DateTime      @updatedAt
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
   diagnoses    Diagnosis[]
 
   @@index([lahanId])
@@ -106,68 +106,70 @@ model Planting {
 // Crop Knowledge Base
 // =====================
 model Crop {
-  id                 String            @id @default(cuid())
-  name               String
-  slug               String            @unique
-  category           CropCategory
-  scientificName     String?
-  description        String?
-  imageUrl           String?
-  iklimOptimal       String?
-  ketinggianOptimal  String?
-  createdAt          DateTime          @default(now())
-  updatedAt          DateTime          @updatedAt
-  sowingGuides       SowingGuide[]
-  growingGuides      GrowingGuide[]
-  hydroponicGuides   HydroponicGuide[]
-  plantings          Planting[]
+  id                String            @id @default(cuid())
+  name              String
+  slug              String            @unique
+  category          CropCategory
+  scientificName    String?
+  description       String?
+  imageUrl          String?
+  iklimOptimal      String?
+  ketinggianOptimal String?
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  sowingGuides      SowingGuide[]
+  growingGuides     GrowingGuide[]
+  hydroponicGuides  HydroponicGuide[]
+  plantings         Planting[]
 
   @@map("crops")
 }
 
 model SowingGuide {
-  id                  String   @id @default(cuid())
-  cropId              String
-  crop                Crop     @relation(fields: [cropId], references: [id], onDelete: Cascade)
-  mediaTanam          String
-  durasiHari          Int
-  suhuOptimal         String
-  kelembaban          String
-  langkah             Json
-  siapTanamIndikator  String
-  createdAt           DateTime @default(now())
-  updatedAt           DateTime @updatedAt
+  id                 String       @id @default(cuid())
+  cropId             String
+  crop               Crop         @relation(fields: [cropId], references: [id], onDelete: Cascade)
+  metode             SowingMetode @default(BIJI)
+  mediaTanam         String
+  durasiHari         Int
+  suhuOptimal        String
+  kelembaban         String
+  langkah            Json
+  siapTanamIndikator String
+  sumber             Json?
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
 
   @@map("sowing_guides")
 }
 
 model GrowingGuide {
-  id              String       @id @default(cuid())
-  cropId          String
-  crop            Crop         @relation(fields: [cropId], references: [id], onDelete: Cascade)
-  fase            GrowingPhase
-  pupuk           Json
-  penyiraman      String
-  hama            Json?
-  panenHariRange  String
-  createdAt       DateTime     @default(now())
-  updatedAt       DateTime     @updatedAt
+  id             String       @id @default(cuid())
+  cropId         String
+  crop           Crop         @relation(fields: [cropId], references: [id], onDelete: Cascade)
+  fase           GrowingPhase
+  pupuk          Json
+  penyiraman     String
+  hama           Json?
+  panenHariRange String
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
 
   @@unique([cropId, fase])
   @@map("growing_guides")
 }
 
 model HydroponicGuide {
-  id        String   @id @default(cuid())
-  cropId    String
-  crop      Crop     @relation(fields: [cropId], references: [id], onDelete: Cascade)
-  sistem    String
-  ppmRange  String
-  phRange   String
-  nutrisi   Json
+  id         String   @id @default(cuid())
+  cropId     String
+  crop       Crop     @relation(fields: [cropId], references: [id], onDelete: Cascade)
+  sistem     String
+  ppmRange   String
+  phRange    String
+  nutrisi    Json
   durasiHari Int
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
 
   @@map("hydroponic_guides")
 }
@@ -176,21 +178,21 @@ model HydroponicGuide {
 // Device & Sensor
 // =====================
 model Device {
-  id              String          @id @default(cuid())
-  kebunId         String
-  kebun           Kebun           @relation(fields: [kebunId], references: [id], onDelete: Cascade)
-  lahanId         String?
-  lahan           Lahan?          @relation(fields: [lahanId], references: [id])
-  nama            String
-  type            DeviceType
-  lokasi          String?
-  status          DeviceStatus    @default(OFFLINE)
-  mqttTopic       String          @unique
-  lastSeen        DateTime?
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
-  sensors         Sensor[]
-  irrigationLogs  IrrigationLog[]
+  id             String          @id @default(cuid())
+  kebunId        String
+  kebun          Kebun           @relation(fields: [kebunId], references: [id], onDelete: Cascade)
+  lahanId        String?
+  lahan          Lahan?          @relation(fields: [lahanId], references: [id])
+  nama           String
+  type           DeviceType
+  lokasi         String?
+  status         DeviceStatus    @default(OFFLINE)
+  mqttTopic      String          @unique
+  lastSeen       DateTime?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  sensors        Sensor[]
+  irrigationLogs IrrigationLog[]
 
   @@index([kebunId])
   @@index([lahanId])
@@ -198,17 +200,17 @@ model Device {
 }
 
 model Sensor {
-  id           String     @id @default(cuid())
+  id           String      @id @default(cuid())
   deviceId     String
-  device       Device     @relation(fields: [deviceId], references: [id], onDelete: Cascade)
+  device       Device      @relation(fields: [deviceId], references: [id], onDelete: Cascade)
   type         SensorType
   unit         String
   minThreshold Float?
   maxThreshold Float?
-  isEnabled    Boolean    @default(true)
+  isEnabled    Boolean     @default(true)
   config       Json?
-  createdAt    DateTime   @default(now())
-  updatedAt    DateTime   @updatedAt
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
   telemetries  Telemetry[]
 
   @@index([deviceId])
@@ -271,9 +273,9 @@ model Alert {
 }
 
 model Diagnosis {
-  id         String   @id @default(cuid())
+  id         String    @id @default(cuid())
   userId     String?
-  user       User?    @relation(fields: [userId], references: [id])
+  user       User?     @relation(fields: [userId], references: [id])
   plantingId String?
   planting   Planting? @relation(fields: [plantingId], references: [id])
   imageUrl   String
@@ -284,7 +286,7 @@ model Diagnosis {
   solusi     Json?
   pencegahan String?
   feedback   Json?
-  createdAt  DateTime @default(now())
+  createdAt  DateTime  @default(now())
 
   @@map("diagnoses")
 }
@@ -292,6 +294,13 @@ model Diagnosis {
 // =====================
 // Enums
 // =====================
+enum SowingMetode {
+  BIJI
+  STEK
+  CANGKOK
+  OKULASI
+}
+
 enum GlobalRole {
   SUPERADMIN
   ADMIN
