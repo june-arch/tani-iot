@@ -1306,7 +1306,7 @@
   {
     "name": "Tomat",
     "slug": "tomat",
-    "category": "SAYUR_BUAH",
+    "category": "SAYUR",
     "scientificName": "Solanum lycopersicum",
     "description": "Tomat dataran rendah-menengah, buah klimakterik kaya likopen. Varietas Balitsa: Tymoti, Mutiara, Ratna.",
     "iklimOptimal": "Tropis-subtropis, suhu 18-28°C (optimum 22-24°C), curah hujan 100-200 mm/bulan, sinar 8-10 jam/hari",
