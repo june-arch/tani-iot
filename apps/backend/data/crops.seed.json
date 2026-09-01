@@ -2181,7 +2181,7 @@
   {
     "name": "Bawang Merah",
     "slug": "bawang-merah",
-    "category": "SAYUR_UMBI",
+    "category": "SAYUR",
     "scientificName": "Allium cepa var. aggregatum",
     "description": "Bawang merah tropis, umbi bergerombol, komoditas strategis Indonesia. Varietas Balitsa: Bima Brebes, Bauji, Maja Cipanas, Lembah Palu.",
     "iklimOptimal": "Tropis kering, suhu 25-32°C, curah hujan 100-150 mm/bulan, penyinaran 12 jam/hari, kelembaban 50-70%",
@@ -3846,7 +3846,7 @@
         "Tambahan generatif: MKP 1 g/L + Kalium sulfat 0,5 g/L + Boron 0,2 g/L"
       ],
       "jadwalSiram": "Drip 4–6 kali/hari @ 200–300 ml/tanaman (total 1,2–1,5 L/hari), sirkulasi DFT 2 L/menit",
-      "durasiHari": "70–80 hari (semai 7 hari + pindah 63–73 hari)",
+      "durasiHari": 70,
       "catatan": "Butuh greenhouse UV 14% + insect net 50 mesh; penyerbukan manual wajib indoor; EC naik bertahap 0,2 mS/cm per minggu"
     },
     "sumber": [
@@ -4081,7 +4081,7 @@
         "Generatif: EC 1,6–1,8, tambah KNO3 0,5 g/L + MKP 0,3 g/L + Ca 0,5 g/L"
       ],
       "jadwalSiram": "Drip NFT sirkulasi 1–1,5 L/menit, interval 30 menit ON / 30 menit OFF; substrat drip 4–6 kali/hari @ 150 ml/tanaman",
-      "durasiHari": "90–120 hari (stolon 14 hari + vegetatif 30 hari + panen mulai 60–75 HST, produksi 3 bulan)",
+      "durasiHari": 90,
       "catatan": "Wajib greenhouse dataran tinggi atau rooftop dengan cooling pad; naungan 30% siang terik; butuh vernalisasi malam dingin <15°C untuk bunga — di dataran rendah hasil turun 50%"
     },
     "sumber": [
