@@ -20,6 +20,7 @@ interface SowingGuideSeed {
   kelembaban: string;
   langkah: string[];
   siapTanamIndikator: string;
+  tipsCepat?: string[];
 }
 
 interface GrowingGuideSeed {
@@ -98,6 +99,7 @@ async function main() {
           kelembaban: sg.kelembaban,
           langkah: sg.langkah as any,
           siapTanamIndikator: sg.siapTanamIndikator,
+          tipsCepat: (sg as any).tipsCepat ?? null as any,
           sumber: (sg.sumber ?? null) as any,
         },
       });

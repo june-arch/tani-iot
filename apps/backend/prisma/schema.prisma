@@ -136,6 +136,7 @@ model SowingGuide {
   kelembaban         String
   langkah            Json
   siapTanamIndikator String
+  tipsCepat          Json?
   sumber             Json?
   createdAt          DateTime     @default(now())
   updatedAt          DateTime     @updatedAt

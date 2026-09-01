@@ -65,6 +65,11 @@ export class SowingGuideDto {
   @IsString({ message: 'Indikator siap tanam harus berupa teks' })
   @IsNotEmpty({ message: 'Indikator siap tanam tidak boleh kosong' })
   siapTanamIndikator!: string;
+
+  @IsOptional()
+  @IsArray({ message: 'Tips cepat harus berupa array' })
+  @IsString({ each: true, message: 'Setiap tips harus berupa teks' })
+  tipsCepat?: string[];
 }
 
 export class GrowingGuideDto {

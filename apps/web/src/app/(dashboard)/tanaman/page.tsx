@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import { useEffect, useState, useMemo } from "react";
-import { Sprout, Leaf, SearchX, AlertTriangle, Beaker } from "lucide-react";
+import { Sprout, Leaf, SearchX, AlertTriangle, Beaker, Lightbulb } from "lucide-react";
 import { api, type Crop } from "@/lib/api";
 import { Card, CardTitle, CardDesc } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
@@ -242,6 +242,18 @@ export default function TanamanPage() {
                               ))}
                             </ol>
                             <p className="rounded bg-primary-soft px-3 py-2 text-xs font-medium text-primary-soft-fg">Siap tanam: {s.siapTanamIndikator}</p>
+                            {Array.isArray((s as any).tipsCepat) && (s as any).tipsCepat.length > 0 && (
+                              <div className="rounded-lg border border-accent/20 bg-accent-soft/20 px-3 py-2">
+                                <p className="flex items-center gap-1.5 text-xs font-semibold text-accent">
+                                  <Lightbulb className="h-3.5 w-3.5" /> Tips Cepat
+                                </p>
+                                <ul className="mt-1 list-disc space-y-0.5 pl-5 text-xs leading-5 text-muted-fg marker:text-accent">
+                                  {((s as any).tipsCepat as string[]).map((t: string, i: number) => (
+                                    <li key={i}>{t}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
                             {sumberItems ? (
                               <div className="rounded border bg-background px-3 py-2">
                                 <p className="text-xs font-semibold">Sumber:</p>

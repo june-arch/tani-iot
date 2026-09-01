@@ -88,13 +88,19 @@
         "suhuOptimal": "25-32°C",
         "kelembaban": "70-85%",
         "langkah": [
-          "Sebar benih langsung di bedengan lembap tanpa rendam lama (cukup 1-2 jam), jarak 10x10 cm",
-          "Tutup tipis tanah 0,5 cm, siram halus hingga lembap",
-          "Jaga kelembapan tanah, tidak perlu naungan berat (cukup paranet 30% jika terik)",
-          "Benih berkecambah 2-3 hari, tumbuh cepat",
-          "Siap panen cabut 25-30 hari tanpa pindah tanam (atau pindah 7 hari jika semai nampan)"
+          "Seleksi benih bernas: rendam air garam 1% (10 g/L) 10 menit, buang yang mengapung, bilas air tawar",
+          "Rendam ZPT bawang: iris 3-4 siung bawang merah + 500 ml air hangat 40-45°C, rendam benih kangkung 2 jam (auksin & allicin alami tipiskan kulit + antifungi), tiriskan angin-anginkan 30 menit",
+          "Siapkan media tanah gembur + kompos + sekam (2:1:1) pH 5,8-6,5 atau rockwool lembap; bedengan lebar 1 m tinggi 20 cm, lubang dangkal 0,5 cm",
+          "Sebar benih jarak 10x10 cm (atau 2x2 cm jika nampan), tutup tipis tanah 0,5 cm + mulsa jerami tipis, siram kabut hingga lembap (kelembapan 70-85%)",
+          "Jaga naungan paranet 30% jika terik 11.00-15.00, semprot kabut 2x sehari (pagi & sore), benih pecah kulit 24-48 jam, kotiledon mekar hari ke-2-3",
+          "Lepas mulsa setelah berkecambah, beri POC 5 ml/L atau NPK 2 g/L 7 HST; siap panen cabut 25-30 hari tanpa pindah tanam, atau pindah 7 HST jika semai nampan"
         ],
-        "siapTanamIndikator": "Tinggi 10-15 cm, 3-4 helai daun sejati, batang kokoh, siap panen cabut 25 hari"
+        "siapTanamIndikator": "Tinggi 10-15 cm, 3-4 helai daun sejati hijau segar, batang berongga kokoh tidak rebah, akar serabut putih 3-5 cm, umur 7 hari semai nampan / 25 hari siap cabut lapang",
+        "tipsCepat": [
+          "Rendam bawang 2 jam (3 siung bawang merah iris + 500 ml air hangat 40°C) + tiriskan 30 menit — hormon auksin alami pecah dormansi 1-2 hari lebih cepat dari rendam air biasa",
+          "Campur benih dengan pasir halus 1:5 saat tebar agar jarak 10x10 cm merata, tutup tipis 0,5 cm jangan >1 cm (benih kangkung butuh cahaya)",
+          "Jaga bedengan lembap tapi tidak becek; semprot kabut pagi-sore, jika hujan tutup plastik bening miring biar tidak busuk"
+        ]
       }
     ]
   },
@@ -191,7 +197,12 @@
           "Jaga naungan ringan 30% 3 hari pertama",
           "Jarang jika terlalu rapat setelah 7 hari (jarak 10 cm)"
         ],
-        "siapTanamIndikator": "Langsung tanam, tidak pindah; siap panen 25 hari tinggi 15-20 cm"
+        "siapTanamIndikator": "Langsung tanam, tidak pindah; siap panen 25 hari tinggi 15-20 cm",
+        "tipsCepat": [
+          "Rendam bawang 1,5 jam (2 siung bawang merah iris + 400 ml air hangat 35°C) + tiriskan 20 menit — biji bayam halus pecah 12 jam lebih cepat, daya kecambah naik 20%",
+          "Wajib campur benih dengan pasir halus kering 1:10 saat tabur, tutup tipis 0,3 cm jangan >0,5 cm (bayam butuh cahaya), tutup karung 2 hari untuk jaga lembap",
+          "Media semai steril siram air panas 70°C tiriskan; siram kabut pagi-sore jangan becek, jaga naungan 30% 3 hari pertama cegah rebah semai"
+        ]
       }
     ]
   },
@@ -282,7 +293,12 @@
           "Jaga kelembapan semprot kabut 2x sehari",
           "Pindah tanam 10-12 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-7 cm, akar putih tidak melingkar, 10-12 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-7 cm, akar putih tidak melingkar, 10-12 hari",
+        "tipsCepat": [
+          "Rendam bawang 2 jam (3 siung bawang merah tumbuk + 500 ml air hangat 40°C) + tiriskan 15 menit — sawi hijau pecah kulit 24 jam lebih cepat vs air biasa",
+          "Semai di rockwool 2x2 cm lembap peras pH 5,8-6,2, 1 benih/lubang 0,5 cm, tutup tipis vermikulit; simpan dome bening cahaya diffuse 50% (jangan gelap total)",
+          "Siram kabut 2x sehari, beri AB Mix 400 ppm 7 HST; pindah tanam 10-12 hari jangan lebih (akar lewat rockwool melingkar kerdil)"
+        ]
       }
     ]
   },
@@ -371,7 +387,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 10 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 10 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 10 hari",
+        "tipsCepat": [
+          "Rendam bawang 2 jam (2 siung bawang merah iris + 400 ml air hangat 40°C) — auksin alami pakcoy pecah 1 hari lebih cepat, bibit lebih seragam",
+          "Rockwool 2x2 cm steril rendam pH 5,8 30 menit tiriskan; lubang 1 cm 1 benih, tutup tipis jangan tekan (butuh oksigen), naungan 50% suhu 18-25°C",
+          "Jaga kelembapan 70-80% semprot pagi-sore; bila etiolasi kurus, langsung tambah cahaya 70% — pakcoy etiolasi tidak pulih tegak"
+        ]
       }
     ]
   },
@@ -480,7 +501,12 @@
           "Simpan di nampan tertutup plastik bening / dome di tempat terang tidak langsung (18-22°C, 60-80% RH), jaga lembap semprot 2x sehari; benih berkecambah 2-3 hari",
           "Setelah kotiledon membuka (3-5 hari), kenalkan cahaya penuh 50% (paranet) dan nutrisi 400-500 ppm; pindah tanam setelah 10-14 hari saat 3-4 daun sejati (tinggi 5-8 cm, akar tembus rockwool)"
         ],
-        "siapTanamIndikator": "Umur 10-14 hari semai, 3-4 helai daun sejati, tinggi 5-8 cm, akar putih menembus rockwool 2-3 cm, roset tidak etiolasi"
+        "siapTanamIndikator": "Umur 10-14 hari semai, 3-4 helai daun sejati, tinggi 5-8 cm, akar putih menembus rockwool 2-3 cm, roset tidak etiolasi",
+        "tipsCepat": [
+          "Rendam bawang dingin 30 menit saja (2 siung iris + 300 ml air 25°C jangan hangat >30°C) + angin-anginkan 10 menit — selada fotosensitif, rendam lama dorman kembali",
+          "Tabur di rockwool halus 0,3 cm jangan tutup rapat (selada butuh cahaya untuk germinasi), dome bening cahaya 50% 10-12 jam/hari suhu 18-22°C (>25°C gagal kecambah)",
+          "Semprot kabut 400 ppm setelah kotiledon membuka; sirkulasi udara wajib cegah lumut hijau di rockwool, pindah tanam 10-14 hari 3-4 daun"
+        ]
       }
     ]
   },
@@ -569,7 +595,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 10 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 10 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 10 hari",
+        "tipsCepat": [
+          "Rendam bawang 1 jam (2 siung bawang merah tumbuk + 300 ml air hangat 40°C) + saring — kemangi berlendir, bawang cegah jamur damping-off",
+          "Campur biji dengan pasir halus 1:5 untuk sebar rata (biji kemangi super kecil 1 mm), tutup tipis 0,5 cm, dome bening naungan 30%",
+          "Media tanah+kompos steril kukus 20 menit; siram kabut jangan siram kocor (biji hanyut), kecambah 5-7 hari; sulam jika rapat >2 cm"
+        ]
       }
     ]
   },
@@ -658,7 +689,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 14 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari",
+        "tipsCepat": [
+          "Rendam bawang 2 jam (3 siung bawang merah iris + 400 ml air hangat 40°C) + peram kain lembap 24 jam — seledri dorman keras, tanpa peram kecambah 21 hari vs 10 hari dengan peram",
+          "Butuh cahaya: tabur di permukaan rockwool/nampan 0,2 cm jangan tutup tanah tebal, cahaya diffuse 50% 12 jam, suhu 18-26°C kelembapan 70-80%",
+          "Jaga lembap semprot 2x sehari, kecambah lambat 8-14 hari normal; beri NPK 1 g/L 10 HST dosis rendah (seledri sensitif garam)"
+        ]
       }
     ]
   },
@@ -747,7 +783,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 14 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari",
+        "tipsCepat": [
+          "Rendam bawang 2 jam (3 siung bawang merah tumbuk + 400 ml air hangat 40°C) + seleksi garam 1% 10 menit buang mengapung — bawang pecah dormansi Allium 2 hari lebih cepat",
+          "Semai di nampan bedengan gembur + sekam 1:1 kedalaman 1 cm jarak 1x1 cm, tutup tipis sekam halus, siram kabut jangan becek (Allium busuk)",
+          "Naungan 50% 3 hari pertama, kecambah 7-10 hari; pindah tanam 14 hari jangan cabut paksa (akar serabut halus putus) — congkel dengan tanah"
+        ]
       }
     ]
   },
@@ -836,7 +877,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 14 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari",
+        "tipsCepat": [
+          "Rendam bawang 2 jam (3 siung bawang merah tumbuk + 500 ml air hangat 40°C) + tiriskan, lalu pre-chill 5°C kulkas 24 jam dalam tisu lembap — kubis butuh vernalisasi dingin pecah 1 hari lebih cepat",
+          "Rockwool 2x2 cm steril pH 6,0 lubang 1 cm 1 benih tutup tipis vermikulit, suhu 15-22°C (di atas 25°C kecambah rendah), naungan 30%",
+          "Semprot kabut pagi-sore, beri NPK 2 g/L 7 HST rendah; pindah tanam 14 hari 3-4 daun — jangan lewat 18 hari (bibit kerdil mengayu)"
+        ]
       }
     ]
   },
@@ -925,7 +971,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 14 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari",
+        "tipsCepat": [
+          "Rendam bawang 3 jam (3 siung bawang merah iris + 500 ml air hangat 40°C) + peram kain lembap 12 jam — kembang kol kulit tebal, peram pecah 24 jam lebih cepat",
+          "Rockwool lembap 1 cm 1 benih tutup tipis, suhu 15-22°C kelembapan 70-80%, dome bening jangan tutup rapat (butuh udara)",
+          "Siram kabut 2x sehari, kecambah 5-8 hari; beri boron 0,5 g/L 7 HST cegah krop keriting — defisiensi boron bintik coklat"
+        ]
       }
     ]
   },
@@ -1014,7 +1065,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 12 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 12 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 12 hari",
+        "tipsCepat": [
+          "Rendam bawang 2 jam (2 siung bawang merah tumbuk + 400 ml air hangat 40°C) + fungisida Captan 1 g/L 5 menit — brokoli rentan black rot",
+          "Rockwool/nampan gembur 1 cm tutup tipis cocopeat halus, suhu 16-23°C cahaya 50% 6 jam, kelembapan 70-80%",
+          "Kecambah 4-7 hari, beri NPK 2 g/L 7 HST; pindah 12 hari 3-4 daun — naungan 30% 3 hari pertama cegah sunburn kotiledon"
+        ]
       }
     ]
   },
@@ -1121,7 +1177,12 @@
           "Beri pupuk semai NPK 2 g/L 10 HST",
           "Pindah tanam 21 hari saat 4-5 daun sejati, tinggi 10-15 cm"
         ],
-        "siapTanamIndikator": "4-5 daun sejati, tinggi 10-15 cm, batang kokoh, akar penuh polybag, 21 hari"
+        "siapTanamIndikator": "4-5 daun sejati, tinggi 10-15 cm, batang kokoh, akar penuh polybag, 21 hari",
+        "tipsCepat": [
+          "Rendam bawang 4 jam (3 siung bawang merah tumbuk + 500 ml air hangat 50°C 10 menit lalu turun 40°C) — cabai rawit kulit mengandung capsaicin penghambat, air hangat 50°C + bawang pecah 2 hari lebih cepat",
+          "Peram kain lembap 24 jam hingga radikula 1 mm baru semai, buang biji tidak berkecambah; semai polybag semai 1 benih/lubang 1 cm tutup tipis kompos halus",
+          "Naungan 50% suhu 24-30°C kelembapan 70-80%, siram 2x sehari jangan becek; beri Trichoderma 1 g/L 5 HST cegah rebah semai Fusarium"
+        ]
       }
     ]
   },
@@ -1210,7 +1271,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 21 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 21 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 21 hari",
+        "tipsCepat": [
+          "Rendam bawang 4 jam (3 siung bawang merah iris + 400 ml air hangat 45°C 15 menit) — cabai keriting butuh hangat stabil, bawang + allicin cegah antraknosa benih",
+          "Tiriskan 30 menit, semai di tanah:kompos:sekam 2:1:1 steril 1 cm, tutup tipis sekam bakar, naungan 50% suhu 25-28°C",
+          "Peram 12 jam jika ingin seleksi; kecambah 7-10 hari; siram kabut pagi-sore, semprot B1 1 ml/L 7 HST jika pertumbuhan lambat"
+        ]
       }
     ]
   },
@@ -1299,7 +1365,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 21 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 21 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 21 hari",
+        "tipsCepat": [
+          "Rendam bawang 5 jam (4 siung bawang merah tumbuk + 500 ml air hangat 50°C 10 menit) — cabai besar biji lebih besar butuh rendam lama, daya kecambah naik 25%",
+          "Semai polybag semai 8x9 cm tanah:kompos:sekam 2:1:1 pH 6,0 lubang 1,5 cm 1 benih, siram jenuh tiriskan, tutup mulsa tipis",
+          "Jaga suhu 24-30°C kelembapan 70-80%, kecambah 8-12 hari; pindah tanam 21 hari 4-5 daun jangan cabut akar tunggang bengkok"
+        ]
       }
     ]
   },
@@ -1417,13 +1488,19 @@
         "suhuOptimal": "20-25°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Rendam benih tomat 4-6 jam dalam air hangat 50°C (perlakuan air panas untuk cegah bakteri), tiriskan",
-          "Semai di tray rockwool/cocopeat lembap, kedalaman 0,5-1 cm, 1 benih per lubang, tutup tipis cocopeat",
-          "Simpan di naungan 50% selama 3-4 hari, semprot kabut pagi-sore, jaga pH media 5,5-6,5",
-          "Setelah kotiledon mekar (hari 4-5), kenalkan sinar penuh bertahap 30% → 100% dalam 3 hari",
-          "Bibit siap pindah tanam saat 4-5 daun sejati, tinggi 10-12 cm, batang kokoh, akar putih penuh (10-14 HST semai)"
+          "Perlakuan air hangat: rendam benih tomat 4-6 jam dalam air hangat 50°C (hangat kuku) + 2 siung bawang merah iris per 300 ml untuk cegah bakteri & pacu auksin, tiriskan 30 menit",
+          "Skarifikasi ringan jika benih import berkulit tebal: gosok 1-2 detik di amplas halus #1000 atau aduk pasir 10 detik, bilas — untuk benih lokal cukup rendam bawang saja",
+          "Siapkan tray rockwool/cocopeat steril pH 5,5-6,5 lembap peras (tidak menetes), buat lubang 0,5-1 cm, 1 benih per lubang, tutup tipis cocopeat halus",
+          "Simpan di dome bening naungan 50% suhu 20-25°C kelembapan 70-80%, semprot kabut pagi-sore; kotiledon mekar hari 4-5, kenalkan sinar 30%→100% bertahap 3 hari",
+          "Umur 7 HST beri nutrisi AB Mix 600 ppm atau NPK 2 g/L 100 ml/tray, jaga sirkulasi udara cegah damping-off (semprot Trichoderma 1 g/L jika perlu)",
+          "Pindah tanam 12-14 HST saat 4-5 daun sejati, tinggi 10-12 cm, batang diameter 3-4 mm kokoh, akar putih memenuhi rockwool"
         ],
-        "siapTanamIndikator": "4-5 daun sejati, tinggi 10-12 cm, diameter batang 3-4 mm, akar serabut putih memenuhi rockwool, umur 12-14 hari setelah semai"
+        "siapTanamIndikator": "Umur 12-14 hari semai, 4-5 daun sejati hijau tebal, tinggi 10-12 cm, diameter batang 3-4 mm, akar serabut putih tembus rockwool 2-3 cm, tidak etiolasi",
+        "tipsCepat": [
+          "Rendam bawang 4 jam (2 siung bawang merah iris + 300 ml air hangat 50°C) — arisan auksin + allicin: daya kecambah naik 15-20%, kecambah 1-2 hari lebih cepat dan tahan rebah semai",
+          "Jangan tutup benih >1 cm; tomat fotosensitif — tutup tipis 0,5 cm + semprot kabut, simpan cahaya diffuse 50% (bukan gelap total) agar tidak etiolasi",
+          "Sterilkan cocopeat dengan siram air panas 80°C tiriskan, pH 5,8; jaga rockwool tidak becek (peras hingga lembap) cegah Pythium"
+        ]
       }
     ]
   },
@@ -1512,7 +1589,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 10 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 10 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 10 hari",
+        "tipsCepat": [
+          "Rendam bawang 3 jam (3 siung bawang merah tumbuk + 400 ml air hangat 45°C) + remas abu gosok 30 detik — terong berlendir, abu+bawang hilangkan lendir & antifungi",
+          "Polybag semai 8x9 cm media tanah:kompos:sekam 2:1:1 steril 1 cm tutup tipis, suhu 25-32°C cahaya 50% 6-8 jam",
+          "Naungan 50% 3 hari pertama, siram kabut 2x sehari; kecambah 6-10 hari, beri NPK 2 g/L 7 HST dosis rendah, pindah 10 hari 3-4 daun"
+        ]
       }
     ]
   },
@@ -1621,7 +1703,12 @@
           "Simpan di persemaian naungan 30-50% (paranet), jaga suhu 25-30°C dan kelembaban 70-85%, semprot air 2x sehari pagi-sore",
           "Bibit siap pindah tanam setelah 5-7 hari saat berdaun 2 helai sejati (tinggi 5-8 cm, akar putih sehat, batang kokoh)"
         ],
-        "siapTanamIndikator": "Umur 5-7 hari, 2 helai daun sejati membuka sempurna, tinggi 5-8 cm, akar putih tidak melingkar, batang tidak etiolasi"
+        "siapTanamIndikator": "Umur 5-7 hari, 2 helai daun sejati membuka sempurna, tinggi 5-8 cm, akar putih tidak melingkar, batang tidak etiolasi",
+        "tipsCepat": [
+          "Rendam bawang 3 jam (2 siung bawang merah iris + 400 ml air hangat 40°C) + tiriskan peram tisu lembap 12 jam hingga radikula 1 mm — seleksi benih hidup 95%",
+          "Semai polybag kecil atau rockwool 2x2 cm lubang 1,5 cm 1 benih tutup tipis, suhu 25-30°C kelembapan 70-85% naungan 30%",
+          "Jaga tidak becek (Pythium), siram 2x sehari pagi-sore; bibit siap 5-7 hari 2 daun sejati — timun jangan lewat 7 hari pindah (akar cepat melingkar)"
+        ]
       }
     ]
   },
@@ -1719,7 +1806,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7-10 hari saat 2 daun sejati"
         ],
-        "siapTanamIndikator": "2 daun sejati, tinggi 8-10 cm, akar penuh polybag, 7-10 hari"
+        "siapTanamIndikator": "2 daun sejati, tinggi 8-10 cm, akar penuh polybag, 7-10 hari",
+        "tipsCepat": [
+          "Skarifikasi gunting ujung tumpul biji pare 1 mm + rendam bawang 6 jam (4 siung tumbuk + 500 ml air hangat 40°C) — pare kulit tanduk keras tanpa gunting kecambah 14 hari vs 7 hari dengan gunting",
+          "Peram kain lembap 24 jam hingga pecah, semai polybag 1 benih 1,5 cm tutup tipis kompos, suhu 25-30°C naungan 50%",
+          "Media steril siram fungisida 1 g/L; siram 2x sehari, beri NPK 2 g/L 7 HST; pindah 7-10 hari 2 daun sejati jangan patah akar tunggang"
+        ]
       }
     ]
   },
@@ -1808,7 +1900,12 @@
           "Siram 2x",
           "Pindah 7 hari 2 daun"
         ],
-        "siapTanamIndikator": "2 daun sejati, 7 hari"
+        "siapTanamIndikator": "2 daun sejati, 7 hari",
+        "tipsCepat": [
+          "Skarifikasi amplas halus 5 detik + rendam bawang 4 jam (3 siung tumbuk + 400 ml air hangat 40°C) — oyong kulit keras berkayu",
+          "Semai polybag 10x15 cm 1 benih kedalaman 2 cm tutup tipis tanah gembur, suhu 25-30°C naungan 50% kelembapan 70-80%",
+          "Jaga lembap siram 2x sehari, kecambah 6-10 hari; beri para-para bambu 2 m setelah pindah 7 hari (oyong merambat cepat 10 cm/hari)"
+        ]
       }
     ]
   },
@@ -1890,7 +1987,12 @@
           "Siram 2 hari sekali",
           "Tunas 14 hari"
         ],
-        "siapTanamIndikator": "Tunas 10-15 cm, akar banyak, 14 hari"
+        "siapTanamIndikator": "Tunas 10-15 cm, akar banyak, 14 hari",
+        "tipsCepat": [
+          "Rendam buah utuh bertunas rendam bawang 2 jam (3 siung tumbuk + 500 ml air hangat 35°C) semprot luka — bawang cegah busuk buah, tunas 2 hari lebih cepat",
+          "Tanam miring 45° 2/3 buah terbenam di tanah gembur + kompos + pasir (2:1:1) pH 6,0, tunas menghadap samping bukan atas (mencegah air menggenang)",
+          "Naungan 50% suhu 20-25°C kelembapan 70-80%, siram 2 hari sekali jangan siram buah langsung (busuk), tunas 10-15 cm 14 hari siap para-para"
+        ]
       }
     ]
   },
@@ -1979,7 +2081,12 @@
           "Berkecambah 4 hari",
           "Jarang 1 tanaman"
         ],
-        "siapTanamIndikator": "Berkecambah 4 hari, langsung tanpa pindah"
+        "siapTanamIndikator": "Berkecambah 4 hari, langsung tanpa pindah",
+        "tipsCepat": [
+          "Rendam bawang 1 jam saja (2 siung bawang merah tumbuk + 400 ml air hangat 35°C jangan >2 jam — biji legume cepat busuk) + tiriskan angin 30 menit",
+          "Tanam langsung lubang 3 cm 2 benih tutup tipis tanah gembur, jarak 20x60 cm, campur Rhizobium 5 g/kg benih jika ada (bintil akar fiksasi N)",
+          "Siram secukupnya jangan becek (kacang busuk), kecambah 4 hari; jarang 1 tanaman terkuat 7 HST, beri ajir 2 m 10 HST"
+        ]
       }
     ]
   },
@@ -2062,7 +2169,12 @@
           "Berkecambah 5 hari",
           "Jarang"
         ],
-        "siapTanamIndikator": "Berkecambah 5 hari"
+        "siapTanamIndikator": "Berkecambah 5 hari",
+        "tipsCepat": [
+          "Rendam bawang 45 menit (1 siung tumbuk + 300 ml air hangat 35°C) — buncis kulit tipis jangan lama (biji pecah busuk 2 jam)",
+          "Tanam langsung lubang 3 cm 1-2 benih tutup tipis, jarak 20x40 cm, media gembur tidak padat (buncis sensitif tanah keras)",
+          "Siram 2 hari sekali, kecambah 5 hari; jangan pindah tanam (buncis tidak suka transplant), penjarangan 7 hari pilih vigor"
+        ]
       }
     ]
   },
@@ -2187,7 +2299,12 @@
           "Tanam umbi dengan tunas menghadap atas, benamkan 2/3 bagian, tutup tipis tanah, siram langsung",
           "Tutup bedengan jerami tipis 2-3 hari untuk jaga kelembaban, buka setelah tunas muncul 3-5 HST"
         ],
-        "siapTanamIndikator": "Bawang merah tidak disemai benih (generatif jarang); langsung tanam umbi bibit bertunas 0,5-1 cm, umur simpan 60-90 hari, tidak ada fase pindah tanam"
+        "siapTanamIndikator": "Bawang merah tidak disemai benih (generatif jarang); langsung tanam umbi bibit bertunas 0,5-1 cm, umur simpan 60-90 hari, tidak ada fase pindah tanam",
+        "tipsCepat": [
+          "Potong ujung umbi 1/3 + rendam bawang 10 menit (3 siung tumbuk + 500 ml air + fungisida mankozeb 2 g/L) — bawang + fungisida seragamkan tunas 3 hari vs 5 hari tanpa potong",
+          "Bedengan tinggi 30-40 cm tanah:pasir:arang sekam 2:1:1 drainase lancar (bawang paling peka genangan >2 jam busuk), jarak 15x15 cm tunas ke atas 2/3 terbenam",
+          "Tutup jerami tipis 2-3 hari, buka setelah tunas 3-5 HST; siram 2x sehari pagi-sore jangan sore lewat 16.00 (kelembapan malam picu Alternaria)"
+        ]
       }
     ]
   },
@@ -2276,7 +2393,12 @@
           "Tunas 7 hari",
           "Jarang"
         ],
-        "siapTanamIndikator": "Tunas 5 cm, 7 hari"
+        "siapTanamIndikator": "Tunas 5 cm, 7 hari",
+        "tipsCepat": [
+          "Pilih siung besar diameter >2 cm + rendam bawang 2 jam (3 siung tumbuk + 400 ml air hangat 35°C) + fungisida 1 g/L 10 menit — bawang pacu tunas 3 hari lebih cepat",
+          "Tanam siung tegak runcing ke atas kedalaman 5 cm jarak 10x15 cm di tanah gembur + pasir 1:1 pH 6,0-6,5, timbun tipis jangan tekan",
+          "Mulsa jerami 3 cm jaga kelembapan 60-70%, siram 3-4 hari sekali jangan becek (busuk umbi), tunas 7 hari"
+        ]
       }
     ]
   },
@@ -2384,7 +2506,12 @@
           "Penjarangan pertama 14 hari setelah kecambah (jarak 5 cm), penjarangan kedua 30 hari (jarak akhir 8-10 cm), buang bibit lemah bercabang",
           "Pembumbunan ringan 40 HST tutup pangkal akar yang muncul, jaga drainase tidak tergenang, siap panen 90-120 HST (diameter 2-4 cm)"
         ],
-        "siapTanamIndikator": "Tanam langsung tanpa pindah (direct seeding); penjarangan menentukan, bukan pindah tanam"
+        "siapTanamIndikator": "Tanam langsung tanpa pindah (direct seeding); penjarangan menentukan, bukan pindah tanam",
+        "tipsCepat": [
+          "Rendam bawang 2 jam (2 siung bawang merah tumbuk + 400 ml air hangat 40°C) + tiriskan 15 menit — wortel biji halus dorman, bawang + angin 15 menit pecah 2 hari lebih cepat",
+          "Campur benih dengan pasir halus kering 1:5 agar sebar rata di alur 1-2 cm jarak baris 15-20 cm, tutup tipis tanah halus 0,5 cm + mulsa jerami tipis",
+          "Gemburkan lahan hingga 35 cm buang batu (wortel bengkok jika ada batu), bedengan tinggi 30 cm, penjarangan 14 hari jarak 5 cm dan 30 hari jarak 8-10 cm"
+        ]
       }
     ]
   },
@@ -2492,7 +2619,12 @@
           "Siram secukupnya jaga lembap, mulsa jerami, tunas muncul 14-21 hari, lakukan pembumbunan pertama 30 HST timbun batang 10 cm",
           "Pembumbunan kedua 45 HST timbun hingga 20 cm untuk tutup umbi dari sinar (hindari hijau/solanin), siap panen 90-110 HST saat daun menguning"
         ],
-        "siapTanamIndikator": "Umbi bibit bertunas 1-2 cm kuat, tidak kisut, bebas virus, umur simpan 2-3 bulan di 3-4°C"
+        "siapTanamIndikator": "Umbi bibit bertunas 1-2 cm kuat, tidak kisut, bebas virus, umur simpan 2-3 bulan di 3-4°C",
+        "tipsCepat": [
+          "Belah umbi bibit 40-60 g tiap belahan 2 mata tunas + rendam bawang 30 menit (3 siung tumbuk + 400 ml air 30°C) + oles fungisida luka — bawang + fungisida cegah busuk belahan 80%",
+          "Angin-anginkan 2 hari hingga kalus putih, tanam kedalaman 10 cm jarak 30x70 cm tunas ke atas, bedengan tinggi 30 cm tanah andosol gembur pH 5,0-6,0",
+          "Pembumbunan 30 HST timbun batang 10 cm dan 45 HST 20 cm tutup umbi dari sinar (hindari solanin hijau), hentikan siram 14 hari sebelum panen"
+        ]
       }
     ]
   },
@@ -2600,7 +2732,12 @@
           "Siram halus jaga lembap, mulsa jerami tebal 5 cm, semprot ZPT jika perlu, tunas muncul 14-21 hari",
           "Haft pembumbunan ringan 60 HST dan 120 HST tutup rimpang yang muncul, panen jahe muda 180 HST, jahe tua 270-300 HST saat daun menguning"
         ],
-        "siapTanamIndikator": "Tunas 2-3 cm kokoh hijau, akar serabut mulai keluar, rimpang tidak berlendir"
+        "siapTanamIndikator": "Tunas 2-3 cm kokoh hijau, akar serabut mulai keluar, rimpang tidak berlendir",
+        "tipsCepat": [
+          "Potong rimpang 40-60 g 2-3 mata tunas + rendam bawang 2 jam (4 siung tumbuk + 500 ml air hangat 35°C) + jemur angin 1 hari — bawang + angin kalus 1 hari lebih cepat",
+          "Semai di sekam lembap 14-21 hari hingga tunas 2-3 cm baru tanam; lubang 20 cm jarak 40x60 cm tunas ke atas timbun 5 cm, naungan paranet 50%",
+          "Bedengan tinggi 30 cm drainase baik, mulsa jerami 5 cm wajib (jahe butuh lembap 80-90% tapi benci genangan), bumbun 60 & 120 HST"
+        ]
       }
     ]
   },
@@ -2708,7 +2845,12 @@
           "Siram rutin 2 hari sekali, jaga naungan, tunas muncul 14-21 hari, sulam yang tidak tumbuh 30 HST",
           "Bumbun ringan 60 dan 120 HST tutup rimpang muncul, panen 240-270 HST saat daun menguning dan mengering 70%"
         ],
-        "siapTanamIndikator": "Tunas 2 cm hijau segar, rimpang tidak keriput, ada akar serabut putih"
+        "siapTanamIndikator": "Tunas 2 cm hijau segar, rimpang tidak keriput, ada akar serabut putih",
+        "tipsCepat": [
+          "Potong rimpang 30-50 g 2-3 mata + rendam bawang 1,5 jam (3 siung tumbuk + 400 ml air hangat 35°C) + tiriskan 6 jam — kunyit mirip jahe tapi rendam lebih singkat",
+          "Semai lembap 14-21 hari tunas 2 cm, tanam kedalaman 5-7 cm jarak 40x40 cm, bedengan 25 cm pH 5,5-6,5 tanah gembur + sekam bakar 2:1:1",
+          "Paranet 30% lahan terbuka, mulsa 3 cm, bumbun ringan 60 & 120 HST; kunyit lebih tahan kering singkat vs jahe tapi awal butuh lembap"
+        ]
       }
     ]
   },
@@ -2797,7 +2939,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Potong rimpang 50-70 g 2 mata tunas + rendam bawang 2 jam (3 siung tumbuk + 400 ml air hangat 40°C) + oles abu sekam luka — lengkuas rimpang keras butuh ZPT bawang",
+          "Semai di cocopeat lembap 7-10 hari, tanam kedalaman 10 cm jarak 50x50 cm, tanah gembur + kompos pH 5,5-6,5 bedengan 30 cm",
+          "Siram 2 hari sekali, naungan 30% awal; lengkuas tahan naungan dibanding jahe, panen rimpang muda 6 bulan vs tua 12 bulan"
+        ]
       }
     ]
   },
@@ -2886,7 +3033,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Pisah anakan serai 1 rumpun jadi 2-3 anakan dengan akar 5-10 cm + rendam bawang 30 menit (3 siung tumbuk + 400 ml air 30°C) + B1 1 ml/L — bawang + B1 akar 3 hari lebih cepat",
+          "Tanam anakan tegak kedalaman 5 cm jarak 50x50 cm, tanah gembur + kompos pH 6,0 tanah tidak becek (serai tahan kering tapi awal butuh lembap)",
+          "Pangkas daun 1/2 saat tanam kurangi penguapan, siram 2 hari sekali, mulsa tipis; serai ditanam anakan bukan biji — jangan semai biji (lam kerdil)"
+        ]
       }
     ]
   },
@@ -2975,7 +3127,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Seleksi garam 1% 10 menit buang mengapung + rendam bawang 2 jam (3 siung tumbuk + 500 ml air hangat 35°C) — jagung manis butuh seleksi mengapung & bawang pecah 1 hari lebih cepat",
+          "Tanam langsung lubang 3-4 cm 1 benih/titik jarak 25x70 cm, tanah gembur + kompos 1:1, tutup tipis jangan padat, siram secukupnya",
+          "Jaga jarak seragam untuk penyerbukan silang angin optimal; sulam 7 HST jika tidak tumbuh, beri NPK dasar 5 g/lubang 10 HST"
+        ]
       }
     ]
   },
@@ -3058,28 +3215,39 @@
         "suhuOptimal": "25-30°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Siapkan Tanah gembur + kompos lembap steril",
-          "Tabur 1 benih per lubang 1 cm, tutup tipis",
-          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-          "Beri NPK 2 g/L 7 HST",
-          "Pindah tanam 7 hari saat 3-4 daun sejati"
+          "Gunakan biji singkong untuk pemuliaan saja: pilih biji bernas dari buah matang, rendam air hangat 40°C + 2 siung bawang merah iris per 400 ml selama 3 jam, skarifikasi amplas halus 5 detik jika kulit keras",
+          "Angin-anginkan 30 menit, semai di tanah gembur berpasir + kompos (1:1) bedengan tinggi 30 cm, lubang 1 cm tutup tipis 0,5 cm, jarak 5x5 cm",
+          "Naungan 50% suhu 25-32°C kelembapan 70-80%, siram halus 2x sehari, kecambah 7-10 hari",
+          "Beri NPK 2 g/L 7 HST, jarang seleksi bibit vigor, pelihara 14 hari hingga 3-4 daun sejati sebelum pindah stek lapangan",
+          "Untuk produksi komersial tetap pakai STEK batang 8-12 bulan lebih cepat 30 hari panen"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati 7-10 hari, tinggi 10-12 cm, batang kokoh, akar serabut 3-5 cm — namun produksi umbi via biji 8-12 bulan (stek lebih unggul)",
+        "tipsCepat": [
+          "Rendam bawang 3 jam (2 siung + 400 ml air hangat 40°C) + skarifikasi pasir 5 detik untuk biji singkong berkulit keras — pecah 2 hari lebih cepat",
+          "Singkong biji hanya untuk persilangan; untuk kebun komersial langsung pakai STEK 20-30 cm 5-7 mata tunas, hasil 30% lebih cepat",
+          "Media semai wajib steril (siram air panas 80°C) cegah busuk kecambah Fusarium"
+        ]
       },
       {
         "metode": "STEK",
-        "mediaTanam": "Tanah gembur berpasir + kompos (1:1), bedengan tinggi 30 cm",
+        "mediaTanam": "Tanah gembur berpasir + kompos (1:1) steril + cocopeat, bedengan tinggi 30 cm drainase baik",
         "durasiHari": 7,
         "suhuOptimal": "25-32°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Pilih batang singkong sehat umur 8-12 bulan, diameter 2-3 cm, potong stek 20-30 cm dengan 5-7 mata tunas",
-          "Potong miring 45° di pangkal, olesi fungisida/abu sekam, angin-anginkan 1 hari untuk kalus",
-          "Tancapkan 2/3 stek miring 45° di bedengan, jarak 100x80 cm, mata tunas menghadap atas, siram secukupnya",
-          "Tutup mulsa jerami, jaga lembap tidak becek; tunas muncul 7-10 hari",
-          "Sulam stek gagal tumbuh setelah 14 hari, beri NPK 5 g/tanaman 21 HST"
+          "Pilih batang singkong induk sehat umur 8-12 bulan bebas CMD/mosaik, diameter 2-3 cm ruas 5-7 mata tunas, panjang ideal 20-30 cm, potong miring 45° di pangkal 0,5 cm di bawah mata tunas dengan pisau steril tajam",
+          "Oles luka atas dengan fungisida pasta + abu sekam, pangkal celup vitamin B1 1 ml/L atau Rootone-F 2 g/100 ml air + air bawang 3 siung/500 ml 30-60 menit (auksin percepat kalus)",
+          "Angin-anginkan 1 hari di teduh hingga luka mengering kalus putih, siapkan bedengan gembur berpasir + kompos (1:1) tinggi 30 cm lebar 1 m, steril siram air panas 80°C sehari sebelum",
+          "Tancapkan 2/3 stek miring 45° menghadap atas (mata tunas atas), jarak 100x80 cm (10.000 stek/ha), kedalaman 10 cm, timbun padat, siram secukupnya (kelembapan 70-80%)",
+          "Mulsa jerami tipis, naungan tidak perlu penuh (cukup 30% 3 hari pertama jika terik), sungkup plastik hanya jika musim hujan deras; tunas pecah 7-10 hari, akar serabut 10-14 hari",
+          "Sulam stek gagal 14 HST, beri NPK 16-16-16 5 g/tanaman tugal 10 cm 21 HST, semprot B1 1 ml/L 14 HST jika pertumbuhan lambat"
         ],
-        "siapTanamIndikator": "Tunas 2-3 helai daun baru, tinggi 10-15 cm, akar serabut keluar 7-14 hari"
+        "siapTanamIndikator": "Tunas pecah 7-10 hari daun 2-3 helai, akar serabut putih 5-10 cm 10-14 hari, tinggi 10-15 cm, tidak layu siang — sulam jika belum tunas 14 hari",
+        "tipsCepat": [
+          "Potong miring 45° tepat 0,5 cm di bawah mata tunas dengan pisau steril celup alkohol 70%; oles fungisida ujung atas cegah busuk",
+          "Celup pangkal B1 1 ml/L atau Rootone-F 2 g/100 ml + air bawang (3 siung tumbuk/500 ml) 30-60 menit — kalus 3 hari lebih cepat, akar 40% lebih banyak",
+          "Media bedengan cocopeat+pasir steril (kukus) kelembapan 80% jangan becek; tancap miring 45° biar tunas tidak terbenam air hujan"
+        ]
       }
     ]
   },
@@ -3162,28 +3330,38 @@
         "suhuOptimal": "25-30°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Siapkan Tanah gembur + kompos lembap steril",
-          "Tabur 1 benih per lubang 1 cm, tutup tipis",
-          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-          "Beri NPK 2 g/L 7 HST",
-          "Pindah tanam 7 hari saat 3-4 daun sejati"
+          "Biji ubi jalar sangat kecil & dorman keras: skarifikasi gosok amplas #800 5-8 detik atau rendam H2SO4 10% 5 menit (hati-hati) lalu bilas, lanjut rendam bawang 3 siung tumbuk + 400 ml air hangat 40°C 4 jam",
+          "Tiriskan 30 menit, tabur di cocopeat steril lembap 0,3 cm tutup tipis vermikulit, semprot kabut, dome bening naungan 30%",
+          "Suhu 25-30°C kelembapan 75-85%, kecambah 5-8 hari (tanpa skarifikasi bisa 14 hari), beri AB Mix 400 ppm 7 HST",
+          "Pindah tanam 10-14 hari saat 3-4 daun sejati 5-7 cm, akar putih 3 cm; namun produksi umbi via STEK pucuk 3x lebih cepat"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati 10-14 hari, tinggi 5-7 cm, akar putih 2-3 cm — biji untuk pemuliaan, lapangan pakai STEK pucuk 25-30 cm",
+        "tipsCepat": [
+          "Rendam bawang 4 jam + skarifikasi amplas 5 detik wajib untuk biji ubi jalar — tanpa ini daya kecambah <40%",
+          "Jangan menutup benih >0,5 cm; butuh cahaya diffuse untuk germinasi",
+          "Untuk kebun produksi lewati biji, langsung STEK pucuk 3-4 ruas tancap 2 ruas — panen 3 bulan vs biji 5 bulan"
+        ]
       },
       {
         "metode": "STEK",
-        "mediaTanam": "Bedengan gembur + pasir + kompos, drainase baik",
+        "mediaTanam": "Bedengan gembur pasir + kompos + cocopeat steril drainase baik, larikan 25x100 cm",
         "durasiHari": 5,
         "suhuOptimal": "24-30°C",
         "kelembaban": "75-85%",
         "langkah": [
-          "Ambil stek pucuk/batang ubi jalar 25-30 cm dengan 3-4 ruas, pangkas daun bawah",
-          "Rendam pangkal stek dalam air + ZPT alami (bawang merah) 30 menit",
-          "Tancapkan 2 ruas ke dalam bedengan lembap, jarak 25x100 cm (larikan), siram halus",
-          "Naungi 2-3 hari pertama dengan daun pisang/paranet 30%, jaga lembap",
-          "Stek berakar 5-7 hari, tunas baru segar → lepas naungan"
+          "Ambil stek pucuk/batang ubi jalar vigor umur 2-3 bulan (jangan induk tua >4 bulan), potong 25-30 cm dengan 3-4 ruas, pangkas daun bawah sisakan 2 daun pucuk, potong miring 45° pangkal",
+          "Rendam pangkal 5 cm dalam larutan B1 1 ml/L + air bawang 3 siung/400 ml 30 menit, atau celup Rootone-F 1 g/50 ml cepat 10 detik; tiriskan 10 menit",
+          "Siapkan bedengan gembur pasir + kompos drainase baik lebar 1 m tinggi 25 cm, lembapkan media cocopeat steril hingga peras tidak menetes (kelembapan 75-85%)",
+          "Tancapkan 2 ruas (10 cm) ke bedengan lembap, jarak 25x100 cm larikan (40.000 stek/ha), posisi horizontal miring 30°, siram kabut halus 200 ml/titik",
+          "Naungi daun pisang/paranet 30% 2-3 hari pertama saja, sungkup plastik tidak perlu (ubi jalar suka udara); jaga lembap siram pagi-sore, lepas naungan hari ke-4",
+          "Akar putih 3-5 cm 5-7 hari, pucuk segar tidak layu 12.00 → siap lepas, beri NPK 2 g/L kocor 10 HST"
         ],
-        "siapTanamIndikator": "Akar putih 3-5 cm, pucuk segar tidak layu siang, 5-7 hari"
+        "siapTanamIndikator": "Akar putih serabut 3-5 cm 5-7 hari, pucuk segar hijau tidak layu siang, tunas baru 2-3 cm, tinggi 15-20 cm — lepas naungan 100%",
+        "tipsCepat": [
+          "Rendam B1 1 ml/L + air bawang (3 siung/400 ml) 30 menit: stek ubi jalar berakar 5 hari vs 10 hari tanpa ZPT",
+          "Potong miring 45° di bawah ruas, media cocopeat steril kelembapan 80% — jangan media becek (stek busuk 3 hari)",
+          "Naungan 30% hanya 2-3 hari; ubi jalar butuh sinar penuh cepat — kelamaan naungan stek etiolasi kurus"
+        ]
       }
     ]
   },
@@ -3272,7 +3450,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Rendam bawang 4 jam (3 siung tumbuk + 400 ml air hangat 50°C 10 menit lalu turun 40°C) + skarifikasi gunting ujung 1 mm — okra kulit keras berbulu tanpa scarify kecambah 14 hari vs 5 hari",
+          "Semai polybag 1 benih/lubang 1,5 cm tutup tipis kompos, suhu 25-30°C naungan 50% kelembapan 70-80%, siram 2x sehari",
+          "Kecambah 5-7 hari, beri NPK 2 g/L 7 HST; pindah tanam 7 hari jangan lewat (okra akar tunggang cepat bengkok di polybag)"
+        ]
       }
     ]
   },
@@ -3361,7 +3544,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Rendam bawang 1,5 jam (2 siung bawang merah iris + 400 ml air hangat 35°C) + tiriskan — kailan mirip sawi, bawang pecah 24 jam lebih cepat",
+          "Semai tanah gembur + kompos steril 0,5 cm tutup tipis arang sekam, jarak 2x2 cm, suhu 22-28°C cahaya 50%, kelembapan 70-80%",
+          "Siram kabut 2x sehari, kecambah 4-6 hari; pindah 7-10 hari 3-4 daun, beri NPK 2 g/L 7 HST dosis rendah"
+        ]
       }
     ]
   },
@@ -3450,7 +3638,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Rendam bawang 2 jam (3 siung bawang merah tumbuk + 400 ml air hangat 40°C) — sawi putih krop butuh bibit vigor seragam",
+          "Rockwool/polybag semai 1 benih/lubang 1 cm tutup tipis cocopeat halus, suhu 18-24°C (di atas 28°C krop tidak mengikat), naungan 30%",
+          "Jaga lembap siram kabut pagi-sore, kecambah 4-6 hari; pindah 7-10 hari 3-4 daun, jangan lewat 12 hari (akar berdesakan krop kecil)"
+        ]
       }
     ]
   },
@@ -3539,7 +3732,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Belah buah bulat ketumbar jadi 2 (ketumbar biji ganda) + rendam bawang 3 jam (3 siung tumbuk + 400 ml air hangat 35°C) + tiriskan 30 menit — tanpa belah daya kecambah 40% vs 80% belah",
+          "Campur biji belahan dengan pasir 1:5 sebar alur 1 cm tutup tipis 0,5 cm, media tanah gembur + kompos berpasir pH 6,5, suhu 20-28°C",
+          "Jaga naungan 30% 3 hari pertama, siram kabut jangan becek (ketumbar busuk bibit), kecambah 10-14 hari; jarang 10 cm 14 HST"
+        ]
       }
     ]
   },
@@ -3675,7 +3873,12 @@
           "Hari ke-7–10: bibit berdaun sejati 2–3 helai, tinggi 7–10 cm, akar putih sehat → siap pindah tanam sore hari",
           "Pindah tanam ke bedengan 30 cm tinggi, lebar 100 cm, jarak 60×70 cm, siram larutan starter NPK 2 g/L"
         ],
-        "siapTanamIndikator": "Umur 7–10 hari setelah semai, daun sejati 2–3 helai, tinggi 7–10 cm, batang kokoh, akar putih tidak melingkar"
+        "siapTanamIndikator": "Umur 7–10 hari setelah semai, daun sejati 2–3 helai, tinggi 7–10 cm, batang kokoh, akar putih tidak melingkar",
+        "tipsCepat": [
+          "Rendam bawang 2 jam (3 siung bawang merah tumbuk + 400 ml air hangat 40°C) + fungisida Previcur 0,1% 30 menit — melon sensitif rebah semai",
+          "Semai rockwool/polybag 8x9 cm benam 1-1,5 cm tutup arang sekam, suhu 25-32°C naungan 30% siram spray pagi-sore",
+          "Kecambah 3-4 hari, buka sungkup kenalkan sinar 50% 3 hari bertahap; pindah 7-10 hari 2-3 daun 7-10 cm jangan lewat (melon cepat etiolasi)"
+        ]
       }
     ]
   },
@@ -3764,7 +3967,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Rendam bawang 3 jam (3 siung tumbuk + 400 ml air hangat 35°C) + tiriskan — semangka kulit biji tebal, bawang + hangat pecah 24 jam lebih cepat",
+          "Semai posisi biji runcing ke bawah (akar keluar ujung runcing) kedalaman 1,5 cm di polybag semai tanah:kompos 2:1 steril, naungan 30%",
+          "Suhu 25-32°C kelembapan 70-80%, siram 2x sehari jangan becek; pindah 7 hari 2-3 daun sebelum akar tunggang bengkok"
+        ]
       }
     ]
   },
@@ -3899,7 +4107,12 @@
           "Naungi 3 hari pertama dengan paranet 50% jika terik, siram spray 2× sehari pagi–sore",
           "Hari ke-7: cek perakaran; sulam yang layu. Hari ke-14: tanaman tegak, daun baru muncul → lepas naungan bertahap"
         ],
-        "siapTanamIndikator": "14 hari setelah tanam stolon: daun baru 2–3 helai segar, akar putih menembus media, crown kokoh tidak busuk"
+        "siapTanamIndikator": "14 hari setelah tanam stolon: daun baru 2–3 helai segar, akar putih menembus media, crown kokoh tidak busuk",
+        "tipsCepat": [
+          "Pilih stolon runner berakar 3-5 crown >1 cm diameter umur 14 hari di polybag 7x9 cm — jangan stolon tanpa akar (gagal 50%) atau crown <0,8 cm (bibit lemah)",
+          "Celup pangkal Rootone-F 1 g/100 ml + B1 1 ml/L 10 menit (auksin + vitamin B1), tanam crown rata tanah jangan terbenam (busuk crown) jarak 30x40 cm",
+          "Siram starter KNO3 2 g/L 150 ml/tanaman sore hari, naungi paranet 50% 3 hari pertama saja, siram spray 2x sehari pagi-sore jangan becek — stolon berakar vs biji hemat 14 hari"
+        ]
       },
       {
         "metode": "BIJI",
@@ -3908,13 +4121,17 @@
         "suhuOptimal": "18-22°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Rendam benih stroberi 2 jam air hangat 25°C, tiriskan; benih sangat kecil, campur pasir halus 1:20 untuk tabur rata",
-          "Tabur di rockwool lembap 0.3 cm, jangan tutup rapat (butuh cahaya), semprot kabut halus",
-          "Simpan dome bening naungan 50% 7-10 hari hingga berkecambah (7-14 hari), jaga lembap semprot 2x sehari",
-          "Setelah kotiledon membuka, beri nutrisi 400 ppm, kenalkan cahaya penuh bertahap",
-          "Pindah tanam 21-28 hari saat 3-4 daun sejati, tinggi 4-6 cm, akar serabut putih"
+          "Benih stroberi ultra-kecil dorman: campur 100 biji + pasir halus 1:20, rendam bawang 2 siung iris per 300 ml air 25°C (jangan hangat >30°C) 2 jam saja, saring dengan saring teh",
+          "Tabur di rockwool halus lembap pH 5,5-6,0 kedalaman 0,3 cm (butuh cahaya — jangan tutup rapat), semprot kabut halus 400 ppm, dome bening naungan 50% suhu 18-22°C",
+          "Kecambah lambat 7-14 hari, jaga kelembapan 70-80% semprot 2x sehari, beri nutrisi 400 ppm setelah kotiledon membuka, cegah lumut dengan sirkulasi udara",
+          "Pindah tanam 21-28 hari saat 3-4 daun sejati tinggi 4-6 cm akar putih menembus rockwool, pelihara 14 hari sebelum bedengan; biji untuk varietas baru, produksi via STOLON 14 hari"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 4-6 cm, akar putih menembus rockwool, 21 hari"
+        "siapTanamIndikator": "3-4 daun sejati 21-28 hari, tinggi 4-6 cm, akar putih 2-3 cm tembus rockwool, roset tidak etiolasi — stolon lebih unggul 14 hari vs biji 28 hari",
+        "tipsCepat": [
+          "Rendam bawang dingin 2 jam (2 siung + 300 ml air 25°C, jangan hangat) + tabur campur pasir 1:20 — benih stroberi butuh cahaya, tutup >0,5 cm gagal kecambah",
+          "Simpan dome bening jangan gelap; cahaya diffuse 50% 10-12 jam/hari wajib fotosensitif, jaga 18-22°C (>25°C dorman kembali)",
+          "Untuk kebun komersial jangan semai biji; pakai stolon runner berakar 3-5 crown >1 cm — berbuah 60 hari vs biji 90 hari"
+        ]
       }
     ]
   },
@@ -3997,28 +4214,38 @@
         "suhuOptimal": "25-30°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Siapkan Tanah gembur + kompos lembap steril",
-          "Tabur 1 benih per lubang 1 cm, tutup tipis",
-          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-          "Beri NPK 2 g/L 7 HST",
-          "Pindah tanam 7 hari saat 3-4 daun sejati"
+          "Biji pisang (Musa) keras & dorman panjang: skarifikasi amplas kasar 10 detik + rendam bawang 5 siung tumbuk + 600 ml air hangat 45°C 12-24 jam (ganti air 6 jam), pilih biji tenggelam saja",
+          "Tiriskan, semai di cocopeat steril basah dalam kotak tertutup suhu 30°C kelembapan 80%, tutup 1 cm, jaga lembap semprot 2x sehari",
+          "Kecambah lambat 14-30 hari, beri fungisida 1 g/L tiap 7 hari cegah busuk; pindah polybag 10x15 cm saat kotiledon 3 cm",
+          "Beri NPK 2 g/L 14 HST, pelihara 30 hari 3-4 daun 10 cm; CATATAN: petani komersial pakai anakan pedang 40-60 cm (STEK) jauh lebih cepat 2 bulan vs biji 6 bulan"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "Kecambah 14-30 hari, tinggi 5-8 cm 2-3 daun, akar putih 3 cm — biji hanya untuk pemuliaan, produksi pakai anakan pedang",
+        "tipsCepat": [
+          "Rendam bawang 12-24 jam (5 siung tumbuk + 600 ml air hangat 45°C, ganti air 6 jam) + amplas 10 detik — tanpa ini pisang biji dorman berbulan-bulan",
+          "Skarifikasi mekanis wajib: biji pisang berkulit tanduk tebal 2 mm, amplas hingga terlihat titik putih hilum",
+          "Untuk kebun jangan semai biji; dongkel anakan pedang 40-60 cm + bonggol 15 cm (STEK) — tingkat hidup 90% vs biji 30%"
+        ]
       },
       {
         "metode": "STEK",
-        "mediaTanam": "Anakan pisang (sucker) pedang umur 3-4 bulan, tinggi 40-60 cm + bonggol sehat + polybag 30x40 cm",
+        "mediaTanam": "Anakan pedang bonggol sehat 40-60 cm + lubang 40x40x40 cm tanah:kompos:pasir 2:1:1 + NPK dasar",
         "durasiHari": 14,
         "suhuOptimal": "26-32°C",
         "kelembaban": "70-85%",
         "langkah": [
-          "Pilih anakan pedang (daun runcing) dari induk sehat bebas layu Fusarium, dongkel dengan bonggol dan akar utuh 15 cm",
-          "Pangkas daun sisakan 20 cm, rendam bonggol dalam fungisida + insektisida 10 menit, tiriskan",
-          "Tanam di polybag/lubang 40x40x40 cm dengan campuran tanah:kompos:pasir 2:1:1 + 100 g NPK dasar + Furadan 5 g",
-          "Siram jenuh pertama, naungi 7 hari paranet 30%, siram 2 hari sekali",
-          "Anakan segar tidak layu 7 hari, muncul daun baru 14 hari → siap tanam lapang setelah 30 hari aklimatisasi polybag"
+          "Pilih anakan pedang (bukan anakan air melebar) umur 3-4 bulan tinggi 40-60 cm diameter bonggol 10-15 cm dari induk sehat bebas layu Fusarium/Bunchy Top, daun runcing sempit",
+          "Dongkel dengan bonggol utuh + akar 15 cm + tanah, pangkas daun sisakan pelepah 20 cm, rendam bonggol fungisida Antracol 2 g/L + insektisida Curacron 1 ml/L + B1 1 ml/L 10 menit, tiriskan 1 jam",
+          "Siapkan lubang 40x40x40 cm campuran tanah:kompos:pasir 2:1:1 + NPK 16-16-16 100 g + Furadan 5 g + dolomit 50 g, aduk 7 hari sebelum tanam, siram jenuh",
+          "Tanam bonggol tegak kedalaman 15 cm (leher bonggol rata tanah), timbun padat, siram jenuh 10 L, mulsa jerami 5 cm, naungi paranet 30% 7 hari",
+          "Siram 2 hari sekali 5 L, semprot B1 1 ml/L 7 HST, anakan segar tidak layu 7 hari, daun baru tombak muncul 14 hari, aklimatisasi polybag 30 hari sebelum lapang jika dongkel kecil",
+          "Seleksi 1 anakan per rumpun, buang anakan air, jaga jarak 3x3 m (1.100 tanaman/ha)"
         ],
-        "siapTanamIndikator": "Daun baru 1 helai membuka, akar putih menembus polybag, bonggol kokoh, 14-21 hari"
+        "siapTanamIndikator": "Daun tombak baru 1 helai membuka 14-21 hari, daun segar tidak layu siang, akar putih menembus polybag 5-10 cm, bonggol kokoh tidak busuk — siap lapang 30 hari",
+        "tipsCepat": [
+          "Wajib anakan pedang (daun sempit runcing) bukan anakan air (daun lebar) — pedang tumbuh 2x lebih cepat dan bebas virus",
+          "Rendam B1 1 ml/L + fungisida 2 g/L 10 menit cegah Fusarium — bonggol pisang rentan busuk 30% tanpa rendam",
+          "Lubang 40x40x40 cm + Furadan 5 g cegah nematoda & uret; mulsa jerami jaga kelembapan 70-85% siram 2 hari sekali jangan becek"
+        ]
       }
     ]
   },
@@ -4107,7 +4334,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Cuci lendir sarka biji papaya gosok abu 30 detik + rendam bawang 2 jam (2 siung bawang merah tumbuk + 300 ml air hangat 40°C) — lendir penghambat tanpa cuci kecambah 14 hari vs 7 hari",
+          "Kering angin 6 jam, semai polybag 10x15 cm 1 benih/lubang 1 cm tutup tipis kompos, suhu 25-30°C naungan 50% kelembapan 70-80%",
+          "Kecambah 10-14 hari, seleksi bibit betina/hermafrodit tidak bisa di benih — tanam 3 bibit/lubang lapang seleksi berbunga 3 bulan"
+        ]
       }
     ]
   },
@@ -4196,7 +4428,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Skarifikasi amplas halus #800 5 detik + rendam bawang 3 jam (3 siung tumbuk + 400 ml air hangat 40°C) + fungisida 1 g/L 5 menit — jambu biji kulit biji keras berlendir",
+          "Semai polybag 10x15 cm tanah:pasir:kompos 2:1:1 1,5 cm tutup tipis, suhu 25-30°C naungan 50% kelembapan 70-80%",
+          "Kecambah lambat 14-21 hari, siram 2 hari sekali jangan becek; pindah 30 hari tinggi 15-20 cm 6 daun (jambu biji lambat dibanding sayur)"
+        ]
       }
     ]
   },
@@ -4285,7 +4522,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Cuci daging buah + rendam bawang 2 jam (3 siung tumbuk + 400 ml air hangat 35°C) — jambu air biji rekalitran jangan keringkan lama (mati 3 hari kering)",
+          "Semai langsung polybag 15x20 cm 1 benih 2 cm posisi lembaga samping, media tanah:pasir:kompos 2:1:1 steril, naungan 50% suhu 25-30°C",
+          "Jaga lembap siram 2 hari sekali, kecambah 14-21 hari; biji jambu air cepat busuk jika becek — media harus porous pasir banyak"
+        ]
       }
     ]
   },
@@ -4363,18 +4605,24 @@
     "sowingGuides": [
       {
         "metode": "BIJI",
-        "mediaTanam": "Tanah gembur + kompos",
+        "mediaTanam": "Polybag 15x20 cm tanah gembur + kompos + pasir (2:1:1) steril pH 5,5-6,5",
         "durasiHari": 7,
         "suhuOptimal": "25-30°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Siapkan Tanah gembur + kompos lembap steril",
-          "Tabur 1 benih per lubang 1 cm, tutup tipis",
-          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-          "Beri NPK 2 g/L 7 HST",
-          "Pindah tanam 7 hari saat 3-4 daun sejati"
+          "Pilih biji mangga segar dari buah masak pohon (varietas Arumanis/Gedong), cuci lendir, kering angin 1 hari, belah kulit tanduk dengan pisau steril (skarifikasi) 2 mm tanpa luka kotiledon",
+          "Rendam ZPT bawang: 4 siung bawang merah tumbuk + 500 ml air hangat 40°C 2-4 jam, tiriskan; oles fungisida mankozeb 2 g/L 5 menit lalu angin-anginkan 30 menit",
+          "Semai di polybag 15x20 cm media tanah gembur + kompos + pasir (2:1:1) steril pH 5,5-6,5, benam biji 2 cm posisi lembaga di atas, siram jenuh",
+          "Naungan paranet 50% suhu 26-30°C kelembapan 70-80%, siram 2 hari sekali jaga lembap tidak becek; perkecambahan 7-14 hari, keping biji terangkat",
+          "Beri NPK 16-16-16 2 g/L 200 ml/polybag 14 HST, semprot B1 1 ml/L 7 HST jika stagnan; seleksi bibit vigor tinggi (poliembrioni: pilih yang tegak)",
+          "Bibit siap sambung okulasi 8-12 bulan (diameter 1-2 cm), atau siap tanam okulasi jadi; jika tanam biji langsung untuk rootstock tunggu 30-45 hari tinggi 20-30 cm 6-8 daun"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "Biji pecah tunas 7-14 hari, tinggi bibit 20-30 cm, 6-8 helai daun hijau mengkilap, batang diameter 0,8-1 cm, akar tunggang lurus tidak melingkar, umur 30-45 hari (siap okulasi 8-12 bulan)",
+        "tipsCepat": [
+          "Rendam bawang 2-4 jam (4 siung bawang merah tumbuk + 500 ml air hangat 40°C) — auksin mempercepat pecah kulit tanduk 3-4 hari vs tanpa rendam 7-10 hari, plus antifungi alami",
+          "Skarifikasi kulit tanduk dengan sayat 2 mm di punggung biji (jangan lukai kotiledon) + amplas halus 5 detik, rendam fungisida 5 menit cegah busuk",
+          "Semai posisi lembaga menghadap atas 2 cm dalam, media pasir-kompos steril (kukus 30 menit); jaga tidak becek — mangga sensitif busuk biji"
+        ]
       },
       {
         "metode": "OKULASI",
@@ -4383,13 +4631,21 @@
         "suhuOptimal": "26-32°C",
         "kelembaban": "70-85%",
         "langkah": [
-          "Siapkan rootstock sehat (dari biji 8-12 bulan), sayat kulit bentuk T 3 cm di ketinggian 20-30 cm dari tanah",
-          "Ambil mata tunas (bud) dari entres varietas unggul (Arumanis, Gedong) ukuran 2x1 cm beserta kulit tipis",
-          "Sisipkan bud ke sayatan T, ikat dengan plastik okulasi/grafting tape rapat, sisakan mata tunas terbuka",
-          "Simpan di naungan 50% 14 hari, jangan siram kena sambungan; cek keberhasilan: bud hijau segar tidak kering",
-          "Setelah 21 hari bud bertunas 2-3 cm, potong batang rootstock 2 cm di atas sambungan, buka ikatan bertahap"
+          "Siapkan rootstock mangga biji umur 8-12 bulan diameter 1-2 cm tinggi 40-60 cm sehat tegak, puasakan air 2 hari sebelum okulasi biar kambium kesat; siapkan entres Arumanis/Gedong Gincu cabang tengah produktif mata tunas dorman montok hijau kecoklatan (bukan pucuk muda)",
+          "Sayat kulit T: dengan silet steril buat sayatan vertikal 3 cm + horizontal 1 cm di ketinggian 20-30 cm dari tanah (sisi tidak kena matahari langsung), kupas kulit hati-hati jangan lukai kayu, buka sayatan",
+          "Ambil mata tunas (bud chip) ukuran 2x1 cm dengan kulit tipis + sedikit kayu (0,2 mm) dari entres, sisipkan ke sayatan T hingga rapat tanpa gelembung udara, kambium bud menempel kambium rootstock",
+          "Ikat dengan grafting tape/parafilm lebar 2 cm dari bawah ke atas melingkar rapat, sisakan mata tunas terbuka 0,5 cm, jangan longgar (udara masuk gagal) jangan terlalu kencang (cekik)",
+          "Simpan naungan paranet 50% suhu 26-32°C kelembapan 70-85%, siram media jangan kena sambungan (siram pangkal saja 2 hari sekali), semprot fungisida 1 g/L 7 HST cegah jamur di ikatan",
+          "Cek hari 7-10: bud hijau segar = jadi, bud coklat kering = gagal ulang; hari 14-21 bud pecah tunas 1-2 cm → iris parafilm di atas tunas, potong pucuk rootstock 2 cm di atas sambungan miring 45° untuk dorong tunas",
+          "Buka ikatan bertahap hari 21-28 saat tunas 3-5 cm dan kalus menyatu kuat, lepas penuh 28 hari, beri NPK 2 g/L 200 ml 21 HST, naungan 30% 7 hari lalu full sun",
+          "Siap pindah lapang setelah tunas 10-15 cm 3-4 daun 45 hari, tinggi total 50-70 cm, sambungan tidak layu"
         ],
-        "siapTanamIndikator": "Mata tunas pecah hijau 1-2 cm, kalus menyatu, 21 hari; siap pindah lapang setelah tunas 10-15 cm"
+        "siapTanamIndikator": "Mata tunas pecah hijau 1-2 cm 14-21 hari, kalus putih menyatu melingkar, daun tunas segar tidak kering; gagal jika bud coklat hitam 10 hari — siap lapang tunas 10-15 cm 45 hari",
+        "tipsCepat": [
+          "Pilih bud dorman montok dari cabang tengah (bukan pucuk) — bud terlalu muda busuk, terlalu tua tidak pecah; silet steril celup alkohol 70% tiap 5 okulasi",
+          "Ikat parafilm rapat kedap udara tapi mata tunas tetap terbuka 0,5 cm; siram jangan kena sambungan 14 hari (air masuk busuk sambungan)",
+          "Naungan 50% 14 hari + buka ikatan 14-21 hari saat tunas 2 cm; potong pucuk rootstock 2 cm di atas okulasi untuk pecah dormansi — tanpa potong tunas lambat 30 hari"
+        ]
       },
       {
         "metode": "CANGKOK",
@@ -4398,13 +4654,21 @@
         "suhuOptimal": "25-30°C",
         "kelembaban": "70-85%",
         "langkah": [
-          "Pilih cabang sehat tidak berbuah, diameter 2-3 cm, panjang 60-80 cm, kerat kulit melingkar 3-4 cm kupas kambium hingga bersih",
-          "Kerik kambium, olesi ZPT (Rootone-F) atau bawang merah, biarkan kering 1 hari",
-          "Bungkus luka dengan media cangkok lembap (kepal 7-10 cm), ikat plastik bening atas-bawah rapat, lubangi kecil drainase",
-          "Siram suntik 2 hari sekali via spuit jika media kering, jaga tidak becek",
-          "Akar tembus plastik 30-45 hari (akar coklat serabut banyak) → potong bawah cangkok, rendam vitamin B1, tanam di polybag 30cm sebelum lapang"
+          "Pilih cabang mangga produktif 2-5 tahun diameter 2-3 cm panjang 60-80 cm tidak sedang berbunga, sehat bebas antraknosa, posisi mudah dijangkau, tandai 30 cm dari pangkal cabang",
+          "Kerat kulit melingkar 2 cincin jarak 3-4 cm, kupas kulit hingga kayu putih bersih, kerik kambium sisa dengan pisau hingga kesat (jika sisa kambium kulit menyambung gagal berakar), biarkan kering angin 1 hari",
+          "Oles luka atas (ujung mengarah pucuk) dengan ZPT Rootone-F pasta 2 g + air bawang 3 siung tumbuk/100 ml atau bawang merah tunggal oles 2 menit (auksin alami), jangan oles kayu bawah",
+          "Siapkan media cangkok lembap peras: cocopeat + kompos matang + tanah gembur 1:1:1 lembap (peras tidak menetes, kadar air 60-70%), kepal 7-10 cm diameter 10 cm, steril siram fungisida 1 g/L sehari sebelum",
+          "Bungkus luka dengan media kepal padat, ikat plastik bening tebal 0,05 mm atas-bawah rapat dengan tali rafia, tusuk 6-8 lubang jarum kecil bawah untuk drainase + 2 lubang atas untuk suntik air",
+          "Siram suntik 20-30 ml air via spuit 2 hari sekali jika media kelihatan kering (plastik bening untuk cek), jangan becek; naungan alami daun induk cukup (jangan potong daun sekitar), jaga cabang tidak goyang ikat ajir",
+          "Akar putih-coklat serabut menembus plastik 25-35 hari, tunggu hingga akar coklat tua 5-10 cm banyak (35-45 hari) → potong miring bawah cangkok 2 cm di bawah plastik dengan gergaji tajam, rendam B1 1 ml/L 30 menit",
+          "Tanam di polybag 30x40 cm media tanah:kompos:sekam 2:1:1, naungi 50% 14 hari, siram 2 hari sekali, pupuk NPK 5 g 30 HST, siap lapang 45-60 hari setelah potong"
         ],
-        "siapTanamIndikator": "Akar serabut coklat memenuhi bungkusan, panjang akar 5-10 cm, 35-45 hari"
+        "siapTanamIndikator": "Akar serabut coklat tua 5-10 cm memenuhi bungkusan (terlihat dari plastik bening) 35-45 hari, daun cabang tetap segar — potong jika akar >15 helai panjang >5 cm",
+        "tipsCepat": [
+          "Kerik kambium hingga kesat mengkilap dan keringkan 1 hari — sisa kambium 1 mm saja cangkok gagal (kulit menyambung, tidak keluar akar)",
+          "Media cocopeat+kompos lembap peras (60% air) + 6-8 lubang drainase jarum; suntik 20 ml air 2 hari sekali — media becek akar busuk hitam",
+          "Bungkus plastik bening (bukan hitam) biar pantau akar; ikat rapat atas-bawah + ajir biar cabang tidak goyang angin — goyang akar putus"
+        ]
       }
     ]
   },
@@ -4487,28 +4751,38 @@
         "suhuOptimal": "25-30°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Siapkan Tanah gembur + kompos lembap steril",
-          "Tabur 1 benih per lubang 1 cm, tutup tipis",
-          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-          "Beri NPK 2 g/L 7 HST",
-          "Pindah tanam 7 hari saat 3-4 daun sejati"
+          "Biji nanas sangat jarang (buah tanpa biji): ambil biji hitam coklat dari buah matang, cuci, rendam bawang 2 siung + 300 ml air hangat 35°C 4 jam, skarifikasi amplas super halus 3 detik karena kulit keras",
+          "Tabur di cocopeat steril 0,5 cm tutup tipis, kelembapan 70-80% suhu 25-30°C, semprot kabut 2x sehari, kecambah 14-21 hari (lambat)",
+          "Beri NPK 1 g/L 14 HST, pindah 30 hari 3 daun 5 cm; namun petani 100% pakai STEK mahkota/tunas — biji hanya untuk pemuliaan, STEK 21 hari siap tanam",
+          "Jika tujuan produksi, lewati biji langsung pakai mahkota nanas keringkan 2-3 hari luka kalus lalu tancap"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "Kecambah 14-21 hari, tinggi 5 cm 3 daun — biji untuk breeding; produksi via STEK mahkota 21 hari daun pucuk tidak mudah dicabut",
+        "tipsCepat": [
+          "Rendam bawang 4 jam + amplas 3 detik untuk biji nanas berkulit keras — kecambah naik 2x vs air biasa",
+          "Biji nanas dormansi tinggi, kecambah 2-3 minggu normal; jangan siram becek (busuk), cukup lembap peras",
+          "Untuk kebun lewati biji; potong mahkota buang daun bawah 2 cm keringkan 2-3 hari (STEK) — tingkat hidup 95% 21 hari"
+        ]
       },
       {
         "metode": "STEK",
-        "mediaTanam": "Mahkota (crown) atau tunas batang nanas + media tanah:pasir:kompos 2:1:1",
+        "mediaTanam": "Mahkota/tunas nanas + media tanah:pasir:kompos 2:1:1 gembur steril",
         "durasiHari": 21,
         "suhuOptimal": "25-32°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Pilih mahkota nanas sehat, buang daun bawah 2 cm, keringkan 2-3 hari hingga luka kalus",
-          "Tancapkan ke media lembap kedalaman 3-4 cm, jarak 30x60 cm, siram secukupnya",
-          "Naungi 7 hari pertama, siram 3 hari sekali (nanas toleran kering), beri fungisida semprot",
-          "Akar muncul 14-21 hari, daun tengah hijau segar tidak mudah dicabut",
-          "Siap pindah lapang setelah 30 hari atau langsung tanam lapang dengan mulsa"
+          "Pilih mahkota (crown) atau tunas batang/sucker nanas sehat buah besar manis, potong mahkota dengan 2 cm daging buah, buang daun bawah 2 cm hingga terlihat cincin akar, keringkan teduh 2-3 hari hingga luka kalus putih (wajib cegah busuk)",
+          "Celup pangkal vitamin B1 1 ml/L + Rootone-F 1 g/100 ml 15 menit atau oles bawang merah tumbuk 5 menit, tiriskan",
+          "Siapkan media tanah:pasir:kompos 2:1:1 gembur pH 5,5-6,0 steril, lubang 5 cm, tancap mahkota kedalaman 3-4 cm tegak, jarak 30x60 cm (55.000/ha) atau 40x60 cm double row",
+          "Siram secukupnya lembap tidak becek (nanas sukulen toleran kering), naungi paranet 30% 7 hari pertama, siram 3 hari sekali 200 ml, semprot fungisida Antracol 2 g/L 7 HST",
+          "Akar serabut muncul 14-21 hari (tes tarik daun pucuk tidak mudah lepas), daun tengah hijau segar, sungkup tidak perlu (nanas tidak butuh kelembapan 80% tinggi)",
+          "Siap pindah lapang 30 hari atau tanam langsung lapang dengan mulsa plastik hitam-perak; beri NPK 5 g/tanaman 30 HST"
         ],
-        "siapTanamIndikator": "Daun pucuk tidak mudah dicabut (akar mengikat), akar serabut 3-5 cm, 21 hari"
+        "siapTanamIndikator": "Daun pucuk ditarik tidak lepas (akar mengikat kuat) 14-21 hari, akar serabut putih 3-5 cm, daun tengah hijau segar, tinggi mahkota 15-20 cm — siap lapang 30 hari",
+        "tipsCepat": [
+          "Keringkan luka mahkota 2-3 hari hingga kalus putih wajib — tancap basah busuk 50% dalam 7 hari",
+          "Celup B1 1 ml/L 15 menit + cocopeat steril — akar 14 hari vs 21 hari tanpa ZPT, jangan rendam >30 menit (mahkota sukulen busuk)",
+          "Media jangan becek; nanas butuh lembap 70-80% tapi toleran kering — siram 3 hari sekali 200 ml, drainase harus lancar"
+        ]
       }
     ]
   },
@@ -4586,18 +4860,23 @@
     "sowingGuides": [
       {
         "metode": "BIJI",
-        "mediaTanam": "Tanah gembur + kompos",
+        "mediaTanam": "Polybag 10x15 cm tanah gembur + pasir + kompos (2:1:1) pH 5,5-6,5",
         "durasiHari": 7,
         "suhuOptimal": "25-30°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Siapkan Tanah gembur + kompos lembap steril",
-          "Tabur 1 benih per lubang 1 cm, tutup tipis",
-          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-          "Beri NPK 2 g/L 7 HST",
-          "Pindah tanam 7 hari saat 3-4 daun sejati"
+          "Pilih biji jeruk manis segar dari buah masak tidak kering, cuci lendir, rendam bawang 3 siung tumbuk + 400 ml air hangat 40°C 3 jam, buang biji mengapung, skarifikasi sayat kulit tipis 1 mm jika ingin cepat",
+          "Angin-anginkan 20 menit, semai di polybag 10x15 cm tanah gembur + pasir + kompos (2:1:1) kedalaman 1,5 cm, siram jenuh, tutup mulsa tipis",
+          "Naungan 30% suhu 25-30°C kelembapan 70-80%, kecambah 10-21 hari, siram 2 hari sekali, beri fungisida 1 g/L 7 HST cegah damping-off",
+          "Beri NPK 2 g/L 14 HST, pelihara 30 hari tinggi 10 cm 4-5 daun; biji untuk rootstock JC (Japansche Citroen), bibit buah unggul via OKULASI 21 hari",
+          "Seleksi bibit JC vigor untuk okulasi Siam Madu/Keprok — jangan tanam biji jeruk manis langsung (buah asam & lama 5 tahun vs okulasi 2 tahun)"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "Kecambah 10-21 hari, tinggi 10-15 cm 4-6 daun 30 hari, akar tunggang lurus — siap okulasi JC 6-9 bulan diameter 0,8-1,5 cm",
+        "tipsCepat": [
+          "Rendam bawang 3 jam (3 siung tumbuk + 400 ml air hangat 40°C) + sayat kulit biji 1 mm — kecambah 10 hari vs 21 hari tanpa perlakuan",
+          "Biji jeruk manis poliembrioni — pilih tunas nucellar tegak (bukan zygotic kerdil) untuk rootstock JC kuat",
+          "Jangan tanam biji jeruk manis untuk buah meja; hasil segregasi asam 50% — okulasi bud Siam/Keprok 21 hari pasti manis"
+        ]
       },
       {
         "metode": "OKULASI",
@@ -4606,13 +4885,20 @@
         "suhuOptimal": "24-30°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Siapkan rootstock JC diameter 0,8-1,5 cm, sehat bebas CVPD, pangkas duri sekitar batang",
-          "Sayat T 2,5 cm di 15-20 cm dari pangkal, ambil bud chip 1,5x0,8 cm dari entres jeruk manis (mata dorman)",
-          "Sisipkan bud, ikat dengan parafilm/grafting tape melingkar rapat, mata tunas di luar",
-          "Letak di naungan 50%, siram rutin tanpa basahi sambungan 14 hari, cek bud tetap hijau",
-          "Hari 14-21: buka ikatan, potong pucuk rootstock 5 cm di atas okulasi untuk dorong tunas, tunas 3-5 cm siap dipelihara"
+          "Siapkan rootstock Japansche Citroen (JC) umur 6-9 bulan diameter 0,8-1,5 cm tinggi 30-40 cm sehat bebas CVPD (belilah bibit JC bersertifikat Balitjestro), pangkas duri sekitar batang, puasakan air 1 hari",
+          "Pilih entres jeruk manis Siam Pontianak/Keprok Batu mata tunas dorman bulat mengkilap dari cabang berbuah lebat, ambil bud chip 1,5x0,8 cm dengan mata tunas di tengah beserta kulit tipis",
+          "Sayat T 2,5 cm di 15-20 cm dari pangkal rootstock (sisi timur hindari matahari sore), buka kulit, sisipkan bud chip rapat tanpa rongga, kambium bertemu minimal satu sisi",
+          "Ikat parafilm/grafting tape melingkar rapat 3 lapis dari bawah ke atas, mata tunas biarkan terbuka 0,3 cm, rekatan kedap air",
+          "Letak naungan paranet 50% suhu 24-30°C kelembapan 70-80%, siram pangkal media 2 hari sekali jangan basahi sambungan 14 hari, semprot fungisida Mankozeb 2 g/L 5 HST",
+          "Cek 7 hari: bud hijau = jadi, coklat = gagal; hari 14-21 buka parafilm atas tunas, pangkas pucuk rootstock 5 cm di atas okulasi miring untuk dominansi tunas entres",
+          "Lepas ikatan penuh 21-28 hari saat tunas 3-5 cm dan sambungan kalus kokoh, beri NPK 16-16-16 3 g/tanaman 21 HST, aklimatisasi full sun bertahap 7 hari"
         ],
-        "siapTanamIndikator": "Bud hijau pecah 1-3 cm, sambungan kalus sempurna, 21 hari"
+        "siapTanamIndikator": "Bud hijau pecah 1-3 cm 14-21 hari, sambungan kalus putih sempurna, tunas entres segar — siap bibit 30-40 cm 45 hari",
+        "tipsCepat": [
+          "Rootstock JC wajib bebas CVPD (beli bersertifikat) — jeruk okulasi gagal 50% karena rootstock terinfeksi virus",
+          "Ikat parafilm kedap 3 lapis, mata terbuka 0,3 cm; jangan siram sambungan 14 hari — air masuk sambungan busuk 70% kasus",
+          "Pangkas pucuk rootstock 5 cm di atas okulasi hari 14 untuk pecah tunas; tanpa pangkas tunas dorman 30 hari baru pecah"
+        ]
       }
     ]
   },
@@ -4690,18 +4976,23 @@
     "sowingGuides": [
       {
         "metode": "BIJI",
-        "mediaTanam": "Tanah gembur + kompos",
+        "mediaTanam": "Polybag 20x30 cm tanah gembur + pasir + kompos (2:1:1) steril",
         "durasiHari": 7,
         "suhuOptimal": "25-30°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Siapkan Tanah gembur + kompos lembap steril",
-          "Tabur 1 benih per lubang 1 cm, tutup tipis",
-          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-          "Beri NPK 2 g/L 7 HST",
-          "Pindah tanam 7 hari saat 3-4 daun sejati"
+          "Belah buah alpukat matang, ambil biji besar 50-80 g tidak luka, cuci, kupas kulit coklat tipis dengan pisau steril (skarifikasi) hati-hati jangan luka kotiledon, rendam bawang 4 siung iris + 500 ml air hangat 35°C 4 jam",
+          "Tiriskan angin 30 menit, semai di polybag 20x30 cm tanah gembur + pasir + kompos (2:1:1) steril, tusuk biji 2/3 terbenam posisi runcing ke atas (belah menghadap samping), siram jenuh",
+          "Naungan 50% suhu 24-28°C kelembapan 75-85%, siram 2-3 hari sekali, tunas 14-30 hari (alpukat lambat), jangan cabut kulit biji paksa",
+          "Beri NPK 2 g/L 21 HST, fungisida 1 g/L 7 HST, pelihara 45-60 hari tinggi 20-30 cm 6-8 daun sebelum sambung pucuk; biji untuk rootstock, buah unggul via OKULASI/sambung pucuk 28 hari",
+          "Pilih biji dari pohon lokal vigor (bukan Hass import) untuk rootstock tahan Phytophthora"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "Tunas 14-30 hari, tinggi 20-30 cm 6-8 daun 45-60 hari, diameter batang 0,8-1 cm, akar tunggang 10 cm kokoh — siap sambung pucuk 6-10 bulan",
+        "tipsCepat": [
+          "Rendam bawang 4 jam (4 siung + 500 ml air hangat 35°C) + kupas kulit biji coklat 10 menit — pecah 14 hari vs 30 hari tanpa kupas",
+          "Skarifikasi kupas kulit biji wajib: kulit alpukat mengandun tanin penghambat; kupas bersih lalu rendam fungisida 2 g/L 5 menit",
+          "Posisi semai runcing ke atas 2/3 terbenam jangan terbalik (akar di bawah) — salah posisi bibit bengkok dan busuk"
+        ]
       },
       {
         "metode": "OKULASI",
@@ -4710,13 +5001,20 @@
         "suhuOptimal": "22-28°C",
         "kelembaban": "75-85%",
         "langkah": [
-          "Siapkan rootstock diameter 1-2 cm, potong pucuk datar ketinggian 30 cm, belah vertikal 3 cm di tengah batang",
-          "Ambil entres pucuk 8-12 cm dengan 2-3 mata tunas, runcingkan pangkal bentuk V 2,5 cm",
-          "Sisipkan entres ke belahan rootstock, sejajarkan kambium minimal satu sisi, ikat grafting tape + sungkup plastik bening",
-          "Simpan naungan 70% 14 hari, jaga kelembapan sungkup (embun), buka sungkup bertahap 5 menit/hari setelah hari ke-14",
-          "Tunas entres pecah 14-21 hari, lepas sungkup penuh hari ke-21, lepas ikatan hari ke-28 jika sambungan kokoh"
+          "Siapkan rootstock alpukat biji umur 6-10 bulan diameter 1-2 cm tinggi 30-40 cm sehat, potong pucuk datar ketinggian 30 cm, belah vertikal 3 cm di tengah batang dengan silet tajam (sambung celah/top grafting) — ini metode okulasi sambung pucuk favorit alpukat",
+          "Ambil entres pucuk alpukat Hass/Mentega/Kendil umur 3-4 bulan 8-12 cm dengan 2-3 mata tunas dorman, runcingkan pangkal bentuk V 2,5 cm dua sisi dengan sayatan halus kambium terlihat",
+          "Sisipkan entres V ke belahan rootstock, sejajarkan kambium minimal satu sisi rapat (jika diameter beda, rapikan satu sisi), jangan ada rongga, ikat grafting tape/parafilm dari bawah ke atas rapat kedap",
+          "Sungkup plastik bening 15x20 cm ikat bawah untuk jaga kelembapan 85% (embun di dalam), simpan naungan paranet 70% suhu 22-28°C 14 hari, jangan buka sungkup sama sekali 7 hari pertama",
+          "Hari 7-10 cek embun masih ada = kelembapan ok; buka sungkup 5 menit/hari setelah hari 14 untuk sirkulasi, semprot fungisida 1 g/L jika jamur putih di sambungan",
+          "Tunas entres pecah 14-21 hari daun 2-3 helai → lepas sungkup penuh hari 21, lepas ikatan hari 28 jika sambungan kokoh tidak goyang, beri B1 1 ml/L 14 HST",
+          "Aklimatisasi naungan 50% 7 hari, siram 2 hari sekali, NPK 2 g/L 28 HST, siap lapang tinggi 40-60 cm 45-60 hari"
         ],
-        "siapTanamIndikator": "Tunas entres pecah daun baru 2-3 helai, sambungan tidak layu, 21-28 hari"
+        "siapTanamIndikator": "Tunas entres pecah 14-21 hari daun 2-3 helai hijau segar, sambungan kalus kokoh tidak layu saat sungkup dibuka — gagal jika entres coklat hitam 10 hari",
+        "tipsCepat": [
+          "Sejajarkan kambium satu sisi wajib — alpukat kambium tebal, jika meleset sambungan tidak menyatu 100% gagal",
+          "Sungkup plastik bening jaga 80-85% kelembapan 14 hari, naungan 70% jangan 50% (alpukat pucuk sensitif terik) — buka 5 menit/hari setelah hari 14",
+          "Entres pucuk 8-12 cm 2-3 mata jangan terlalu panjang (>15 cm layu) atau terlalu pendek (<5 cm cadangan makanan kurang)"
+        ]
       }
     ]
   },
@@ -4805,7 +5103,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Rendam bawang dingin 2 jam (2 siung iris + 300 ml air 25°C jangan hangat >30°C) + campur pasir halus 1:20 — biji buah naga mikro 1 mm (3000 biji/gram) butuh pasir sebar rata",
+          "Tabur di cocopeat steril halus 0,3 cm jangan tutup tebal (butuh cahaya), dome bening naungan 50% suhu 25-30°C kelembapan 70-80%",
+          "Semprot kabut 2x sehari, kecambah 7-10 hari bintik hijau; pindah 30 hari tinggi 3-5 cm kaktus kecil 3 sisik — namun kebun produksi via STEK batang 20 cm 3x lebih cepat berbuah"
+        ]
       }
     ]
   },
@@ -4894,7 +5197,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Cuci biji durian buang selaput + rendam bawang 1 jam (3 siung tumbuk + 400 ml air hangat 35°C jangan lama — biji rekalitran cepat busuk) + fungisida 2 g/L 5 menit",
+          "Semai langsung polybag 20x30 cm tanah:pasir:kompos 2:1:1 posisi benih rebah miring 30° 2 cm timbun tipis, naungan 50% suhu 25-30°C kelembapan 70-80%",
+          "Jangan simpan biji >3 hari (rekalitran daya hidup turun 50% 7 hari kering), kecambah 7-14 hari; siram 2 hari sekali jangan becek (durian sensitif Phytophthora)"
+        ]
       }
     ]
   },
@@ -4983,7 +5291,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Cuci lendir aril rambutan + rendam bawang 2 jam (2 siung tumbuk + 300 ml air hangat 35°C) + angin-anginkan 1 jam — biji rambutan rekalitran mirip durian jangan kering >5 hari",
+          "Semai polybag 15x20 cm 1 benih 2 cm posisi mata tunas samping, media tanah:pasir:kompos 2:1:1, naungan 50% suhu 25-30°C",
+          "Kecambah 10-14 hari, siram 2 hari sekali; biji rambutan tidak tahan simpan — semai dalam 2 hari setelah makan buah untuk daya 90%"
+        ]
       }
     ]
   },
@@ -5072,7 +5385,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Ambil biji apomiktik manggis segar dari buah matang pohon + rendam bawang 1,5 jam (2 siung tumbuk + 300 ml air hangat 30°C) + fungisida 5 menit — manggis biji rekalitran paling sensitif kering",
+          "Semai polybag 15x20 cm 1 benih 1,5 cm tutup tipis tanah gembur + pasir 1:1, naungan 50% suhu 25-30°C kelembapan 80%",
+          "Jangan keringkan biji >24 jam (viabilitas turun 70%), kecambah 21-30 hari lambat; siram 2 hari sekali, naungan 70% awal manggis suka teduh"
+        ]
       }
     ]
   },
@@ -5161,7 +5479,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Cuci lendir duku + rendam bawang 2 jam (2 siung tumbuk + 300 ml air hangat 35°C) — duku biji rekalitran kecil, bawang pacu 3 hari lebih cepat",
+          "Semai polybag 10x15 cm 1 benih 1 cm tutup tipis kompos, naungan 50% suhu 25-30°C kelembapan 70-80%, media tanah:kompos 2:1",
+          "Kecambah 14-21 hari, siram 2 hari sekali; duku lambat tumbuh — bibit siap okulasi 8-12 bulan diameter 1 cm (mirip manggis)"
+        ]
       }
     ]
   },
@@ -5250,7 +5573,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Rendam bawang 3 jam (3 siung tumbuk + 400 ml air hangat 40°C) + skarifikasi amplas 5 detik ujung runcing — salak kulit biji tempurung keras",
+          "Semai polybag 15x20 cm 1 benih 2 cm posisi mata tunas samping, tanah:pasir:kompos 2:1:1 pH 5,5-6,5, naungan 50% suhu 25-30°C",
+          "Kecambah 21-30 hari lambat (salak palem), siram 2 hari sekali; semai dalam 3 hari jangan simpan lama (rekalitran daya turun 40% 7 hari)"
+        ]
       }
     ]
   },
@@ -5339,7 +5667,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Cuci getah nangka + rendam bawang 1,5 jam (2 siung tumbuk + 300 ml air hangat 30°C jangan >2 jam — biji rekalitran besar cepat busuk)",
+          "Semai polybag 15x20 cm 1 benih 2 cm rebah, tanah:kompos:pasir 2:1:1, naungan 50% suhu 25-30°C kelembapan 70-80%",
+          "Kecambah 10-14 hari, siram 2 hari sekali; biji nangka daya semai 80% segar, turun 30% jika simpan 7 hari — semai cepat untuk rootstock okulasi"
+        ]
       }
     ]
   },
@@ -5428,7 +5761,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Skarifikasi gunting ujung tumpul biji sirsak 1 mm + rendam bawang 3 jam (3 siung tumbuk + 400 ml air hangat 40°C) — Annona kulit keras mengkilap tanpa gunting kecambah 30 hari vs 14 hari",
+          "Semai polybag 10x15 cm 1 benih 1,5 cm tutup tipis kompos, tanah:pasir 2:1, naungan 50% suhu 25-30°C kelembapan 70-80%",
+          "Siram 2 hari sekali jangan becek; kecambah 14-21 hari, seleksi bibit vigor tegak untuk rootstock srikaya/sirsak"
+        ]
       }
     ]
   },
@@ -5517,7 +5855,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Fermentasi biji markisa dalam pulp 24 jam + cuci + rendam bawang 2 jam (2 siung tumbuk + 300 ml air hangat 35°C) — markisa berlendir dorman tanpa fermentasi kecambah 30 hari vs 10 hari",
+          "Gosok pasir 5 detik skarifikasi ringan, semai polybag 1 benih 1 cm tutup tipis arang sekam, naungan 50% suhu 25-30°C",
+          "Kecambah 10-14 hari, siram 2x sehari; markisa merambat butuh ajir 2 m setelah pindah 30 hari 15 cm"
+        ]
       }
     ]
   },
@@ -5606,7 +5949,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Cuci lendir belimbing + rendam bawang 2 jam (2 siung tumbuk + 300 ml air hangat 35°C) + tiriskan angin 30 menit — belimbing biji pipih 5 mm dorman ringan",
+          "Semai polybag 10x15 cm 1 benih 1 cm tutup tipis tanah gembur + pasir 1:1, naungan 50% suhu 25-30°C kelembapan 70-80%",
+          "Kecambah 14-21 hari, siram 2 hari sekali; semai segar jangan simpan >7 hari (rekalitran), bibit siap okulasi 6-9 bulan"
+        ]
       }
     ]
   },
@@ -5695,7 +6043,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Skarifikasi amplas 3 detik + rendam bawang 2 jam (2 siung tumbuk + 300 ml air hangat 35°C) — sawo biji keras coklat mengkilap licin",
+          "Semai polybag 10x15 cm 1 benih 1,5 cm tutup tipis kompos, tanah:pasir:kompos 2:1:1, naungan 50% suhu 25-30°C",
+          "Kecambah lambat 21-30 hari, siram 2 hari sekali; sawo lambat — bibit siap okulasi 10-12 bulan diameter 1 cm"
+        ]
       }
     ]
   },
@@ -5784,7 +6137,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Cuci aril kelengkeng + rendam bawang 2 jam (2 siung tumbuk + 300 ml air hangat 35°C) — kelengkeng biji bulat hitam rekalitran jangan kering",
+          "Semai polybag 10x15 cm 1 benih 1 cm tutup tipis tanah gembur, naungan 50% suhu 25-30°C kelembapan 70-80%",
+          "Kecambah 7-14 hari cepat, siram 2 hari sekali; semai dalam 3 hari daya 85%, simpan 7 hari daya 40% — untuk rootstock okulasi Diamond/Pingpong"
+        ]
       }
     ]
   },
@@ -5873,7 +6231,12 @@
           "Beri NPK 2 g/L 7 HST",
           "Pindah tanam 7 hari saat 3-4 daun sejati"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari",
+        "tipsCepat": [
+          "Rendam bawang 2 jam (3 siung tumbuk + 400 ml air hangat 35°C) + fungisida 1 g/L 10 menit — blewah mirip melon rentan rebah semai Pythium",
+          "Semai polybag 8x9 cm benam 1-1,5 cm tutup tipis arang sekam, suhu 25-32°C naungan 30% kelembapan 70-80%",
+          "Kecambah 3-5 hari cepat, pindah 7 hari 2-3 daun; jangan lewat 10 hari (akar tunggang blewah cepat melingkar, buah jadi kerdil)"
+        ]
       }
     ]
   },
@@ -5951,33 +6314,43 @@
     "sowingGuides": [
       {
         "metode": "BIJI",
-        "mediaTanam": "Tanah gembur + kompos",
+        "mediaTanam": "Cocopeat steril + pasir + kompos (2:1:1) pH 6,0 untuk stratifikasi",
         "durasiHari": 7,
         "suhuOptimal": "25-30°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Siapkan Tanah gembur + kompos lembap steril",
-          "Tabur 1 benih per lubang 1 cm, tutup tipis",
-          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-          "Beri NPK 2 g/L 7 HST",
-          "Pindah tanam 7 hari saat 3-4 daun sejati"
+          "Stratifikasi + skarifikasi: gosok biji anggur amplas halus 5 detik, rendam bawang 3 siung + 400 ml air hangat 40°C 4 jam, tiriskan, simpan kulkas 4°C dalam tisu lembap 14-21 hari (stratifikasi dingin)",
+          "Keluarkan, semai di cocopeat steril pH 6,0 lembap 1 cm tutup vermikulit tipis, dome bening suhu 24-28°C kelembapan 70-80% semprot kabut 2x sehari",
+          "Kecambah 10-14 hari setelah stratifikasi, beri fungisida Captan 1 g/L 7 HST, NPK 2 g/L 14 HST",
+          "Pindah polybag 15x20 cm saat 3-4 daun sejati 8-10 cm, pelihara 30-45 hari; namun bibit unggul komersial via STEK (3 minggu) jauh lebih cepat berbuah 12 bulan vs biji 24 bulan"
         ],
-        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+        "siapTanamIndikator": "Kecambah 10-14 hari pasca stratifikasi, 3-4 daun 8-10 cm 21 hari, akar 5 cm — biji untuk rootstock, produksi via STEK/okulasi",
+        "tipsCepat": [
+          "Rendam bawang 4 jam + stratifikasi dingin 4°C 14-21 hari dalam tisu lembap — anggur butuh dingin pecah dormansi, tanpa ini kecambah <20%",
+          "Skarifikasi amplas 5 detik + rendam air hangat 40°C 4 jam, jangan rendam >6 jam (biji tenggelam busuk)",
+          "Biji anggur hasil buah tidak sama induk; untuk varietas import (Ninel, Jupiter) wajib STEK/cangkok agar sifat buah 100% sama"
+        ]
       },
       {
         "metode": "STEK",
-        "mediaTanam": "Batang anggur semi-berkayu diameter 0,8-1,2 cm + media cocopeat:pasir:kompos 2:1:1 + polybag 15x20 cm",
+        "mediaTanam": "Batang semi-berkayu 0,8-1,2 cm + media cocopeat:pasir:kompos 2:1:1 + polybag 15x20 cm",
         "durasiHari": 21,
         "suhuOptimal": "24-30°C",
         "kelembaban": "70-80%",
         "langkah": [
-          "Pilih batang anggur sehat umur 6-8 bulan, potong stek 20-25 cm dengan 3-4 mata tunas, potong miring bawah 45° 1 cm di bawah mata",
-          "Rendam pangkal dalam ZPT Rootone-F / air bawang 1 jam, olesi fungisida bagian atas",
-          "Tancapkan 2 mata ke media lembap, 1-2 mata di atas, siram, sungkup plastik bening untuk jaga kelembapan",
-          "Simpan naungan 50% 14 hari, semprot kabut 1x sehari, buka sungkup 10 menit/hari setelah hari ke-10",
-          "Kalus dan akar muncul 14-21 hari, tunas pecah 2-3 cm → pindah ke naungan penuh bertahap, siap grafting/okulasi jika perlu"
+          "Pilih batang anggur semi-berkayu sehat umur 6-8 bulan diameter 0,8-1,2 cm ruas 3-4 mata tunas, potong stek 20-25 cm dengan silet steril, potong miring bawah 45° 0,5-1 cm di bawah mata, potong datar atas 1 cm di atas mata, oles fungisida luka atas",
+          "Rendam pangkal 3 cm dalam ZPT Rootone-F 2 g/100 ml air + air bawang 3 siung tumbuk/400 ml 1 jam, atau B1 1 ml/L 60 menit; tiriskan 10 menit",
+          "Tancapkan 2 mata terbenam ke media cocopeat:pasir:kompos 2:1:1 steril lembap peras dalam polybag 15x20 cm, 1-2 mata di atas media, padatkan, siram 200 ml, sungkup plastik bening transparan ikat karet",
+          "Simpan naungan paranet 50% suhu 24-30°C kelembapan 70-80% (dalam sungkup 85%), semprot kabut 1x sehari pagi via buka sungkup 10 menit, jangan siram berlebihan (akar busuk)",
+          "Kalus putih muncul 10-14 hari, akar serabut 2-4 cm 14-21 hari, tunas pecah 1-3 cm 14-21 hari → buka sungkup bertahap 10→30→60 menit/hari setelah hari 10, lepas penuh hari 14 jika tunas segar",
+          "Pindah naungan penuh bertahap 3 hari, beri NPK 1 g/L 21 HST, siap grafting okulasi atau tanam para-para 2 m setelah 30-45 hari"
         ],
-        "siapTanamIndikator": "Kalus putih di pangkal, akar serabut 2-4 cm, tunas pecah 1-3 cm, 21 hari"
+        "siapTanamIndikator": "Kalus putih di pangkal 10-14 hari, akar serabut putih 2-4 cm 14-21 hari, tunas pecah 1-3 cm hijau segar, daun tidak layu setelah buka sungkup — siap grafting 21 hari",
+        "tipsCepat": [
+          "Potong miring 45° tepat di bawah mata dengan silet steril, celup Rootone-F 2 g/100 ml + air bawang 1 jam — stek anggur tanpa ZPT tingkat jadi <40%",
+          "Media cocopeat steril wajib (siram fungisida Previcur 1 ml/L) + sungkup plastik bening — jaga 80% kelembapan 14 hari jangan buka penuh sebelum kalus",
+          "Buka sungkup 10 menit/hari setelah hari ke-10 untuk sirkulasi; anggur stek rentan jamur Botrytis jika sungkup rapat terus"
+        ]
       }
     ]
   }
