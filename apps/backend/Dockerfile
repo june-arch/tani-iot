@@ -15,4 +15,4 @@ RUN npx prisma@6.19.3 generate
 RUN npm run build
 
 EXPOSE 3101
-CMD ["sh", "-c", "npx prisma migrate deploy && node dist/src/main.js"]
+CMD ["sh", "-c", "npx prisma migrate deploy || npx prisma db push --accept-data-loss && node dist/src/main.js"]
