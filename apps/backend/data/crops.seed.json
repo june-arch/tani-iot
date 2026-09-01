@@ -9,20 +9,6 @@
     "ketinggianOptimal": "0-800 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/N_Ipoa_D1600.JPG",
     "imageAtribusi": "N_Ipoa_D1600.JPG - CC BY-SA 3.0",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos + sekam (2:1:1) atau langsung tabur lahan basah / rockwool",
-      "durasiHari": 0,
-      "suhuOptimal": "25-32°C",
-      "kelembaban": "70-85%",
-      "langkah": [
-        "Sebar benih langsung di bedengan lembap tanpa rendam lama (cukup 1-2 jam), jarak 10x10 cm",
-        "Tutup tipis tanah 0,5 cm, siram halus hingga lembap",
-        "Jaga kelembapan tanah, tidak perlu naungan berat (cukup paranet 30% jika terik)",
-        "Benih berkecambah 2-3 hari, tumbuh cepat",
-        "Siap panen cabut 25-30 hari tanpa pindah tanam (atau pindah 7 hari jika semai nampan)"
-      ],
-      "siapTanamIndikator": "Tinggi 10-15 cm, 3-4 helai daun sejati, batang kokoh, siap panen cabut 25 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -93,6 +79,23 @@
         "url": "https://commons.wikimedia.org/wiki/File:N_Ipoa_D1600.JPG",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos + sekam (2:1:1) atau langsung tabur lahan basah / rockwool",
+        "durasiHari": 0,
+        "suhuOptimal": "25-32°C",
+        "kelembaban": "70-85%",
+        "langkah": [
+          "Sebar benih langsung di bedengan lembap tanpa rendam lama (cukup 1-2 jam), jarak 10x10 cm",
+          "Tutup tipis tanah 0,5 cm, siram halus hingga lembap",
+          "Jaga kelembapan tanah, tidak perlu naungan berat (cukup paranet 30% jika terik)",
+          "Benih berkecambah 2-3 hari, tumbuh cepat",
+          "Siap panen cabut 25-30 hari tanpa pindah tanam (atau pindah 7 hari jika semai nampan)"
+        ],
+        "siapTanamIndikator": "Tinggi 10-15 cm, 3-4 helai daun sejati, batang kokoh, siap panen cabut 25 hari"
+      }
     ]
   },
   {
@@ -105,20 +108,6 @@
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Amaranthus_tricolor5.jpg",
     "imageAtribusi": "Amaranthus_tricolor5.jpg - CC BY-SA 3.0",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos halus / rockwool",
-      "durasiHari": 4,
-      "suhuOptimal": "24-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Sebar benih bayam langsung di bedengan (tidak perlu semai pindah), campur benih dengan pasir halus 1:10 agar sebar rata",
-        "Tutup tipis tanah 0,5 cm, siram halus",
-        "Tutup dengan karung/plastik 2 hari untuk jaga lembap, buka setelah berkecambah",
-        "Jaga naungan ringan 30% 3 hari pertama",
-        "Jarang jika terlalu rapat setelah 7 hari (jarak 10 cm)"
-      ],
-      "siapTanamIndikator": "Langsung tanam, tidak pindah; siap panen 25 hari tinggi 15-20 cm"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -187,6 +176,23 @@
         "url": "https://commons.wikimedia.org/wiki/File:Amaranthus_tricolor5.jpg",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos halus / rockwool",
+        "durasiHari": 4,
+        "suhuOptimal": "24-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Sebar benih bayam langsung di bedengan (tidak perlu semai pindah), campur benih dengan pasir halus 1:10 agar sebar rata",
+          "Tutup tipis tanah 0,5 cm, siram halus",
+          "Tutup dengan karung/plastik 2 hari untuk jaga lembap, buka setelah berkecambah",
+          "Jaga naungan ringan 30% 3 hari pertama",
+          "Jarang jika terlalu rapat setelah 7 hari (jarak 10 cm)"
+        ],
+        "siapTanamIndikator": "Langsung tanam, tidak pindah; siap panen 25 hari tinggi 15-20 cm"
+      }
     ]
   },
   {
@@ -198,20 +204,6 @@
     "iklimOptimal": "Sejuk-sedang, 18-27°C",
     "ketinggianOptimal": "0-1200 mdpl (optimal 500-1000)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Chingensai.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Rockwool 2x2 cm atau tanah + kompos",
-      "durasiHari": 10,
-      "suhuOptimal": "18-25°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Tabur benih di rockwool lembap 1 lubang 1 benih, tutup tipis",
-        "Simpan di tempat teduh lembap 2 hari hingga berkecambah",
-        "Pindah ke persemaian terang naungan 30% setelah berkecambah",
-        "Jaga kelembapan semprot kabut 2x sehari",
-        "Pindah tanam 10-12 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-7 cm, akar putih tidak melingkar, 10-12 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -275,6 +267,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/pak-choi/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Rockwool 2x2 cm atau tanah + kompos",
+        "durasiHari": 10,
+        "suhuOptimal": "18-25°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Tabur benih di rockwool lembap 1 lubang 1 benih, tutup tipis",
+          "Simpan di tempat teduh lembap 2 hari hingga berkecambah",
+          "Pindah ke persemaian terang naungan 30% setelah berkecambah",
+          "Jaga kelembapan semprot kabut 2x sehari",
+          "Pindah tanam 10-12 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-7 cm, akar putih tidak melingkar, 10-12 hari"
+      }
     ]
   },
   {
@@ -286,20 +295,6 @@
     "iklimOptimal": "Sejuk-sedang 18-27°C",
     "ketinggianOptimal": "0-1200 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Pak_choi.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Rockwool 2x2 cm",
-      "durasiHari": 10,
-      "suhuOptimal": "18-25°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Rockwool 2x2 cm lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 10 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 10 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -361,6 +356,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/pakcoy/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Rockwool 2x2 cm",
+        "durasiHari": 10,
+        "suhuOptimal": "18-25°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Rockwool 2x2 cm lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 10 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 10 hari"
+      }
     ]
   },
   {
@@ -372,20 +384,6 @@
     "iklimOptimal": "Sejuk sedang, suhu tumbuh optimal 15-24°C (ideal 18-22°C), kelembapan 60-80%, sinar 10-12 jam; >25°C memicu bolting dan pahit",
     "ketinggianOptimal": "500-1500 mdpl optimal; dataran rendah (0-300 mdpl) bisa dengan shade net 30-50% + hidroponik terkontrol",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Lactuca_sativa_var._longifolia_001.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Rockwool 2.5x2.5 cm (hidroponik) atau campuran tanah gembur berpasir + kompos + arang sekam (1:1:1) pH 6.0-6.8",
-      "durasiHari": 12,
-      "suhuOptimal": "18-22°C (maks 24°C; >25°C dormansi benih)",
-      "kelembaban": "60-80%",
-      "langkah": [
-        "Benih selada tidak perlu rendam lama — cukup semprot air / rendam 30 menit air biasa, angin-anginkan 10 menit (benih fotosensitif, butuh cahaya untuk berkecambah)",
-        "Siapkan rockwool yang telah direndam air pH 5.8-6.0 selama 30 menit, tiriskan; buat lubang 0.5 cm di tengah tiap kubus",
-        "Letakkan 1 benih per lubang (jangan ditutup rapat — selada butuh cahaya), semprot kabut halus hingga rockwool lembap",
-        "Simpan di nampan tertutup plastik bening / dome di tempat terang tidak langsung (18-22°C, 60-80% RH), jaga lembap semprot 2x sehari; benih berkecambah 2-3 hari",
-        "Setelah kotiledon membuka (3-5 hari), kenalkan cahaya penuh 50% (paranet) dan nutrisi 400-500 ppm; pindah tanam setelah 10-14 hari saat 3-4 daun sejati (tinggi 5-8 cm, akar tembus rockwool)"
-      ],
-      "siapTanamIndikator": "Umur 10-14 hari semai, 3-4 helai daun sejati, tinggi 5-8 cm, akar putih menembus rockwool 2-3 cm, roset tidak etiolasi"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -467,7 +465,24 @@
       "https://www.litbang.pertanian.go.id/info-teknologi/1648/budidaya-selada-hidroponik — Badan Litbang Pertanian - Budidaya Selada Hidroponik NFT (ppm/EC)",
       "https://www.fao.org/land-water/databases-and-software/crop-information/lettuce/en/ — FAO Crop Information - Lettuce (Lactuca sativa) suhu 7-24°C, pH 5.8-6.5, sensitif salinitas"
     ],
-    "catatanVerifikasi": "Balitsa/litbang domain tidak resolve 2026-08-31 (otoritas pertanian.go.id tanpa Answer, migrasi ke BSIP/Kementan) — verifikasi via arsip BSIP No.600, modul hidroponik Balitsa 2021 (EC selada 0.8-1.8), dan FAO Ecocrop Lettuce (optimal 15-18°C, maks 24°C, min 7°C). Nilai ppm 560-840 konsisten Balitsa NFT selada keriting; selada romaine/crisphead hingga 1260 ppm."
+    "catatanVerifikasi": "Balitsa/litbang domain tidak resolve 2026-08-31 (otoritas pertanian.go.id tanpa Answer, migrasi ke BSIP/Kementan) — verifikasi via arsip BSIP No.600, modul hidroponik Balitsa 2021 (EC selada 0.8-1.8), dan FAO Ecocrop Lettuce (optimal 15-18°C, maks 24°C, min 7°C). Nilai ppm 560-840 konsisten Balitsa NFT selada keriting; selada romaine/crisphead hingga 1260 ppm.",
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Rockwool 2.5x2.5 cm (hidroponik) atau campuran tanah gembur berpasir + kompos + arang sekam (1:1:1) pH 6.0-6.8",
+        "durasiHari": 12,
+        "suhuOptimal": "18-22°C (maks 24°C; >25°C dormansi benih)",
+        "kelembaban": "60-80%",
+        "langkah": [
+          "Benih selada tidak perlu rendam lama — cukup semprot air / rendam 30 menit air biasa, angin-anginkan 10 menit (benih fotosensitif, butuh cahaya untuk berkecambah)",
+          "Siapkan rockwool yang telah direndam air pH 5.8-6.0 selama 30 menit, tiriskan; buat lubang 0.5 cm di tengah tiap kubus",
+          "Letakkan 1 benih per lubang (jangan ditutup rapat — selada butuh cahaya), semprot kabut halus hingga rockwool lembap",
+          "Simpan di nampan tertutup plastik bening / dome di tempat terang tidak langsung (18-22°C, 60-80% RH), jaga lembap semprot 2x sehari; benih berkecambah 2-3 hari",
+          "Setelah kotiledon membuka (3-5 hari), kenalkan cahaya penuh 50% (paranet) dan nutrisi 400-500 ppm; pindah tanam setelah 10-14 hari saat 3-4 daun sejati (tinggi 5-8 cm, akar tembus rockwool)"
+        ],
+        "siapTanamIndikator": "Umur 10-14 hari semai, 3-4 helai daun sejati, tinggi 5-8 cm, akar putih menembus rockwool 2-3 cm, roset tidak etiolasi"
+      }
+    ]
   },
   {
     "name": "Kemangi",
@@ -478,20 +493,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ocimum_basilicum_-_Koehler.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Rockwool / tanah",
-      "durasiHari": 10,
-      "suhuOptimal": "22-28°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Rockwool / tanah lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 10 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 10 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -553,6 +554,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/kemangi/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Rockwool / tanah",
+        "durasiHari": 10,
+        "suhuOptimal": "22-28°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Rockwool / tanah lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 10 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 10 hari"
+      }
     ]
   },
   {
@@ -564,20 +582,6 @@
     "iklimOptimal": "Sejuk 16-26°C",
     "ketinggianOptimal": "200-1200 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Apium_graveolens_-_Koehler.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Rockwool / nampan",
-      "durasiHari": 14,
-      "suhuOptimal": "18-26°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Rockwool / nampan lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 14 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -639,6 +643,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/seledri/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Rockwool / nampan",
+        "durasiHari": 14,
+        "suhuOptimal": "18-26°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Rockwool / nampan lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 14 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari"
+      }
     ]
   },
   {
@@ -650,20 +671,6 @@
     "iklimOptimal": "Sejuk-sedang 18-27°C",
     "ketinggianOptimal": "500-1500 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Allium_fistulosum.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Anakan / semai",
-      "durasiHari": 14,
-      "suhuOptimal": "18-25°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Anakan / semai lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 14 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -725,6 +732,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/daun-bawang/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Anakan / semai",
+        "durasiHari": 14,
+        "suhuOptimal": "18-25°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Anakan / semai lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 14 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari"
+      }
     ]
   },
   {
@@ -736,20 +760,6 @@
     "iklimOptimal": "Sejuk 15-24°C",
     "ketinggianOptimal": "800-1500 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Brassica_oleracea_var_capitata.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Rockwool",
-      "durasiHari": 14,
-      "suhuOptimal": "15-22°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Rockwool lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 14 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -811,6 +821,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/kubis/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Rockwool",
+        "durasiHari": 14,
+        "suhuOptimal": "15-22°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Rockwool lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 14 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari"
+      }
     ]
   },
   {
@@ -822,20 +849,6 @@
     "iklimOptimal": "Sejuk 15-23°C",
     "ketinggianOptimal": "700-1500 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Brassica_oleracea_var_botrytis.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Rockwool",
-      "durasiHari": 14,
-      "suhuOptimal": "15-22°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Rockwool lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 14 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -897,6 +910,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/kembang-kol/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Rockwool",
+        "durasiHari": 14,
+        "suhuOptimal": "15-22°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Rockwool lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 14 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 14 hari"
+      }
     ]
   },
   {
@@ -908,20 +938,6 @@
     "iklimOptimal": "Sejuk 15-23°C",
     "ketinggianOptimal": "700-1500 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Broccoli.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Rockwool / nampan",
-      "durasiHari": 12,
-      "suhuOptimal": "16-23°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Rockwool / nampan lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 12 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 12 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -983,6 +999,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/brokoli/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Rockwool / nampan",
+        "durasiHari": 12,
+        "suhuOptimal": "16-23°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Rockwool / nampan lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 12 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 12 hari"
+      }
     ]
   },
   {
@@ -994,20 +1027,6 @@
     "iklimOptimal": "Tropis, 24-30°C, sinar penuh",
     "ketinggianOptimal": "0-1200 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Capsicum_frutescens_-_Koehler.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Polybag semai + tanah:kompos:sekam 2:1:1",
-      "durasiHari": 21,
-      "suhuOptimal": "24-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Rendam benih 4-6 jam air hangat, tiriskan, peram dalam kain lembap 24 jam",
-        "Tabur di polybag semai 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan di persemaian naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri pupuk semai NPK 2 g/L 10 HST",
-        "Pindah tanam 21 hari saat 4-5 daun sejati, tinggi 10-15 cm"
-      ],
-      "siapTanamIndikator": "4-5 daun sejati, tinggi 10-15 cm, batang kokoh, akar penuh polybag, 21 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -1087,6 +1106,23 @@
         "url": "https://www.pertanian.go.id/assets/uploads/2020/04/Juknis-Cabai.pdf",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Polybag semai + tanah:kompos:sekam 2:1:1",
+        "durasiHari": 21,
+        "suhuOptimal": "24-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Rendam benih 4-6 jam air hangat, tiriskan, peram dalam kain lembap 24 jam",
+          "Tabur di polybag semai 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan di persemaian naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri pupuk semai NPK 2 g/L 10 HST",
+          "Pindah tanam 21 hari saat 4-5 daun sejati, tinggi 10-15 cm"
+        ],
+        "siapTanamIndikator": "4-5 daun sejati, tinggi 10-15 cm, batang kokoh, akar penuh polybag, 21 hari"
+      }
     ]
   },
   {
@@ -1098,20 +1134,6 @@
     "iklimOptimal": "Tropis 24-30°C",
     "ketinggianOptimal": "0-1200 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Chili_pepper.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Polybag semai",
-      "durasiHari": 21,
-      "suhuOptimal": "24-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Polybag semai lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 21 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 21 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -1173,6 +1195,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/cabai-keriting/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Polybag semai",
+        "durasiHari": 21,
+        "suhuOptimal": "24-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Polybag semai lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 21 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 21 hari"
+      }
     ]
   },
   {
@@ -1184,20 +1223,6 @@
     "iklimOptimal": "Tropis 24-30°C",
     "ketinggianOptimal": "0-1200 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Chili_pepper.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Polybag semai",
-      "durasiHari": 21,
-      "suhuOptimal": "24-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Polybag semai lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 21 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 21 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -1259,6 +1284,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/cabai-besar/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Polybag semai",
+        "durasiHari": 21,
+        "suhuOptimal": "24-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Polybag semai lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 21 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 21 hari"
+      }
     ]
   },
   {
@@ -1270,20 +1312,6 @@
     "iklimOptimal": "Tropis-subtropis, suhu 18-28°C (optimum 22-24°C), curah hujan 100-200 mm/bulan, sinar 8-10 jam/hari",
     "ketinggianOptimal": "0-1500 mdpl (optimum 400-800 mdpl untuk dataran medium; dataran tinggi hingga 1500 mdpl untuk varietas tahan)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Rockwool / cocopeat steril + kompos halus (1:1)",
-      "durasiHari": 12,
-      "suhuOptimal": "20-25°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Rendam benih tomat 4-6 jam dalam air hangat 50°C (perlakuan air panas untuk cegah bakteri), tiriskan",
-        "Semai di tray rockwool/cocopeat lembap, kedalaman 0,5-1 cm, 1 benih per lubang, tutup tipis cocopeat",
-        "Simpan di naungan 50% selama 3-4 hari, semprot kabut pagi-sore, jaga pH media 5,5-6,5",
-        "Setelah kotiledon mekar (hari 4-5), kenalkan sinar penuh bertahap 30% → 100% dalam 3 hari",
-        "Bibit siap pindah tanam saat 4-5 daun sejati, tinggi 10-12 cm, batang kokoh, akar putih penuh (10-14 HST semai)"
-      ],
-      "siapTanamIndikator": "4-5 daun sejati, tinggi 10-12 cm, diameter batang 3-4 mm, akar serabut putih memenuhi rockwool, umur 12-14 hari setelah semai"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -1380,7 +1408,24 @@
       "wikimediaPageId": 143779,
       "dosisSpesifik": "Dosis tomat Balitsa: pupuk kandang 20 t/ha + NPK 300 kg/ha (10 g/tan) + SP-36 150 kg/ha + KCl 300 kg/ha generatif + KNO3/MKP foliar — berbeda dari bawang merah yang dominan ZA/KCl untuk umbi",
       "tanggalVerifikasi": "2026-08-31"
-    }
+    },
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Rockwool / cocopeat steril + kompos halus (1:1)",
+        "durasiHari": 12,
+        "suhuOptimal": "20-25°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Rendam benih tomat 4-6 jam dalam air hangat 50°C (perlakuan air panas untuk cegah bakteri), tiriskan",
+          "Semai di tray rockwool/cocopeat lembap, kedalaman 0,5-1 cm, 1 benih per lubang, tutup tipis cocopeat",
+          "Simpan di naungan 50% selama 3-4 hari, semprot kabut pagi-sore, jaga pH media 5,5-6,5",
+          "Setelah kotiledon mekar (hari 4-5), kenalkan sinar penuh bertahap 30% → 100% dalam 3 hari",
+          "Bibit siap pindah tanam saat 4-5 daun sejati, tinggi 10-12 cm, batang kokoh, akar putih penuh (10-14 HST semai)"
+        ],
+        "siapTanamIndikator": "4-5 daun sejati, tinggi 10-12 cm, diameter batang 3-4 mm, akar serabut putih memenuhi rockwool, umur 12-14 hari setelah semai"
+      }
+    ]
   },
   {
     "name": "Terong",
@@ -1391,20 +1436,6 @@
     "iklimOptimal": "Tropis panas 25-32°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Solanum_melongena_-_Koehler.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Polybag semai",
-      "durasiHari": 10,
-      "suhuOptimal": "25-32°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Polybag semai lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 10 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 10 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -1466,6 +1497,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/terong/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Polybag semai",
+        "durasiHari": 10,
+        "suhuOptimal": "25-32°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Polybag semai lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 10 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 10 hari"
+      }
     ]
   },
   {
@@ -1477,20 +1525,6 @@
     "iklimOptimal": "Tropis lembap, suhu tumbuh optimal 21-30°C (ideal 25-28°C), curah hujan 400-800 mm/musim, sinar penuh 8-10 jam/hari",
     "ketinggianOptimal": "0-1000 mdpl (optimal 100-800 mdpl, adaptif dataran rendah-menengah)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Cucumis_sativus_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-194.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Campuran tanah gembur + pupuk kandang matang + arang sekam (1:1:1) atau Rockwool 2x2 cm / cocopeat untuk hidroponik",
-      "durasiHari": 6,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-85%",
-      "langkah": [
-        "Rendam benih timun 4-6 jam dalam air hangat 40°C, tiriskan dan peram 12 jam hingga berkecambah (radikula 1 mm)",
-        "Siapkan media semai steril: polybag kecil atau rockwool yang telah dibasahi hingga lembap (jangan becek), beri lubang 1 cm",
-        "Tanam 1 benih per lubang sedalam 1 cm, tutup tipis media, semprot air halus hingga lembap merata",
-        "Simpan di persemaian naungan 30-50% (paranet), jaga suhu 25-30°C dan kelembaban 70-85%, semprot air 2x sehari pagi-sore",
-        "Bibit siap pindah tanam setelah 5-7 hari saat berdaun 2 helai sejati (tinggi 5-8 cm, akar putih sehat, batang kokoh)"
-      ],
-      "siapTanamIndikator": "Umur 5-7 hari, 2 helai daun sejati membuka sempurna, tinggi 5-8 cm, akar putih tidak melingkar, batang tidak etiolasi"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -1572,7 +1606,24 @@
       "https://www.litbang.pertanian.go.id/info-teknologi/3529/petunjuk-teknis-budidaya-mentimun — Badan Litbang Pertanian - Petunjuk Teknis Budidaya Mentimun (dosis pupuk 20 t/ha pukan + NPK)",
       "https://www.fao.org/land-water/databases-and-software/crop-information/cucumber/en/ — FAO Crop Information - Cucumber (Cucumis sativus) suhu optimal 25-30°C, pH 5.5-6.7, EC toleransi"
     ],
-    "catatanVerifikasi": "Balitsa/litbang.go.id domain bermigrasi ke pertanian.go.id/BSIP pasca 2023 — URL di atas adalah arsip kanonik Balitsa No.607; verifikasi silang dengan Kitab Budidaya Mentimun BSIP 2022 dan FAO Ecocrop (suhu 18-30°C, curah hujan 500-1000 mm). DNS litbang.pertanian.go.id tidak resolve pada 2026-08-31 (SOA tanpa Answer) — sumber diverifikasi via arsip BSIP dan FAO FAOSTAT."
+    "catatanVerifikasi": "Balitsa/litbang.go.id domain bermigrasi ke pertanian.go.id/BSIP pasca 2023 — URL di atas adalah arsip kanonik Balitsa No.607; verifikasi silang dengan Kitab Budidaya Mentimun BSIP 2022 dan FAO Ecocrop (suhu 18-30°C, curah hujan 500-1000 mm). DNS litbang.pertanian.go.id tidak resolve pada 2026-08-31 (SOA tanpa Answer) — sumber diverifikasi via arsip BSIP dan FAO FAOSTAT.",
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Campuran tanah gembur + pupuk kandang matang + arang sekam (1:1:1) atau Rockwool 2x2 cm / cocopeat untuk hidroponik",
+        "durasiHari": 6,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-85%",
+        "langkah": [
+          "Rendam benih timun 4-6 jam dalam air hangat 40°C, tiriskan dan peram 12 jam hingga berkecambah (radikula 1 mm)",
+          "Siapkan media semai steril: polybag kecil atau rockwool yang telah dibasahi hingga lembap (jangan becek), beri lubang 1 cm",
+          "Tanam 1 benih per lubang sedalam 1 cm, tutup tipis media, semprot air halus hingga lembap merata",
+          "Simpan di persemaian naungan 30-50% (paranet), jaga suhu 25-30°C dan kelembaban 70-85%, semprot air 2x sehari pagi-sore",
+          "Bibit siap pindah tanam setelah 5-7 hari saat berdaun 2 helai sejati (tinggi 5-8 cm, akar putih sehat, batang kokoh)"
+        ],
+        "siapTanamIndikator": "Umur 5-7 hari, 2 helai daun sejati membuka sempurna, tinggi 5-8 cm, akar putih tidak melingkar, batang tidak etiolasi"
+      }
+    ]
   },
   {
     "name": "Pare",
@@ -1583,20 +1634,6 @@
     "iklimOptimal": "Tropis 24-30°C, hujan 800-1200 mm",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Momordica_charantia_22052014.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Polybag semai tanah:kompos:sekam 2:1:1",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Rendam benih pare 6-8 jam, peram kain lembap 24 jam hingga berkecambah",
-        "Tanam 1 benih per polybag 1,5 cm, tutup tipis",
-        "Simpan naungan 50%, siram 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7-10 hari saat 2 daun sejati"
-      ],
-      "siapTanamIndikator": "2 daun sejati, tinggi 8-10 cm, akar penuh polybag, 7-10 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -1667,6 +1704,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/bitter-gourd/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Polybag semai tanah:kompos:sekam 2:1:1",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Rendam benih pare 6-8 jam, peram kain lembap 24 jam hingga berkecambah",
+          "Tanam 1 benih per polybag 1,5 cm, tutup tipis",
+          "Simpan naungan 50%, siram 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7-10 hari saat 2 daun sejati"
+        ],
+        "siapTanamIndikator": "2 daun sejati, tinggi 8-10 cm, akar penuh polybag, 7-10 hari"
+      }
     ]
   },
   {
@@ -1678,20 +1732,6 @@
     "iklimOptimal": "Tropis 25-32°C",
     "ketinggianOptimal": "0-800 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Sechium_edule_dsc07767.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Polybag semai",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Rendam 4-6 jam",
-        "Tanam 1 benih 2 cm",
-        "Naungan 50%",
-        "Siram 2x",
-        "Pindah 7 hari 2 daun"
-      ],
-      "siapTanamIndikator": "2 daun sejati, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -1753,6 +1793,23 @@
         "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/600-oyong",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Polybag semai",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Rendam 4-6 jam",
+          "Tanam 1 benih 2 cm",
+          "Naungan 50%",
+          "Siram 2x",
+          "Pindah 7 hari 2 daun"
+        ],
+        "siapTanamIndikator": "2 daun sejati, 7 hari"
+      }
     ]
   },
   {
@@ -1764,20 +1821,6 @@
     "iklimOptimal": "Sejuk-sedang 18-27°C",
     "ketinggianOptimal": "500-1500 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Sechium_edule_dsc07767.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Buah utuh bertunas",
-      "durasiHari": 14,
-      "suhuOptimal": "20-25°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Pilih buah tua bertunas 5 cm",
-        "Tanam miring 45° 2/3 terbenam",
-        "Naungan 50%",
-        "Siram 2 hari sekali",
-        "Tunas 14 hari"
-      ],
-      "siapTanamIndikator": "Tunas 10-15 cm, akar banyak, 14 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -1832,6 +1875,23 @@
         "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/600-labu-siam",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Buah utuh bertunas",
+        "durasiHari": 14,
+        "suhuOptimal": "20-25°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Pilih buah tua bertunas 5 cm",
+          "Tanam miring 45° 2/3 terbenam",
+          "Naungan 50%",
+          "Siram 2 hari sekali",
+          "Tunas 14 hari"
+        ],
+        "siapTanamIndikator": "Tunas 10-15 cm, akar banyak, 14 hari"
+      }
     ]
   },
   {
@@ -1843,20 +1903,6 @@
     "iklimOptimal": "Tropis 25-32°C",
     "ketinggianOptimal": "0-800 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Vigna_unguiculata_-_长豇豆.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Langsung tanam lubang",
-      "durasiHari": 0,
-      "suhuOptimal": "25-32°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Lubang 3 cm 2 benih",
-        "Tutup tipis",
-        "Siram",
-        "Berkecambah 4 hari",
-        "Jarang 1 tanaman"
-      ],
-      "siapTanamIndikator": "Berkecambah 4 hari, langsung tanpa pindah"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -1918,6 +1964,23 @@
         "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/600-kacang-panjang",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Langsung tanam lubang",
+        "durasiHari": 0,
+        "suhuOptimal": "25-32°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Lubang 3 cm 2 benih",
+          "Tutup tipis",
+          "Siram",
+          "Berkecambah 4 hari",
+          "Jarang 1 tanaman"
+        ],
+        "siapTanamIndikator": "Berkecambah 4 hari, langsung tanpa pindah"
+      }
     ]
   },
   {
@@ -1929,20 +1992,6 @@
     "iklimOptimal": "Sejuk 18-27°C",
     "ketinggianOptimal": "500-1500 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Langsung tanam",
-      "durasiHari": 0,
-      "suhuOptimal": "20-27°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Lubang 3 cm",
-        "Tutup",
-        "Siram",
-        "Berkecambah 5 hari",
-        "Jarang"
-      ],
-      "siapTanamIndikator": "Berkecambah 5 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -1998,6 +2047,23 @@
         "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/600-buncis",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Langsung tanam",
+        "durasiHari": 0,
+        "suhuOptimal": "20-27°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Lubang 3 cm",
+          "Tutup",
+          "Siram",
+          "Berkecambah 5 hari",
+          "Jarang"
+        ],
+        "siapTanamIndikator": "Berkecambah 5 hari"
+      }
     ]
   },
   {
@@ -2009,20 +2075,6 @@
     "iklimOptimal": "Tropis kering, suhu 25-32°C, curah hujan 100-150 mm/bulan, penyinaran 12 jam/hari, kelembaban 50-70%",
     "ketinggianOptimal": "0-900 mdpl (optimum 0-400 mdpl dataran rendah; varietas Maja Cipanas adaptif hingga 900 mdpl)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Shallot_bawang_merah.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur berpasir + arang sekam + kompos (2:1:1), bedengan tinggi 30-40 cm",
-      "durasiHari": 0,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "60-70%",
-      "langkah": [
-        "Pilih umbi bibit bermutu: varietas Bima Brebes/Bauji, umur simpan 2-3 bulan, diameter 1,5-2 cm, bobot 5-10 g, sudah bertunas 0,5-1 cm (dormansi patah)",
-        "Potong ujung umbi 1/3 bagian untuk seragamkan tunas, rendam fungisida 10 menit (mankozeb 2 g/L), angin-anginkan 1 jam",
-        "Buat bedengan lebar 1-1,2 m, tinggi 30-40 cm, jarak tanam 15x15 cm atau 20x15 cm, lubang 2-3 cm",
-        "Tanam umbi dengan tunas menghadap atas, benamkan 2/3 bagian, tutup tipis tanah, siram langsung",
-        "Tutup bedengan jerami tipis 2-3 hari untuk jaga kelembaban, buka setelah tunas muncul 3-5 HST"
-      ],
-      "siapTanamIndikator": "Bawang merah tidak disemai benih (generatif jarang); langsung tanam umbi bibit bertunas 0,5-1 cm, umur simpan 60-90 hari, tidak ada fase pindah tanam"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -2120,7 +2172,24 @@
       "wikimediaFile": "Shallot bawang merah.jpg",
       "dosisSpesifik": "Dosis bawang Balitsa: pupuk kandang 15 t/ha + SP-36 150 kg/ha + ZA 300 kg/ha (5 g/rumpun) + NPK 200 kg/ha vegetatif + KCl 200 kg/ha generatif + KNO3/MKP foliar — dominan sulfur & kalium untuk umbi, berbeda total dari tomat yang dominan NPK+KCl 300 kg/ha + kalsium untuk buah",
       "tanggalVerifikasi": "2026-08-31"
-    }
+    },
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur berpasir + arang sekam + kompos (2:1:1), bedengan tinggi 30-40 cm",
+        "durasiHari": 0,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "60-70%",
+        "langkah": [
+          "Pilih umbi bibit bermutu: varietas Bima Brebes/Bauji, umur simpan 2-3 bulan, diameter 1,5-2 cm, bobot 5-10 g, sudah bertunas 0,5-1 cm (dormansi patah)",
+          "Potong ujung umbi 1/3 bagian untuk seragamkan tunas, rendam fungisida 10 menit (mankozeb 2 g/L), angin-anginkan 1 jam",
+          "Buat bedengan lebar 1-1,2 m, tinggi 30-40 cm, jarak tanam 15x15 cm atau 20x15 cm, lubang 2-3 cm",
+          "Tanam umbi dengan tunas menghadap atas, benamkan 2/3 bagian, tutup tipis tanah, siram langsung",
+          "Tutup bedengan jerami tipis 2-3 hari untuk jaga kelembaban, buka setelah tunas muncul 3-5 HST"
+        ],
+        "siapTanamIndikator": "Bawang merah tidak disemai benih (generatif jarang); langsung tanam umbi bibit bertunas 0,5-1 cm, umur simpan 60-90 hari, tidak ada fase pindah tanam"
+      }
+    ]
   },
   {
     "name": "Bawang Putih",
@@ -2131,20 +2200,6 @@
     "iklimOptimal": "Sejuk 18-25°C, hari panjang",
     "ketinggianOptimal": "800-1500 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Garlic.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Siung langsung",
-      "durasiHari": 0,
-      "suhuOptimal": "18-25°C",
-      "kelembaban": "60-70%",
-      "langkah": [
-        "Pilih siung besar",
-        "Tanam 5 cm",
-        "Siram",
-        "Tunas 7 hari",
-        "Jarang"
-      ],
-      "siapTanamIndikator": "Tunas 5 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -2206,6 +2261,23 @@
         "url": "https://balitsa.litbang.pertanian.go.id/ind/index.php/publikasi/600-bawang-putih",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Siung langsung",
+        "durasiHari": 0,
+        "suhuOptimal": "18-25°C",
+        "kelembaban": "60-70%",
+        "langkah": [
+          "Pilih siung besar",
+          "Tanam 5 cm",
+          "Siram",
+          "Tunas 7 hari",
+          "Jarang"
+        ],
+        "siapTanamIndikator": "Tunas 5 cm, 7 hari"
+      }
     ]
   },
   {
@@ -2218,20 +2290,6 @@
     "ketinggianOptimal": "800-2000 mdpl (optimal 1200-1500), dataran rendah <700 mdpl hasil kurang dan warna pucat",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Carrots_with_stems.jpg",
     "imageAtribusi": "Carrots_with_stems.jpg - CC BY-SA 3.0 Wikimedia Commons",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur dalam 30-40 cm + pasir + kompos halus (2:1:1), pH 5.5-6.5, bedengan tinggi 30 cm, gembur tanpa batu",
-      "durasiHari": 10,
-      "suhuOptimal": "16-24°C (perkecambahan optimal 20°C)",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Gemburkan lahan hingga 35 cm, buang batu/akar, campur kompos halus 20 ton/ha + dolomit jika pH <5.5, buat bedengan lebar 100 cm tinggi 30 cm",
-        "Buat alur sedalam 1-2 cm jarak antar baris 15-20 cm, tabur benih tipis (1000 benih/m2), tutup tipis tanah halus + mulsa jerami tipis",
-        "Siram halus kabut 2x sehari jaga lembap, naungan paranet 30% 3-5 hari pertama jika terik, kecambah muncul 10-14 hari",
-        "Penjarangan pertama 14 hari setelah kecambah (jarak 5 cm), penjarangan kedua 30 hari (jarak akhir 8-10 cm), buang bibit lemah bercabang",
-        "Pembumbunan ringan 40 HST tutup pangkal akar yang muncul, jaga drainase tidak tergenang, siap panen 90-120 HST (diameter 2-4 cm)"
-      ],
-      "siapTanamIndikator": "Tanam langsung tanpa pindah (direct seeding); penjarangan menentukan, bukan pindah tanam"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF_AWAL",
@@ -2311,6 +2369,23 @@
         "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Carrots_with_stems.jpg",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur dalam 30-40 cm + pasir + kompos halus (2:1:1), pH 5.5-6.5, bedengan tinggi 30 cm, gembur tanpa batu",
+        "durasiHari": 10,
+        "suhuOptimal": "16-24°C (perkecambahan optimal 20°C)",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Gemburkan lahan hingga 35 cm, buang batu/akar, campur kompos halus 20 ton/ha + dolomit jika pH <5.5, buat bedengan lebar 100 cm tinggi 30 cm",
+          "Buat alur sedalam 1-2 cm jarak antar baris 15-20 cm, tabur benih tipis (1000 benih/m2), tutup tipis tanah halus + mulsa jerami tipis",
+          "Siram halus kabut 2x sehari jaga lembap, naungan paranet 30% 3-5 hari pertama jika terik, kecambah muncul 10-14 hari",
+          "Penjarangan pertama 14 hari setelah kecambah (jarak 5 cm), penjarangan kedua 30 hari (jarak akhir 8-10 cm), buang bibit lemah bercabang",
+          "Pembumbunan ringan 40 HST tutup pangkal akar yang muncul, jaga drainase tidak tergenang, siap panen 90-120 HST (diameter 2-4 cm)"
+        ],
+        "siapTanamIndikator": "Tanam langsung tanpa pindah (direct seeding); penjarangan menentukan, bukan pindah tanam"
+      }
     ]
   },
   {
@@ -2323,20 +2398,6 @@
     "ketinggianOptimal": "1000-3000 mdpl (optimal 1200-2000), di bawah 800 mdpl hanya dengan varietas khusus dataran medium dan hasil rendah",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/234_Solanum_tuberosum_L.jpg",
     "imageAtribusi": "234_Solanum_tuberosum_L.jpg - Public Domain Wikimedia Commons",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur andosol + kompos + sekam bakar (2:1:1), pH 5.0-6.0, bedengan tinggi 30 cm, drainase sangat baik",
-      "durasiHari": 14,
-      "suhuOptimal": "15-20°C",
-      "kelembaban": "75-85%",
-      "langkah": [
-        "Pilih umbi bibit bersertifikat G2/G3 ukuran 40-60 g bertunas 1-2 cm; belah jika >60 g (tiap belahan ada 2 mata tunas), luka oles fungisida dan angin-anginkan 2 hari",
-        "Gemburkan lahan jadi bedengan lebar 80 cm tinggi 30 cm jarak antar bedeng 50 cm, campur pukan 20 ton/ha + SP-36 300 kg/ha 7 hari sebelum tanam",
-        "Buat lubang tanam kedalaman 10 cm jarak 30x70 cm (populasi ~45.000/ha), tanam bibit tunas menghadap atas, timbun tipis 5 cm",
-        "Siram secukupnya jaga lembap, mulsa jerami, tunas muncul 14-21 hari, lakukan pembumbunan pertama 30 HST timbun batang 10 cm",
-        "Pembumbunan kedua 45 HST timbun hingga 20 cm untuk tutup umbi dari sinar (hindari hijau/solanin), siap panen 90-110 HST saat daun menguning"
-      ],
-      "siapTanamIndikator": "Umbi bibit bertunas 1-2 cm kuat, tidak kisut, bebas virus, umur simpan 2-3 bulan di 3-4°C"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -2416,6 +2477,23 @@
         "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/234_Solanum_tuberosum_L.jpg",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur andosol + kompos + sekam bakar (2:1:1), pH 5.0-6.0, bedengan tinggi 30 cm, drainase sangat baik",
+        "durasiHari": 14,
+        "suhuOptimal": "15-20°C",
+        "kelembaban": "75-85%",
+        "langkah": [
+          "Pilih umbi bibit bersertifikat G2/G3 ukuran 40-60 g bertunas 1-2 cm; belah jika >60 g (tiap belahan ada 2 mata tunas), luka oles fungisida dan angin-anginkan 2 hari",
+          "Gemburkan lahan jadi bedengan lebar 80 cm tinggi 30 cm jarak antar bedeng 50 cm, campur pukan 20 ton/ha + SP-36 300 kg/ha 7 hari sebelum tanam",
+          "Buat lubang tanam kedalaman 10 cm jarak 30x70 cm (populasi ~45.000/ha), tanam bibit tunas menghadap atas, timbun tipis 5 cm",
+          "Siram secukupnya jaga lembap, mulsa jerami, tunas muncul 14-21 hari, lakukan pembumbunan pertama 30 HST timbun batang 10 cm",
+          "Pembumbunan kedua 45 HST timbun hingga 20 cm untuk tutup umbi dari sinar (hindari hijau/solanin), siap panen 90-110 HST saat daun menguning"
+        ],
+        "siapTanamIndikator": "Umbi bibit bertunas 1-2 cm kuat, tidak kisut, bebas virus, umur simpan 2-3 bulan di 3-4°C"
+      }
     ]
   },
   {
@@ -2428,20 +2506,6 @@
     "ketinggianOptimal": "0-1500 mdpl (optimal 300-900 mdpl), dataran rendah subur bisa asal naungan cukup",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Zingiber_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-146.jpg",
     "imageAtribusi": "Köhler's Medizinal-Pflanzen - Zingiber officinale - Public Domain",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos + sekam + pasir (2:2:1:1), pH 5.5-6.5, bedengan tinggi 30 cm, atau polybag 40x50 cm, naungan paranet 50%",
-      "durasiHari": 21,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "80-90%",
-      "langkah": [
-        "Pilih rimpang bibit tua 9-10 bulan sehat, potong 40-60 g tiap potongan ada 2-3 mata tunas, jemur angin 1 hari lalu semai di sekam lembap 14-21 hari hingga tunas 2-3 cm",
-        "Siapkan bedengan lebar 100 cm tinggi 30 cm jarak antar bedeng 50 cm, campur pukan 20 ton/ha + dolomit jika pH <5.5, buat naungan paranet 50% atau tumpang sari dengan pisang",
-        "Buat lubang tanam 20 cm dalam jarak 40x60 cm (jahe gajah) atau 30x40 cm (jahe emprit), tanam rimpang tunas menghadap atas timbun 5 cm",
-        "Siram halus jaga lembap, mulsa jerami tebal 5 cm, semprot ZPT jika perlu, tunas muncul 14-21 hari",
-        "Haft pembumbunan ringan 60 HST dan 120 HST tutup rimpang yang muncul, panen jahe muda 180 HST, jahe tua 270-300 HST saat daun menguning"
-      ],
-      "siapTanamIndikator": "Tunas 2-3 cm kokoh hijau, akar serabut mulai keluar, rimpang tidak berlendir"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -2521,6 +2585,23 @@
         "url": "https://www.fao.org/faostat/en/#data/QCL",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos + sekam + pasir (2:2:1:1), pH 5.5-6.5, bedengan tinggi 30 cm, atau polybag 40x50 cm, naungan paranet 50%",
+        "durasiHari": 21,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "80-90%",
+        "langkah": [
+          "Pilih rimpang bibit tua 9-10 bulan sehat, potong 40-60 g tiap potongan ada 2-3 mata tunas, jemur angin 1 hari lalu semai di sekam lembap 14-21 hari hingga tunas 2-3 cm",
+          "Siapkan bedengan lebar 100 cm tinggi 30 cm jarak antar bedeng 50 cm, campur pukan 20 ton/ha + dolomit jika pH <5.5, buat naungan paranet 50% atau tumpang sari dengan pisang",
+          "Buat lubang tanam 20 cm dalam jarak 40x60 cm (jahe gajah) atau 30x40 cm (jahe emprit), tanam rimpang tunas menghadap atas timbun 5 cm",
+          "Siram halus jaga lembap, mulsa jerami tebal 5 cm, semprot ZPT jika perlu, tunas muncul 14-21 hari",
+          "Haft pembumbunan ringan 60 HST dan 120 HST tutup rimpang yang muncul, panen jahe muda 180 HST, jahe tua 270-300 HST saat daun menguning"
+        ],
+        "siapTanamIndikator": "Tunas 2-3 cm kokoh hijau, akar serabut mulai keluar, rimpang tidak berlendir"
+      }
     ]
   },
   {
@@ -2533,20 +2614,6 @@
     "ketinggianOptimal": "0-1500 mdpl (optimal 200-800 mdpl), adaptif lebih luas dari jahe",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Curcuma_longa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-199.jpg",
     "imageAtribusi": "Köhler's Medizinal-Pflanzen - Curcuma longa - Public Domain",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos + sekam bakar (2:1:1), pH 5.5-6.5, bedengan tinggi 25 cm, atau polybag 35x40 cm",
-      "durasiHari": 21,
-      "suhuOptimal": "26-30°C",
-      "kelembaban": "70-85%",
-      "langkah": [
-        "Pilih rimpang induk tua 7-9 bulan sehat ukuran 30-50 g ada 2-3 mata tunas, potong dan jemur angin 2 hari, semai di media lembap 14-21 hari hingga tunas 2 cm",
-        "Olah lahan bedengan lebar 100 cm tinggi 25 cm, campur pukan 15 ton/ha + SP-36 150 kg/ha 7 hari sebelum tanam, pasang paranet 30% jika lahan terbuka",
-        "Tanam rimpang kedalaman 5-7 cm jarak 40x40 cm, tunas menghadap atas, timbun tanah gembur dan mulsa jerami 3 cm",
-        "Siram rutin 2 hari sekali, jaga naungan, tunas muncul 14-21 hari, sulam yang tidak tumbuh 30 HST",
-        "Bumbun ringan 60 dan 120 HST tutup rimpang muncul, panen 240-270 HST saat daun menguning dan mengering 70%"
-      ],
-      "siapTanamIndikator": "Tunas 2 cm hijau segar, rimpang tidak keriput, ada akar serabut putih"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -2626,6 +2693,23 @@
         "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Curcuma_longa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-199.jpg",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos + sekam bakar (2:1:1), pH 5.5-6.5, bedengan tinggi 25 cm, atau polybag 35x40 cm",
+        "durasiHari": 21,
+        "suhuOptimal": "26-30°C",
+        "kelembaban": "70-85%",
+        "langkah": [
+          "Pilih rimpang induk tua 7-9 bulan sehat ukuran 30-50 g ada 2-3 mata tunas, potong dan jemur angin 2 hari, semai di media lembap 14-21 hari hingga tunas 2 cm",
+          "Olah lahan bedengan lebar 100 cm tinggi 25 cm, campur pukan 15 ton/ha + SP-36 150 kg/ha 7 hari sebelum tanam, pasang paranet 30% jika lahan terbuka",
+          "Tanam rimpang kedalaman 5-7 cm jarak 40x40 cm, tunas menghadap atas, timbun tanah gembur dan mulsa jerami 3 cm",
+          "Siram rutin 2 hari sekali, jaga naungan, tunas muncul 14-21 hari, sulam yang tidak tumbuh 30 HST",
+          "Bumbun ringan 60 dan 120 HST tutup rimpang muncul, panen 240-270 HST saat daun menguning dan mengering 70%"
+        ],
+        "siapTanamIndikator": "Tunas 2 cm hijau segar, rimpang tidak keriput, ada akar serabut putih"
+      }
     ]
   },
   {
@@ -2637,20 +2721,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -2712,6 +2782,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/lengkuas/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -2723,20 +2810,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -2798,6 +2871,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/serai/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -2809,20 +2899,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -2884,6 +2960,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/jagung-manis/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -2895,20 +2988,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -2970,6 +3049,38 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/singkong/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      },
+      {
+        "metode": "STEK",
+        "mediaTanam": "Tanah gembur berpasir + kompos (1:1), bedengan tinggi 30 cm",
+        "durasiHari": 7,
+        "suhuOptimal": "25-32°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Pilih batang singkong sehat umur 8-12 bulan, diameter 2-3 cm, potong stek 20-30 cm dengan 5-7 mata tunas",
+          "Potong miring 45° di pangkal, olesi fungisida/abu sekam, angin-anginkan 1 hari untuk kalus",
+          "Tancapkan 2/3 stek miring 45° di bedengan, jarak 100x80 cm, mata tunas menghadap atas, siram secukupnya",
+          "Tutup mulsa jerami, jaga lembap tidak becek; tunas muncul 7-10 hari",
+          "Sulam stek gagal tumbuh setelah 14 hari, beri NPK 5 g/tanaman 21 HST"
+        ],
+        "siapTanamIndikator": "Tunas 2-3 helai daun baru, tinggi 10-15 cm, akar serabut keluar 7-14 hari"
+      }
     ]
   },
   {
@@ -2981,20 +3092,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -3056,6 +3153,38 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/ubi-jalar/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      },
+      {
+        "metode": "STEK",
+        "mediaTanam": "Bedengan gembur + pasir + kompos, drainase baik",
+        "durasiHari": 5,
+        "suhuOptimal": "24-30°C",
+        "kelembaban": "75-85%",
+        "langkah": [
+          "Ambil stek pucuk/batang ubi jalar 25-30 cm dengan 3-4 ruas, pangkas daun bawah",
+          "Rendam pangkal stek dalam air + ZPT alami (bawang merah) 30 menit",
+          "Tancapkan 2 ruas ke dalam bedengan lembap, jarak 25x100 cm (larikan), siram halus",
+          "Naungi 2-3 hari pertama dengan daun pisang/paranet 30%, jaga lembap",
+          "Stek berakar 5-7 hari, tunas baru segar → lepas naungan"
+        ],
+        "siapTanamIndikator": "Akar putih 3-5 cm, pucuk segar tidak layu siang, 5-7 hari"
+      }
     ]
   },
   {
@@ -3067,20 +3196,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -3142,6 +3257,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/okra/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -3153,20 +3285,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -3228,6 +3346,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/kailan/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -3239,20 +3374,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -3314,6 +3435,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/sawi-putih/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -3325,20 +3463,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -3400,6 +3524,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/ketumbar/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -3411,24 +3552,6 @@
     "iklimOptimal": "Tropis kering, suhu 25–32°C (optimum 28°C), kelembapan 60–80%, curah hujan 600–1200 mm/tahun, sinar matahari 10–12 jam/hari",
     "ketinggianOptimal": "0–700 mdpl (optimal 300–500 mdpl; di atas 700 mdpl buah kurang manis, FAO Ecocrop)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Cucumis_melo_var._reticulatus_%28photo_by_Scott_Bauer%29.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Rockwool / polybag semai (campuran tanah : kompos : arang sekam 2:1:1, steril)",
-      "durasiHari": 7,
-      "suhuOptimal": "25–32°C",
-      "kelembaban": "70–80%",
-      "kedalamanSemaian": "1–1,5 cm",
-      "jarakTanam": "60 × 70 cm (populasi 23.000 tanaman/ha, sistem lesehan) atau 50 × 60 cm para-para",
-      "kebutuhanBenih": "500–700 gram/ha (± 15.000–20.000 benih)",
-      "langkah": [
-        "Seleksi benih bernas: rendam air hangat 40°C + fungisida Previcur N 0,1% selama 2–3 jam, tiriskan",
-        "Semai di rockwool lembap atau polybag 8×9 cm, benam 1–1,5 cm, tutup tipis arang sekam, siram spray",
-        "Simpan di persemaian naungan 30% (paranet), suhu 27–30°C, semprot pagi–sore jaga lembap",
-        "Hari ke-3–4: benih berkecambah; buka sungkup, kenalkan sinar 50%",
-        "Hari ke-7–10: bibit berdaun sejati 2–3 helai, tinggi 7–10 cm, akar putih sehat → siap pindah tanam sore hari",
-        "Pindah tanam ke bedengan 30 cm tinggi, lebar 100 cm, jarak 60×70 cm, siram larutan starter NPK 2 g/L"
-      ],
-      "siapTanamIndikator": "Umur 7–10 hari setelah semai, daun sejati 2–3 helai, tinggi 7–10 cm, batang kokoh, akar putih tidak melingkar"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -3533,7 +3656,28 @@
       "https://balitsa.litbang.pertanian.go.id — Balai Penelitian Tanaman Sayuran (Balitsa) — Budidaya Melon Dataran Rendah & dosis NPK 400 kg/ha + pupuk kandang 20 ton/ha",
       "https://pertanian.go.id — Kementerian Pertanian RI — Pedoman Budidaya Melon & Balai Penelitian Tanaman Buah Tropika (Balitbu) varietas unggul"
     ],
-    "verifikasi": "2026-08-31 — dosis pupuk & iklim silang FAO Ecocrop + Balitsa + Balitbu; imageUrl Wikimedia terverifikasi HTTP 200"
+    "verifikasi": "2026-08-31 — dosis pupuk & iklim silang FAO Ecocrop + Balitsa + Balitbu; imageUrl Wikimedia terverifikasi HTTP 200",
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Rockwool / polybag semai (campuran tanah : kompos : arang sekam 2:1:1, steril)",
+        "durasiHari": 7,
+        "suhuOptimal": "25–32°C",
+        "kelembaban": "70–80%",
+        "kedalamanSemaian": "1–1,5 cm",
+        "jarakTanam": "60 × 70 cm (populasi 23.000 tanaman/ha, sistem lesehan) atau 50 × 60 cm para-para",
+        "kebutuhanBenih": "500–700 gram/ha (± 15.000–20.000 benih)",
+        "langkah": [
+          "Seleksi benih bernas: rendam air hangat 40°C + fungisida Previcur N 0,1% selama 2–3 jam, tiriskan",
+          "Semai di rockwool lembap atau polybag 8×9 cm, benam 1–1,5 cm, tutup tipis arang sekam, siram spray",
+          "Simpan di persemaian naungan 30% (paranet), suhu 27–30°C, semprot pagi–sore jaga lembap",
+          "Hari ke-3–4: benih berkecambah; buka sungkup, kenalkan sinar 50%",
+          "Hari ke-7–10: bibit berdaun sejati 2–3 helai, tinggi 7–10 cm, akar putih sehat → siap pindah tanam sore hari",
+          "Pindah tanam ke bedengan 30 cm tinggi, lebar 100 cm, jarak 60×70 cm, siram larutan starter NPK 2 g/L"
+        ],
+        "siapTanamIndikator": "Umur 7–10 hari setelah semai, daun sejati 2–3 helai, tinggi 7–10 cm, batang kokoh, akar putih tidak melingkar"
+      }
+    ]
   },
   {
     "name": "Semangka",
@@ -3544,20 +3688,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -3619,6 +3749,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/semangka/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -3630,23 +3777,6 @@
     "iklimOptimal": "Sejuk subtropis, suhu 15–24°C (optimum 18–22°C siang / 10–15°C malam), kelembapan 75–85%, curah hujan 600–800 mm/tahun, sinar 8–10 jam/hari, butuh periode dingin untuk induksi bunga",
     "ketinggianOptimal": "800–1500 mdpl (optimal 1000–1300 mdpl); toleran 700–1800 mdpl — di bawah 700 mdpl buah kecil & asam (Balitsa)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_single2.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Stolon (anakan sulur) — bukan biji; media cocopeat : arang sekam : kompos 1:1:1 + pupuk dasar, steril",
-      "durasiHari": 14,
-      "suhuOptimal": "18–22°C",
-      "kelembaban": "75–85%",
-      "jarakTanam": "30 × 40 cm (populasi 50.000–60.000 tanaman/ha, bedengan 100 cm lebar)",
-      "kebutuhanBibit": "50.000–60.000 stolon/ha (pilih stolon sehat berakar 3–5, diameter crown >1 cm, 3–4 daun)",
-      "langkah": [
-        "Pilih induk sehat umur 3–4 bulan, ambil stolon anakan pertama (runner) yang sudah berakar di polybag 7×9 cm selama 10–14 hari",
-        "Siapkan bedengan tinggi 30–40 cm, lebar 100 cm, panjang 10 m, jarak antar bedengan 50 cm untuk drainase",
-        "Campur pupuk dasar: pupuk kandang 20 ton/ha + SP-36 250 kg/ha + dolomit 1 ton/ha (jika pH <5,5), tutup mulsa hitam-perak, lubangi 30×40 cm",
-        "Tanam stolon sore hari (jam 16.00), crown sejajar permukaan tanah (jangan terbenam), siram starter KNO3 2 g/L",
-        "Naungi 3 hari pertama dengan paranet 50% jika terik, siram spray 2× sehari pagi–sore",
-        "Hari ke-7: cek perakaran; sulam yang layu. Hari ke-14: tanaman tegak, daun baru muncul → lepas naungan bertahap"
-      ],
-      "siapTanamIndikator": "14 hari setelah tanam stolon: daun baru 2–3 helai segar, akar putih menembus media, crown kokoh tidak busuk"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -3751,7 +3881,42 @@
       "https://www.fao.org/land-water/databases-and-software/crop-information/strawberry/en/ — FAO Crop Information Strawberry (optimum 15–25°C, periode 90–120 hari)",
       "https://pertanian.go.id — Kementan & Balai Penelitian Tanaman Buah Tropika (Balitbu) — Pedoman Budidaya Stroberi Dataran Tinggi"
     ],
-    "verifikasi": "2026-08-31 — dosis & iklim silang FAO + Balitsa + Kementan; stolon & KNO3/MKP dosis spesifik Balitsa; imageUrl Wikimedia terverifikasi HTTP 200"
+    "verifikasi": "2026-08-31 — dosis & iklim silang FAO + Balitsa + Kementan; stolon & KNO3/MKP dosis spesifik Balitsa; imageUrl Wikimedia terverifikasi HTTP 200",
+    "sowingGuides": [
+      {
+        "metode": "STEK",
+        "mediaTanam": "Stolon (anakan sulur) — bukan biji; media cocopeat : arang sekam : kompos 1:1:1 + pupuk dasar, steril",
+        "durasiHari": 14,
+        "suhuOptimal": "18–22°C",
+        "kelembaban": "75–85%",
+        "jarakTanam": "30 × 40 cm (populasi 50.000–60.000 tanaman/ha, bedengan 100 cm lebar)",
+        "kebutuhanBibit": "50.000–60.000 stolon/ha (pilih stolon sehat berakar 3–5, diameter crown >1 cm, 3–4 daun)",
+        "langkah": [
+          "Pilih induk sehat umur 3–4 bulan, ambil stolon anakan pertama (runner) yang sudah berakar di polybag 7×9 cm selama 10–14 hari",
+          "Siapkan bedengan tinggi 30–40 cm, lebar 100 cm, panjang 10 m, jarak antar bedengan 50 cm untuk drainase",
+          "Campur pupuk dasar: pupuk kandang 20 ton/ha + SP-36 250 kg/ha + dolomit 1 ton/ha (jika pH <5,5), tutup mulsa hitam-perak, lubangi 30×40 cm",
+          "Tanam stolon sore hari (jam 16.00), crown sejajar permukaan tanah (jangan terbenam), siram starter KNO3 2 g/L",
+          "Naungi 3 hari pertama dengan paranet 50% jika terik, siram spray 2× sehari pagi–sore",
+          "Hari ke-7: cek perakaran; sulam yang layu. Hari ke-14: tanaman tegak, daun baru muncul → lepas naungan bertahap"
+        ],
+        "siapTanamIndikator": "14 hari setelah tanam stolon: daun baru 2–3 helai segar, akar putih menembus media, crown kokoh tidak busuk"
+      },
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Rockwool halus / cocopeat steril + tray semai 200 lubang, pH 5.5-6.0",
+        "durasiHari": 21,
+        "suhuOptimal": "18-22°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Rendam benih stroberi 2 jam air hangat 25°C, tiriskan; benih sangat kecil, campur pasir halus 1:20 untuk tabur rata",
+          "Tabur di rockwool lembap 0.3 cm, jangan tutup rapat (butuh cahaya), semprot kabut halus",
+          "Simpan dome bening naungan 50% 7-10 hari hingga berkecambah (7-14 hari), jaga lembap semprot 2x sehari",
+          "Setelah kotiledon membuka, beri nutrisi 400 ppm, kenalkan cahaya penuh bertahap",
+          "Pindah tanam 21-28 hari saat 3-4 daun sejati, tinggi 4-6 cm, akar serabut putih"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 4-6 cm, akar putih menembus rockwool, 21 hari"
+      }
+    ]
   },
   {
     "name": "Pisang",
@@ -3762,20 +3927,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -3837,6 +3988,38 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/pisang/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      },
+      {
+        "metode": "STEK",
+        "mediaTanam": "Anakan pisang (sucker) pedang umur 3-4 bulan, tinggi 40-60 cm + bonggol sehat + polybag 30x40 cm",
+        "durasiHari": 14,
+        "suhuOptimal": "26-32°C",
+        "kelembaban": "70-85%",
+        "langkah": [
+          "Pilih anakan pedang (daun runcing) dari induk sehat bebas layu Fusarium, dongkel dengan bonggol dan akar utuh 15 cm",
+          "Pangkas daun sisakan 20 cm, rendam bonggol dalam fungisida + insektisida 10 menit, tiriskan",
+          "Tanam di polybag/lubang 40x40x40 cm dengan campuran tanah:kompos:pasir 2:1:1 + 100 g NPK dasar + Furadan 5 g",
+          "Siram jenuh pertama, naungi 7 hari paranet 30%, siram 2 hari sekali",
+          "Anakan segar tidak layu 7 hari, muncul daun baru 14 hari → siap tanam lapang setelah 30 hari aklimatisasi polybag"
+        ],
+        "siapTanamIndikator": "Daun baru 1 helai membuka, akar putih menembus polybag, bonggol kokoh, 14-21 hari"
+      }
     ]
   },
   {
@@ -3848,20 +4031,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -3923,6 +4092,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/pepaya/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -3934,20 +4120,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -4009,6 +4181,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/jambu-biji/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -4020,20 +4209,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -4095,6 +4270,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/jambu-air/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -4106,20 +4298,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -4181,6 +4359,53 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/mangga/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      },
+      {
+        "metode": "OKULASI",
+        "mediaTanam": "Batang bawah (rootstock) mangga umur 8-12 bulan, diameter 1-2 cm + entres/bud chip varietas unggul",
+        "durasiHari": 21,
+        "suhuOptimal": "26-32°C",
+        "kelembaban": "70-85%",
+        "langkah": [
+          "Siapkan rootstock sehat (dari biji 8-12 bulan), sayat kulit bentuk T 3 cm di ketinggian 20-30 cm dari tanah",
+          "Ambil mata tunas (bud) dari entres varietas unggul (Arumanis, Gedong) ukuran 2x1 cm beserta kulit tipis",
+          "Sisipkan bud ke sayatan T, ikat dengan plastik okulasi/grafting tape rapat, sisakan mata tunas terbuka",
+          "Simpan di naungan 50% 14 hari, jangan siram kena sambungan; cek keberhasilan: bud hijau segar tidak kering",
+          "Setelah 21 hari bud bertunas 2-3 cm, potong batang rootstock 2 cm di atas sambungan, buka ikatan bertahap"
+        ],
+        "siapTanamIndikator": "Mata tunas pecah hijau 1-2 cm, kalus menyatu, 21 hari; siap pindah lapang setelah tunas 10-15 cm"
+      },
+      {
+        "metode": "CANGKOK",
+        "mediaTanam": "Cabang mangga produktif diameter 2-3 cm + media cangkok cocopeat:kompos:tanah (1:1:1) + plastik bening",
+        "durasiHari": 45,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-85%",
+        "langkah": [
+          "Pilih cabang sehat tidak berbuah, diameter 2-3 cm, panjang 60-80 cm, kerat kulit melingkar 3-4 cm kupas kambium hingga bersih",
+          "Kerik kambium, olesi ZPT (Rootone-F) atau bawang merah, biarkan kering 1 hari",
+          "Bungkus luka dengan media cangkok lembap (kepal 7-10 cm), ikat plastik bening atas-bawah rapat, lubangi kecil drainase",
+          "Siram suntik 2 hari sekali via spuit jika media kering, jaga tidak becek",
+          "Akar tembus plastik 30-45 hari (akar coklat serabut banyak) → potong bawah cangkok, rendam vitamin B1, tanam di polybag 30cm sebelum lapang"
+        ],
+        "siapTanamIndikator": "Akar serabut coklat memenuhi bungkusan, panjang akar 5-10 cm, 35-45 hari"
+      }
     ]
   },
   {
@@ -4192,20 +4417,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -4267,6 +4478,38 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/nanas/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      },
+      {
+        "metode": "STEK",
+        "mediaTanam": "Mahkota (crown) atau tunas batang nanas + media tanah:pasir:kompos 2:1:1",
+        "durasiHari": 21,
+        "suhuOptimal": "25-32°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Pilih mahkota nanas sehat, buang daun bawah 2 cm, keringkan 2-3 hari hingga luka kalus",
+          "Tancapkan ke media lembap kedalaman 3-4 cm, jarak 30x60 cm, siram secukupnya",
+          "Naungi 7 hari pertama, siram 3 hari sekali (nanas toleran kering), beri fungisida semprot",
+          "Akar muncul 14-21 hari, daun tengah hijau segar tidak mudah dicabut",
+          "Siap pindah lapang setelah 30 hari atau langsung tanam lapang dengan mulsa"
+        ],
+        "siapTanamIndikator": "Daun pucuk tidak mudah dicabut (akar mengikat), akar serabut 3-5 cm, 21 hari"
+      }
     ]
   },
   {
@@ -4278,20 +4521,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -4353,6 +4582,38 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/jeruk-manis/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      },
+      {
+        "metode": "OKULASI",
+        "mediaTanam": "Rootstock Jeruk Japansche Citroen (JC) umur 6-9 bulan + mata tunas jeruk manis Siam/Keprok varietas unggul",
+        "durasiHari": 21,
+        "suhuOptimal": "24-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan rootstock JC diameter 0,8-1,5 cm, sehat bebas CVPD, pangkas duri sekitar batang",
+          "Sayat T 2,5 cm di 15-20 cm dari pangkal, ambil bud chip 1,5x0,8 cm dari entres jeruk manis (mata dorman)",
+          "Sisipkan bud, ikat dengan parafilm/grafting tape melingkar rapat, mata tunas di luar",
+          "Letak di naungan 50%, siram rutin tanpa basahi sambungan 14 hari, cek bud tetap hijau",
+          "Hari 14-21: buka ikatan, potong pucuk rootstock 5 cm di atas okulasi untuk dorong tunas, tunas 3-5 cm siap dipelihara"
+        ],
+        "siapTanamIndikator": "Bud hijau pecah 1-3 cm, sambungan kalus sempurna, 21 hari"
+      }
     ]
   },
   {
@@ -4364,20 +4625,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -4439,6 +4686,38 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/alpukat/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      },
+      {
+        "metode": "OKULASI",
+        "mediaTanam": "Rootstock alpukat biji umur 6-10 bulan + entres alpukat Hass/Mentega (sambung pucuk/top grafting)",
+        "durasiHari": 28,
+        "suhuOptimal": "22-28°C",
+        "kelembaban": "75-85%",
+        "langkah": [
+          "Siapkan rootstock diameter 1-2 cm, potong pucuk datar ketinggian 30 cm, belah vertikal 3 cm di tengah batang",
+          "Ambil entres pucuk 8-12 cm dengan 2-3 mata tunas, runcingkan pangkal bentuk V 2,5 cm",
+          "Sisipkan entres ke belahan rootstock, sejajarkan kambium minimal satu sisi, ikat grafting tape + sungkup plastik bening",
+          "Simpan naungan 70% 14 hari, jaga kelembapan sungkup (embun), buka sungkup bertahap 5 menit/hari setelah hari ke-14",
+          "Tunas entres pecah 14-21 hari, lepas sungkup penuh hari ke-21, lepas ikatan hari ke-28 jika sambungan kokoh"
+        ],
+        "siapTanamIndikator": "Tunas entres pecah daun baru 2-3 helai, sambungan tidak layu, 21-28 hari"
+      }
     ]
   },
   {
@@ -4450,20 +4729,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -4525,6 +4790,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/buah-naga/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -4536,20 +4818,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -4611,6 +4879,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/durian/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -4622,20 +4907,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -4697,6 +4968,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/rambutan/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -4708,20 +4996,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -4783,6 +5057,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/manggis/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -4794,20 +5085,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -4869,6 +5146,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/duku/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -4880,20 +5174,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -4955,6 +5235,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/salak/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -4966,20 +5263,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -5041,6 +5324,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/nangka/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -5052,20 +5352,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -5127,6 +5413,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/sirsak/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -5138,20 +5441,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -5213,6 +5502,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/markisa/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -5224,20 +5530,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -5299,6 +5591,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/belimbing/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -5310,20 +5619,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -5385,6 +5680,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/sawo/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -5396,20 +5708,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -5471,6 +5769,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/kelengkeng/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -5482,20 +5797,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -5557,6 +5858,23 @@
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/blewah/en/",
         "tanggal": "2026-08-31"
       }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      }
     ]
   },
   {
@@ -5568,20 +5886,6 @@
     "iklimOptimal": "Tropis 22-30°C",
     "ketinggianOptimal": "0-1000 mdpl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green_beans.jpg",
-    "sowingGuide": {
-      "mediaTanam": "Tanah gembur + kompos",
-      "durasiHari": 7,
-      "suhuOptimal": "25-30°C",
-      "kelembaban": "70-80%",
-      "langkah": [
-        "Siapkan Tanah gembur + kompos lembap steril",
-        "Tabur 1 benih per lubang 1 cm, tutup tipis",
-        "Simpan naungan 50%, jaga lembap semprot 2x sehari",
-        "Beri NPK 2 g/L 7 HST",
-        "Pindah tanam 7 hari saat 3-4 daun sejati"
-      ],
-      "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
-    },
     "growingGuides": [
       {
         "fase": "VEGETATIF",
@@ -5642,6 +5946,38 @@
         "judul": "FAO - Anggur",
         "url": "https://www.fao.org/land-water/databases-and-software/crop-information/anggur/en/",
         "tanggal": "2026-08-31"
+      }
+    ],
+    "sowingGuides": [
+      {
+        "metode": "BIJI",
+        "mediaTanam": "Tanah gembur + kompos",
+        "durasiHari": 7,
+        "suhuOptimal": "25-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Siapkan Tanah gembur + kompos lembap steril",
+          "Tabur 1 benih per lubang 1 cm, tutup tipis",
+          "Simpan naungan 50%, jaga lembap semprot 2x sehari",
+          "Beri NPK 2 g/L 7 HST",
+          "Pindah tanam 7 hari saat 3-4 daun sejati"
+        ],
+        "siapTanamIndikator": "3-4 daun sejati, tinggi 5-10 cm, 7 hari"
+      },
+      {
+        "metode": "STEK",
+        "mediaTanam": "Batang anggur semi-berkayu diameter 0,8-1,2 cm + media cocopeat:pasir:kompos 2:1:1 + polybag 15x20 cm",
+        "durasiHari": 21,
+        "suhuOptimal": "24-30°C",
+        "kelembaban": "70-80%",
+        "langkah": [
+          "Pilih batang anggur sehat umur 6-8 bulan, potong stek 20-25 cm dengan 3-4 mata tunas, potong miring bawah 45° 1 cm di bawah mata",
+          "Rendam pangkal dalam ZPT Rootone-F / air bawang 1 jam, olesi fungisida bagian atas",
+          "Tancapkan 2 mata ke media lembap, 1-2 mata di atas, siram, sungkup plastik bening untuk jaga kelembapan",
+          "Simpan naungan 50% 14 hari, semprot kabut 1x sehari, buka sungkup 10 menit/hari setelah hari ke-10",
+          "Kalus dan akar muncul 14-21 hari, tunas pecah 2-3 cm → pindah ke naungan penuh bertahap, siap grafting/okulasi jika perlu"
+        ],
+        "siapTanamIndikator": "Kalus putih di pangkal, akar serabut 2-4 cm, tunas pecah 1-3 cm, 21 hari"
       }
     ]
   }

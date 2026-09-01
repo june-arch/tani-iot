@@ -12,6 +12,8 @@ interface Pupuk {
 }
 
 interface SowingGuideSeed {
+  metode?: string;
+  sumber?: any;
   mediaTanam: string;
   durasiHari: number;
   suhuOptimal: string;
@@ -45,7 +47,8 @@ interface CropSeed {
   iklimOptimal: string;
   ketinggianOptimal: string;
   imageUrl?: string | null;
-  sowingGuide: SowingGuideSeed;
+  sowingGuides?: SowingGuideSeed[];
+  sowingGuide?: SowingGuideSeed;
   growingGuides: GrowingGuideSeed[];
   hydroponicGuide: HydroponicGuideSeed;
 }
@@ -81,19 +84,24 @@ async function main() {
       },
     });
 
-    // SowingGuide: hapus lama lalu buat baru (idempotent)
+    // SowingGuide: hapus lama lalu buat baru (idempotent) - support multi metode + backward compat
     await prisma.sowingGuide.deleteMany({ where: { cropId: crop.id } });
-    await prisma.sowingGuide.create({
-      data: {
-        cropId: crop.id,
-        mediaTanam: c.sowingGuide.mediaTanam,
-        durasiHari: c.sowingGuide.durasiHari,
-        suhuOptimal: c.sowingGuide.suhuOptimal,
-        kelembaban: c.sowingGuide.kelembaban,
-        langkah: c.sowingGuide.langkah as any,
-        siapTanamIndikator: c.sowingGuide.siapTanamIndikator,
-      },
-    });
+    const sowingGuides: SowingGuideSeed[] = (c.sowingGuides ?? (c.sowingGuide ? [c.sowingGuide] : [])) as SowingGuideSeed[];
+    for (const sg of sowingGuides) {
+      await prisma.sowingGuide.create({
+        data: {
+          cropId: crop.id,
+          metode: (sg.metode ?? 'BIJI') as any,
+          mediaTanam: sg.mediaTanam,
+          durasiHari: sg.durasiHari,
+          suhuOptimal: sg.suhuOptimal,
+          kelembaban: sg.kelembaban,
+          langkah: sg.langkah as any,
+          siapTanamIndikator: sg.siapTanamIndikator,
+          sumber: (sg.sumber ?? null) as any,
+        },
+      });
+    }
 
     // GrowingGuides
     await prisma.growingGuide.deleteMany({ where: { cropId: crop.id } });

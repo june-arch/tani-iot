@@ -35,6 +35,13 @@ export class PupukDto {
 }
 
 export class SowingGuideDto {
+  @IsOptional()
+  @IsEnum(['BIJI', 'STEK', 'CANGKOK', 'OKULASI'], { message: 'Metode harus BIJI, STEK, CANGKOK, atau OKULASI' })
+  metode?: string;
+
+  @IsOptional()
+  sumber?: any;
+
   @IsString({ message: 'Media tanam harus berupa teks' })
   @IsNotEmpty({ message: 'Media tanam tidak boleh kosong' })
   mediaTanam!: string;
@@ -140,7 +147,13 @@ export class CreateCropDto {
   @IsOptional()
   @ValidateNested()
   @Type(() => SowingGuideDto)
-  sowingGuide?: SowingGuideDto;
+  sowingGuide?: SowingGuideDto; // backward compat: single, akan di-convert ke array di service/seed
+
+  @IsOptional()
+  @IsArray({ message: 'Sowing guides harus berupa array' })
+  @ValidateNested({ each: true })
+  @Type(() => SowingGuideDto)
+  sowingGuides?: SowingGuideDto[];
 
   @IsOptional()
   @IsArray({ message: 'Growing guides harus berupa array' })
