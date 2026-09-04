@@ -1,26 +1,29 @@
 "use client";
 import * as React from "react";
 
-type Variant = "primary" | "secondary" | "accent" | "ghost" | "destructive";
+type Variant = "primary" | "secondary" | "outlined" | "ghost" | "destructive";
 type Size = "sm" | "md" | "lg";
 
 const variantCls: Record<Variant, string> = {
+  // Primary — Midnight Wine #421d24, the ONLY chromatic filled CTA (DESIGN.md)
   primary:
-    "bg-primary text-primary-fg hover:bg-primary-hover focus-visible:ring-primary disabled:opacity-50",
+    "bg-midnight-wine text-paper-white hover:bg-[#2f151a] border border-midnight-wine focus-visible:ring-midnight-wine shadow-none",
+  // Secondary — Lilac Mist #d4c7ff with ink text + ink border (Outlined Light Button)
   secondary:
-    "bg-muted text-foreground hover:bg-border focus-visible:ring-ring disabled:opacity-50 border",
-  accent:
-    "bg-accent text-accent-fg hover:bg-accent-hover focus-visible:ring-accent disabled:opacity-50",
+    "bg-lilac-mist text-ink-charcoal hover:bg-[#c3b6f0] border border-ink-charcoal focus-visible:ring-royal-violet",
+  // Outlined — keep for alternative secondary
+  outlined:
+    "bg-paper-white text-ink-charcoal hover:bg-warm-parchment border border-soft-mist focus-visible:ring-royal-violet",
   ghost:
-    "bg-transparent text-foreground hover:bg-muted focus-visible:ring-ring disabled:opacity-50",
+    "bg-transparent text-ink-charcoal hover:bg-paper-white hover:shadow-subtle border border-transparent focus-visible:ring-royal-violet",
   destructive:
-    "bg-destructive text-destructive-fg hover:bg-[#B91C1C] focus-visible:ring-destructive disabled:opacity-50",
+    "bg-destructive text-destructive-fg hover:bg-[#7f1515] border border-destructive focus-visible:ring-destructive",
 };
 
 const sizeCls: Record<Size, string> = {
-  sm: "h-9 px-3 text-xs",
-  md: "h-11 px-5 text-sm", // 44px min
-  lg: "h-12 px-6 text-sm",
+  sm: "h-9 px-3.5 text-[13px]",
+  md: "h-12 px-5 text-[15px]", // 48px per DESIGN — Primary Action height
+  lg: "h-[48px] px-6 text-[15px]",
 };
 
 export function Button({
@@ -38,9 +41,9 @@ export function Button({
       className={[
         "inline-flex items-center justify-center gap-2 rounded-button font-semibold",
         "transition-colors duration-150",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
-        "disabled:cursor-not-allowed disabled:pointer-events-none",
-        "active:scale-[0.97]",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-warm-parchment",
+        "disabled:cursor-not-allowed disabled:opacity-50 disabled:pointer-events-none",
+        "active:scale-[0.98]",
         variantCls[variant],
         sizeCls[size],
         className,

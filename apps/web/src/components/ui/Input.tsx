@@ -16,7 +16,7 @@ export function Input({
   return (
     <div className="flex flex-col gap-1.5">
       {label && (
-        <label htmlFor={inputId} className="text-xs font-semibold tracking-wide text-foreground">
+        <label htmlFor={inputId} className="text-xs font-semibold tracking-wide text-ink-charcoal">
           {label}
         </label>
       )}
@@ -24,12 +24,12 @@ export function Input({
         id={inputId}
         aria-invalid={!!error}
         className={[
-          "h-11 w-full rounded-button border bg-background px-3.5 text-sm",
-          "placeholder:text-muted-fg/60",
+          "h-11 w-full rounded-small-button border bg-paper-white px-3.5 text-sm text-ink-charcoal",
+          "placeholder:text-stone-gray/60",
           "transition-colors",
-          "focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20",
-          "disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-muted",
-          error ? "border-destructive focus:border-destructive focus:ring-destructive/20" : "border-border",
+          "focus:border-royal-violet focus:outline-none focus:ring-2 focus:ring-royal-violet/20",
+          "disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-warm-parchment",
+          error ? "border-destructive focus:border-destructive focus:ring-destructive/20" : "border-soft-mist",
           className,
         ].join(" ")}
         {...props}
@@ -54,7 +54,7 @@ export function Textarea({
   return (
     <div className="flex flex-col gap-1.5">
       {label && (
-        <label htmlFor={inputId} className="text-xs font-semibold tracking-wide text-foreground">
+        <label htmlFor={inputId} className="text-xs font-semibold tracking-wide text-ink-charcoal">
           {label}
         </label>
       )}
@@ -62,11 +62,11 @@ export function Textarea({
         id={inputId}
         aria-invalid={!!error}
         className={[
-          "min-h-24 w-full rounded-button border bg-background px-3.5 py-3 text-sm",
-          "placeholder:text-muted-fg/60",
-          "focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20",
+          "min-h-24 w-full rounded-small-button border bg-paper-white px-3.5 py-3 text-sm text-ink-charcoal",
+          "placeholder:text-stone-gray/60",
+          "focus:border-royal-violet focus:outline-none focus:ring-2 focus:ring-royal-violet/20",
           "disabled:opacity-50",
-          error ? "border-destructive" : "border-border",
+          error ? "border-destructive" : "border-soft-mist",
           className,
         ].join(" ")}
         {...props}
@@ -92,17 +92,17 @@ export function Select({
   return (
     <div className="flex flex-col gap-1.5">
       {label && (
-        <label htmlFor={inputId} className="text-xs font-semibold tracking-wide text-foreground">
+        <label htmlFor={inputId} className="text-xs font-semibold tracking-wide text-ink-charcoal">
           {label}
         </label>
       )}
       <select
         id={inputId}
         className={[
-          "h-11 w-full rounded-button border bg-background px-3.5 text-sm",
-          "focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20",
+          "h-11 w-full rounded-small-button border bg-paper-white px-3.5 text-sm text-ink-charcoal",
+          "focus:border-royal-violet focus:outline-none focus:ring-2 focus:ring-royal-violet/20",
           "disabled:opacity-50",
-          error ? "border-destructive" : "border-border",
+          error ? "border-destructive" : "border-soft-mist",
           className,
         ].join(" ")}
         {...props}

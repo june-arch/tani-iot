@@ -1,14 +1,16 @@
 import * as React from "react";
 
-type Variant = "success" | "warning" | "destructive" | "info" | "neutral" | "primary";
+type Variant = "success" | "warning" | "destructive" | "info" | "neutral" | "primary" | "lilac";
 
 const map: Record<Variant, string> = {
-  success: "bg-success-soft text-success",
-  warning: "bg-warning-soft text-[#92400E]",
-  destructive: "bg-destructive-soft text-[#991B1B]",
-  info: "bg-info-soft text-info border border-info/20",
-  neutral: "bg-muted text-muted-fg border",
-  primary: "bg-primary-soft text-primary-soft-fg",
+  // keep semantics but on parchment palette
+  success: "bg-[#d4f5e2] text-[#14532d] border border-[#a7e8c2]/50",
+  warning: "bg-warning-soft text-[#92400E] border border-warning/15",
+  destructive: "bg-destructive-soft text-destructive border border-destructive/10",
+  info: "bg-lilac-mist text-ink-charcoal border border-royal-violet/15",
+  neutral: "bg-paper-white text-stone-gray border border-soft-mist",
+  primary: "bg-midnight-wine text-paper-white border border-midnight-wine",
+  lilac: "bg-lilac-mist text-ink-charcoal border border-royal-violet/10",
 };
 
 export function Badge({
