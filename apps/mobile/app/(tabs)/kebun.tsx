@@ -4,7 +4,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useQuery } from '@tanstack/react-query';
 import client from '@/src/api/client';
 
-const PRIMARY = '#2E7D32';
+const PRIMARY = '#421d24'; // Midnight Wine — Superhuman
+const LILAC = '#d4c7ff';
+const VIOLET = '#714cb6';
 
 type Kebun = {
   id: string;
@@ -99,44 +101,43 @@ export default function KebunScreen() {
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: '#FFFCF8' },
+  safe: { flex: 1, backgroundColor: '#f2f0eb' },
   header: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 12 },
-  title: { fontSize: 22, fontWeight: '800', color: '#111827' },
-  subtitle: { fontSize: 13, color: '#6B7280', marginTop: 2 },
+  title: { fontSize: 22, fontWeight: '800', color: '#292827' },
+  subtitle: { fontSize: 13, color: '#666666', marginTop: 2 },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 10 },
-  muted: { color: '#6B7280', fontSize: 13, textAlign: 'center' },
+  muted: { color: '#666666', fontSize: 13, textAlign: 'center' },
   emptyIcon: { fontSize: 48 },
-  emptyTitle: { fontSize: 16, fontWeight: '700', color: '#111827' },
-  btnPrimary: { backgroundColor: PRIMARY, paddingHorizontal: 22, paddingVertical: 12, borderRadius: 10, marginTop: 8 },
-  btnPrimaryText: { color: '#fff', fontWeight: '700', fontSize: 14 },
+  emptyTitle: { fontSize: 16, fontWeight: '700', color: '#292827' },
+  btnPrimary: { backgroundColor: PRIMARY, paddingHorizontal: 22, paddingVertical: 12, borderRadius: 16, marginTop: 8 },
+  btnPrimaryText: { color: '#ffffff', fontWeight: '700', fontSize: 14 },
   addBtn: {
     backgroundColor: PRIMARY,
-    borderRadius: 10,
+    borderRadius: 16,
     paddingVertical: 12,
     alignItems: 'center',
     marginBottom: 4,
   },
-  addBtnText: { color: '#fff', fontWeight: '700' },
+  addBtnText: { color: '#ffffff', fontWeight: '700' },
   card: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
-    borderRadius: 14,
+    backgroundColor: '#ffffff',
+    borderRadius: 16,
     padding: 14,
     gap: 12,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
-    elevation: 1,
+    borderColor: '#e3e3e2',
   },
   cardIcon: {
     width: 44,
     height: 44,
     borderRadius: 10,
-    backgroundColor: '#E8F5E9',
+    backgroundColor: '#d4c7ff',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  cardTitle: { fontSize: 15, fontWeight: '700', color: '#111827' },
-  cardLoc: { fontSize: 12, color: '#6B7280', marginTop: 2 },
-  cardMeta: { fontSize: 11, color: '#6B7280', marginTop: 2 },
-  cardDesc: { fontSize: 12, color: '#4B5563', marginTop: 4 },
+  cardTitle: { fontSize: 15, fontWeight: '700', color: '#292827' },
+  cardLoc: { fontSize: 12, color: '#666666', marginTop: 2 },
+  cardMeta: { fontSize: 11, color: '#666666', marginTop: 2 },
+  cardDesc: { fontSize: 12, color: '#666666', marginTop: 4 },
 });

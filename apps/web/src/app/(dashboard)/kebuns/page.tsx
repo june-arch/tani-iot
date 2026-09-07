@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { MapPin, Plus, X, AlertTriangle } from "lucide-react";
+import { MapPin, Plus, X, AlertTriangle, ArrowRight, Leaf, Sprout } from "lucide-react";
 import { Card, CardTitle, CardDesc } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -50,29 +50,19 @@ export default function KebunsPage() {
     }
   }
 
-  useEffect(() => {
-    fetchKebuns();
-  }, []);
+  useEffect(() => { fetchKebuns(); }, []);
 
   async function handleCreate(e: React.FormEvent) {
     e.preventDefault();
     setFormErr(null);
     if (!form.nama.trim() || !form.lokasi.trim()) {
       const m = "Nama dan lokasi wajib diisi.";
-      setFormErr(m);
-      showToast(m);
-      return;
+      setFormErr(m); showToast(m); return;
     }
     setCreating(true);
     try {
-      const payload: Record<string, unknown> = {
-        nama: form.nama.trim(),
-        lokasi: form.lokasi.trim(),
-      };
-      if (form.luas.trim()) {
-        const n = Number(form.luas);
-        if (!Number.isNaN(n)) payload.luas = n;
-      }
+      const payload: Record<string, unknown> = { nama: form.nama.trim(), lokasi: form.lokasi.trim() };
+      if (form.luas.trim()) { const n = Number(form.luas); if (!Number.isNaN(n)) payload.luas = n; }
       if (form.deskripsi.trim()) payload.deskripsi = form.deskripsi.trim();
       await api.post("/kebuns", payload);
       showToast("Kebun berhasil dibuat.");
@@ -81,40 +71,33 @@ export default function KebunsPage() {
       fetchKebuns();
     } catch (e: unknown) {
       const msg = (e as { message?: string })?.message ?? "Gagal membuat kebun.";
-      setFormErr(msg);
-      showToast(msg);
-    } finally {
-      setCreating(false);
-    }
+      setFormErr(msg); showToast(msg);
+    } finally { setCreating(false); }
   }
 
   if (kebuns === null) {
     return (
       <div className="space-y-4">
         <Skeleton className="h-8 w-40" />
-        <div className="grid gap-4 sm:grid-cols-2">
-          {Array.from({ length: 2 }).map((_, i) => (
-            <Skeleton key={i} className="h-40" />
-          ))}
-        </div>
+        <div className="grid gap-4 sm:grid-cols-2">{Array.from({ length: 2 }).map((_, i) => (<Skeleton key={i} className="h-40 rounded-card" />))}</div>
       </div>
     );
   }
 
   return (
-    <motion.div variants={container} initial="hidden" animate="show" className="space-y-6 pb-20 lg:pb-0">
-      {toast && <div className="fixed top-4 left-1/2 z-50 -translate-x-1/2 rounded-full bg-destructive px-4 py-2.5 text-sm font-semibold text-destructive-fg shadow-lg">{toast}</div>}
+    <motion.div variants={container} initial="hidden" animate="show" className="space-y-8 pb-20 lg:pb-0">
+      {toast && <div className="fixed top-4 left-1/2 z-50 -translate-x-1/2 rounded-pill bg-midnight-wine px-4 py-2.5 text-sm font-semibold text-paper-white">{toast}</div>}
 
       <motion.div variants={item} className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h1 className="font-sans text-2xl font-bold tracking-tight [text-wrap:balance]">Kebun</h1>
-          <p className="mt-1 text-sm leading-6 text-muted-fg [text-wrap:pretty]">Kelola kebun dan lahan. Multi-kebun — satu akun untuk banyak lokasi.</p>
+          <h1 className="font-sans text-[26px] font-[460] leading-[1.1] tracking-[-0.022em] text-ink-charcoal [text-wrap:balance]">Kebun</h1>
+          <p className="mt-2 text-sm leading-6 text-stone-gray [text-wrap:pretty] max-w-[60ch]">Kelola kebun dan lahan. Multi-kebun — satu akun untuk banyak lokasi.</p>
         </div>
         <Button onClick={() => setShowModal(true)} className="gap-1.5"><Plus className="h-4 w-4" /> Tambah Kebun</Button>
       </motion.div>
 
       {err && (
-        <div className="flex items-center gap-2 rounded-lg bg-destructive-soft px-3 py-2.5 text-sm font-medium text-[#991B1B]"><AlertTriangle className="h-4 w-4 shrink-0" /> {err} — <button onClick={fetchKebuns} className="underline font-bold">Muat ulang</button></div>
+        <div className="flex items-center gap-2 rounded-lg bg-destructive-soft px-3 py-2.5 text-sm font-medium text-destructive"><AlertTriangle className="h-4 w-4 shrink-0" /> {err} — <button onClick={fetchKebuns} className="font-bold text-royal-violet underline">Muat ulang</button></div>
       )}
 
       {kebuns.length === 0 ? (
@@ -126,65 +109,52 @@ export default function KebunsPage() {
           {kebuns.map((k) => {
             const d = displayKebun(k);
             return (
-              <motion.div key={String(k.id)} variants={item} whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
-                <Card className="flex flex-col">
-                  <div className="flex items-start justify-between gap-2">
-                    <div>
-                      <CardTitle className="flex items-center gap-1.5 [text-wrap:balance]"><MapPin className="h-4 w-4 text-primary" /> {d.name}</CardTitle>
-                      <CardDesc className="[text-wrap:pretty]">{d.lokasi}</CardDesc>
-                    </div>
-                    <Badge variant="success">Aktif</Badge>
+              <motion.div key={String(k.id)} variants={item}>
+                <Card className="flex flex-col hover:border-royal-violet/20 transition-colors">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-lilac-mist text-ink-charcoal"><MapPin className="h-4 w-4" /></span>
+                  <CardTitle className="mt-3 [text-wrap:balance]">{d.name}</CardTitle>
+                  <CardDesc className="[text-wrap:pretty]">{d.lokasi}</CardDesc>
+                  <div className="mt-3 flex gap-2">
+                    <span className="rounded-pill border border-soft-mist bg-warm-parchment px-2.5 py-1 text-xs font-semibold text-stone-gray">{d.countLahan} lahan</span>
+                    <span className="rounded-pill bg-lilac-mist px-2.5 py-1 text-xs font-semibold text-ink-charcoal">{d.countDevice} device</span>
                   </div>
+                  <p className="mt-3 text-xs leading-4 text-stone-gray [text-wrap:pretty]">Satu kebun, banyak lahan & sensor — kelola irigasi dan kalender tanam per-lahan.</p>
                   <div className="mt-4 flex gap-2">
-                    <span className="rounded-full bg-muted px-3 py-1 text-xs font-semibold">{d.countLahan} lahan</span>
-                    <span className="rounded-full bg-primary-soft px-3 py-1 text-xs font-semibold text-primary-soft-fg">
-                      {d.countDevice} device
-                    </span>
+                    <Link href={`/kebuns`} className="inline-flex h-11 flex-1 items-center justify-center rounded-button bg-midnight-wine px-4 text-sm font-semibold text-paper-white hover:bg-[#2f151a]">Kelola</Link>
+                    <Link href="/sensors" className="inline-flex h-11 flex-1 items-center justify-center rounded-small-button border border-soft-mist bg-paper-white px-4 text-sm font-semibold text-ink-charcoal hover:bg-warm-parchment">Lihat Sensor</Link>
                   </div>
-                  <div className="mt-4 flex gap-2">
-                    <Link
-                      href={`/kebuns`}
-                      className="inline-flex h-11 flex-1 items-center justify-center rounded-button bg-primary px-4 text-sm font-semibold text-primary-fg hover:bg-primary-hover"
-                    >
-                      Kelola
-                    </Link>
-                    <Link href="/sensors" className="inline-flex h-11 flex-1 items-center justify-center rounded-button border bg-background px-4 text-sm font-semibold hover:bg-muted">
-                      Lihat Sensor
-                    </Link>
-                  </div>
+                  <Link href="/kalender" className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-royal-violet hover:underline">Buka kalender <ArrowRight className="h-3.5 w-3.5" /></Link>
                 </Card>
               </motion.div>
             );
           })}
-          <motion.div variants={item} whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
-            <Card className="flex h-full flex-col items-center justify-center border-dashed py-10 text-center">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-soft text-primary-soft-fg"><Plus className="h-5 w-5" /></span>
-              <p className="mt-3 text-sm font-semibold [text-wrap:balance]">Tambah Kebun Baru</p>
-              <p className="mt-1 text-xs leading-4 text-muted-fg [text-wrap:pretty]">Lokasi baru, lahan baru, sensor baru</p>
-              <Button variant="secondary" className="mt-4 gap-1.5" onClick={() => setShowModal(true)}>
-                <Plus className="h-4 w-4" /> Buat Kebun
-              </Button>
+          <motion.div variants={item}>
+            <Card className="flex h-full flex-col items-center justify-center border-dashed border-soft-mist bg-paper-white py-10 text-center hover:border-royal-violet/30 transition-colors">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-lilac-mist text-ink-charcoal"><Plus className="h-5 w-5" /></span>
+              <p className="mt-3 font-sans text-sm font-bold text-ink-charcoal [text-wrap:balance]">Tambah Kebun Baru</p>
+              <p className="mt-1 text-xs leading-4 text-stone-gray [text-wrap:pretty]">Lokasi baru, lahan baru, sensor baru</p>
+              <Button variant="secondary" className="mt-4 gap-1.5" onClick={() => setShowModal(true)}><Plus className="h-4 w-4" /> Buat Kebun</Button>
             </Card>
           </motion.div>
         </motion.div>
       )}
 
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
-          <motion.div initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} className="w-full max-w-md rounded-card border bg-background p-6 shadow-xl">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink-charcoal/40 p-4">
+          <motion.div initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} className="w-full max-w-md rounded-card border border-soft-mist bg-paper-white p-6">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className="font-sans text-lg font-bold [text-wrap:balance]">Tambah Kebun</h3>
-                <p className="mt-1 text-sm leading-5 text-muted-fg [text-wrap:pretty]">Isi data kebun. Anggota otomatis: Anda sebagai OWNER.</p>
+                <h3 className="font-sans text-lg font-bold tracking-tight text-ink-charcoal [text-wrap:balance]">Tambah Kebun</h3>
+                <p className="mt-1 text-sm leading-5 text-stone-gray [text-wrap:pretty]">Isi data kebun. Anggota otomatis: Anda sebagai OWNER.</p>
               </div>
-              <button onClick={() => setShowModal(false)} className="flex h-8 w-8 items-center justify-center rounded-full border hover:bg-muted"><X className="h-4 w-4" /></button>
+              <button onClick={() => setShowModal(false)} className="flex h-8 w-8 items-center justify-center rounded-full border border-soft-mist bg-paper-white hover:bg-warm-parchment"><X className="h-4 w-4" /></button>
             </div>
             <form onSubmit={handleCreate} className="mt-4 space-y-4">
               <Input label="Nama kebun *" placeholder="Kebun Sawah Teras" value={form.nama} onChange={(e) => setForm({ ...form, nama: e.target.value })} required />
               <Input label="Lokasi *" placeholder="Sawah Teras, Bandung" value={form.lokasi} onChange={(e) => setForm({ ...form, lokasi: e.target.value })} required />
               <Input label="Luas (m²)" type="number" placeholder="1000" value={form.luas} onChange={(e) => setForm({ ...form, luas: e.target.value })} />
               <Textarea label="Deskripsi" placeholder="Deskripsi singkat kebun" value={form.deskripsi} onChange={(e) => setForm({ ...form, deskripsi: e.target.value })} rows={3} />
-              {formErr && <div className="flex items-center gap-1.5 rounded-lg bg-destructive-soft px-3 py-2 text-sm text-[#991B1B]"><AlertTriangle className="h-4 w-4" /> {formErr}</div>}
+              {formErr && <div className="flex items-center gap-1.5 rounded-lg bg-destructive-soft px-3 py-2 text-sm font-medium text-destructive"><AlertTriangle className="h-4 w-4" /> {formErr}</div>}
               <div className="flex gap-2">
                 <Button type="button" variant="secondary" className="flex-1" onClick={() => setShowModal(false)}>Batal</Button>
                 <Button type="submit" disabled={creating} className="flex-1">{creating ? "Menyimpan..." : "Simpan Kebun"}</Button>

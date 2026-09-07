@@ -114,7 +114,7 @@ export default function LoginPage() {
               </span>
               <span className="font-sans text-base font-bold tracking-tight">Tani IoT</span>
             </Link>
-            <h2 className="mt-4 font-sans text-[26px] font-bold tracking-tight text-ink-charcoal [text-wrap:balance]">Masuk ke Tani IoT</h2>
+            <h2 className="mt-4 font-sans text-[26px] font-[460] leading-[1.1] tracking-[-0.022em] text-ink-charcoal [text-wrap:balance]">Masuk ke Tani IoT</h2>
             <p className="mt-1 text-sm leading-6 text-stone-gray [text-wrap:pretty]">Masuk untuk kelola kebun, lahan, dan sensor.</p>
           </div>
 

@@ -17,6 +17,7 @@ type Rencana = {
   lahanId: string | null;
   lahanNama: string;
   kebunNama: string;
+  kebunId?: string;
   metode: "TANAH" | "HIDROPONIK";
   tanggalSemai: string; // YYYY-MM-DD
   tanggalTanam?: string | null;
@@ -24,7 +25,7 @@ type Rencana = {
   jumlah?: number | null;
   catatan?: string;
   prediksi: {
-    tanam: string; // YYYY-MM-DD
+    tanam: string;
     siapTanamLabel: string;
     panenMin: string;
     panenMax: string;
@@ -34,9 +35,8 @@ type Rencana = {
   };
   status: "SEMAI" | "TANAM" | "PANEN" | "SELESAI";
   createdAt: string;
+  raw?: any;
 };
-
-const STORE_KEY = "tani.rencana.v1";
 
 function addDays(dateStr: string, days: number): string {
   const d = new Date(dateStr + "T00:00:00");
@@ -62,12 +62,58 @@ function daysDiff(a: string, b: string): number {
 function isSameDay(a: string, b: Date): boolean {
   return a === b.toISOString().slice(0, 10);
 }
+function toISODate(v: any): string {
+  if (!v) return "";
+  try {
+    const d = new Date(v);
+    return d.toISOString().slice(0, 10);
+  } catch { return String(v).slice(0,10); }
+}
+function mapBackend(p: any): Rencana {
+  const tanggalSemai = toISODate(p.tanggalSemai);
+  const tanggalTanam = p.tanggalTanam ? toISODate(p.tanggalTanam) : null;
+  const tanggalPanen = p.tanggalPanen ? toISODate(p.tanggalPanen) : null;
+  const prediksi = p.prediksi ?? p?.raw?.prediksi ?? null;
+  // fallback compute if null (should not happen)
+  const fallbackPred = prediksi ?? {
+    tanam: addDays(tanggalSemai, 7),
+    siapTanamLabel: "Siap pindah tanam",
+    panenMin: addDays(tanggalTanam ?? addDays(tanggalSemai, 7), 60),
+    panenMax: addDays(tanggalTanam ?? addDays(tanggalSemai, 7), 90),
+    panenAvg: addDays(tanggalTanam ?? addDays(tanggalSemai, 7), 75),
+    durasiSemai: 7,
+    panenRangeLabel: "60-90 hari",
+  };
+  const statusRaw = (p.status ?? "AKTIF").toString().toUpperCase();
+  const status: Rencana["status"] = statusRaw === "PANEN" ? "PANEN" : statusRaw === "SELESAI" ? "SELESAI" : p.tanggalTanam ? "TANAM" : "SEMAI";
+  return {
+    id: String(p.id),
+    cropSlug: p.cropSlug ?? p.crop?.slug ?? "",
+    cropName: p.cropName ?? p.crop?.name ?? "Tanaman",
+    cropCategory: p.cropCategory ?? p.crop?.category ?? "SAYUR",
+    lahanId: p.lahanId ? String(p.lahanId) : (p.lahan?.id ? String(p.lahan.id) : null),
+    lahanNama: p.lahanNama ?? p.lahan?.nama ?? "Tanpa lahan",
+    kebunNama: p.kebunNama ?? p.lahan?.kebun?.nama ?? "—",
+    kebunId: p.kebunId ?? p.lahan?.kebun?.id ?? p.lahan?.kebunId,
+    metode: (p.metode ?? "TANAH") as any,
+    tanggalSemai,
+    tanggalTanam,
+    tanggalPanen,
+    jumlah: p.jumlah ?? null,
+    catatan: typeof p.catatan === "string" ? p.catatan : p.catatan?.text ?? undefined,
+    prediksi: fallbackPred,
+    status,
+    createdAt: p.createdAt ? new Date(p.createdAt).toISOString() : new Date().toISOString(),
+    raw: p,
+  };
+}
 
 export default function KalenderPage() {
   const [crops, setCrops] = useState<Crop[] | null>(null);
   const [kebuns, setKebuns] = useState<Kebun[] | null>(null);
   const [lahans, setLahans] = useState<{ id: string; nama: string; kebunNama: string }[]>([]);
   const [rencana, setRencana] = useState<Rencana[]>([]);
+  const [loading, setLoading] = useState(true);
   const [month, setMonth] = useState(() => {
     const n = new Date();
     return new Date(n.getFullYear(), n.getMonth(), 1);
@@ -87,6 +133,7 @@ export default function KalenderPage() {
   const [formCatatan, setFormCatatan] = useState("");
   const [cropDetail, setCropDetail] = useState<any>(null);
   const [detailLoading, setDetailLoading] = useState(false);
+  const [saving, setSaving] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
 
   function showToast(m: string) {
@@ -94,14 +141,24 @@ export default function KalenderPage() {
     setTimeout(() => setToast(null), 2800);
   }
 
-  // load crops & kebuns
+  async function fetchRencana() {
+    setLoading(true);
+    try {
+      const data = await api.get<any[]>("/plantings");
+      const mapped = (data as any[]).map(mapBackend);
+      setRencana(mapped);
+    } catch (e: any) {
+      showToast(e.message ?? "Gagal memuat kalender");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  // load crops & kebuns & rencana (dynamic API)
   useEffect(() => {
     api.get<Crop[]>("/crops").then(setCrops).catch(() => {});
     api.get<Kebun[]>("/kebuns/my").then(setKebuns).catch(() => setKebuns([]));
-    try {
-      const raw = localStorage.getItem(STORE_KEY);
-      if (raw) setRencana(JSON.parse(raw));
-    } catch {}
+    fetchRencana();
   }, []);
 
   // load lahans when kebuns ready
@@ -119,11 +176,6 @@ export default function KalenderPage() {
       setLahans(all);
     })();
   }, [kebuns]);
-
-  // persist
-  useEffect(() => {
-    try { localStorage.setItem(STORE_KEY, JSON.stringify(rencana)); } catch {}
-  }, [rencana]);
 
   // fetch crop detail when selected
   useEffect(() => {
@@ -167,47 +219,47 @@ export default function KalenderPage() {
     setEditId(null);
   }
 
-  function handleSave(e: React.FormEvent) {
+  async function handleSave(e: React.FormEvent) {
     e.preventDefault();
     if (!formCrop || !formTanggalSemai) { showToast("Pilih tanaman & tanggal semai"); return; }
+    if (!formLahan) { showToast("Pilih lahan"); return; }
     if (!cropDetail || !prediksi) { showToast("Memuat panduan tanaman..."); return; }
-    const crop = crops?.find(c => c.slug === formCrop);
-    const lahan = lahans.find(l => l.id === formLahan);
-    const base: Rencana = {
-      id: editId ?? `r_${Date.now()}_${Math.random().toString(36).slice(2,6)}`,
-      cropSlug: formCrop,
-      cropName: crop?.name ?? formCrop,
-      cropCategory: crop?.category ?? "SAYUR",
-      lahanId: lahan?.id ?? null,
-      lahanNama: lahan?.nama ?? "Tanpa lahan",
-      kebunNama: lahan?.kebunNama ?? "—",
-      metode: formMetode,
-      tanggalSemai: formTanggalSemai,
-      tanggalTanam: formTanggalTanam || null,
-      tanggalPanen: null,
-      jumlah: formJumlah ? Number(formJumlah) : null,
-      catatan: formCatatan || undefined,
-      prediksi: {
-        tanam: prediksi.tanamPred,
-        siapTanamLabel: prediksi.siapTanamLabel,
-        panenMin: prediksi.panenMin,
-        panenMax: prediksi.panenMax,
-        panenAvg: prediksi.panenAvg,
-        durasiSemai: prediksi.durasi,
-        panenRangeLabel: prediksi.rangeLabel,
-      },
-      status: formTanggalTanam ? "TANAM" : "SEMAI",
-      createdAt: new Date().toISOString(),
-    };
-    if (editId) {
-      setRencana(prev => prev.map(r => r.id === editId ? { ...r, ...base, id: editId, createdAt: r.createdAt } : r));
-      showToast("Rencana diperbarui");
-    } else {
-      setRencana(prev => [base, ...prev]);
-      showToast(`Semai ${base.cropName} dicatat — tanam prediksi ${formatIndo(base.prediksi.tanam)}`);
+    setSaving(true);
+    try {
+      const payload: any = {
+        lahanId: formLahan,
+        cropId: formCrop,
+        metode: formMetode,
+        tanggalSemai: formTanggalSemai,
+        jumlah: formJumlah ? Number(formJumlah) : undefined,
+        catatan: formCatatan || undefined,
+      };
+      if (formTanggalTanam) payload.tanggalTanam = formTanggalTanam;
+
+      if (editId) {
+        // untuk edit, hapus lalu buat baru jika ganti crop/lahan/semai, else patch
+        const orig = rencana.find(r => r.id === editId);
+        const needRecreate = orig && (orig.cropSlug !== formCrop || orig.lahanId !== formLahan || orig.tanggalSemai !== formTanggalSemai);
+        if (needRecreate) {
+          await api.del(`/plantings/${editId}`);
+          const created = await api.post<any>("/plantings", payload);
+          showToast(`Rencana diperbarui — tanam prediksi ${formatIndo(mapBackend(created).prediksi.tanam)}`);
+        } else {
+          await api.patch(`/plantings/${editId}`, { tanggalTanam: formTanggalTanam || undefined, catatan: formCatatan || undefined });
+          showToast("Rencana diperbarui");
+        }
+      } else {
+        const created = await api.post<any>("/plantings", payload);
+        showToast(`Semai ${mapBackend(created).cropName} dicatat — tanam prediksi ${formatIndo(mapBackend(created).prediksi.tanam)}`);
+      }
+      await fetchRencana();
+      setShowForm(false);
+      resetForm();
+    } catch (err: any) {
+      showToast(err.message ?? "Gagal menyimpan");
+    } finally {
+      setSaving(false);
     }
-    setShowForm(false);
-    resetForm();
   }
 
   function startEdit(r: Rencana) {
@@ -222,24 +274,31 @@ export default function KalenderPage() {
     setShowForm(true);
   }
 
-  function removeRencana(id: string) {
-    setRencana(prev => prev.filter(r => r.id !== id));
-    showToast("Rencana dihapus");
+  async function removeRencana(id: string) {
+    try {
+      await api.del(`/plantings/${id}`);
+      setRencana(prev => prev.filter(r => r.id !== id));
+      showToast("Rencana dihapus");
+    } catch (e: any) { showToast(e.message ?? "Gagal hapus"); }
   }
 
-  function markTanam(id: string) {
+  async function markTanam(id: string) {
     const r = rencana.find(x => x.id === id);
     if (!r) return;
     const today = new Date().toISOString().slice(0,10);
-    setRencana(prev => prev.map(x => x.id === id ? { ...x, tanggalTanam: today, status: "TANAM" as const } : x));
-    // recompute panen based on today
-    showToast(`Tanam tercatat hari ini — panen prediksi ${formatIndo(addDays(today, parsePanenRange(r.prediksi.panenRangeLabel).avg))}`);
+    try {
+      await api.patch(`/plantings/${id}`, { tanggalTanam: today, fase: "PINDAH_TANAM", status: "AKTIF" });
+      await fetchRencana();
+      showToast(`Tanam tercatat hari ini — panen prediksi ${formatIndo(addDays(today, parsePanenRange(r.prediksi.panenRangeLabel).avg))}`);
+    } catch (e: any) { showToast(e.message ?? "Gagal tandai tanam"); }
   }
 
-  function markPanen(id: string) {
-    const today = new Date().toISOString().slice(0,10);
-    setRencana(prev => prev.map(x => x.id === id ? { ...x, tanggalPanen: today, status: "PANEN" as const } : x));
-    showToast("Panen tercatat — selamat!");
+  async function markPanen(id: string) {
+    try {
+      await api.patch(`/plantings/${id}`, { status: "PANEN", fase: "PANEN" });
+      await fetchRencana();
+      showToast("Panen tercatat — selamat!");
+    } catch (e: any) { showToast(e.message ?? "Gagal tandai panen"); }
   }
 
   // calendar generation
@@ -280,17 +339,17 @@ export default function KalenderPage() {
   const monthLabel = month.toLocaleDateString("id-ID", { month: "long", year: "numeric" });
 
   return (
-    <div className="space-y-6 pb-20 lg:pb-0">
+    <div className="space-y-8 pb-20 lg:pb-0">
       {toast && <div className="fixed top-4 left-1/2 z-50 -translate-x-1/2 rounded-pill bg-midnight-wine px-4 py-2.5 text-sm font-semibold text-paper-white shadow-lg">{toast}</div>}
 
       {/* Header editorial */}
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h1 className="flex items-center gap-2 font-sans text-2xl font-bold tracking-tight [text-wrap:balance]">
+          <h1 className="flex items-center gap-2 font-sans text-[26px] font-[460] leading-[1.1] tracking-[-0.022em] text-ink-charcoal [text-wrap:balance]">
             <CalendarDays className="h-6 w-6 text-midnight-wine" /> Kalender Tanam
           </h1>
-          <p className="mt-1 max-w-xl text-sm leading-6 text-stone-gray [text-wrap:pretty]">
-            Catat semai → prediksi pindah tanam (+durasi semai) → prediksi panen (+panen range). Kalender enak dilihat petani.
+          <p className="mt-2 max-w-xl text-sm leading-6 text-stone-gray [text-wrap:pretty] max-w-[60ch]">
+            Catat semai → prediksi pindah tanam (+durasi semai) → prediksi panen (+panen range). Data dinamis dari API.
           </p>
         </div>
         <Button onClick={() => { resetForm(); setShowForm(true); }} className="gap-1.5">
@@ -322,7 +381,7 @@ export default function KalenderPage() {
           </div>
           <div className="hidden items-center gap-2 sm:flex">
             <button onClick={() => setMonth(new Date(new Date().getFullYear(), new Date().getMonth(),1))} className="rounded-pill border border-soft-mist bg-paper-white px-3 py-1.5 text-xs font-semibold hover:bg-warm-parchment">Hari ini</button>
-            <Badge variant="neutral" className="gap-1"><Clock className="h-3 w-3" /> {rencana.length} rencana</Badge>
+            <Badge variant="neutral" className="gap-1"><Clock className="h-3 w-3" /> {loading ? "memuat..." : `${rencana.length} rencana`}</Badge>
           </div>
         </div>
 
@@ -330,7 +389,9 @@ export default function KalenderPage() {
           {["Sen","Sel","Rab","Kam","Jum","Sab","Min"].map(d=>(
             <div key={d} className="bg-warm-parchment py-2 text-center text-xs font-semibold tracking-wide text-stone-gray">{d}</div>
           ))}
-          {cal.map((d, idx) => {
+          {loading ? (
+            Array.from({ length: 35 }).map((_, i) => <Skeleton key={i} className="min-h-[96px] bg-paper-white" />)
+          ) : cal.map((d, idx) => {
             if (!d) return <div key={idx} className="min-h-[96px] bg-warm-parchment" />;
             const iso = d.toISOString().slice(0,10);
             const evs = eventsOn(iso);
@@ -397,13 +458,17 @@ export default function KalenderPage() {
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <h3 className="font-sans text-lg font-bold tracking-tight text-ink-charcoal">Daftar Budidaya</h3>
-          <span className="text-xs text-stone-gray">{filteredList.length} rencana</span>
+          <span className="text-xs text-stone-gray">{loading ? "memuat..." : `${filteredList.length} rencana`}</span>
         </div>
-        {filteredList.length===0 ? (
+        {loading ? (
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {Array.from({ length: 3 }).map((_, i) => <Skeleton key={i} className="h-48 rounded-card" />)}
+          </div>
+        ) : filteredList.length===0 ? (
           <Card className="py-10 text-center">
             <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-lilac-mist text-ink-charcoal"><Sprout className="h-6 w-6" /></span>
             <h4 className="mt-3 font-sans font-semibold text-ink-charcoal">Belum ada catatan</h4>
-            <p className="mx-auto mt-1 max-w-md text-sm text-stone-gray [text-wrap:pretty]">Klik Catat Semai — pilih tanaman & tanggal semai, sistem otomatis prediksi hari terbaik pindah tanam dan tanggal panen dari panduan 60+ komoditas.</p>
+            <p className="mx-auto mt-1 max-w-md text-sm text-stone-gray [text-wrap:pretty]">Klik Catat Semai — pilih lahan & tanaman & tanggal semai, sistem otomatis prediksi hari terbaik pindah tanam dan tanggal panen dari panduan 60+ komoditas. Data tersimpan di server, bukan di browser.</p>
             <Button onClick={()=>{resetForm(); setShowForm(true);}} className="mt-4 gap-1.5"><Plus className="h-4 w-4" /> Catat Semai Pertama</Button>
           </Card>
         ) : (
@@ -467,12 +532,16 @@ export default function KalenderPage() {
               <div className="sticky top-0 flex items-start justify-between gap-3 border-b border-soft-mist bg-paper-white p-5">
                 <div>
                   <h3 className="font-sans text-lg font-bold tracking-tight text-ink-charcoal">{editId ? "Ubah Rencana" : "Catat Semai Baru"}</h3>
-                  <p className="mt-1 text-xs leading-4 text-stone-gray [text-wrap:pretty]">Pilih tanaman & tanggal semai — prediksi tanam & panen otomatis dari panduan.</p>
+                  <p className="mt-1 text-xs leading-4 text-stone-gray [text-wrap:pretty]">Pilih lahan, tanaman & tanggal semai — prediksi tanam & panen otomatis dari panduan (disimpan di server).</p>
                 </div>
                 <button onClick={()=>setShowForm(false)} className="flex h-8 w-8 items-center justify-center rounded-full border border-soft-mist hover:bg-warm-parchment"><X className="h-4 w-4" /></button>
               </div>
 
               <form onSubmit={handleSave} className="space-y-4 p-5">
+                <Select label="Lahan * — pilih dulu" value={formLahan} onChange={e=>setFormLahan(e.target.value)} required>
+                  <option value="">Pilih lahan...</option>
+                  {lahans.map(l=> <option key={l.id} value={l.id}>{l.kebunNama} — {l.nama}</option>)}
+                </Select>
                 <Select label="Komoditas * — 60+ pilihan" value={formCrop} onChange={e=>setFormCrop(e.target.value)} required>
                   <option value="">Pilih tanaman...</option>
                   {crops?.map(c=> <option key={c.slug} value={c.slug}>{c.name} — {c.slug} ({c.category})</option>)}
@@ -502,10 +571,6 @@ export default function KalenderPage() {
                   <Input label="Tanggal Semai *" type="date" value={formTanggalSemai} onChange={e=>setFormTanggalSemai(e.target.value)} required />
                   <Input label="Tanggal Tanam aktual (opsional)" type="date" value={formTanggalTanam} onChange={e=>setFormTanggalTanam(e.target.value)} />
                 </div>
-                <Select label="Lahan" value={formLahan} onChange={e=>setFormLahan(e.target.value)}>
-                  <option value="">Tanpa lahan / pilih nanti</option>
-                  {lahans.map(l=> <option key={l.id} value={l.id}>{l.kebunNama} — {l.nama}</option>)}
-                </Select>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <Select label="Metode" value={formMetode} onChange={e=>setFormMetode(e.target.value as any)}>
                     <option value="TANAH">TANAH</option>
@@ -517,7 +582,7 @@ export default function KalenderPage() {
 
                 <div className="flex gap-2">
                   <Button type="button" variant="outlined" className="flex-1" onClick={()=>setShowForm(false)}>Batal</Button>
-                  <Button type="submit" className="flex-1 gap-1.5">{editId ? "Simpan" : "Catat Semai"} <ArrowRight className="h-4 w-4" /></Button>
+                  <Button type="submit" disabled={saving} className="flex-1 gap-1.5">{saving ? "Menyimpan..." : editId ? "Simpan" : "Catat Semai"} <ArrowRight className="h-4 w-4" /></Button>
                 </div>
               </form>
             </motion.div>

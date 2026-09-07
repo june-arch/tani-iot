@@ -8,6 +8,7 @@ import { KebunsModule } from './modules/kebuns/kebuns.module';
 import { DevicesModule } from './modules/devices/devices.module';
 import { SensorsModule } from './modules/sensors/sensors.module';
 import { CropsModule } from './modules/crops/crops.module';
+import { PlantingsModule } from './modules/plantings/plantings.module';
 import { AiModule } from './modules/ai/ai.module';
 import { ScheduleModule } from '@nestjs/schedule';
 import { MqttModule } from './modules/mqtt/mqtt.module';
@@ -23,6 +24,7 @@ import { IrrigationModule } from './modules/irrigation/irrigation.module';
     DevicesModule,
     SensorsModule,
     CropsModule,
+    PlantingsModule,
     AiModule,
     MqttModule,
     IrrigationModule,

@@ -4,7 +4,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import * as ImagePicker from 'expo-image-picker';
 import client from '@/src/api/client';
 
-const PRIMARY = '#2E7D32';
+const PRIMARY = '#421d24';
+const VIOLET = '#714cb6';
+const LILAC = '#d4c7ff';
 
 type DiagnoseResult = {
   diagnosis: string;
@@ -191,42 +193,42 @@ export default function DoctorScreen() {
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: '#FFFCF8' },
+  safe: { flex: 1, backgroundColor: '#f2f0eb' },
   header: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 8 },
-  title: { fontSize: 22, fontWeight: '800', color: '#111827' },
-  subtitle: { fontSize: 13, color: '#6B7280', marginTop: 2 },
+  title: { fontSize: 22, fontWeight: '800', color: '#292827' },
+  subtitle: { fontSize: 13, color: '#666666', marginTop: 2 },
   actionRow: { flexDirection: 'row', gap: 12 },
-  btn: { flex: 1, borderRadius: 12, paddingVertical: 14, alignItems: 'center', justifyContent: 'center' },
+  btn: { flex: 1, borderRadius: 16, paddingVertical: 14, alignItems: 'center', justifyContent: 'center' },
   btnPrimary: { backgroundColor: PRIMARY },
-  btnPrimaryText: { color: '#fff', fontWeight: '700', fontSize: 14 },
-  btnOutline: { backgroundColor: '#fff', borderWidth: 1.5, borderColor: PRIMARY },
-  btnOutlineText: { color: PRIMARY, fontWeight: '700', fontSize: 14 },
-  previewCard: { borderRadius: 14, overflow: 'hidden', borderWidth: 1, borderColor: '#E5E7EB', backgroundColor: '#fff' },
+  btnPrimaryText: { color: '#ffffff', fontWeight: '700', fontSize: 14 },
+  btnOutline: { backgroundColor: '#ffffff', borderWidth: 1, borderColor: '#292827', borderRadius: 8 },
+  btnOutlineText: { color: '#292827', fontWeight: '700', fontSize: 14 },
+  previewCard: { borderRadius: 16, overflow: 'hidden', borderWidth: 1, borderColor: '#e3e3e2', backgroundColor: '#ffffff' },
   previewImg: { width: '100%', height: 260 },
-  removeBtn: { paddingVertical: 10, alignItems: 'center', backgroundColor: '#FEF2F2' },
-  removeText: { color: '#DC2626', fontWeight: '700', fontSize: 13 },
+  removeBtn: { paddingVertical: 10, alignItems: 'center', backgroundColor: '#f2f0eb' },
+  removeText: { color: '#991b1b', fontWeight: '700', fontSize: 13 },
   emptyPreview: {
     borderWidth: 2,
-    borderColor: '#E5E7EB',
+    borderColor: '#e3e3e2',
     borderStyle: 'dashed',
-    borderRadius: 14,
+    borderRadius: 16,
     padding: 32,
     alignItems: 'center',
     gap: 6,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
   },
   emptyIcon: { fontSize: 36 },
-  emptyText: { fontSize: 14, fontWeight: '700', color: '#374151' },
-  muted: { fontSize: 12, color: '#6B7280', textAlign: 'center' },
-  diagnoseBtn: { backgroundColor: PRIMARY, borderRadius: 12, paddingVertical: 14, alignItems: 'center' },
-  diagnoseText: { color: '#fff', fontWeight: '800', fontSize: 15 },
-  loadingCard: { backgroundColor: '#fff', borderRadius: 12, padding: 20, alignItems: 'center', gap: 10, borderWidth: 1, borderColor: '#E5E7EB' },
-  errorCard: { backgroundColor: '#FEF2F2', borderRadius: 12, padding: 14, borderWidth: 1, borderColor: '#FECACA', gap: 6 },
-  errorTitle: { fontWeight: '700', color: '#DC2626' },
+  emptyText: { fontSize: 14, fontWeight: '700', color: '#292827' },
+  muted: { fontSize: 12, color: '#666666', textAlign: 'center' },
+  diagnoseBtn: { backgroundColor: PRIMARY, borderRadius: 16, paddingVertical: 14, alignItems: 'center' },
+  diagnoseText: { color: '#ffffff', fontWeight: '800', fontSize: 15 },
+  loadingCard: { backgroundColor: '#ffffff', borderRadius: 16, padding: 20, alignItems: 'center', gap: 10, borderWidth: 1, borderColor: '#e3e3e2' },
+  errorCard: { backgroundColor: '#fee2e2', borderRadius: 12, padding: 14, borderWidth: 1, borderColor: '#fecaca', gap: 6 },
+  errorTitle: { fontWeight: '700', color: '#991b1b' },
   errorMsg: { fontSize: 13, color: '#7F1D1D' },
-  resultCard: { backgroundColor: '#fff', borderRadius: 14, padding: 16, borderWidth: 1, borderColor: '#E5E7EB', gap: 12 },
+  resultCard: { backgroundColor: '#ffffff', borderRadius: 16, padding: 16, borderWidth: 1, borderColor: '#e3e3e2', gap: 12 },
   resultTitle: { fontSize: 16, fontWeight: '800', color: PRIMARY },
-  resultRow: { gap: 4, paddingBottom: 10, borderBottomWidth: 1, borderBottomColor: '#F3F4F6' },
-  resultLabel: { fontSize: 11, fontWeight: '700', color: '#6B7280', textTransform: 'uppercase', letterSpacing: 0.5 },
-  resultValue: { fontSize: 13, color: '#111827', lineHeight: 18 },
+  resultRow: { gap: 4, paddingBottom: 10, borderBottomWidth: 1, borderBottomColor: '#f2f0eb' },
+  resultLabel: { fontSize: 11, fontWeight: '700', color: '#666666', textTransform: 'uppercase', letterSpacing: 0.5 },
+  resultValue: { fontSize: 13, color: '#292827', lineHeight: 18 },
 });

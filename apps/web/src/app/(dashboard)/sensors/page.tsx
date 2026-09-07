@@ -182,7 +182,16 @@ export default function SensorsPage() {
   const filtered = sensors
     .map((s) => ({ orig: s, disp: displaySensor(s as Sensor & { deviceNama?: string; lastValue?: number | null }) }))
     .filter(({ disp }) => {
-      if (filter !== "Semua" && disp.tipe !== filter) return false;
+      if (filter !== "Semua") {
+        const groups: Record<string, string[]> = {
+          Tanah: ["PH","NPK_N","NPK_P","NPK_K","SOIL_MOISTURE","PH_TANAH"],
+          Air: ["WATER_LEVEL","TDS_PPM","EC","TDS"],
+          Lingkungan: ["TEMP","HUMIDITY"],
+        };
+        if (groups[filter]) {
+          if (!groups[filter].includes(disp.tipe)) return false;
+        } else if (disp.tipe !== filter) return false;
+      }
       if (q && !disp.name.toLowerCase().includes(q.toLowerCase())) return false;
       return true;
     });
@@ -191,30 +200,62 @@ export default function SensorsPage() {
 
   return (
     <motion.div variants={container} initial="hidden" animate="show" className="space-y-6 pb-20 lg:pb-0">
-      {toast && <div className="fixed top-4 left-1/2 z-50 -translate-x-1/2 rounded-full bg-destructive px-4 py-2.5 text-sm font-semibold text-destructive-fg shadow-lg">{toast}</div>}
+      {toast && <div className="fixed top-4 left-1/2 z-50 -translate-x-1/2 rounded-pill bg-midnight-wine px-4 py-2.5 text-sm font-semibold text-paper-white">{toast}</div>}
 
       <motion.div variants={item} className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h1 className="font-sans text-2xl font-bold tracking-tight">Sensor</h1>
-          <p className="mt-1 text-sm text-muted-fg">Konfigurasi threshold, kalibrasi, dan status MQTT.</p>
+          <h1 className="font-sans text-[26px] font-[460] leading-[1.1] tracking-[-0.022em] text-ink-charcoal [text-wrap:balance]">Sensor</h1>
+          <p className="mt-2 text-sm leading-6 text-stone-gray [text-wrap:pretty] max-w-[60ch]">Konfigurasi threshold, kalibrasi, dan status MQTT.</p>
         </div>
         <div className="flex items-center gap-2">
-          <Badge variant="success">MQTT ● Terhubung</Badge>
-          <span className="text-xs text-muted-fg">broker: mqtt://101.50.2.190:1883</span>
+          <Badge variant="lilac">MQTT ● Terhubung</Badge>
+          <span className="text-xs text-stone-gray">broker: mqtt://101.50.2.190:1883</span>
         </div>
       </motion.div>
 
       <motion.div variants={item}>
-        <Card muted className="flex flex-wrap items-center justify-between gap-3">
+        <Card className="flex flex-wrap items-center justify-between gap-3 bg-paper-white">
           <div className="flex items-center gap-3">
-            <span className="h-3 w-3 rounded-full bg-success animate-pulse" />
+            <span className="h-3 w-3 rounded-full bg-royal-violet animate-pulse" />
             <div>
-              <p className="text-sm font-semibold">Status MQTT</p>
-              <p className="text-xs text-muted-fg">Terhubung · {sensors.length} sensor terdaftar · interval 60 dtk</p>
+              <p className="text-sm font-semibold text-ink-charcoal">Status MQTT</p>
+              <p className="text-xs text-stone-gray">Terhubung · {sensors.length} sensor terdaftar · interval 60 dtk</p>
             </div>
           </div>
-          <Badge variant="primary">QoS 1</Badge>
+          <Badge variant="lilac">QoS 1</Badge>
         </Card>
+      </motion.div>
+
+      {/* Suite Tab Strip — Sensor kategori (DESIGN.md) */}
+      <motion.div variants={item} className="rounded-card border border-soft-mist bg-paper-white p-1">
+        <div className="grid grid-cols-2 gap-1 sm:grid-cols-4">
+          {[
+            { id: "Semua", label: "Semua", icon: Activity },
+            { id: "Tanah", label: "Tanah", sub: "pH • NPK • Soil", icon: Beaker },
+            { id: "Air", label: "Air", sub: "Tandon • TDS", icon: Droplets },
+            { id: "Lingkungan", label: "Lingkungan", sub: "Temp • Humidity", icon: Thermometer },
+          ].map((tab) => {
+            const active = filter === tab.id || (filter === "Semua" && tab.id === "Semua") || (["PH","NPK_N","NPK_P","NPK_K","SOIL_MOISTURE"].includes(filter) && tab.id==="Tanah") || (["WATER_LEVEL","TDS_PPM","EC"].includes(filter) && tab.id==="Air") || (["TEMP","HUMIDITY"].includes(filter) && tab.id==="Lingkungan");
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setFilter(tab.id)}
+                className={[
+                  "flex items-center gap-2 rounded-small-button px-3 py-2.5 text-left transition-colors",
+                  active ? "bg-lilac-mist text-ink-charcoal" : "bg-paper-white text-stone-gray hover:bg-warm-parchment hover:text-ink-charcoal",
+                ].join(" ")}
+              >
+                <span className={["flex h-7 w-7 items-center justify-center rounded-lg", active ? "bg-paper-white text-midnight-wine" : "bg-warm-parchment text-stone-gray"].join(" ")}>
+                  <tab.icon className="h-4 w-4" />
+                </span>
+                <span className="flex flex-col">
+                  <span className="text-xs font-bold leading-none">{tab.label}</span>
+                  {tab.sub && <span className="text-[10px] leading-none opacity-70">{tab.sub}</span>}
+                </span>
+              </button>
+            );
+          })}
+        </div>
       </motion.div>
 
       {/* Kebun selector */}
@@ -223,8 +264,8 @@ export default function SensorsPage() {
       ) : !hasKebun ? (
         <Card className="py-10 text-center">
           <p className="text-3xl">🏡</p>
-          <h3 className="mt-2 font-sans font-semibold">Belum ada kebun</h3>
-          <p className="mx-auto mt-1 max-w-sm text-sm text-muted-fg">Buat kebun dulu untuk melihat device & sensor.</p>
+          <h3 className="mt-2 font-sans font-semibold text-ink-charcoal">Belum ada kebun</h3>
+          <p className="mx-auto mt-1 max-w-sm text-sm text-stone-gray">Buat kebun dulu untuk melihat device & sensor.</p>
         </Card>
       ) : (
         <motion.div variants={item} className="flex flex-wrap items-center gap-3">
@@ -235,19 +276,30 @@ export default function SensorsPage() {
             })}
           </Select>
           <Input placeholder="Cari sensor..." value={q} onChange={(e) => setQ(e.target.value)} className="max-w-xs" />
-          <div className="flex flex-wrap gap-2">
-            {["Semua", "PH", "NPK_N", "NPK_P", "NPK_K", "TDS_PPM", "WATER_LEVEL", "TEMP", "HUMIDITY", "SOIL_MOISTURE"].map((t) => (
-              <button
-                key={t}
-                onClick={() => setFilter(t)}
-                className={[
-                  "h-11 rounded-pill border px-3 text-xs font-semibold transition-colors",
-                  filter === t ? "bg-primary text-primary-fg border-primary" : "bg-background hover:bg-muted",
-                ].join(" ")}
-              >
-                {t}
-              </button>
-            ))}
+          {/* secondary pills — hanya tampil saat tab aktif punya sub-tipe */}
+          <div className="flex flex-wrap gap-1.5">
+            {(() => {
+              const subMap: Record<string, string[]> = {
+                Tanah: ["PH","NPK_N","NPK_P","NPK_K","SOIL_MOISTURE"],
+                Air: ["WATER_LEVEL","TDS_PPM","EC"],
+                Lingkungan: ["TEMP","HUMIDITY"],
+                Semua: ["PH","NPK_N","WATER_LEVEL","TDS_PPM","TEMP"],
+              };
+              const pills = filter === "Semua" ? [] : (subMap[filter] ?? []);
+              if (pills.length===0) return null;
+              return pills.map((t) => (
+                <button
+                  key={t}
+                  onClick={() => setFilter(t)}
+                  className="rounded-pill border border-soft-mist bg-warm-parchment px-2.5 py-1 text-xs font-semibold text-stone-gray hover:bg-paper-white hover:text-ink-charcoal"
+                >
+                  {t}
+                </button>
+              ));
+            })()}
+            {filter !== "Semua" && filter !== "Tanah" && filter !== "Air" && filter !== "Lingkungan" && (
+              <button onClick={() => setFilter("Semua")} className="rounded-pill bg-midnight-wine px-3 py-1 text-xs font-semibold text-paper-white">Reset → Semua</button>
+            )}
           </div>
         </motion.div>
       )}
@@ -261,10 +313,10 @@ export default function SensorsPage() {
           ))}
         </div>
       ) : !hasKebun ? null : filtered.length === 0 ? (
-        <Card className="py-16 text-center">
+        <Card className="py-16 text-center border-soft-mist bg-paper-white">
           <p className="text-4xl">📡</p>
-          <h3 className="mt-3 font-sans font-semibold">Tidak ada sensor</h3>
-          <p className="mx-auto mt-1 max-w-sm text-sm text-muted-fg">
+          <h3 className="mt-3 font-sans font-semibold text-ink-charcoal">Tidak ada sensor</h3>
+          <p className="mx-auto mt-1 max-w-sm text-sm text-stone-gray">
             Tidak ditemukan sensor dengan filter ini. Coba ubah kata kunci atau tipe.
           </p>
           <Button variant="secondary" className="mt-4" onClick={() => { setFilter("Semua"); setQ(""); }}>
@@ -277,23 +329,23 @@ export default function SensorsPage() {
             const isSelected = String(orig.id) === selectedSensor;
             return (
               <motion.div key={disp.id} variants={item}>
-                <Card className={["relative cursor-pointer transition-colors", isSelected ? "border-primary ring-2 ring-primary/20" : ""].join(" ")} onClick={() => setSelectedSensor(String(orig.id))}>
+                <Card className={["relative cursor-pointer", isSelected ? "border-royal-violet shadow-subtle" : "border-soft-mist"].join(" ")} onClick={() => setSelectedSensor(String(orig.id))}>
                   <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
+                    <CardTitle className="flex items-center gap-2 text-ink-charcoal">
                       {disp.name}
                     </CardTitle>
                     <Badge variant={disp.status === "online" ? "success" : disp.status === "warning" ? "warning" : "destructive"}>
                       {disp.status === "online" ? "Online" : disp.status === "warning" ? "Perhatian" : "Offline"}
                     </Badge>
                   </CardHeader>
-                  <p className="mt-3 font-mono text-2xl font-bold">
-                    {disp.value} <span className="text-sm font-medium text-muted-fg">{disp.unit}</span>
+                  <p className="mt-3 font-mono text-2xl font-bold text-ink-charcoal">
+                    {disp.value} <span className="text-sm font-medium text-stone-gray">{disp.unit}</span>
                   </p>
-                  <p className="mt-1 text-xs text-muted-fg">
+                  <p className="mt-1 text-xs text-stone-gray">
                     {disp.lahan} · {disp.tipe}
                   </p>
-                  <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-muted">
-                    <div className="h-full w-3/4 rounded-full bg-primary opacity-60" />
+                  <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-soft-mist">
+                    <div className="h-full w-3/4 rounded-full bg-midnight-wine" />
                   </div>
                 </Card>
               </motion.div>
@@ -305,9 +357,9 @@ export default function SensorsPage() {
       {/* Telemetry & threshold */}
       {hasKebun && sensors.length > 0 && (
         <motion.div variants={item} className="grid gap-4 lg:grid-cols-2">
-          <Card>
-            <h3 className="font-sans text-base font-semibold">Telemetry — {sensors.find((s) => String(s.id) === selectedSensor) ? (sensors.find((s) => String(s.id) === selectedSensor)?.name ?? selectedSensor) : "Pilih sensor"}</h3>
-            <p className="mt-1 text-sm text-muted-fg">20 data terakhir. Klik kartu sensor untuk ganti.</p>
+          <Card className="border-soft-mist bg-paper-white">
+            <h3 className="font-sans text-base font-bold tracking-tight text-ink-charcoal">Telemetry — {sensors.find((s) => String(s.id) === selectedSensor) ? (sensors.find((s) => String(s.id) === selectedSensor)?.name ?? selectedSensor) : "Pilih sensor"}</h3>
+            <p className="mt-1 text-sm text-stone-gray">20 data terakhir. Klik kartu sensor untuk ganti.</p>
             {telLoading ? (
               <div className="mt-4 space-y-2">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -315,21 +367,21 @@ export default function SensorsPage() {
                 ))}
               </div>
             ) : !telemetry || telemetry.length === 0 ? (
-              <p className="mt-4 rounded-lg bg-muted px-3 py-3 text-sm text-muted-fg">Belum ada data telemetry untuk sensor ini.</p>
+              <p className="mt-4 rounded-lg border border-soft-mist bg-warm-parchment px-3 py-3 text-sm text-stone-gray">Belum ada data telemetry untuk sensor ini.</p>
             ) : (
-              <div className="mt-4 max-h-64 overflow-auto rounded-lg border">
+              <div className="mt-4 max-h-64 overflow-auto rounded-lg border border-soft-mist">
                 <table className="w-full text-sm">
-                  <thead className="sticky top-0 bg-muted">
+                  <thead className="sticky top-0 bg-warm-parchment">
                     <tr>
-                      <th className="px-3 py-2 text-left font-semibold">Waktu</th>
-                      <th className="px-3 py-2 text-right font-semibold">Nilai</th>
+                      <th className="px-3 py-2 text-left font-semibold text-ink-charcoal">Waktu</th>
+                      <th className="px-3 py-2 text-right font-semibold text-ink-charcoal">Nilai</th>
                     </tr>
                   </thead>
                   <tbody>
                     {telemetry.map((t, i) => (
-                      <tr key={i} className="border-t">
-                        <td className="px-3 py-2 font-mono text-xs">{new Date(t.recordedAt).toLocaleString("id-ID")}</td>
-                        <td className="px-3 py-2 text-right font-mono font-bold">{t.value}</td>
+                      <tr key={i} className="border-t border-soft-mist">
+                        <td className="px-3 py-2 font-mono text-xs text-stone-gray">{new Date(t.recordedAt).toLocaleString("id-ID")}</td>
+                        <td className="px-3 py-2 text-right font-mono font-bold text-ink-charcoal">{t.value}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -338,9 +390,9 @@ export default function SensorsPage() {
             )}
           </Card>
 
-          <Card>
-            <h3 className="font-sans text-base font-semibold">Atur Threshold</h3>
-            <p className="mt-1 text-sm text-muted-fg">Simpan ambang batas — akan memicu alert jika telemetry di luar range. PATCH /sensors/:id/config</p>
+          <Card className="border-soft-mist bg-paper-white">
+            <h3 className="font-sans text-base font-bold tracking-tight text-ink-charcoal">Atur Threshold</h3>
+            <p className="mt-1 text-sm text-stone-gray">Simpan ambang batas — akan memicu alert jika telemetry di luar range. PATCH /sensors/:id/config</p>
             <form onSubmit={handleThresholdSave} className="mt-4 grid gap-4 sm:grid-cols-2">
               <Select label="Sensor" value={selectedSensor} onChange={(e) => setSelectedSensor(e.target.value)}>
                 {sensors.map((s) => (

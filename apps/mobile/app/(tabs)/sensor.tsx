@@ -1,140 +1,148 @@
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, RefreshControl } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useQuery } from '@tanstack/react-query';
+import client from '@/src/api/client';
 
-const PRIMARY = '#2E7D32';
+const WINE = '#421d24';
+const VIOLET = '#714cb6';
+const LILAC = '#d4c7ff';
+const PARCHMENT = '#f2f0eb';
+const MIST = '#e3e3e2';
+const INK = '#292827';
+const STONE = '#666666';
+const PAPER = '#ffffff';
 
-type GaugeProps = { label: string; value: number; unit: string; max: number; color: string };
-function Gauge({ label, value, unit, max, color }: GaugeProps) {
-  const pct = Math.max(0, Math.min(100, (value / max) * 100));
-  return (
-    <View style={styles.gaugeCard}>
-      <Text style={styles.gaugeLabel}>{label}</Text>
-      <View style={styles.gaugeBarBg}>
-        <View style={[styles.gaugeBarFill, { width: `${pct}%`, backgroundColor: color }]} />
-      </View>
-      <Text style={styles.gaugeValue}>
-        {value} <Text style={styles.gaugeUnit}>{unit}</Text>
-      </Text>
-      <Text style={styles.gaugeMax}>/ {max} {unit}</Text>
-    </View>
-  );
-}
-
-type SensorCardProps = { icon: string; label: string; value: string; status: string; color: string };
-function SensorCard({ icon, label, value, status, color }: SensorCardProps) {
-  return (
-    <View style={[styles.sensorCard, { borderLeftColor: color }]}>
-      <Text style={styles.sensorIcon}>{icon}</Text>
-      <Text style={styles.sensorLabel}>{label}</Text>
-      <Text style={styles.sensorValue}>{value}</Text>
-      <View style={[styles.statusBadge, { backgroundColor: color + '18', borderColor: color }]}>
-        <Text style={[styles.statusText, { color }]}>{status}</Text>
-      </View>
-    </View>
-  );
-}
+type Sensor = { id: string; type?: string; tipe?: string; unit?: string; deviceId: string; isEnabled?: boolean; minThreshold?: number | null; maxThreshold?: number | null };
 
 export default function SensorScreen() {
-  // Mock data — tandon + environment
-  const tandonLevel = 72;
+  const [filter, setFilter] = useState<'Semua' | 'Tanah' | 'Air' | 'Lingkungan'>('Semua');
+  const { data, isLoading, isError, error, refetch, isRefetching } = useQuery({
+    queryKey: ['sensor-mobile', filter],
+    queryFn: async () => {
+      const kebunsRaw = await client.get('/kebuns/my');
+      const kebuns = kebunsRaw.data?.data ?? kebunsRaw.data ?? [];
+      if (!kebuns.length) return { sensors: [] as any[], tandonPersen: null as number | null, tandonRaw: null };
+      const allSensors: any[] = [];
+      for (const k of kebuns) {
+        try {
+          const devRes = await client.get(`/kebuns/${k.id}/devices`);
+          const devices = devRes.data?.data ?? devRes.data ?? [];
+          for (const d of devices) for (const s of d.sensors ?? []) allSensors.push({ ...s, deviceNama: d.nama, kebunNama: k.nama ?? k.name });
+        } catch {}
+      }
+      let tandonPersen: number | null = null;
+      const tandon = allSensors.find((s) => ['WATER_LEVEL', 'TANDON', 'LEVEL'].some((x) => (s.type ?? s.tipe ?? '').toString().toUpperCase().includes(x)));
+      if (tandon?.id) {
+        try {
+          const tel = await client.get(`/sensors/${tandon.id}/telemetry?limit=1`);
+          const arr = tel.data?.data ?? tel.data ?? [];
+          const v = Array.isArray(arr) ? arr[0]?.value : null;
+          if (v != null) tandonPersen = Math.round(v);
+        } catch {}
+      }
+      return { sensors: allSensors, tandonPersen, tandonRaw: tandon };
+    },
+  });
+
+  const sensors = data?.sensors ?? [];
+  const filtered = sensors.filter((s: any) => {
+    const t = (s.type ?? s.tipe ?? '').toString().toUpperCase();
+    if (filter === 'Semua') return true;
+    if (filter === 'Tanah') return ['PH', 'NPK_N', 'NPK_P', 'NPK_K', 'SOIL_MOISTURE'].includes(t);
+    if (filter === 'Air') return ['WATER_LEVEL', 'TDS_PPM', 'TDS', 'EC'].includes(t);
+    if (filter === 'Lingkungan') return ['TEMP', 'HUMIDITY'].includes(t);
+    return true;
+  });
+
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
       <View style={styles.header}>
         <Text style={styles.title}>Sensor & Monitoring</Text>
-        <Text style={styles.subtitle}>Data real-time dari perangkat IoT</Text>
+        <Text style={styles.subtitle}>Data real-time dari perangkat IoT — dinamis via MQTT</Text>
       </View>
-      <ScrollView contentContainerStyle={{ padding: 16, gap: 16, paddingBottom: 32 }} showsVerticalScrollIndicator={false}>
-        {/* Tandon */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>💧 Tandon Air</Text>
-          <Gauge label="Level Air" value={tandonLevel} unit="%" max={100} color={PRIMARY} />
-          <View style={styles.tandonInfo}>
-            <Text style={styles.tandonText}>Kapasitas: 1000 L • Estimasi sisa: {Math.round((tandonLevel / 100) * 1000)} L</Text>
-            <Text style={[styles.tandonStatus, { color: tandonLevel < 20 ? '#DC2626' : PRIMARY }]}>
-              {tandonLevel < 20 ? '⚠️ Air hampir habis' : '✅ Normal'}
-            </Text>
-          </View>
+      <ScrollView contentContainerStyle={{ padding: 16, gap: 16, paddingBottom: 32 }} refreshControl={<RefreshControl refreshing={isRefetching} onRefresh={() => refetch()} colors={[WINE]} />} showsVerticalScrollIndicator={false}>
+        {/* Tandon dynamic */}
+        <View style={styles.card}>
+          <View style={styles.rowBetween}><Text style={styles.cardTitle}>💧 Tandon Air</Text><View style={[styles.badge, { backgroundColor: data?.tandonPersen != null && data.tandonPersen < 20 ? '#fee2e2' : LILAC, borderColor: data?.tandonPersen != null && data.tandonPersen < 20 ? '#fecaca' : VIOLET }]}><Text style={[styles.badgeText, { color: data?.tandonPersen != null && data.tandonPersen < 20 ? '#991b1b' : INK }]}>{data?.tandonPersen == null ? 'Tidak ada data' : data.tandonPersen < 20 ? 'Rendah' : 'Aman'}</Text></View></View>
+          {isLoading ? <ActivityIndicator color={WINE} /> : (
+            <>
+              <Text style={styles.bigValue}>{data?.tandonPersen != null ? `${data.tandonPersen}%` : '—'}<Text style={styles.unit}> live</Text></Text>
+              <View style={styles.barBg}><View style={[styles.barFill, { width: `${Math.max(0, Math.min(100, data?.tandonPersen ?? 0))}%`, backgroundColor: WINE }]} /></View>
+              <Text style={styles.muted}>{data?.tandonPersen != null ? `Level real-time dari sensor ${data.tandonRaw?.deviceNama ?? ''}` : 'Pasang sensor WATER_LEVEL untuk data'}</Text>
+            </>
+          )}
         </View>
 
-        {/* Grid sensor */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>📊 Sensor Lingkungan</Text>
+        {/* Tab strip */}
+        <View style={styles.tabStrip}>
+          {(['Semua', 'Tanah', 'Air', 'Lingkungan'] as const).map((t) => {
+            const active = filter === t;
+            return (
+              <Pressable key={t} onPress={() => setFilter(t)} style={[styles.tab, active && styles.tabActive]}>
+                <Text style={[styles.tabText, active && styles.tabTextActive]}>{t}</Text>
+              </Pressable>
+            );
+          })}
+        </View>
+
+        {isLoading ? (
+          <View style={styles.center}><ActivityIndicator color={WINE} /><Text style={styles.muted}>Memuat sensor...</Text></View>
+        ) : isError ? (
+          <View style={styles.center}><Text style={styles.errorText}>{(error as Error)?.message ?? 'Gagal'}</Text><Pressable onPress={() => refetch()} style={styles.btnWine}><Text style={styles.btnWineText}>Coba Lagi</Text></Pressable></View>
+        ) : filtered.length === 0 ? (
+          <View style={styles.card}><Text style={styles.emptyTitle}>Tidak ada sensor</Text><Text style={styles.muted}>Filter {filter} kosong — coba Semua atau cek kebun/device.</Text></View>
+        ) : (
           <View style={styles.grid}>
-            <SensorCard icon="🧪" label="pH Air" value="6.2" status="Optimal" color="#2E7D32" />
-            <SensorCard icon="🧂" label="PPM / TDS" value="850 ppm" status="Normal" color="#0EA5E9" />
-            <SensorCard icon="🌡️" label="Suhu" value="28 °C" status="Hangat" color="#F59E0B" />
-            <SensorCard icon="💦" label="Kelembaban" value="68 %" status="Optimal" color="#8B5CF6" />
-            <SensorCard icon="🌱" label="Soil Moisture" value="42 %" status="Cukup" color="#10B981" />
-            <SensorCard icon="⚡" label="EC" value="1.7 mS" status="Normal" color="#06B6D4" />
+            {filtered.map((s: any) => (
+              <View key={s.id} style={styles.sensorCard}>
+                <Text style={styles.sensorIcon}>{s.type === 'PH' ? '🧪' : s.type?.includes('TDS') ? '🧂' : s.type?.includes('WATER') ? '💧' : s.type === 'TEMP' ? '🌡️' : s.type === 'HUMIDITY' ? '💦' : '🌱'}</Text>
+                <Text style={styles.sensorLabel}>{s.type ?? s.tipe}</Text>
+                <Text style={styles.sensorValue}>{s.unit ? `— ${s.unit}` : '—'}</Text>
+                <Text style={styles.sensorSub}>{s.deviceNama ?? s.kebunNama ?? ''} • {s.isEnabled === false ? 'Nonaktif' : 'Aktif'}</Text>
+                <View style={[styles.miniBadge, { backgroundColor: s.isEnabled === false ? '#fee2e2' : LILAC }]}><Text style={[styles.miniBadgeText, { color: s.isEnabled === false ? '#991b1b' : INK }]}>{s.isEnabled === false ? 'Offline' : 'Online'}</Text></View>
+              </View>
+            ))}
           </View>
-          <Text style={styles.mockNote}>Data mock — hubungkan perangkat untuk data real-time via MQTT</Text>
-        </View>
-
-        {/* Detail pH & PPM */}
-        <View style={styles.detailRow}>
-          <View style={[styles.detailCard, { borderTopColor: '#2E7D32' }]}>
-            <Text style={styles.detailLabel}>pH Optimal</Text>
-            <Text style={styles.detailValue}>5.5 – 6.5</Text>
-            <Text style={styles.detailSub}>Saat ini 6.2 (baik untuk sayur)</Text>
-          </View>
-          <View style={[styles.detailCard, { borderTopColor: '#0EA5E9' }]}>
-            <Text style={styles.detailLabel}>PPM Optimal</Text>
-            <Text style={styles.detailValue}>800 – 1200</Text>
-            <Text style={styles.detailSub}>Saat ini 850 ppm (vegetatif)</Text>
-          </View>
-        </View>
+        )}
+        <Text style={styles.mockNote}>Data dinamis dari /kebuns/my → /devices → /sensors/telemetry (bukan mock)</Text>
       </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: '#FFFCF8' },
+  safe: { flex: 1, backgroundColor: PARCHMENT },
   header: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 8 },
-  title: { fontSize: 22, fontWeight: '800', color: '#111827' },
-  subtitle: { fontSize: 13, color: '#6B7280', marginTop: 2 },
-  section: { backgroundColor: '#fff', borderRadius: 14, padding: 14, borderWidth: 1, borderColor: '#E5E7EB', gap: 12 },
-  sectionTitle: { fontSize: 14, fontWeight: '800', color: '#111827' },
-  gaugeCard: { backgroundColor: '#F9FAFB', borderRadius: 12, padding: 14, borderWidth: 1, borderColor: '#E5E7EB', gap: 8 },
-  gaugeLabel: { fontSize: 12, fontWeight: '700', color: '#374151' },
-  gaugeBarBg: { height: 12, backgroundColor: '#E5E7EB', borderRadius: 6, overflow: 'hidden' },
-  gaugeBarFill: { height: 12, borderRadius: 6 },
-  gaugeValue: { fontSize: 22, fontWeight: '800', color: '#111827' },
-  gaugeUnit: { fontSize: 14, fontWeight: '600', color: '#6B7280' },
-  gaugeMax: { fontSize: 11, color: '#9CA3AF' },
-  tandonInfo: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  tandonText: { fontSize: 12, color: '#6B7280' },
-  tandonStatus: { fontSize: 12, fontWeight: '700' },
+  title: { fontSize: 22, fontWeight: '800', color: INK },
+  subtitle: { fontSize: 13, color: STONE, marginTop: 2 },
+  card: { backgroundColor: PAPER, borderRadius: 16, padding: 14, borderWidth: 1, borderColor: MIST, gap: 8 },
+  rowBetween: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  cardTitle: { fontSize: 14, fontWeight: '800', color: INK },
+  badge: { borderWidth: 1, borderRadius: 6, paddingHorizontal: 8, paddingVertical: 4 },
+  badgeText: { fontSize: 11, fontWeight: '700' },
+  bigValue: { fontSize: 28, fontWeight: '800', color: INK },
+  unit: { fontSize: 12, color: STONE },
+  barBg: { height: 6, backgroundColor: MIST, borderRadius: 6, overflow: 'hidden' },
+  barFill: { height: 6, borderRadius: 6 },
+  tabStrip: { flexDirection: 'row', backgroundColor: PAPER, borderRadius: 8, padding: 4, borderWidth: 1, borderColor: MIST, gap: 4 },
+  tab: { flex: 1, paddingVertical: 10, alignItems: 'center', borderRadius: 8, backgroundColor: PAPER },
+  tabActive: { backgroundColor: LILAC },
+  tabText: { fontSize: 12, fontWeight: '600', color: STONE },
+  tabTextActive: { color: INK, fontWeight: '800' },
+  center: { alignItems: 'center', padding: 24, gap: 8 },
+  muted: { color: STONE, fontSize: 12, textAlign: 'center' },
+  errorText: { color: '#991b1b', textAlign: 'center' },
+  btnWine: { backgroundColor: WINE, paddingHorizontal: 20, paddingVertical: 10, borderRadius: 16, alignSelf: 'center' },
+  btnWineText: { color: PAPER, fontWeight: '700' },
   grid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
-  sensorCard: {
-    width: '48%',
-    backgroundColor: '#F9FAFB',
-    borderRadius: 12,
-    padding: 12,
-    borderWidth: 1,
-    borderColor: '#E5E7EB',
-    borderLeftWidth: 4,
-    gap: 4,
-  },
+  sensorCard: { width: '48%', backgroundColor: PAPER, borderRadius: 12, padding: 12, borderWidth: 1, borderColor: MIST, gap: 4 },
   sensorIcon: { fontSize: 20 },
-  sensorLabel: { fontSize: 11, color: '#6B7280', fontWeight: '600', marginTop: 2 },
-  sensorValue: { fontSize: 16, fontWeight: '800', color: '#111827' },
-  statusBadge: { alignSelf: 'flex-start', borderWidth: 1, borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2, marginTop: 4 },
-  statusText: { fontSize: 10, fontWeight: '700' },
-  mockNote: { fontSize: 11, color: '#9CA3AF', fontStyle: 'italic', textAlign: 'center', marginTop: 4 },
-  detailRow: { flexDirection: 'row', gap: 12 },
-  detailCard: {
-    flex: 1,
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    padding: 14,
-    borderWidth: 1,
-    borderColor: '#E5E7EB',
-    borderTopWidth: 3,
-    gap: 4,
-  },
-  detailLabel: { fontSize: 11, fontWeight: '700', color: '#6B7280' },
-  detailValue: { fontSize: 14, fontWeight: '800', color: '#111827' },
-  detailSub: { fontSize: 11, color: '#6B7280' },
+  sensorLabel: { fontSize: 11, color: STONE, fontWeight: '700' },
+  sensorValue: { fontSize: 13, fontWeight: '800', color: INK },
+  sensorSub: { fontSize: 10, color: STONE },
+  miniBadge: { alignSelf: 'flex-start', borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2, marginTop: 4 },
+  miniBadgeText: { fontSize: 10, fontWeight: '700' },
+  mockNote: { fontSize: 11, color: STONE, fontStyle: 'italic', textAlign: 'center' },
+  emptyTitle: { fontSize: 14, fontWeight: '700', color: INK, textAlign: 'center' },
 });
