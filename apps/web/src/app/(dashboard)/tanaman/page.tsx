@@ -15,6 +15,20 @@ import Link from "next/link";
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.08 } } };
 const item = { hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" as const } } };
 
+// Gambar dengan fallback: kalau URL mati (404/rate-limit), tampilkan blok lilac + ikon, bukan ikon gambar rusak
+function CropImage({ src, alt, className = "", eager = false }: { src: string; alt: string; className?: string; eager?: boolean }) {
+  const [broken, setBroken] = useState(false);
+  useEffect(() => { setBroken(false); }, [src]);
+  if (broken) {
+    return (
+      <div className={`flex items-center justify-center bg-lilac-mist ${className}`} aria-label={alt}>
+        <Sprout className="h-10 w-10 text-midnight-wine/40" />
+      </div>
+    );
+  }
+  return <Image src={src} alt={alt} fill className={`object-cover ${className}`} unoptimized onError={() => setBroken(true)} priority={eager} />;
+}
+
 export default function TanamanPage() {
   const [q, setQ] = useState("");
   const [crops, setCrops] = useState<Crop[] | null>(null);
@@ -81,7 +95,7 @@ export default function TanamanPage() {
               <Card className="flex h-full flex-col hover:border-royal-violet/20 transition-colors">
                 {(c.imageUrl) && (
                   <div className="relative -m-4 mb-3 h-32 overflow-hidden rounded-t-card">
-                    <Image src={c.imageUrl} alt={c.name} fill className="object-cover" unoptimized />
+                    <CropImage src={c.imageUrl} alt={c.name} />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink-charcoal/50 to-transparent" />
                     <div className="absolute bottom-2 left-2 rounded-pill bg-paper-white px-2 py-1 text-xs font-semibold text-ink-charcoal">{c.category}</div>
                   </div>
@@ -112,7 +126,7 @@ export default function TanamanPage() {
             <div className="relative overflow-hidden">
               {(selected as any).imageUrl ? (
                 <div className="relative h-48 w-full">
-                  <Image src={(selected as any).imageUrl} alt={selected.name} fill className="object-cover" unoptimized />
+                  <CropImage src={(selected as any).imageUrl} alt={selected.name} />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-charcoal/70 via-ink-charcoal/20 to-transparent" />
                   <div className="absolute bottom-0 p-5">
                     <div className="inline-flex items-center gap-1.5 rounded-pill bg-paper-white px-2.5 py-1 text-xs font-semibold text-ink-charcoal"><Sprout className="h-3.5 w-3.5 text-royal-violet" /> {selected.category}</div>
