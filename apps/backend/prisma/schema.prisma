@@ -345,6 +345,10 @@ enum CropCategory {
 enum GrowingPhase {
   VEGETATIF
   GENERATIF
+  VEGETATIF_AWAL
+  PEMBESARAN_UMBI
+  PENGUMBIAN_GENERATIF
+  PENGISIAN_RIMPANG
 }
 
 enum DeviceType {

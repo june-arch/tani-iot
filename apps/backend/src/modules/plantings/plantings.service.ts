@@ -35,7 +35,9 @@ export class PlantingsService {
 
   private computePrediksi(crop: any, tanggalSemai: string, tanggalTanamActual?: string) {
     const sowing = crop.sowingGuides?.[0];
-    const generatif = crop.growingGuides?.find((g: any) => g.fase === 'GENERATIF');
+    const guides: any[] = crop.growingGuides ?? [];
+    // Fase panen: GENERATIF dulu, kalau tidak ada (umbi/rimpang) pakai guide terakhir
+    const generatif = guides.find((g: any) => g.fase === 'GENERATIF') ?? guides[guides.length - 1];
     const durasi = sowing?.durasiHari ?? 7;
     const rangeLabel: string = generatif?.panenHariRange ?? '60-90 hari';
     const { min, max, avg } = parsePanenRange(rangeLabel);

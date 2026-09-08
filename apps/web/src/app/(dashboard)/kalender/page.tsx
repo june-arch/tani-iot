@@ -187,7 +187,9 @@ export default function KalenderPage() {
   const prediksi = useMemo(() => {
     if (!cropDetail || !formTanggalSemai) return null;
     const sowing = cropDetail.sowingGuides?.[0];
-    const generatif = cropDetail.growingGuides?.find((g: any) => g.fase === "GENERATIF");
+    const guides: any[] = cropDetail.growingGuides ?? [];
+    // Fase panen: GENERATIF dulu, kalau tidak ada (umbi/rimpang) pakai guide terakhir
+    const generatif = guides.find((g: any) => g.fase === "GENERATIF") ?? guides[guides.length - 1];
     const durasi = sowing?.durasiHari ?? 7;
     const rangeLabel: string = generatif?.panenHariRange ?? "60-90 hari";
     const { min, max, avg } = parsePanenRange(rangeLabel);

@@ -228,7 +228,7 @@ export default function TanamanPage() {
                       {(detail as any).growingGuides.map((g: any) => (
                         <div key={g.id} className="rounded-card border border-soft-mist bg-paper-white p-4">
                           <h4 className="font-sans text-sm font-bold tracking-tight text-ink-charcoal flex items-center gap-2">
-                            {g.fase === "VEGETATIF" ? <Sprout className="h-4 w-4 text-royal-violet" /> : <Leaf className="h-4 w-4 text-midnight-wine" />} Fase {g.fase} — <span className="font-mono text-royal-violet">{g.panenHariRange}</span>
+                            {String(g.fase).startsWith("VEGETATIF") ? <Sprout className="h-4 w-4 text-royal-violet" /> : <Leaf className="h-4 w-4 text-midnight-wine" />} Fase {String(g.fase).toLowerCase().replace(/_/g, " ").replace(/\b\w/g, (m) => m.toUpperCase())} — <span className="font-mono text-royal-violet">{g.panenHariRange}</span>
                           </h4>
                           <p className="mt-1 text-xs text-stone-gray">Penyiraman: {g.penyiraman}</p>
                           <div className="mt-2 space-y-1.5">
