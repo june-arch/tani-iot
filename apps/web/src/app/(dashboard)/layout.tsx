@@ -1,7 +1,9 @@
 "use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { LayoutDashboard, MapPin, Activity, Sprout, Leaf, ChevronRight, CalendarDays } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { LayoutDashboard, Activity, Sprout, Leaf, ChevronRight, CalendarDays, MapPin, LogOut } from "lucide-react";
+import { getUser, clearAuth } from "@/lib/auth";
 
 const NAV = [
   { href: "/", label: "Ringkasan", Icon: LayoutDashboard },
@@ -11,8 +13,27 @@ const NAV = [
   { href: "/tanaman", label: "Tanaman", Icon: Sprout },
 ];
 
+type SessionUser = { nama?: string; name?: string; email?: string };
+
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const router = useRouter();
+  const [user, setUser] = useState<SessionUser | null>(null);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    setUser(getUser<SessionUser>());
+    setReady(true);
+  }, [pathname]);
+
+  const initial = ((user?.nama ?? user?.name ?? user?.email ?? "A").trim().charAt(0) || "A").toUpperCase();
+
+  function handleLogout() {
+    clearAuth();
+    setUser(null);
+    router.push("/login");
+    router.refresh();
+  }
 
   return (
     <div className="min-h-screen bg-warm-parchment text-ink-charcoal">
@@ -65,69 +86,35 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <span className="text-xs font-semibold text-ink-charcoal">Kebun Demo</span>
               <span className="text-xs text-stone-gray">· 3 lahan</span>
             </div>
-            <Link href="/login" className="hidden text-sm font-medium text-stone-gray hover:text-ink-charcoal sm:inline">Masuk</Link>
-            <Link href="/kebuns" className="inline-flex h-8 items-center justify-center rounded-small-button border border-ink-charcoal bg-lilac-mist px-3.5 text-xs font-semibold text-ink-charcoal hover:bg-[#c3b6f0]">
-              Mulai
-            </Link>
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-lilac-mist text-sm font-bold text-ink-charcoal ring-1 ring-soft-mist">
-              A
-            </div>
+            {!ready ? null : user ? (
+              <>
+                <span className="hidden max-w-[140px] truncate text-sm font-semibold text-ink-charcoal sm:inline" title={user.nama ?? user.name ?? user.email}>
+                  {user.nama ?? user.name ?? user.email}
+                </span>
+                <button
+                  onClick={handleLogout}
+                  className="hidden h-8 items-center gap-1.5 rounded-small-button border border-soft-mist bg-paper-white px-3 text-xs font-semibold text-ink-charcoal hover:bg-warm-parchment sm:inline-flex"
+                >
+                  <LogOut className="h-3.5 w-3.5" /> Keluar
+                </button>
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-midnight-wine text-sm font-bold text-paper-white ring-1 ring-soft-mist">
+                  {initial}
+                </div>
+              </>
+            ) : (
+              <>
+                <Link href="/login" className="hidden text-sm font-medium text-stone-gray hover:text-ink-charcoal sm:inline">Masuk</Link>
+                <Link href="/kebuns" className="inline-flex h-8 items-center justify-center rounded-small-button border border-ink-charcoal bg-lilac-mist px-3.5 text-xs font-semibold text-ink-charcoal hover:bg-[#c3b6f0]">
+                  Mulai
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </header>
 
-      <div className="mx-auto flex max-w-[1200px]">
-        {/* Sidebar desktop — Paper White cards on parchment */}
-        <aside className="hidden w-[260px] shrink-0 border-r border-soft-mist bg-warm-parchment lg:block">
-          <div className="sticky top-[57px] flex h-[calc(100vh-57px)] flex-col p-4">
-            <div className="rounded-card border border-soft-mist bg-paper-white p-4">
-              <p className="text-xs font-semibold tracking-wide text-stone-gray">KEBUN AKTIF</p>
-              <p className="mt-1 flex items-center gap-1.5 text-sm font-bold text-ink-charcoal [text-wrap:balance]">
-                <MapPin className="h-3.5 w-3.5 text-midnight-wine" /> Kebun Demo
-              </p>
-              <p className="text-xs leading-4 text-stone-gray [text-wrap:pretty]">Sawah Teras — 3 lahan · 6 sensor</p>
-              <button className="mt-3 inline-flex h-9 w-full items-center justify-center gap-1.5 rounded-small-button border border-soft-mist bg-paper-white text-xs font-semibold text-ink-charcoal hover:bg-warm-parchment">
-                <MapPin className="h-3.5 w-3.5" /> Ganti Kebun
-              </button>
-            </div>
-
-            <nav className="mt-4 flex flex-col gap-1">
-              {NAV.map(({ href, label, Icon }) => {
-                const active = pathname === href || (href !== "/" && pathname.startsWith(href));
-                return (
-                  <Link
-                    key={href}
-                    href={href}
-                    className={[
-                      "flex items-center gap-2.5 rounded-small-button px-3 py-2.5 text-sm font-medium transition-colors",
-                      active
-                        ? "bg-midnight-wine text-paper-white"
-                        : "text-stone-gray hover:bg-paper-white hover:text-ink-charcoal",
-                    ].join(" ")}
-                  >
-                    <Icon className="h-[18px] w-[18px] shrink-0" strokeWidth={1.75} />
-                    {label}
-                  </Link>
-                );
-              })}
-            </nav>
-
-            {/* Dark feature band hint — Deep Lagoon */}
-            <div className="mt-auto rounded-card border border-deep-lagoon bg-deep-lagoon p-4 text-paper-white">
-              <p className="flex items-center gap-1.5 text-xs font-bold tracking-wide">
-                <Leaf className="h-3.5 w-3.5" /> Butuh bantuan?
-              </p>
-              <p className="mt-1 text-xs leading-4 text-paper-white/75 [text-wrap:pretty]">
-                Panduan media tanam, pupuk vegetatif & kalibrasi sensor ada di dokumentasi.
-              </p>
-              <Link href="/tanaman" className="mt-3 inline-flex h-8 items-center justify-center rounded-small-button border border-paper-white/20 bg-paper-white/10 px-3 text-xs font-semibold text-paper-white hover:bg-paper-white/20">
-                Buka panduan
-              </Link>
-            </div>
-          </div>
-        </aside>
-
-        {/* Content */}
+      <div className="mx-auto max-w-[1200px]">
+        {/* Content — full width, tanpa sidebar (navigasi cukup di header + bottom nav mobile) */}
         <main className="min-w-0 flex-1 px-4 py-6 pb-28 sm:px-6 sm:py-8 lg:pb-8">{children}</main>
       </div>
 
