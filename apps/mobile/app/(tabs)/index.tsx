@@ -1,8 +1,11 @@
 import { RefreshControl, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
+import { useState } from 'react';
 import { AppButton, AppCard, AppCardBody, AppCardTitle, AppChip, nadaTandon } from '@/src/components/ui';
 import { ErrorState, LoadingState } from '@/src/components/ui/AppState';
+import { UpdateBanner } from '@/src/components/UpdateBanner';
+import { useAppUpdate } from '@/src/hooks/useAppUpdate';
 import { useDashboardViewModel } from '@/src/viewmodels/useDashboardViewModel';
 import { INK, LAGOON, MIST, PAPER, PARCHMENT, STONE, WINE } from '@/src/theme';
 
@@ -16,6 +19,8 @@ const AKSI = [
 export default function DashboardScreen() {
   const router = useRouter();
   const vm = useDashboardViewModel();
+  const update = useAppUpdate();
+  const [bannerTutup, setBannerTutup] = useState(false);
   if (vm.isLoading) return <SafeAreaView style={st.safe} edges={['top']}><LoadingState pesan="Memuat ringkasan..." /></SafeAreaView>;
   if (vm.isError) return <SafeAreaView style={st.safe} edges={['top']}><ErrorState pesan={vm.pesanError ?? 'Coba lagi'} onRetry={() => vm.refetch()} labelRetry="Muat Ulang" /></SafeAreaView>;
   const d = vm.ringkasan;
@@ -24,6 +29,9 @@ export default function DashboardScreen() {
   return (
     <SafeAreaView style={st.safe} edges={['top']}>
       <ScrollView contentContainerStyle={st.konten} refreshControl={<RefreshControl refreshing={vm.isRefetching} onRefresh={() => vm.refetch()} colors={[WINE]} />} showsVerticalScrollIndicator={false}>
+        {update.adaUpdate && update.rilis && !bannerTutup ? (
+          <UpdateBanner rilis={update.rilis} onTutup={() => setBannerTutup(true)} />
+        ) : null}
         <AppCard><AppCardBody>
           <View style={st.hero}>
             <View style={st.heroIkon}><Text>🌾</Text></View>

@@ -37,3 +37,17 @@ export type LoginInput = z.infer<typeof loginSchema>;
 export type KebunInput = z.infer<typeof kebunSchema>;
 export type ThresholdInput = z.infer<typeof thresholdSchema>;
 export type RencanaTanamInput = z.infer<typeof rencanaTanamSchema>;
+
+export const rilisSchema = z.object({
+  versionName: z
+    .string()
+    .min(1, "Nama versi wajib diisi")
+    .regex(/^\d+\.\d+\.\d+$/, "Format versi harus semver (contoh: 1.1.0)"),
+  versionCode: z.coerce
+    .number({ message: "Kode versi harus angka" })
+    .int("Kode versi harus bilangan bulat")
+    .min(1, "Kode versi minimal 1"),
+  changelog: z.string().max(5000, "Catatan maksimal 5000 karakter").optional(),
+});
+
+export type RilisInput = z.infer<typeof rilisSchema>;

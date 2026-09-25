@@ -3,7 +3,7 @@ import { useMemo } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
-import { LayoutDashboard, Activity, Sprout, Leaf, ChevronRight, CalendarDays, MapPin, LogOut } from "lucide-react";
+import { LayoutDashboard, Activity, Sprout, Leaf, ChevronRight, CalendarDays, MapPin, LogOut, Smartphone } from "lucide-react";
 import { clearAuth } from "@/lib/auth";
 
 const NAV = [
@@ -14,7 +14,11 @@ const NAV = [
   { href: "/tanaman", label: "Tanaman", Icon: Sprout },
 ];
 
-type SesiPengguna = { nama: string; email: string };
+const NAV_ADMIN = [
+  { href: "/rilis", label: "Rilis APK", Icon: Smartphone },
+];
+
+type SesiPengguna = { nama: string; email: string; role: string };
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -24,11 +28,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const user = useMemo<SesiPengguna | null>(
     () =>
       session?.user?.email
-        ? { nama: session.user.nama || session.user.email, email: session.user.email }
+        ? { nama: session.user.nama || session.user.email, email: session.user.email, role: session.user.role ?? "" }
         : null,
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [pathname, session],
   );
+  const navItems = user?.role === "SUPERADMIN" ? [...NAV, ...NAV_ADMIN] : NAV;
 
   const initial = ((user?.nama ?? user?.email ?? "A").trim().charAt(0) || "A").toUpperCase();
 
@@ -65,7 +70,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               </span>
             </Link>
             <nav className="hidden items-center gap-1 lg:flex">
-              {NAV.map(({ href, label }) => {
+              {navItems.map(({ href, label }) => {
                 const active = pathname === href || (href !== "/" && pathname.startsWith(href));
                 return (
                   <Link
@@ -123,7 +128,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
       {/* Bottom nav mobile — Paper White + Soft Mist */}
       <nav className="fixed inset-x-3 bottom-3 z-20 flex items-center justify-around rounded-[1.25rem] border border-soft-mist bg-paper-white p-1.5 shadow-[0_8px_32px_rgba(41,40,39,0.12)] lg:hidden">
-        {NAV.map(({ href, label, Icon }) => {
+        {navItems.map(({ href, label, Icon }) => {
           const active = pathname === href;
           return (
             <Link

@@ -86,3 +86,44 @@ export function usePlantings() {
     },
   });
 }
+
+export type Rilis = {
+  id: string;
+  versionName: string;
+  versionCode: number;
+  changelog?: string | null;
+  fileSize: number;
+  downloadCount: number;
+  dibuatOleh?: string | null;
+  createdAt?: string;
+  downloadPath: string;
+  [k: string]: unknown;
+};
+
+export function unduhUrl(r: Pick<Rilis, "downloadPath">): string {
+  const base =
+    process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") ??
+    "http://localhost:3101/api";
+  return `${base}${r.downloadPath}`;
+}
+
+export function useReleases() {
+  return useQuery({
+    queryKey: ["releases"],
+    queryFn: async () => {
+      const raw = await apiFetch<unknown>(ENDPOINTS.releases);
+      return normalizeList<Rilis>(raw);
+    },
+  });
+}
+
+export function useLatestRelease() {
+  return useQuery({
+    queryKey: ["releases", "latest"],
+    queryFn: async () => {
+      const raw = await apiFetch<unknown>(ENDPOINTS.releaseLatest());
+      // respons objek tunggal { data: Rilis } — apiFetch sudah unwrap envelope
+      return raw as Rilis | null;
+    },
+  });
+}

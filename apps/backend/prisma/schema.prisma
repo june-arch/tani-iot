@@ -293,6 +293,28 @@ model Diagnosis {
 }
 
 // =====================
+// Rilis APK (distribusi update Android)
+// =====================
+model AppRelease {
+  id           String   @id @default(cuid())
+  versionName  String // contoh: "1.1.0" (ditampilkan ke petani)
+  versionCode  Int      @unique // contoh: 2 (dibandingkan di mobile, monoton naik)
+  changelog    String?  @db.Text // catatan perubahan (Bahasa Indonesia)
+  fileName     String // nama file asli saat diunggah
+  filePath     String // path relatif: uploads/apk/<file>
+  fileSize     Int // ukuran byte
+  mimeType     String   @default("application/vnd.android.package-archive")
+  isPublished  Boolean  @default(true) // false = draft, tidak ditawarkan ke mobile
+  downloadCount Int     @default(0)
+  dibuatOleh   String? // email/nama SUPERADMIN pengunggah
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([isPublished, versionCode])
+  @@map("app_releases")
+}
+
+// =====================
 // Enums
 // =====================
 enum SowingMetode {

@@ -63,6 +63,11 @@ export const openApiDocument = {
       name: 'AI Doctor Tani',
       description: 'Diagnosis foto daun + histori + umpan balik',
     },
+    {
+      name: 'Rilis APK',
+      description:
+        'Upload APK oleh SUPERADMIN + cek versi terbaru (publik) untuk update mobile',
+    },
   ],
   security: [{ bearer: [] }],
   paths: {
@@ -871,6 +876,80 @@ export const openApiDocument = {
         tags: ['Irigasi'],
         summary: 'Daftar job cron aktif (tanpa filter kebun — JWT saja)',
         responses: { '200': { description: 'Array { name, running }' } },
+      },
+    },
+    '/releases': {
+      post: {
+        tags: ['Rilis APK'],
+        summary: 'Unggah APK baru (SUPERADMIN, multipart field: apk)',
+        requestBody: {
+          required: true,
+          content: {
+            'multipart/form-data': {
+              schema: {
+                type: 'object',
+                required: ['apk', 'versionName', 'versionCode'],
+                properties: {
+                  apk: { type: 'string', format: 'binary' },
+                  versionName: { type: 'string', example: '1.1.0' },
+                  versionCode: { type: 'integer', example: 2 },
+                  changelog: { type: 'string' },
+                  isPublished: { type: 'boolean', default: true },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          '201': { description: 'Amplop { message, data: Rilis }' },
+          '403': { $ref: '#/components/responses/Forbidden' },
+          '409': { description: 'Kode versi sudah dipakai' },
+        },
+      },
+      get: {
+        tags: ['Rilis APK'],
+        summary: 'Daftar semua rilis termasuk draft (SUPERADMIN)',
+        responses: {
+          '200': { description: 'Amplop { message, data: Rilis[] }' },
+        },
+      },
+    },
+    '/releases/latest': {
+      get: {
+        tags: ['Rilis APK'],
+        summary:
+          'Rilis terbaru yang dipublikasikan — PUBLIK. Query ?currentCode= untuk flag adaPembaruan',
+        security: [],
+        parameters: [
+          { name: 'currentCode', in: 'query', schema: { type: 'integer' } },
+        ],
+        responses: {
+          '200': {
+            description: 'Amplop { message, data: Rilis+downloadPath }',
+          },
+          '404': { description: 'Belum ada APK yang dipublikasikan' },
+        },
+      },
+    },
+    '/releases/{id}/download': {
+      get: {
+        tags: ['Rilis APK'],
+        summary: 'Unduh file APK — PUBLIK (attachment .apk)',
+        security: [],
+        parameters: [
+          {
+            name: 'id',
+            in: 'path',
+            required: true,
+            schema: { type: 'string' },
+          },
+        ],
+        responses: {
+          '200': {
+            description: 'File application/vnd.android.package-archive',
+          },
+          '404': { $ref: '#/components/responses/TidakDitemukan' },
+        },
       },
     },
     '/ai/diagnose': {

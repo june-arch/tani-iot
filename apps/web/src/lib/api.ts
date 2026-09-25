@@ -131,6 +131,39 @@ export const api = {
     apiFetch<T>(path, { ...opts, method: "DELETE" }),
 };
 
+/** POST/PUT multipart (FormData) — tanpa header JSON agar boundary otomatis. */
+export async function apiUpload<T>(
+  path: string,
+  form: FormData,
+  opts: RequestInit = {},
+): Promise<T> {
+  const url = path.startsWith("http")
+    ? path
+    : `${baseUrl}${path.startsWith("/") ? "" : "/"}${path}`;
+
+  const headers: Record<string, string> = {
+    ...((opts.headers as Record<string, string> | undefined) ?? {}),
+  };
+  const token = getAuthToken();
+  if (token) headers["Authorization"] = `Bearer ${token}`;
+
+  const res = await fetch(url, { ...opts, method: opts.method ?? "POST", headers, body: form, cache: "no-store" });
+  const body = await parseJson(res);
+  if (!res.ok) {
+    const msg =
+      (body as { message?: string; pesan?: string; error?: string })?.message ??
+      (body as { pesan?: string })?.pesan ??
+      (body as { error?: string })?.error ??
+      `Unggah gagal (${res.status})`;
+    handle401(res.status);
+    throw { status: res.status, message: msg, raw: body } as ApiError;
+  }
+  if (body && typeof body === "object" && "data" in (body as Record<string, unknown>)) {
+    return (body as ApiEnvelope<T>).data as T;
+  }
+  return body as T;
+}
+
 // Types konsumsi
 export type Crop = {
   id: string;

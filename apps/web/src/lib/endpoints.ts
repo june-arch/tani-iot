@@ -10,6 +10,12 @@ export const ENDPOINTS = {
   planting: (id: string) => `/plantings/${id}`,
   crops: "/crops",
   crop: (slug: string) => `/crops/${slug}`,
+  releases: "/releases",
+  release: (id: string) => `/releases/${id}`,
+  releaseLatest: (currentCode?: number) =>
+    typeof currentCode === "number"
+      ? `/releases/latest?currentCode=${currentCode}`
+      : "/releases/latest",
 } as const;
 
 export function errorMessage(e: unknown, fallback: string): string {

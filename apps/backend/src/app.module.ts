@@ -14,6 +14,7 @@ import { DocsModule } from './modules/docs/docs.module';
 import { ScheduleModule } from '@nestjs/schedule';
 import { MqttModule } from './modules/mqtt/mqtt.module';
 import { IrrigationModule } from './modules/irrigation/irrigation.module';
+import { ReleasesModule } from './modules/releases/releases.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { IrrigationModule } from './modules/irrigation/irrigation.module';
     DocsModule,
     MqttModule,
     IrrigationModule,
+    ReleasesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
