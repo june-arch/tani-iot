@@ -1,10 +1,11 @@
 import { Tabs } from 'expo-router';
 import { SymbolView } from 'expo-symbols';
 import type { ColorValue } from 'react-native';
+import { MIST, PARCHMENT, STONE, WINE } from '@/src/theme';
 
-// Superhuman palette — sinkron dengan web (DESIGN.md)
-const ACTIVE = '#421d24'; // Midnight Wine
-const INACTIVE = '#666666'; // Stone Gray
+// Superhuman palette — token tunggal di src/theme.ts
+const ACTIVE = WINE;
+const INACTIVE = STONE;
 
 function TabIcon({ ios, android, color }: { ios: string; android: string; color: ColorValue }) {
   return (
@@ -23,7 +24,7 @@ export default function TabLayout() {
         tabBarActiveTintColor: ACTIVE,
         tabBarInactiveTintColor: INACTIVE,
         headerShown: false,
-        tabBarStyle: { height: 60, paddingBottom: 6, paddingTop: 4, backgroundColor: '#f2f0eb', borderTopColor: '#e3e3e2', borderTopWidth: 1 },
+        tabBarStyle: { height: 60, paddingBottom: 6, paddingTop: 4, backgroundColor: PARCHMENT, borderTopColor: MIST, borderTopWidth: 1 },
         tabBarLabelStyle: { fontSize: 11, fontWeight: '600' },
       }}>
       <Tabs.Screen

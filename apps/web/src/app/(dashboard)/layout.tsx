@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { LayoutDashboard, Activity, Sprout, Leaf, ChevronRight, CalendarDays, MapPin, LogOut } from "lucide-react";
@@ -18,19 +18,15 @@ type SessionUser = { nama?: string; name?: string; email?: string };
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
-  const [user, setUser] = useState<SessionUser | null>(null);
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    setUser(getUser<SessionUser>());
-    setReady(true);
-  }, [pathname]);
+  // Baca sesi saat render (komponen klien) — dibaca ulang tiap navigasi
+  // via dep pathname agar logout/login di tab lain tercermin. Tanpa effect.
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- pathname memang pemicu baca ulang sesi
+  const user = useMemo(() => getUser<SessionUser>(), [pathname]);
 
   const initial = ((user?.nama ?? user?.name ?? user?.email ?? "A").trim().charAt(0) || "A").toUpperCase();
 
   function handleLogout() {
     clearAuth();
-    setUser(null);
     router.push("/login");
     router.refresh();
   }
@@ -86,7 +82,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <span className="text-xs font-semibold text-ink-charcoal">Kebun Demo</span>
               <span className="text-xs text-stone-gray">· 3 lahan</span>
             </div>
-            {!ready ? null : user ? (
+            {user ? (
               <>
                 <span className="hidden max-w-[140px] truncate text-sm font-semibold text-ink-charcoal sm:inline" title={user.nama ?? user.name ?? user.email}>
                   {user.nama ?? user.name ?? user.email}

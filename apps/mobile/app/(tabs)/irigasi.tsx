@@ -1,122 +1,70 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable, Switch, ActivityIndicator, RefreshControl } from 'react-native';
+import { RefreshControl, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import client from '@/src/api/client';
-
-const WINE = '#421d24';
-const VIOLET = '#714cb6';
-const LILAC = '#d4c7ff';
-const PARCHMENT = '#f2f0eb';
-const MIST = '#e3e3e2';
-const INK = '#292827';
-const STONE = '#666666';
-const PAPER = '#ffffff';
+import { Switch } from 'heroui-native';
+import { AppButton, AppCard, AppCardBody, AppInput, pesanField } from '@/src/components/ui';
+import { FieldError } from '@/src/components/ui';
+import { LoadingState } from '@/src/components/ui/AppState';
+import { useIrigasiViewModel } from '@/src/viewmodels/useIrigasiViewModel';
+import { DANGER, INK, PARCHMENT, STONE, WINE } from '@/src/theme';
 
 export default function IrigasiScreen() {
-  const qc = useQueryClient();
-  const [autoMode, setAutoMode] = useState(false);
-
-  const { data: kebunData } = useQuery({
-    queryKey: ['irigasi-kebuns'],
-    queryFn: async () => {
-      const r = await client.get('/kebuns/my');
-      return r.data?.data ?? r.data ?? [];
-    },
-  });
-  const firstKebun = kebunData?.[0];
-  const { data: lahanData } = useQuery({
-    queryKey: ['irigasi-lahans', firstKebun?.id],
-    enabled: !!firstKebun?.id,
-    queryFn: async () => {
-      const r = await client.get(`/kebuns/${firstKebun.id}/lahans`);
-      return r.data?.data ?? r.data ?? [];
-    },
-  });
-  const firstLahan = lahanData?.[0];
-
-  const { data: logsData, isLoading: logsLoading, refetch, isRefetching } = useQuery({
-    queryKey: ['irigasi-logs', firstKebun?.id],
-    enabled: !!firstKebun?.id,
-    queryFn: async () => {
-      const r = await client.get(`/irrigation/logs?kebunId=${firstKebun.id}&limit=10`);
-      return r.data?.data ?? r.data ?? r.data?.logs ?? [];
-    },
-  });
-  const logs: any[] = Array.isArray(logsData) ? logsData : logsData?.data ?? [];
-
-  const trigger = useMutation({
-    mutationFn: async () => {
-      if (!firstKebun?.id || !firstLahan?.id) throw new Error('Belum ada kebun/lahan');
-      const r = await client.post('/irrigation/trigger', { kebunId: firstKebun.id, lahanId: firstLahan.id, durationSec: 30, source: 'MANUAL' });
-      return r.data;
-    },
-    onSuccess: () => { qc.invalidateQueries({ queryKey: ['irigasi-logs'] }); },
-  });
-
+  const vm = useIrigasiViewModel();
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
-      <View style={styles.header}>
-        <Text style={styles.title}>Irigasi</Text>
-        <Text style={styles.subtitle}>Kontrol penyiraman dinamis — tandon check & MQTT real</Text>
+    <SafeAreaView style={st.safe} edges={['top']}>
+      <View style={st.header}>
+        <Text style={st.judul}>Irigasi</Text>
+        <Text style={st.sub}>Kontrol penyiraman dinamis — tandon check & MQTT real</Text>
       </View>
-      <ScrollView contentContainerStyle={{ padding: 16, gap: 16, paddingBottom: 32 }} refreshControl={<RefreshControl refreshing={isRefetching} onRefresh={() => refetch()} colors={[WINE]} />} showsVerticalScrollIndicator={false}>
-        <View style={styles.card}>
-          <View style={styles.rowBetween}>
-            <View>
-              <Text style={styles.cardTitle}>Mode Otomatis</Text>
-              <Text style={styles.cardSub}>Siram berdasarkan jadwal & sensor</Text>
-            </View>
-            <Switch value={autoMode} onValueChange={setAutoMode} trackColor={{ true: VIOLET, false: MIST }} thumbColor={autoMode ? PAPER : INK} />
+      <ScrollView contentContainerStyle={st.konten} refreshControl={<RefreshControl refreshing={vm.isRefetching} onRefresh={() => vm.refetch()} colors={[WINE]} />} showsVerticalScrollIndicator={false}>
+        <AppCard><AppCardBody>
+          <View style={st.baris}>
+            <View style={{ flex: 1 }}><Text style={st.kartuJudul}>Mode Otomatis</Text><Text style={st.sub}>Siram berdasarkan jadwal & sensor</Text></View>
+            <Switch isSelected={vm.modeOtomatis} onSelectedChange={vm.setModeOtomatis} />
           </View>
-          <Text style={styles.hint}>{autoMode ? '✅ Irigasi otomatis aktif (schedule via cron)' : 'Manual — tekan Siram'}</Text>
-          {!firstKebun && <Text style={styles.muted}>Belum ada kebun — buat di tab Kebun dulu</Text>}
-        </View>
-
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>Siram Manual</Text>
-          <Text style={styles.cardSub}>{firstLahan ? `${firstLahan.nama ?? 'Lahan'} • 30 dtk • ${firstKebun?.nama ?? ''}` : 'Pilih lahan dulu'}</Text>
-          <Pressable onPress={() => trigger.mutate()} disabled={trigger.isPending || !firstLahan} style={[styles.btnWine, (trigger.isPending || !firstLahan) && { opacity: 0.6 }]}>
-            {trigger.isPending ? <ActivityIndicator color={PAPER} /> : <Text style={styles.btnText}>💧 Siram Sekarang</Text>}
-          </Pressable>
-          {trigger.isSuccess ? <Text style={styles.success}>Sukses — MQTT OPEN dikirim</Text> : null}
-          {trigger.isError ? <Text style={styles.error}>{(trigger.error as Error)?.message ?? 'Gagal'}</Text> : null}
-          <Text style={styles.mockNote}>Real API POST /irrigation/trigger — cek tandon WATER_LEVEL &lt;20% otomatis batal</Text>
-        </View>
-
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>Riwayat Irigasi (dinamis)</Text>
-          {logsLoading ? <ActivityIndicator color={WINE} /> : logs.length === 0 ? <Text style={styles.muted}>Belum ada log — siram sekali untuk lihat</Text> : logs.slice(0,5).map((l: any, i: number) => (
-            <View key={l.id ?? i} style={styles.logRow}>
-              <Text style={styles.logDate}>{l.createdAt ? new Date(l.createdAt).toLocaleString('id-ID') : l.tgl ?? '—'}</Text>
-              <Text style={[styles.logStatus, { color: l.status === 'SUKSES' ? WINE : l.status === 'BATAL_TANDON_KOSONG' ? VIOLET : '#DC2626' }]}>{l.status ?? '—'}</Text>
-              <Text style={styles.logSrc}>{l.source ?? l.sumber ?? '—'}</Text>
-            </View>
-          ))}
-        </View>
+          <Text style={st.hint}>{vm.modeOtomatis ? '✅ Irigasi otomatis aktif (schedule via cron)' : 'Manual — atur durasi lalu tekan Siram'}</Text>
+          {!vm.adaKebun && <Text style={st.sub}>Belum ada kebun — buat di tab Kebun dulu</Text>}
+        </AppCardBody></AppCard>
+        <AppCard><AppCardBody>
+          <Text style={st.kartuJudul}>Siram Manual</Text>
+          <Text style={st.sub}>{vm.lahanAktif ? `${vm.lahanAktif.nama} • ${vm.kebunAktif?.nama ?? ''}` : 'Pilih lahan dulu'}</Text>
+          <vm.form.Field name="durasiDetik">
+            {(field) => (
+              <AppInput label="Durasi (detik)" placeholder="30" keyboardType="numeric" value={field.state.value} onChangeText={field.handleChange} onBlur={field.handleBlur} error={pesanField(field)} />
+            )}
+          </vm.form.Field>
+          <AppButton judul="💧 Siram Sekarang" onPress={vm.siram} loading={vm.isMenyiram} disabled={!vm.lahanAktif} />
+          {vm.siramSukses && <Text style={st.sukses}>Sukses — MQTT OPEN dikirim</Text>}
+          <FieldError pesan={vm.pesanSiramError} />
+          <Text style={st.hint}>Real API POST /irrigation/trigger — tandon WATER_LEVEL &lt;20% otomatis batal</Text>
+        </AppCardBody></AppCard>
+        <AppCard><AppCardBody>
+          <Text style={st.kartuJudul}>Riwayat Irigasi (dinamis)</Text>
+          {vm.logsLoading ? <LoadingState pesan="Memuat log..." /> :
+            vm.logs.length === 0 ? <Text style={st.sub}>Belum ada log — siram sekali untuk lihat</Text> :
+            vm.logs.slice(0, 5).map((l, i) => (
+              <View key={l.id ?? i} style={st.logRow}>
+                <Text style={st.logTgl}>{l.createdAt ? new Date(l.createdAt).toLocaleString('id-ID') : l.tgl ?? '—'}</Text>
+                <Text style={[st.logStatus, { color: l.status === 'SUKSES' ? WINE : DANGER }]}>{l.status ?? '—'}</Text>
+                <Text style={st.sub}>{l.source ?? l.sumber ?? '—'}</Text>
+              </View>
+            ))}
+        </AppCardBody></AppCard>
       </ScrollView>
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
+const st = StyleSheet.create({
   safe: { flex: 1, backgroundColor: PARCHMENT },
   header: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 8 },
-  title: { fontSize: 22, fontWeight: '800', color: INK },
-  subtitle: { fontSize: 13, color: STONE, marginTop: 2 },
-  card: { backgroundColor: PAPER, borderRadius: 16, padding: 14, borderWidth: 1, borderColor: MIST, gap: 10 },
-  cardTitle: { fontSize: 14, fontWeight: '800', color: INK },
-  cardSub: { fontSize: 12, color: STONE },
-  rowBetween: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  hint: { fontSize: 12, color: STONE, fontStyle: 'italic' },
-  btnWine: { backgroundColor: WINE, borderRadius: 16, paddingVertical: 14, alignItems: 'center', marginTop: 4 },
-  btnText: { color: PAPER, fontWeight: '700', fontSize: 14 },
-  success: { fontSize: 12, color: WINE, textAlign: 'center', fontWeight: '600' },
-  error: { fontSize: 12, color: '#991b1b', textAlign: 'center' },
-  muted: { fontSize: 12, color: STONE, textAlign: 'center' },
-  mockNote: { fontSize: 11, color: STONE, fontStyle: 'italic', textAlign: 'center' },
-  logRow: { flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 6, borderBottomWidth: 1, borderBottomColor: MIST },
-  logDate: { fontSize: 12, color: INK, flex: 1 },
+  judul: { fontSize: 22, fontWeight: '800', color: INK },
+  sub: { fontSize: 12, color: STONE },
+  konten: { padding: 16, gap: 14, paddingBottom: 32 },
+  baris: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  kartuJudul: { fontSize: 14, fontWeight: '800', color: INK },
+  hint: { fontSize: 11, color: STONE, fontStyle: 'italic' },
+  sukses: { fontSize: 12, color: WINE, textAlign: 'center', fontWeight: '600' },
+  logRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: 6, gap: 8 },
+  logTgl: { fontSize: 12, color: INK, flex: 1 },
   logStatus: { fontSize: 12, fontWeight: '700', flex: 1, textAlign: 'center' },
-  logSrc: { fontSize: 11, color: STONE },
 });

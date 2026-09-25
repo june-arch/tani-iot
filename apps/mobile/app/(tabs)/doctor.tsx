@@ -1,234 +1,78 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, Pressable, Image, ScrollView, ActivityIndicator, Alert } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import * as ImagePicker from 'expo-image-picker';
-import client from '@/src/api/client';
-
-const PRIMARY = '#421d24';
-const VIOLET = '#714cb6';
-const LILAC = '#d4c7ff';
-
-type DiagnoseResult = {
-  diagnosis: string;
-  confidence?: number;
-  penyebab?: string;
-  solusi?: string[] | string;
-  pencegahan?: string;
-  cropSlug?: string;
-};
-
-function formatSolusi(v: DiagnoseResult['solusi']): string {
-  if (!v) return '-';
-  if (Array.isArray(v)) return v.join('\n• ');
-  if (typeof v === 'string') return v;
-  try {
-    return JSON.stringify(v, null, 2);
-  } catch {
-    return String(v);
-  }
-}
+import { Spinner } from 'heroui-native';
+import { AppButton, AppCard, AppCardBody, AppCardTitle, AppInput, FieldError, pesanField } from '@/src/components/ui';
+import { EmptyState } from '@/src/components/ui/AppState';
+import { useDoctorViewModel } from '@/src/viewmodels/useDoctorViewModel';
+import { formatSolusi } from '@/src/models/diagnosis';
+import { INK, PARCHMENT, STONE } from '@/src/theme';
 
 export default function DoctorScreen() {
-  const [imageUri, setImageUri] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<DiagnoseResult | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  const pickFromLibrary = async () => {
-    const perm = await ImagePicker.requestMediaLibraryPermissionsAsync();
-    if (!perm.granted) {
-      Alert.alert('Izin Ditolak', 'Butuh izin galeri untuk memilih foto');
-      return;
-    }
-    const res = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      quality: 0.7,
-      base64: false,
-    });
-    if (!res.canceled && res.assets[0]) {
-      setImageUri(res.assets[0].uri);
-      setResult(null);
-      setError(null);
-    }
-  };
-
-  const takePhoto = async () => {
-    const perm = await ImagePicker.requestCameraPermissionsAsync();
-    if (!perm.granted) {
-      Alert.alert('Izin Ditolak', 'Butuh izin kamera');
-      return;
-    }
-    const res = await ImagePicker.launchCameraAsync({ quality: 0.7 });
-    if (!res.canceled && res.assets[0]) {
-      setImageUri(res.assets[0].uri);
-      setResult(null);
-      setError(null);
-    }
-  };
-
-  const handleDiagnose = async () => {
-    if (!imageUri) return;
-    setLoading(true);
-    setError(null);
-    setResult(null);
-    try {
-      const form = new FormData();
-      // RN FormData file
-      form.append('image', {
-        uri: imageUri,
-        name: 'tanaman.jpg',
-        type: 'image/jpeg',
-      } as any);
-
-      const res = await client.post('/ai/diagnose', form, {
-        headers: { 'Content-Type': 'multipart/form-data' },
-        timeout: 60000,
-      });
-      const payload = res.data?.data ?? res.data;
-      // expected: { diagnosis, solusi, pencegahan, ... } or wrapped
-      const mapped: DiagnoseResult = {
-        diagnosis: payload?.diagnosis || payload?.hasil || payload?.message || JSON.stringify(payload),
-        confidence: payload?.confidence,
-        penyebab: payload?.penyebab || payload?.cause,
-        solusi: payload?.solusi || payload?.solution || payload?.solusiList,
-        pencegahan: payload?.pencegahan || payload?.prevention,
-        cropSlug: payload?.cropSlug,
-      };
-      setResult(mapped);
-    } catch (e: any) {
-      setError(e?.message || 'Gagal melakukan diagnosis');
-    } finally {
-      setLoading(false);
-    }
-  };
-
+  const vm = useDoctorViewModel();
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
-      <View style={styles.header}>
-        <Text style={styles.title}>Doctor Tanaman</Text>
-        <Text style={styles.subtitle}>Foto daun → diagnosis penyakit & solusi</Text>
+    <SafeAreaView style={st.safe} edges={['top']}>
+      <View style={st.header}>
+        <Text style={st.judul}>Doctor Tanaman</Text>
+        <Text style={st.sub}>Foto daun → diagnosis penyakit & solusi</Text>
       </View>
-      <ScrollView contentContainerStyle={{ padding: 16, gap: 16, paddingBottom: 32 }} showsVerticalScrollIndicator={false}>
-        <View style={styles.actionRow}>
-          <Pressable onPress={takePhoto} style={[styles.btn, styles.btnPrimary]}>
-            <Text style={styles.btnPrimaryText}>📷 Kamera</Text>
-          </Pressable>
-          <Pressable onPress={pickFromLibrary} style={[styles.btn, styles.btnOutline]}>
-            <Text style={styles.btnOutlineText}>🖼️ Galeri</Text>
-          </Pressable>
+      <ScrollView contentContainerStyle={st.konten} showsVerticalScrollIndicator={false}>
+        <View style={st.baris}>
+          <View style={{ flex: 1 }}><AppButton judul="📷 Kamera" onPress={vm.dariKamera} /></View>
+          <View style={{ flex: 1 }}><AppButton judul="🖼️ Galeri" variant="kedua" onPress={vm.dariGaleri} /></View>
         </View>
-
-        {imageUri ? (
-          <View style={styles.previewCard}>
-            <Image source={{ uri: imageUri }} style={styles.previewImg} resizeMode="cover" />
-            <Pressable onPress={() => { setImageUri(null); setResult(null); setError(null); }} style={styles.removeBtn}>
-              <Text style={styles.removeText}>Hapus Foto ✕</Text>
-            </Pressable>
-          </View>
+        {vm.imageUri ? (
+          <AppCard>
+            <Image source={{ uri: vm.imageUri }} style={st.foto} resizeMode="cover" />
+            <AppButton judul="Hapus Foto ✕" variant="garis" size="sm" onPress={vm.hapusFoto} />
+          </AppCard>
         ) : (
-          <View style={styles.emptyPreview}>
-            <Text style={styles.emptyIcon}>🌿📸</Text>
-            <Text style={styles.emptyText}>Belum ada foto</Text>
-            <Text style={styles.muted}>Ambil foto daun yang sakit dengan pencahayaan yang baik</Text>
-          </View>
+          <EmptyState ikon="🌿📸" judul="Belum ada foto" pesan="Ambil foto daun yang sakit dengan pencahayaan yang baik." />
         )}
-
-        {imageUri ? (
-          <Pressable onPress={handleDiagnose} disabled={loading} style={[styles.diagnoseBtn, loading && { opacity: 0.6 }]}>
-            {loading ? <ActivityIndicator color="#fff" /> : <Text style={styles.diagnoseText}>🔍 Diagnosa Sekarang</Text>}
-          </Pressable>
-        ) : null}
-
-        {loading ? (
-          <View style={styles.loadingCard}>
-            <ActivityIndicator size="large" color={PRIMARY} />
-            <Text style={styles.muted}>Menganalisis gambar...</Text>
-          </View>
-        ) : null}
-
-        {error ? (
-          <View style={styles.errorCard}>
-            <Text style={styles.errorTitle}>Gagal</Text>
-            <Text style={styles.errorMsg}>{error}</Text>
-            <Text style={styles.muted}>Pastikan backend http://localhost:3101/api berjalan & endpoint POST /api/ai/diagnose aktif</Text>
-          </View>
-        ) : null}
-
-        {result ? (
-          <View style={styles.resultCard}>
-            <Text style={styles.resultTitle}>Hasil Diagnosis</Text>
-            <View style={styles.resultRow}>
-              <Text style={styles.resultLabel}>Diagnosis</Text>
-              <Text style={styles.resultValue}>{result.diagnosis}</Text>
-            </View>
-            {result.confidence != null ? (
-              <View style={styles.resultRow}>
-                <Text style={styles.resultLabel}>Kepercayaan</Text>
-                <Text style={styles.resultValue}>{Math.round(result.confidence * 100)}%</Text>
-              </View>
-            ) : null}
-            {result.penyebab ? (
-              <View style={styles.resultRow}>
-                <Text style={styles.resultLabel}>Penyebab</Text>
-                <Text style={styles.resultValue}>{result.penyebab}</Text>
-              </View>
-            ) : null}
-            {result.solusi ? (
-              <View style={styles.resultRow}>
-                <Text style={styles.resultLabel}>Solusi</Text>
-                <Text style={styles.resultValue}>• {formatSolusi(result.solusi)}</Text>
-              </View>
-            ) : null}
-            {result.pencegahan ? (
-              <View style={styles.resultRow}>
-                <Text style={styles.resultLabel}>Pencegahan</Text>
-                <Text style={styles.resultValue}>{result.pencegahan}</Text>
-              </View>
-            ) : null}
-          </View>
-        ) : null}
+        <vm.form.Field name="catatan">
+          {(field) => (
+            <AppInput label="Catatan (opsional)" placeholder="Contoh: bercak kuning di tepi daun..." multiline numberOfLines={3} value={field.state.value} onChangeText={field.handleChange} onBlur={field.handleBlur} error={pesanField(field)} />
+          )}
+        </vm.form.Field>
+        {vm.imageUri && <AppButton judul="🔍 Diagnosa Sekarang" onPress={vm.diagnosa} loading={vm.isLoading} />}
+        {vm.isLoading && (
+          <AppCard><AppCardBody><View style={st.tengah}><Spinner size="lg" /><Text style={st.sub}>Menganalisis gambar...</Text></View></AppCardBody></AppCard>
+        )}
+        <FieldError pesan={vm.pesanError} />
+        {vm.pesanError && <Text style={st.sub}>Pastikan backend berjalan & endpoint POST /api/ai/diagnose aktif</Text>}
+        {vm.hasil && (
+          <AppCard><AppCardBody>
+            <AppCardTitle>Hasil Diagnosis</AppCardTitle>
+            <HasilRow label="Diagnosis" nilai={vm.hasil.diagnosis} />
+            {vm.hasil.confidence !== undefined && <HasilRow label="Kepercayaan" nilai={`${Math.round(vm.hasil.confidence > 1 ? vm.hasil.confidence : vm.hasil.confidence * 100)}%`} />}
+            {vm.hasil.penyebab && <HasilRow label="Penyebab" nilai={vm.hasil.penyebab} />}
+            {vm.hasil.solusi && <HasilRow label="Solusi" nilai={`• ${formatSolusi(vm.hasil.solusi)}`} />}
+            {vm.hasil.pencegahan && <HasilRow label="Pencegahan" nilai={vm.hasil.pencegahan} />}
+          </AppCardBody></AppCard>
+        )}
       </ScrollView>
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: '#f2f0eb' },
+function HasilRow({ label, nilai }: { label: string; nilai: string }) {
+  return (
+    <View style={st.hasilRow}>
+      <Text style={st.hasilLabel}>{label}</Text>
+      <Text style={st.hasilNilai}>{nilai}</Text>
+    </View>
+  );
+}
+
+const st = StyleSheet.create({
+  safe: { flex: 1, backgroundColor: PARCHMENT },
   header: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 8 },
-  title: { fontSize: 22, fontWeight: '800', color: '#292827' },
-  subtitle: { fontSize: 13, color: '#666666', marginTop: 2 },
-  actionRow: { flexDirection: 'row', gap: 12 },
-  btn: { flex: 1, borderRadius: 16, paddingVertical: 14, alignItems: 'center', justifyContent: 'center' },
-  btnPrimary: { backgroundColor: PRIMARY },
-  btnPrimaryText: { color: '#ffffff', fontWeight: '700', fontSize: 14 },
-  btnOutline: { backgroundColor: '#ffffff', borderWidth: 1, borderColor: '#292827', borderRadius: 8 },
-  btnOutlineText: { color: '#292827', fontWeight: '700', fontSize: 14 },
-  previewCard: { borderRadius: 16, overflow: 'hidden', borderWidth: 1, borderColor: '#e3e3e2', backgroundColor: '#ffffff' },
-  previewImg: { width: '100%', height: 260 },
-  removeBtn: { paddingVertical: 10, alignItems: 'center', backgroundColor: '#f2f0eb' },
-  removeText: { color: '#991b1b', fontWeight: '700', fontSize: 13 },
-  emptyPreview: {
-    borderWidth: 2,
-    borderColor: '#e3e3e2',
-    borderStyle: 'dashed',
-    borderRadius: 16,
-    padding: 32,
-    alignItems: 'center',
-    gap: 6,
-    backgroundColor: '#ffffff',
-  },
-  emptyIcon: { fontSize: 36 },
-  emptyText: { fontSize: 14, fontWeight: '700', color: '#292827' },
-  muted: { fontSize: 12, color: '#666666', textAlign: 'center' },
-  diagnoseBtn: { backgroundColor: PRIMARY, borderRadius: 16, paddingVertical: 14, alignItems: 'center' },
-  diagnoseText: { color: '#ffffff', fontWeight: '800', fontSize: 15 },
-  loadingCard: { backgroundColor: '#ffffff', borderRadius: 16, padding: 20, alignItems: 'center', gap: 10, borderWidth: 1, borderColor: '#e3e3e2' },
-  errorCard: { backgroundColor: '#fee2e2', borderRadius: 12, padding: 14, borderWidth: 1, borderColor: '#fecaca', gap: 6 },
-  errorTitle: { fontWeight: '700', color: '#991b1b' },
-  errorMsg: { fontSize: 13, color: '#7F1D1D' },
-  resultCard: { backgroundColor: '#ffffff', borderRadius: 16, padding: 16, borderWidth: 1, borderColor: '#e3e3e2', gap: 12 },
-  resultTitle: { fontSize: 16, fontWeight: '800', color: PRIMARY },
-  resultRow: { gap: 4, paddingBottom: 10, borderBottomWidth: 1, borderBottomColor: '#f2f0eb' },
-  resultLabel: { fontSize: 11, fontWeight: '700', color: '#666666', textTransform: 'uppercase', letterSpacing: 0.5 },
-  resultValue: { fontSize: 13, color: '#292827', lineHeight: 18 },
+  judul: { fontSize: 22, fontWeight: '800', color: INK },
+  sub: { fontSize: 12, color: STONE, textAlign: 'center' },
+  konten: { padding: 16, gap: 14, paddingBottom: 32 },
+  baris: { flexDirection: 'row', gap: 12 },
+  foto: { width: '100%', height: 240, borderRadius: 12, marginBottom: 10 },
+  tengah: { alignItems: 'center', gap: 10 },
+  hasilRow: { gap: 4, paddingVertical: 8, borderBottomWidth: 1, borderBottomColor: PARCHMENT },
+  hasilLabel: { fontSize: 11, fontWeight: '700', color: STONE, textTransform: 'uppercase' },
+  hasilNilai: { fontSize: 13, color: INK, lineHeight: 18 },
 });

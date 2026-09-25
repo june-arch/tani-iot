@@ -1,143 +1,72 @@
-import React from 'react';
-import { View, Text, StyleSheet, FlatList, Pressable, ActivityIndicator } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useQuery } from '@tanstack/react-query';
-import client from '@/src/api/client';
-
-const PRIMARY = '#421d24'; // Midnight Wine — Superhuman
-const LILAC = '#d4c7ff';
-const VIOLET = '#714cb6';
-
-type Kebun = {
-  id: string;
-  nama: string;
-  lokasi: string;
-  luas?: number | null;
-  deskripsi?: string | null;
-};
+import { AppButton, AppCard, AppInput, pesanField } from '@/src/components/ui';
+import { EmptyState, ErrorState, LoadingState } from '@/src/components/ui/AppState';
+import { useKebunViewModel } from '@/src/viewmodels/useKebunViewModel';
+import { INK, LILAC, PARCHMENT, STONE } from '@/src/theme';
 
 export default function KebunScreen() {
-  const { data, isLoading, isError, error, refetch, isRefetching } = useQuery<Kebun[]>({
-    queryKey: ['kebuns-my'],
-    queryFn: async () => {
-      const res = await client.get('/kebuns/my');
-      const d = res.data?.data ?? res.data;
-      return Array.isArray(d) ? d : [];
-    },
-    retry: false,
-  });
-
+  const vm = useKebunViewModel();
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
-      <View style={styles.header}>
-        <Text style={styles.title}>Kebun Saya</Text>
-        <Text style={styles.subtitle}>Kelola lahan dan kebun Anda</Text>
+    <SafeAreaView style={st.safe} edges={['top']}>
+      <View style={st.header}>
+        <Text style={st.judul}>Kebun Saya</Text>
+        <Text style={st.sub}>Kelola lahan dan kebun Anda</Text>
       </View>
-
-      {isLoading ? (
-        <View style={styles.center}>
-          <ActivityIndicator size="large" color={PRIMARY} />
-          <Text style={styles.muted}>Memuat kebun...</Text>
-        </View>
-      ) : isError ? (
-        <View style={styles.center}>
-          <Text style={styles.emptyIcon}>⚠️</Text>
-          <Text style={styles.emptyTitle}>Gagal memuat</Text>
-          <Text style={styles.muted}>{(error as Error)?.message || 'Periksa koneksi atau login dulu'}</Text>
-          <Pressable onPress={() => refetch()} style={styles.btnPrimary}>
-            <Text style={styles.btnPrimaryText}>Coba Lagi</Text>
-          </Pressable>
-        </View>
-      ) : !data || data.length === 0 ? (
-        <View style={styles.center}>
-          <Text style={styles.emptyIcon}>🏡</Text>
-          <Text style={styles.emptyTitle}>Belum ada kebun</Text>
-          <Text style={styles.muted}>Anda belum memiliki kebun. Tambah kebun untuk mulai menanam.</Text>
-          <Pressable
-            onPress={() => {
-              // placeholder CTA — backend requires auth; show toast-like feedback
-              refetch();
-            }}
-            style={styles.btnPrimary}>
-            <Text style={styles.btnPrimaryText}>+ Tambah Kebun</Text>
-          </Pressable>
-          <Text style={[styles.muted, { marginTop: 8, fontSize: 11 }]}>
-            Butuh login untuk menambah kebun (POST /api/kebuns)
-          </Text>
-        </View>
-      ) : (
-        <FlatList
-          data={data}
-          keyExtractor={(item) => item.id}
-          contentContainerStyle={{ padding: 16, gap: 12, paddingBottom: 24 }}
-          refreshing={isRefetching}
-          onRefresh={() => refetch()}
-          renderItem={({ item }) => (
-            <View style={styles.card}>
-              <View style={styles.cardIcon}>
-                <Text style={{ fontSize: 22 }}>🌾</Text>
-              </View>
-              <View style={{ flex: 1 }}>
-                <Text style={styles.cardTitle}>{item.nama}</Text>
-                <Text style={styles.cardLoc}>{item.lokasi}</Text>
-                {item.luas ? <Text style={styles.cardMeta}>Luas: {item.luas} m²</Text> : null}
-                {item.deskripsi ? (
-                  <Text style={styles.cardDesc} numberOfLines={2}>
-                    {item.deskripsi}
-                  </Text>
-                ) : null}
-              </View>
-            </View>
+      <View style={st.cari}>
+        <vm.form.Field name="cari">
+          {(field) => (
+            <AppInput
+              placeholder="Cari kebun..."
+              value={field.state.value}
+              onChangeText={field.handleChange}
+              onBlur={field.handleBlur}
+              returnKeyType="search"
+              error={pesanField(field)}
+            />
           )}
-          ListHeaderComponent={
-            <Pressable onPress={() => refetch()} style={styles.addBtn}>
-              <Text style={styles.addBtnText}>+ Tambah Kebun</Text>
-            </Pressable>
-          }
-        />
-      )}
+        </vm.form.Field>
+      </View>
+      {vm.isLoading ? <LoadingState pesan="Memuat kebun..." /> :
+        vm.isError ? <ErrorState pesan={vm.pesanError ?? 'Periksa koneksi atau login dulu'} onRetry={() => vm.refetch()} /> :
+        vm.kebuns.length === 0 ? (
+          <EmptyState ikon="🏡" judul="Belum ada kebun" pesan={vm.total === 0 ? 'Anda belum memiliki kebun. Tambah kebun untuk mulai menanam.' : 'Tidak cocok dengan pencarian.'} anak={<><AppButton judul="+ Tambah Kebun" onPress={() => vm.refetch()} /><Text style={st.catatan}>Butuh login untuk menambah kebun (POST /api/kebuns)</Text></>} />
+        ) : (
+          <FlatList
+            data={vm.kebuns}
+            keyExtractor={(item) => item.id}
+            contentContainerStyle={st.list}
+            refreshing={vm.isRefetching}
+            onRefresh={() => vm.refetch()}
+            ListHeaderComponent={<AppButton judul="+ Tambah Kebun" onPress={() => vm.refetch()} />}
+            renderItem={({ item }) => (
+              <AppCard>
+                <View style={st.row}>
+                  <View style={st.ikon}><Text style={{ fontSize: 22 }}>🌾</Text></View>
+                  <View style={{ flex: 1 }}>
+                    <Text style={st.nama}>{item.nama}</Text>
+                    <Text style={st.sub}>{item.lokasi}</Text>
+                    {item.luas ? <Text style={st.sub}>Luas: {item.luas} m²</Text> : null}
+                    {item.deskripsi ? <Text style={st.sub} numberOfLines={2}>{item.deskripsi}</Text> : null}
+                  </View>
+                </View>
+              </AppCard>
+            )}
+          />
+        )}
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: '#f2f0eb' },
-  header: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 12 },
-  title: { fontSize: 22, fontWeight: '800', color: '#292827' },
-  subtitle: { fontSize: 13, color: '#666666', marginTop: 2 },
-  center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 10 },
-  muted: { color: '#666666', fontSize: 13, textAlign: 'center' },
-  emptyIcon: { fontSize: 48 },
-  emptyTitle: { fontSize: 16, fontWeight: '700', color: '#292827' },
-  btnPrimary: { backgroundColor: PRIMARY, paddingHorizontal: 22, paddingVertical: 12, borderRadius: 16, marginTop: 8 },
-  btnPrimaryText: { color: '#ffffff', fontWeight: '700', fontSize: 14 },
-  addBtn: {
-    backgroundColor: PRIMARY,
-    borderRadius: 16,
-    paddingVertical: 12,
-    alignItems: 'center',
-    marginBottom: 4,
-  },
-  addBtnText: { color: '#ffffff', fontWeight: '700' },
-  card: {
-    flexDirection: 'row',
-    backgroundColor: '#ffffff',
-    borderRadius: 16,
-    padding: 14,
-    gap: 12,
-    borderWidth: 1,
-    borderColor: '#e3e3e2',
-  },
-  cardIcon: {
-    width: 44,
-    height: 44,
-    borderRadius: 10,
-    backgroundColor: '#d4c7ff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  cardTitle: { fontSize: 15, fontWeight: '700', color: '#292827' },
-  cardLoc: { fontSize: 12, color: '#666666', marginTop: 2 },
-  cardMeta: { fontSize: 11, color: '#666666', marginTop: 2 },
-  cardDesc: { fontSize: 12, color: '#666666', marginTop: 4 },
+const st = StyleSheet.create({
+  safe: { flex: 1, backgroundColor: PARCHMENT },
+  header: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 4 },
+  judul: { fontSize: 22, fontWeight: '800', color: INK },
+  sub: { fontSize: 12, color: STONE, marginTop: 2 },
+  cari: { paddingHorizontal: 16, paddingBottom: 8 },
+  list: { padding: 16, gap: 12, paddingBottom: 24 },
+  row: { flexDirection: 'row', gap: 12 },
+  ikon: { width: 44, height: 44, borderRadius: 10, backgroundColor: LILAC, alignItems: 'center', justifyContent: 'center' },
+  nama: { fontSize: 15, fontWeight: '700', color: INK },
+  catatan: { fontSize: 11, color: STONE, textAlign: 'center' },
 });

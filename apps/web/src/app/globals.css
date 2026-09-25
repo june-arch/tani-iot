@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "../../theme.css";
+@import "@heroui/react/styles";
+@source "../../node_modules/@heroui/react/dist";
 
 @custom-variant dark (&:where(.dark, .dark *));
 

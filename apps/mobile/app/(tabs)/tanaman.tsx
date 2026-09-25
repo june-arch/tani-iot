@@ -1,347 +1,76 @@
-import React, { useState, useMemo } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  TextInput,
-  Pressable,
-  Modal,
-  ScrollView,
-  ActivityIndicator,
-} from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useQuery } from '@tanstack/react-query';
-import client from '@/src/api/client';
-
-// Types matching Prisma Crop + relations
-type SowingGuide = {
-  id: string;
-  mediaTanam: string;
-  durasiHari: number;
-  suhuOptimal: string;
-  kelembaban: string;
-  langkah: string[] | unknown;
-  siapTanamIndikator: string;
-};
-type GrowingGuide = {
-  id: string;
-  fase: 'VEGETATIF' | 'GENERATIF';
-  pupuk: unknown;
-  penyiraman: string;
-  hama?: unknown;
-  panenHariRange: string;
-};
-type HydroponicGuide = {
-  id: string;
-  sistem: string;
-  ppmRange: string;
-  phRange: string;
-  nutrisi: unknown;
-  durasiHari: number;
-};
-type Crop = {
-  id: string;
-  name: string;
-  slug: string;
-  category: string;
-  scientificName?: string | null;
-  description?: string | null;
-  iklimOptimal?: string | null;
-  ketinggianOptimal?: string | null;
-  sowingGuides?: SowingGuide[];
-  growingGuides?: GrowingGuide[];
-  hydroponicGuides?: HydroponicGuide[];
-};
-
-const PRIMARY = '#421d24'; // Midnight Wine
-const ACCENT = '#714cb6'; // Royal Violet
-const LILAC = '#d4c7ff';
-
-function formatJson(v: unknown): string {
-  if (!v) return '-';
-  if (typeof v === 'string') return v;
-  if (Array.isArray(v)) return v.join(', ');
-  try {
-    return JSON.stringify(v, null, 2);
-  } catch {
-    return String(v);
-  }
-}
+import { AppButton, AppCard, AppChip, AppInput, pesanField } from '@/src/components/ui';
+import { EmptyState, ErrorState, LoadingState } from '@/src/components/ui/AppState';
+import { TanamanDetailModal } from '@/src/components/TanamanDetailModal';
+import { useTanamanViewModel } from '@/src/viewmodels/useTanamanViewModel';
+import { INK, LILAC, MIST, PAPER, PARCHMENT, STONE } from '@/src/theme';
 
 export default function TanamanScreen() {
-  const [search, setSearch] = useState('');
-  const [selected, setSelected] = useState<Crop | null>(null);
-
-  const { data, isLoading, isError, error, refetch, isRefetching } = useQuery<Crop[]>({
-    queryKey: ['crops'],
-    queryFn: async () => {
-      const res = await client.get('/crops');
-      // backend wraps: { sukses, data } or { data }
-      const d = res.data?.data ?? res.data;
-      return Array.isArray(d) ? d : d?.data ?? [];
-    },
-  });
-
-  const filtered = useMemo(() => {
-    if (!data) return [];
-    if (!search.trim()) return data;
-    const q = search.toLowerCase();
-    return data.filter(
-      (c) =>
-        c.name.toLowerCase().includes(q) ||
-        c.slug.toLowerCase().includes(q) ||
-        c.category.toLowerCase().includes(q) ||
-        (c.scientificName && c.scientificName.toLowerCase().includes(q))
-    );
-  }, [data, search]);
-
+  const vm = useTanamanViewModel();
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>Daftar Tanaman</Text>
-        <Text style={styles.headerSub}>Pilih tanaman untuk lihat panduan lengkap</Text>
+    <SafeAreaView style={st.safe} edges={['top']}>
+      <View style={st.header}>
+        <Text style={st.judul}>Daftar Tanaman</Text>
+        <Text style={st.sub}>Pilih tanaman untuk lihat panduan lengkap</Text>
       </View>
-
-      <View style={styles.searchWrap}>
-        <TextInput
-          placeholder="Cari tanaman..."
-          placeholderTextColor="#9CA3AF"
-          value={search}
-          onChangeText={setSearch}
-          style={styles.searchInput}
-          returnKeyType="search"
-        />
-      </View>
-
-      {isLoading ? (
-        <View style={styles.center}>
-          <ActivityIndicator size="large" color={PRIMARY} />
-          <Text style={styles.muted}>Memuat tanaman...</Text>
-        </View>
-      ) : isError ? (
-        <View style={styles.center}>
-          <Text style={styles.errorText}>{(error as Error)?.message || 'Gagal memuat data'}</Text>
-          <Pressable onPress={() => refetch()} style={styles.btnPrimary}>
-            <Text style={styles.btnPrimaryText}>Coba Lagi</Text>
-          </Pressable>
-        </View>
-      ) : filtered.length === 0 ? (
-        <View style={styles.center}>
-          <Text style={styles.emptyIcon}>🌱</Text>
-          <Text style={styles.emptyTitle}>Tidak ada tanaman</Text>
-          <Text style={styles.muted}>
-            {search ? `Tidak ditemukan untuk "${search}"` : 'Belum ada data tanaman'}
-          </Text>
-        </View>
-      ) : (
-        <FlatList
-          data={filtered}
-          keyExtractor={(item) => item.id}
-          contentContainerStyle={{ padding: 16, paddingBottom: 24, gap: 12 }}
-          refreshing={isRefetching}
-          onRefresh={() => refetch()}
-          renderItem={({ item }) => (
-            <Pressable
-              onPress={() => setSelected(item)}
-              style={({ pressed }) => [styles.card, pressed && { opacity: 0.85 }]}>
-              <View style={styles.cardIcon}>
-                <Text style={{ fontSize: 22 }}>{item.category === 'BUAH' ? '🍓' : '🥬'}</Text>
-              </View>
-              <View style={{ flex: 1 }}>
-                <Text style={styles.cardTitle}>{item.name}</Text>
-                <Text style={styles.cardSlug}>{item.scientificName || item.slug}</Text>
-                <View style={styles.badgeRow}>
-                  <View style={styles.badge}>
-                    <Text style={styles.badgeText}>{item.category}</Text>
-                  </View>
-                  {item.iklimOptimal ? (
-                    <Text style={styles.cardMeta}>{item.iklimOptimal}</Text>
-                  ) : null}
-                </View>
-                {item.description ? (
-                  <Text numberOfLines={2} style={styles.cardDesc}>
-                    {item.description}
-                  </Text>
-                ) : null}
-              </View>
-              <Text style={styles.chevron}>›</Text>
-            </Pressable>
+      <View style={st.cari}>
+        <vm.form.Field name="cari">
+          {(field) => (
+            <AppInput placeholder="Cari tanaman..." value={field.state.value} onChangeText={field.handleChange} onBlur={field.handleBlur} returnKeyType="search" error={pesanField(field)} />
           )}
-        />
-      )}
-
-      {/* Detail Modal */}
-      <Modal visible={!!selected} animationType="slide" onRequestClose={() => setSelected(null)}>
-        <SafeAreaView style={styles.modalSafe} edges={['top', 'bottom']}>
-          <View style={styles.modalHeader}>
-            <Text style={styles.modalTitle}>{selected?.name}</Text>
-            <Pressable onPress={() => setSelected(null)} style={styles.closeBtn}>
-              <Text style={styles.closeText}>Tutup ✕</Text>
-            </Pressable>
-          </View>
-          <ScrollView contentContainerStyle={{ padding: 16, gap: 16 }} showsVerticalScrollIndicator={false}>
-            {selected?.description ? <Text style={styles.modalDesc}>{selected.description}</Text> : null}
-            {selected?.iklimOptimal || selected?.ketinggianOptimal ? (
-              <View style={styles.infoRow}>
-                {selected.iklimOptimal ? <Text style={styles.infoChip}>Iklim: {selected.iklimOptimal}</Text> : null}
-                {selected.ketinggianOptimal ? (
-                  <Text style={styles.infoChip}>Ketinggian: {selected.ketinggianOptimal}</Text>
-                ) : null}
-              </View>
-            ) : null}
-
-            {/* Sowing Guide */}
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>🌱 Panduan Semai (Sowing Guide)</Text>
-              {selected?.sowingGuides && selected.sowingGuides.length > 0 ? (
-                selected.sowingGuides.map((g) => (
-                  <View key={g.id} style={styles.guideCard}>
-                    <Text style={styles.guideLabel}>Media: {g.mediaTanam}</Text>
-                    <Text style={styles.guideMeta}>
-                      Durasi {g.durasiHari} hari • Suhu {g.suhuOptimal} • Kelembaban {g.kelembaban}
-                    </Text>
-                    {Array.isArray(g.langkah) ? (
-                      <View style={{ marginTop: 8, gap: 4 }}>
-                        {(g.langkah as string[]).map((s, i) => (
-                          <Text key={i} style={styles.bullet}>
-                            {i + 1}. {s}
-                          </Text>
-                        ))}
+        </vm.form.Field>
+      </View>
+      {vm.isLoading ? <LoadingState pesan="Memuat tanaman..." /> :
+        vm.isError ? <ErrorState pesan={vm.pesanError ?? 'Gagal memuat data'} onRetry={() => vm.refetch()} /> :
+        vm.crops.length === 0 ? <EmptyState ikon="🌱" judul="Tidak ada tanaman" pesan="Belum ada data atau tidak cocok dengan pencarian." /> : (
+          <FlatList
+            data={vm.crops}
+            keyExtractor={(item) => item.id}
+            contentContainerStyle={st.list}
+            refreshing={vm.isRefetching}
+            onRefresh={() => vm.refetch()}
+            renderItem={({ item }) => (
+              <TouchableOpacity onPress={() => vm.setTerpilih(item)}>
+                <AppCard>
+                  <View style={st.row}>
+                    <View style={st.ikon}><Text style={{ fontSize: 22 }}>{item.category === 'BUAH' ? '🍓' : '🥬'}</Text></View>
+                    <View style={{ flex: 1 }}>
+                      <Text style={st.nama}>{item.name}</Text>
+                      <Text style={st.subItalic}>{item.scientificName || item.slug}</Text>
+                      <View style={st.baris}>
+                        <AppChip label={item.category} nada="info" />
+                        {item.iklimOptimal ? <Text style={st.sub}>{item.iklimOptimal}</Text> : null}
                       </View>
-                    ) : (
-                      <Text style={styles.bullet}>{formatJson(g.langkah)}</Text>
-                    )}
-                    <Text style={[styles.guideMeta, { marginTop: 8, fontStyle: 'italic' }]}>
-                      Siap tanam: {g.siapTanamIndikator}
-                    </Text>
+                      {item.description ? <Text numberOfLines={2} style={st.sub}>{item.description}</Text> : null}
+                    </View>
+                    <Text style={st.chev}>›</Text>
                   </View>
-                ))
-              ) : (
-                <Text style={styles.muted}>Belum ada panduan semai</Text>
-              )}
-            </View>
-
-            {/* Growing Guides */}
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>🌿 Panduan Tumbuh</Text>
-              {(['VEGETATIF', 'GENERATIF'] as const).map((fase) => {
-                const guides = selected?.growingGuides?.filter((x) => x.fase === fase) ?? [];
-                return (
-                  <View key={fase} style={{ gap: 8 }}>
-                    <Text style={styles.faseTitle}>{fase === 'VEGETATIF' ? 'Fase Vegetatif' : 'Fase Generatif'}</Text>
-                    {guides.length > 0 ? (
-                      guides.map((g) => (
-                        <View key={g.id} style={styles.guideCard}>
-                          <Text style={styles.guideLabel}>Panen: {g.panenHariRange}</Text>
-                          <Text style={styles.guideMeta}>Penyiraman: {g.penyiraman}</Text>
-                          <Text style={styles.guideMeta}>Pupuk: {formatJson(g.pupuk)}</Text>
-                          {g.hama ? <Text style={styles.guideMeta}>Hama: {formatJson(g.hama)}</Text> : null}
-                        </View>
-                      ))
-                    ) : (
-                      <Text style={styles.muted}>Belum ada panduan {fase.toLowerCase()}</Text>
-                    )}
-                  </View>
-                );
-              })}
-            </View>
-
-            {/* Hidroponik */}
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>💧 Panduan Hidroponik</Text>
-              {selected?.hydroponicGuides && selected.hydroponicGuides.length > 0 ? (
-                selected.hydroponicGuides.map((h) => (
-                  <View key={h.id} style={styles.guideCard}>
-                    <Text style={styles.guideLabel}>Sistem: {h.sistem}</Text>
-                    <Text style={styles.guideMeta}>
-                      PPM {h.ppmRange} • pH {h.phRange} • {h.durasiHari} hari
-                    </Text>
-                    <Text style={styles.guideMeta}>Nutrisi: {formatJson(h.nutrisi)}</Text>
-                  </View>
-                ))
-              ) : (
-                <Text style={styles.muted}>Belum ada panduan hidroponik</Text>
-              )}
-            </View>
-          </ScrollView>
-        </SafeAreaView>
-      </Modal>
+                </AppCard>
+              </TouchableOpacity>
+            )}
+          />
+        )}
+      <TanamanDetailModal crop={vm.terpilih} onTutup={() => vm.setTerpilih(null)} />
+      <View style={st.tombolBawah}>
+        <AppButton judul="Muat Ulang" variant="kedua" size="sm" onPress={() => vm.refetch()} />
+      </View>
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: '#f2f0eb' },
-  header: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 12 },
-  headerTitle: { fontSize: 22, fontWeight: '800', color: '#292827' },
-  headerSub: { fontSize: 13, color: '#666666', marginTop: 2 },
-  searchWrap: { paddingHorizontal: 16, paddingBottom: 12 },
-  searchInput: {
-    backgroundColor: '#ffffff',
-    borderWidth: 1,
-    borderColor: '#e3e3e2',
-    borderRadius: 8,
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    fontSize: 14,
-    color: '#292827',
-  },
-  center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 12 },
-  muted: { color: '#666666', fontSize: 13, textAlign: 'center' },
-  errorText: { color: '#991b1b', textAlign: 'center' },
-  emptyIcon: { fontSize: 48 },
-  emptyTitle: { fontSize: 16, fontWeight: '700', color: '#292827' },
-  btnPrimary: { backgroundColor: PRIMARY, paddingHorizontal: 20, paddingVertical: 10, borderRadius: 16, marginTop: 4 },
-  btnPrimaryText: { color: '#ffffff', fontWeight: '700' },
-  card: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#ffffff',
-    borderRadius: 16,
-    padding: 14,
-    gap: 12,
-    borderWidth: 1,
-    borderColor: '#e3e3e2',
-  },
-  cardIcon: {
-    width: 44,
-    height: 44,
-    borderRadius: 10,
-    backgroundColor: '#d4c7ff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  cardTitle: { fontSize: 15, fontWeight: '700', color: '#292827' },
-  cardSlug: { fontSize: 12, color: '#666666', fontStyle: 'italic' },
-  badgeRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 4 },
-  badge: { backgroundColor: PRIMARY, borderRadius: 999, paddingHorizontal: 8, paddingVertical: 3 },
-  badgeText: { color: '#ffffff', fontSize: 10, fontWeight: '700' },
-  cardMeta: { fontSize: 11, color: '#666666' },
-  cardDesc: { fontSize: 12, color: '#666666', marginTop: 4 },
-  chevron: { fontSize: 20, color: '#e3e3e2', fontWeight: '600' },
-  modalSafe: { flex: 1, backgroundColor: '#f2f0eb' },
-  modalHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#e3e3e2',
-    backgroundColor: '#ffffff',
-  },
-  modalTitle: { fontSize: 18, fontWeight: '800', color: '#292827', flex: 1 },
-  closeBtn: { backgroundColor: '#f2f0eb', paddingHorizontal: 12, paddingVertical: 8, borderRadius: 8, borderWidth: 1, borderColor: '#e3e3e2' },
-  closeText: { fontWeight: '700', color: '#292827' },
-  modalDesc: { fontSize: 13, color: '#666666', lineHeight: 18 },
-  infoRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
-  infoChip: { backgroundColor: '#d4c7ff', paddingHorizontal: 10, paddingVertical: 6, borderRadius: 999, fontSize: 12, color: '#292827', fontWeight: '600' },
-  section: { backgroundColor: '#ffffff', borderRadius: 12, padding: 14, borderWidth: 1, borderColor: '#e3e3e2', gap: 10 },
-  sectionTitle: { fontSize: 14, fontWeight: '800', color: '#292827' },
-  faseTitle: { fontSize: 13, fontWeight: '700', color: ACCENT },
-  guideCard: { backgroundColor: '#f2f0eb', borderRadius: 10, padding: 10, borderWidth: 1, borderColor: '#e3e3e2' },
-  guideLabel: { fontSize: 13, fontWeight: '700', color: '#292827' },
-  guideMeta: { fontSize: 12, color: '#666666', marginTop: 2 },
-  bullet: { fontSize: 12, color: '#292827', lineHeight: 16 },
+const st = StyleSheet.create({
+  safe: { flex: 1, backgroundColor: PARCHMENT },
+  header: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 4 },
+  judul: { fontSize: 22, fontWeight: '800', color: INK },
+  sub: { fontSize: 12, color: STONE, marginTop: 2 },
+  subItalic: { fontSize: 12, color: STONE, fontStyle: 'italic' },
+  cari: { paddingHorizontal: 16, paddingBottom: 8 },
+  list: { padding: 16, gap: 12, paddingBottom: 24 },
+  row: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  ikon: { width: 44, height: 44, borderRadius: 10, backgroundColor: LILAC, alignItems: 'center', justifyContent: 'center' },
+  nama: { fontSize: 15, fontWeight: '700', color: INK },
+  baris: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 4 },
+  chev: { fontSize: 20, color: MIST, fontWeight: '600' },
+  tombolBawah: { paddingHorizontal: 16, paddingBottom: 12, backgroundColor: PAPER, borderTopWidth: 1, borderTopColor: MIST },
 });
