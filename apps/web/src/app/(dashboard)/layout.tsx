@@ -2,8 +2,9 @@
 import { useMemo } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { signOut, useSession } from "next-auth/react";
 import { LayoutDashboard, Activity, Sprout, Leaf, ChevronRight, CalendarDays, MapPin, LogOut } from "lucide-react";
-import { getUser, clearAuth } from "@/lib/auth";
+import { clearAuth } from "@/lib/auth";
 
 const NAV = [
   { href: "/", label: "Ringkasan", Icon: LayoutDashboard },
@@ -13,21 +14,27 @@ const NAV = [
   { href: "/tanaman", label: "Tanaman", Icon: Sprout },
 ];
 
-type SessionUser = { nama?: string; name?: string; email?: string };
+type SesiPengguna = { nama: string; email: string };
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
-  // Baca sesi saat render (komponen klien) — dibaca ulang tiap navigasi
-  // via dep pathname agar logout/login di tab lain tercermin. Tanpa effect.
-  // eslint-disable-next-line react-hooks/exhaustive-deps -- pathname memang pemicu baca ulang sesi
-  const user = useMemo(() => getUser<SessionUser>(), [pathname]);
+  // Sesi NextAuth sebagai sumber kebenaran; useMemo menjaga render stabil per navigasi.
+  const { data: session } = useSession();
+  const user = useMemo<SesiPengguna | null>(
+    () =>
+      session?.user?.email
+        ? { nama: session.user.nama || session.user.email, email: session.user.email }
+        : null,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [pathname, session],
+  );
 
-  const initial = ((user?.nama ?? user?.name ?? user?.email ?? "A").trim().charAt(0) || "A").toUpperCase();
+  const initial = ((user?.nama ?? user?.email ?? "A").trim().charAt(0) || "A").toUpperCase();
 
   function handleLogout() {
-    clearAuth();
-    router.push("/login");
+    clearAuth(); // bersihkan transport fetch lokal
+    void signOut({ callbackUrl: "/login" });
     router.refresh();
   }
 
@@ -84,8 +91,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             </div>
             {user ? (
               <>
-                <span className="hidden max-w-[140px] truncate text-sm font-semibold text-ink-charcoal sm:inline" title={user.nama ?? user.name ?? user.email}>
-                  {user.nama ?? user.name ?? user.email}
+                <span className="hidden max-w-[140px] truncate text-sm font-semibold text-ink-charcoal sm:inline" title={user.nama}>
+                  {user.nama}
                 </span>
                 <button
                   onClick={handleLogout}

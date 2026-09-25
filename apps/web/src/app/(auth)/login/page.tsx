@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import { motion } from "motion/react";
 import { Leaf, AlertTriangle, ArrowRight } from "lucide-react";
+import { signIn, useSession } from "next-auth/react";
 import { useForm } from "@tanstack/react-form";
 import { useMutation } from "@tanstack/react-query";
-import { api } from "@/lib/api";
-import { setToken } from "@/lib/auth";
 import { loginSchema, type LoginInput } from "@/lib/schemas";
 import { useToast } from "@/hooks/useToast";
 import { Toast } from "@/components/ui/Toast";
@@ -14,14 +14,8 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 
-type LoginResponse = {
-  user: { id: string; email: string; nama: string; role: string };
-  accessToken: string;
-  refreshToken: string;
-};
-
 function friendlyError(msg: string) {
-  if (/401|403|Email atau password salah/i.test(msg))
+  if (/401|403|Email atau password salah|CredentialsSignin/i.test(msg))
     return "Email atau password salah. Coba lagi.";
   return msg;
 }
@@ -29,12 +23,25 @@ function friendlyError(msg: string) {
 export default function LoginPage() {
   const router = useRouter();
   const { toast, showToast } = useToast();
+  const { status } = useSession();
+
+  useEffect(() => {
+    if (status === "authenticated") router.replace("/");
+  }, [status, router]);
 
   const login = useMutation({
-    mutationFn: (v: LoginInput) =>
-      api.post<LoginResponse>("/auth/login", { email: v.email.trim(), password: v.password }),
-    onSuccess: (res) => {
-      setToken(res.accessToken, res.refreshToken, res.user);
+    mutationFn: async (v: LoginInput) => {
+      const res = await signIn("credentials", {
+        email: v.email.trim(),
+        password: v.password,
+        redirect: false,
+      });
+      if (!res || res.error) {
+        throw new Error(res?.error ?? "Gagal masuk. Periksa email/password.");
+      }
+      return res;
+    },
+    onSuccess: () => {
       showToast("Login berhasil! Mengalihkan...");
       router.push("/");
       router.refresh();

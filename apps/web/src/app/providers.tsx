@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { SessionProvider } from "next-auth/react";
 import { ToastProvider } from "@heroui/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { SessionSync } from "@/components/auth/SessionSync";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [client] = useState(
@@ -19,8 +21,13 @@ export function Providers({ children }: { children: React.ReactNode }) {
   );
 
   return (
-    <QueryClientProvider client={client}>
-      <ToastProvider>{children}</ToastProvider>
-    </QueryClientProvider>
+    <SessionProvider refetchOnWindowFocus={false}>
+      <QueryClientProvider client={client}>
+        <ToastProvider>
+          <SessionSync />
+          {children}
+        </ToastProvider>
+      </QueryClientProvider>
+    </SessionProvider>
   );
 }

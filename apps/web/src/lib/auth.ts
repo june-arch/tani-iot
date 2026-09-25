@@ -1,4 +1,6 @@
-// Tani IoT — auth helpers (localStorage + cookie)
+// Tani IoT — transport token untuk fetch (localStorage + cookie).
+// Sumber kebenaran sesi adalah NextAuth (lihat src/auth.ts + SessionSync);
+// file ini hanya dibaca/ditulis secara sinkron oleh api.ts dan SessionSync.
 export const TOKEN_KEY = "tani_token";
 export const REFRESH_KEY = "tani_refresh";
 export const USER_KEY = "tani_user";
@@ -15,25 +17,6 @@ export function getToken(): string | null {
     if (ls) return ls;
   }
   return cookieGet(TOKEN_KEY);
-}
-
-export function getRefreshToken(): string | null {
-  if (typeof window !== "undefined") {
-    const ls = window.localStorage.getItem(REFRESH_KEY);
-    if (ls) return ls;
-  }
-  return cookieGet(REFRESH_KEY);
-}
-
-export function getUser<T = unknown>(): T | null {
-  if (typeof window === "undefined") return null;
-  const raw = window.localStorage.getItem(USER_KEY);
-  if (!raw) return null;
-  try {
-    return JSON.parse(raw) as T;
-  } catch {
-    return null;
-  }
 }
 
 export function setToken(accessToken: string, refreshToken?: string | null, user?: unknown): void {
@@ -59,8 +42,4 @@ export function clearAuth(): void {
     document.cookie = `${TOKEN_KEY}=; Path=/; Max-Age=0`;
     document.cookie = `${REFRESH_KEY}=; Path=/; Max-Age=0`;
   }
-}
-
-export function isAuthenticated(): boolean {
-  return !!getToken();
 }
