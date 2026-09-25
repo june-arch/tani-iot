@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# APK Android (artefak build lokal, 200MB+ — jangan commit; salin manual ke public/ saat deploy)
+/public/*.apk
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
