@@ -10,13 +10,17 @@ import { SensorsModule } from './modules/sensors/sensors.module';
 import { CropsModule } from './modules/crops/crops.module';
 import { PlantingsModule } from './modules/plantings/plantings.module';
 import { AiModule } from './modules/ai/ai.module';
+import { DocsModule } from './modules/docs/docs.module';
 import { ScheduleModule } from '@nestjs/schedule';
 import { MqttModule } from './modules/mqtt/mqtt.module';
 import { IrrigationModule } from './modules/irrigation/irrigation.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true, envFilePath: ['../../.env', '.env'] }),
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: ['../../.env', '.env'],
+    }),
     ScheduleModule.forRoot(),
     PrismaModule,
     AuthModule,
@@ -26,6 +30,7 @@ import { IrrigationModule } from './modules/irrigation/irrigation.module';
     CropsModule,
     PlantingsModule,
     AiModule,
+    DocsModule,
     MqttModule,
     IrrigationModule,
   ],
