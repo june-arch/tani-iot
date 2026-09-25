@@ -1,20 +1,20 @@
 import { Tabs } from 'expo-router';
 import { SymbolView } from 'expo-symbols';
 import type { ColorValue } from 'react-native';
+import type { ComponentProps } from 'react';
 import { MIST, PARCHMENT, STONE, WINE } from '@/src/theme';
 
 // Superhuman palette — token tunggal di src/theme.ts
 const ACTIVE = WINE;
 const INACTIVE = STONE;
 
+type NamaSimbol = ComponentProps<typeof SymbolView>['name'];
+
 function TabIcon({ ios, android, color }: { ios: string; android: string; color: ColorValue }) {
-  return (
-    <SymbolView
-      name={{ ios: ios as any, android: android as any, web: android as any }}
-      tintColor={color}
-      size={26}
-    />
-  );
+  // Nama ikon berasal dari literal internal (SF Symbols + Material) — ditegaskan
+  // ke tipe `name` SymbolView agar aman di iOS/Android/Web tanpa `any`.
+  const name = { ios, android, web: android } as NamaSimbol;
+  return <SymbolView name={name} tintColor={color} size={26} />;
 }
 
 export default function TabLayout() {

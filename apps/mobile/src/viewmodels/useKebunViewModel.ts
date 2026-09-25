@@ -1,18 +1,26 @@
 import { useMemo } from 'react';
-import { useQuery } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useForm, useStore } from '@tanstack/react-form';
 import { normalizeError } from '../api/client';
-import { kebunService } from '../services/kebunService';
+import { kebunService, type KebunBaru } from '../services/kebunService';
 import { cariKebunSchema, type CariKebunForm } from '../models/kebun';
 import { useDebouncedValue } from './useDebouncedValue';
 
 export function useKebunViewModel() {
+  const qc = useQueryClient();
   const form = useForm({
     defaultValues: { cari: '' } as CariKebunForm,
     validators: { onChange: cariKebunSchema },
   });
   const cari = useStore(form.store, (s) => s.values.cari);
   const cariDebounced = useDebouncedValue(cari, 300);
+
+  const tambah = useMutation({
+    mutationFn: (input: KebunBaru) => kebunService.tambahKebun(input),
+    onSuccess: () => {
+      void qc.invalidateQueries({ queryKey: ['kebun', 'daftar'] });
+    },
+  });
 
   const query = useQuery({
     queryKey: ['kebun', 'daftar'],
@@ -40,5 +48,7 @@ export function useKebunViewModel() {
     isError: query.isError,
     pesanError: query.isError ? normalizeError(query.error) : null,
     refetch: query.refetch,
+    tambah,
+    pesanTambah: tambah.isError ? normalizeError(tambah.error) : null,
   };
 }

@@ -35,7 +35,9 @@ export const useAuthStore = create<AuthState>((set) => ({
     try {
       await SecureStore.deleteItemAsync('access_token');
       await SecureStore.deleteItemAsync('auth_user');
-    } catch {}
+    } catch {
+      // Abaikan kegagalan hapus — state memori yang jadi acuan.
+    }
     set({ token: null, user: null, isAuthenticated: false });
   },
 
@@ -45,6 +47,8 @@ export const useAuthStore = create<AuthState>((set) => ({
       const raw = await SecureStore.getItemAsync('auth_user');
       const user: User | null = raw ? (JSON.parse(raw) as User) : null;
       if (token) set({ token, user, isAuthenticated: true });
-    } catch {}
+    } catch {
+      // SecureStore tidak tersedia — mulai sebagai tamu.
+    }
   },
 }));

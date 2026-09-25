@@ -61,12 +61,7 @@ export function useDashboardViewModel() {
           tandonPersen = null;
         }
       }
-      let plantings: RencanaTanam[] = [];
-      try {
-        plantings = await tanamanService.daftarRencana();
-      } catch {
-        plantings = [];
-      }
+      const plantings = await tanamanService.daftarRencana().catch(() => [] as RencanaTanam[]);
       return {
         kebuns,
         totalLahan,

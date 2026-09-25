@@ -1,12 +1,19 @@
 import * as React from "react";
+import {
+  Card as HeroCard,
+  CardHeader as HeroCardHeader,
+  CardTitle as HeroCardTitle,
+  CardDescription as HeroCardDescription,
+} from "@heroui/react";
 
 export function Card({
   className = "",
   muted = false,
+  children,
   ...props
-}: React.HTMLAttributes<HTMLDivElement> & { muted?: boolean }) {
+}: React.HTMLAttributes<HTMLDivElement> & { muted?: boolean; children: React.ReactNode }) {
   return (
-    <div
+    <HeroCard
       className={[
         "rounded-card border p-4",
         // DESIGN: no drop shadow, edge defined by hairline Soft Mist #e3e3e2 on parchment
@@ -15,7 +22,9 @@ export function Card({
         className,
       ].join(" ")}
       {...props}
-    />
+    >
+      {children}
+    </HeroCard>
   );
 }
 
@@ -23,19 +32,37 @@ export function CardHeader({
   className = "",
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={["flex items-center justify-between gap-2", className].join(" ")} {...props} />;
+  return (
+    <HeroCardHeader
+      className={["flex items-center justify-between gap-2", className].join(" ")}
+      {...props}
+    />
+  );
 }
 
 export function CardTitle({
   className = "",
   ...props
 }: React.HTMLAttributes<HTMLHeadingElement>) {
-  return <h3 className={["font-sans text-[15px] font-semibold leading-5 tracking-tight text-ink-charcoal", className].join(" ")} {...props} />;
+  return (
+    <HeroCardTitle
+      className={[
+        "font-sans text-[15px] font-semibold leading-5 tracking-tight text-ink-charcoal",
+        className,
+      ].join(" ")}
+      {...props}
+    />
+  );
 }
 
 export function CardDesc({
   className = "",
   ...props
 }: React.HTMLAttributes<HTMLParagraphElement>) {
-  return <p className={["text-sm leading-5 text-stone-gray", className].join(" ")} {...props} />;
+  return (
+    <HeroCardDescription
+      className={["text-sm leading-5 text-stone-gray", className].join(" ")}
+      {...props}
+    />
+  );
 }

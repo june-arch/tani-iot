@@ -1,12 +1,13 @@
 import { useFonts } from 'expo-font';
 import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { HeroUINativeProvider } from 'heroui-native';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import '../global.css';
+import { useAuthStore } from '@/src/stores/auth';
 
 import { useColorScheme } from '@/components/useColorScheme';
 export {
@@ -30,21 +31,29 @@ const queryClient = new QueryClient({
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
+    // Pola resmi Expo: aset font statis dimuat via require agar terbundel.
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
+  const [sesiSiap, setSesiSiap] = useState(false);
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
     if (error) throw error;
   }, [error]);
 
+  // Pulihkan sesi dari SecureStore sebelum splash hilang.
   useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
+    void useAuthStore.getState().loadAuth().finally(() => setSesiSiap(true));
+  }, []);
 
-  if (!loaded) {
+  useEffect(() => {
+    if (loaded && sesiSiap) {
+      void SplashScreen.hideAsync();
+    }
+  }, [loaded, sesiSiap]);
+
+  if (!loaded || !sesiSiap) {
     return null;
   }
 
@@ -61,6 +70,7 @@ function RootLayoutNav() {
           <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
             <Stack>
               <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+              <Stack.Screen name="login" options={{ headerShown: false }} />
               <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
             </Stack>
           </ThemeProvider>

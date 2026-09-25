@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Chip as HeroChip } from "@heroui/react";
 
 type Variant = "success" | "warning" | "destructive" | "info" | "neutral" | "primary" | "lilac";
 
@@ -16,16 +17,19 @@ const map: Record<Variant, string> = {
 export function Badge({
   variant = "neutral",
   className = "",
+  children,
   ...props
-}: React.HTMLAttributes<HTMLSpanElement> & { variant?: Variant }) {
+}: Omit<React.HTMLAttributes<HTMLSpanElement>, "color"> & { variant?: Variant; children: React.ReactNode }) {
   return (
-    <span
+    <HeroChip
       className={[
         "inline-flex items-center rounded-pill px-2.5 py-1 text-xs font-semibold leading-none",
         map[variant],
         className,
       ].join(" ")}
       {...props}
-    />
+    >
+      {children}
+    </HeroChip>
   );
 }

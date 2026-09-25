@@ -1,5 +1,12 @@
+import { Skeleton as HeroSkeleton } from "@heroui/react";
+
 export function Skeleton({ className = "" }: { className?: string }) {
-  return <div className={["animate-pulse rounded-lg bg-soft-mist", className].join(" ")} />;
+  return (
+    <HeroSkeleton
+      animationType="pulse"
+      className={["rounded-lg bg-soft-mist", className].join(" ")}
+    />
+  );
 }
 
 export function CardSkeleton() {
