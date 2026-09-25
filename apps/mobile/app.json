@@ -7,11 +7,6 @@
     "icon": "./assets/images/icon.png",
     "scheme": "tani-iot",
     "userInterfaceStyle": "light",
-    "splash": {
-      "backgroundColor": "#FFFCF8",
-      "image": "./assets/images/icon.png",
-      "resizeMode": "contain"
-    },
     "ios": {
       "supportsTablet": true
     },
@@ -40,7 +35,8 @@
           "imageWidth": 200
         }
       ],
-      "expo-secure-store"
+      "expo-secure-store",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true
