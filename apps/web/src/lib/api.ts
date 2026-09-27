@@ -39,19 +39,23 @@ function getAuthToken(): string | null {
   return null;
 }
 
-function handle401(status: number) {
+function handle401(status: number, tokenTerkirim: boolean) {
   if (status === 401 && typeof window !== "undefined") {
     const path = window.location.pathname;
     // jangan redirect jika sudah di login
-    if (!path.startsWith("/login")) {
-      // bersihkan token basi
-      try {
-        window.localStorage.removeItem("tani_token");
-        window.localStorage.removeItem("tani_refresh");
-      } catch {}
-      document.cookie = "tani_token=; Path=/; Max-Age=0";
-      window.location.href = "/login";
-    }
+    if (path.startsWith("/login")) return;
+    // Tanpa token terkirim (mis. sesaat setelah login sebelum SessionSync
+    // menyalin token) → JANGAN tendang ke /login; SessionSync akan
+    // memuat ulang query otomatis begitu sesi siap. Ini anti-kedip
+    // dashboard → login → dashboard.
+    if (!tokenTerkirim) return;
+    // Token dikirim tapi ditolak backend (basi/dicabut) → keluar sungguhan.
+    try {
+      window.localStorage.removeItem("tani_token");
+      window.localStorage.removeItem("tani_refresh");
+    } catch {}
+    document.cookie = "tani_token=; Path=/; Max-Age=0";
+    window.location.href = "/login";
   }
 }
 
@@ -96,7 +100,7 @@ export async function apiFetch<T>(
       (body as { pesan?: string })?.pesan ??
       (body as { error?: string })?.error ??
       `Request gagal (${res.status})`;
-    handle401(res.status);
+    handle401(res.status, !!token);
     throw { status: res.status, message: msg, raw: body } as ApiError;
   }
 
@@ -155,7 +159,7 @@ export async function apiUpload<T>(
       (body as { pesan?: string })?.pesan ??
       (body as { error?: string })?.error ??
       `Unggah gagal (${res.status})`;
-    handle401(res.status);
+    handle401(res.status, !!token);
     throw { status: res.status, message: msg, raw: body } as ApiError;
   }
   if (body && typeof body === "object" && "data" in (body as Record<string, unknown>)) {

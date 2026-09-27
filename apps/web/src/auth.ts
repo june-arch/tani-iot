@@ -7,6 +7,8 @@ declare module "next-auth" {
   interface Session {
     accessToken?: string;
     refreshToken?: string;
+    /** Diisi "RefreshGagal" bila refresh token backend ditolak (sesi harus diakhiri). */
+    error?: string;
     user: DefaultSession["user"] & {
       id: string;
       nama: string;
@@ -27,6 +29,9 @@ declare module "@auth/core/jwt" {
     refreshToken?: string;
     nama?: string;
     role?: string;
+    /** Epoch ms kedaluwarsa access token backend (disegarkan proaktif sebelum 15 mnt). */
+    accessExpires?: number;
+    error?: string;
   }
 }
 
@@ -41,6 +46,33 @@ function unwrapBackend(body: unknown): BackendLogin | null {
     return (body as { data: BackendLogin }).data;
   }
   return body as BackendLogin | null;
+}
+
+type BackendTokenPair = { accessToken: string; refreshToken: string };
+
+// Backend menerbitkan access 15 mnt — segarkan proaktif di 13 mnt agar
+// api.ts tidak pernah menendang ke /login saat sesi NextAuth masih valid.
+const AKSES_UMUR_MS = 13 * 60 * 1000;
+const ULANG_SEBENTAR_MS = 30 * 1000;
+
+async function segarkanTokenBackend(refreshToken: string): Promise<BackendTokenPair | null | "fatal"> {
+  let res: Response;
+  try {
+    res = await fetch(`${baseUrl}/auth/refresh`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ refreshToken }),
+      cache: "no-store",
+    });
+  } catch {
+    return null; // jaringan gagal — coba lagi nanti, jangan bunuh sesi
+  }
+  if (res.status === 401 || res.status === 403) return "fatal";
+  if (!res.ok) return null;
+  const body = (await res.json().catch(() => null)) as { data?: BackendTokenPair } | null;
+  const pair = body?.data;
+  if (!pair?.accessToken) return null;
+  return { accessToken: pair.accessToken, refreshToken: pair.refreshToken ?? refreshToken };
 }
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
@@ -84,13 +116,38 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         token.refreshToken = user.refreshToken;
         token.nama = user.nama;
         token.role = user.role;
+        token.accessExpires = Date.now() + AKSES_UMUR_MS;
+        token.error = undefined;
         if (user.email) token.email = user.email;
+        return token;
       }
-      return token;
+      // Sesi berjalan: token masih segar → tanpa fetch tambahan.
+      if (token.accessToken && (token.accessExpires ?? 0) > Date.now()) {
+        return token;
+      }
+      if (!token.refreshToken) {
+        return { ...token, error: "RefreshGagal" };
+      }
+      const hasil = await segarkanTokenBackend(token.refreshToken);
+      if (hasil === "fatal") {
+        return { ...token, error: "RefreshGagal" };
+      }
+      if (hasil === null) {
+        // Gangguan sesaat — coba lagi 30 detik ke depan.
+        return { ...token, accessExpires: Date.now() + ULANG_SEBENTAR_MS };
+      }
+      return {
+        ...token,
+        accessToken: hasil.accessToken,
+        refreshToken: hasil.refreshToken,
+        accessExpires: Date.now() + AKSES_UMUR_MS,
+        error: undefined,
+      };
     },
     async session({ session, token }) {
       session.accessToken = token.accessToken;
       session.refreshToken = token.refreshToken;
+      session.error = token.error;
       session.user.id = token.sub ?? "";
       session.user.nama = token.nama ?? "";
       session.user.role = token.role ?? "";

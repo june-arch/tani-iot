@@ -1,8 +1,9 @@
 "use client";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
+import { useQueryClient } from "@tanstack/react-query";
 import { LayoutDashboard, Activity, Sprout, Leaf, ChevronRight, CalendarDays, MapPin, LogOut, Smartphone } from "lucide-react";
 import { clearAuth } from "@/lib/auth";
 
@@ -22,7 +23,6 @@ type SesiPengguna = { nama: string; email: string; role: string };
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const router = useRouter();
   // Sesi NextAuth sebagai sumber kebenaran; useMemo menjaga render stabil per navigasi.
   const { data: session } = useSession();
   const user = useMemo<SesiPengguna | null>(
@@ -35,12 +35,25 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   );
   const navItems = user?.role === "SUPERADMIN" ? [...NAV, ...NAV_ADMIN] : NAV;
 
+  const queryClient = useQueryClient();
+
   const initial = ((user?.nama ?? user?.email ?? "A").trim().charAt(0) || "A").toUpperCase();
 
-  function handleLogout() {
-    clearAuth(); // bersihkan transport fetch lokal
-    void signOut({ callbackUrl: "/login" });
-    router.refresh();
+  const [keluar, setKeluar] = useState(false);
+
+  async function handleLogout() {
+    if (keluar) return;
+    setKeluar(true);
+    try {
+      clearAuth(); // bersihkan transport fetch lokal
+      queryClient.clear(); // buang cache query agar tidak flash data basi
+      await signOut({ callbackUrl: "/login" });
+    } catch {
+      // Fallback bila pemanggilan signOut gagal: paksa ke login.
+      window.location.href = "/login";
+    } finally {
+      setKeluar(false);
+    }
   }
 
   return (
@@ -101,9 +114,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 </span>
                 <button
                   onClick={handleLogout}
-                  className="hidden h-8 items-center gap-1.5 rounded-small-button border border-soft-mist bg-paper-white px-3 text-xs font-semibold text-ink-charcoal hover:bg-warm-parchment sm:inline-flex"
+                  disabled={keluar}
+                  className="hidden h-8 items-center gap-1.5 rounded-small-button border border-soft-mist bg-paper-white px-3 text-xs font-semibold text-ink-charcoal hover:bg-warm-parchment disabled:opacity-50 sm:inline-flex"
                 >
-                  <LogOut className="h-3.5 w-3.5" /> Keluar
+                  <LogOut className="h-3.5 w-3.5" /> {keluar ? "Keluar…" : "Keluar"}
                 </button>
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-midnight-wine text-sm font-bold text-paper-white ring-1 ring-soft-mist">
                   {initial}

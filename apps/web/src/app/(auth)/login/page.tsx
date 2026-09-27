@@ -43,7 +43,10 @@ export default function LoginPage() {
     },
     onSuccess: () => {
       showToast("Login berhasil! Mengalihkan...");
-      router.push("/");
+      // replace (bukan push): tombol kembali tidak mengembalikan ke /login,
+      // dan riwayat tidak menumpuk. Query dashboard dimuat ulang otomatis
+      // oleh SessionSync begitu sesi terautentikasi (tanpa tendangan 401).
+      router.replace("/");
       router.refresh();
     },
   });
