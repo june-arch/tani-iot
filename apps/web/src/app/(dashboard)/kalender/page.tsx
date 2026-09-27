@@ -86,7 +86,7 @@ export default function KalenderPage() {
 
       <AnimatePresence>
         {showForm && (
-          <RencanaForm crops={k.crops} lahans={k.lahans} initial={editing} onClose={() => setShowForm(false)} onSave={k.saveRencana} />
+          <RencanaForm crops={k.crops} lahans={k.lahans} lahansLoading={k.lahansLoading} lahansError={k.lahansError} onRetryLahans={k.refetchLahans} initial={editing} onClose={() => setShowForm(false)} onSave={k.saveRencana} />
         )}
       </AnimatePresence>
     </div>

@@ -6,6 +6,8 @@ import { signOut, useSession } from "next-auth/react";
 import { useQueryClient } from "@tanstack/react-query";
 import { LayoutDashboard, Activity, Sprout, Leaf, ChevronRight, CalendarDays, MapPin, LogOut, Smartphone } from "lucide-react";
 import { clearAuth } from "@/lib/auth";
+import { useKebuns } from "@/lib/queries";
+import { kebunName } from "@/lib/endpoints";
 
 const NAV = [
   { href: "/", label: "Ringkasan", Icon: LayoutDashboard },
@@ -20,6 +22,39 @@ const NAV_ADMIN = [
 ];
 
 type SesiPengguna = { nama: string; email: string; role: string };
+
+function KebunBadge() {
+  const { data: kebuns, isLoading } = useKebuns();
+  if (isLoading) {
+    return (
+      <div className="hidden items-center gap-2 rounded-small-button border border-soft-mist bg-paper-white px-3 py-2 sm:flex" aria-live="polite">
+        <span className="h-2 w-2 animate-pulse rounded-full bg-soft-mist" />
+        <span className="text-xs text-stone-gray">Memuat kebun…</span>
+      </div>
+    );
+  }
+  if (!kebuns || kebuns.length === 0) {
+    return (
+      <div className="hidden items-center gap-2 rounded-small-button border border-soft-mist bg-paper-white px-3 py-2 sm:flex">
+        <span className="h-2 w-2 rounded-full bg-stone-gray" />
+        <span className="text-xs font-semibold text-ink-charcoal">Belum ada kebun</span>
+      </div>
+    );
+  }
+  const totalLahan = kebuns.reduce((a, k) => {
+    if (typeof k._count?.lahans === "number") return a + k._count.lahans;
+    if (Array.isArray(k.lahans)) return a + k.lahans.length;
+    return a;
+  }, 0);
+  const namaUtama = kebunName(kebuns[0]);
+  return (
+    <div className="hidden items-center gap-2 rounded-small-button border border-soft-mist bg-paper-white px-3 py-2 sm:flex" title={`${kebuns.length} kebun · ${totalLahan} lahan`}>
+      <span className="h-2 w-2 rounded-full bg-[#1a7a4a] animate-pulse" />
+      <span className="max-w-[140px] truncate text-xs font-semibold text-ink-charcoal">{kebuns.length > 1 ? `${kebuns.length} kebun` : namaUtama}</span>
+      <span className="text-xs text-stone-gray">· {totalLahan} lahan</span>
+    </div>
+  );
+}
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -102,16 +137,17 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           </div>
 
           <div className="flex items-center gap-2">
-            <div className="hidden items-center gap-2 rounded-small-button border border-soft-mist bg-paper-white px-3 py-2 sm:flex">
-              <span className="h-2 w-2 rounded-full bg-[#1a7a4a] animate-pulse" />
-              <span className="text-xs font-semibold text-ink-charcoal">Kebun Demo</span>
-              <span className="text-xs text-stone-gray">· 3 lahan</span>
-            </div>
+            <KebunBadge />
             {user ? (
               <>
                 <span className="hidden max-w-[140px] truncate text-sm font-semibold text-ink-charcoal sm:inline" title={user.nama}>
                   {user.nama}
                 </span>
+                {user.role && (
+                  <span className="hidden rounded-pill bg-lilac-mist px-2 py-0.5 text-[11px] font-bold tracking-wide text-ink-charcoal sm:inline" title={`Peran: ${user.role}`}>
+                    {user.role}
+                  </span>
+                )}
                 <button
                   onClick={handleLogout}
                   disabled={keluar}

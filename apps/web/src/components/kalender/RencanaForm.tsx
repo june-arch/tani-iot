@@ -55,8 +55,9 @@ function PrediksiPreview({ slug, semai, tanam }: { slug: string; semai: string; 
   );
 }
 
-export function RencanaForm({ crops, lahans, initial, onClose, onSave }: {
-  crops: Crop[] | null; lahans: LahanOpt[]; initial: Rencana | null;
+export function RencanaForm({ crops, lahans, lahansLoading, lahansError, onRetryLahans, initial, onClose, onSave }: {
+  crops: Crop[] | null; lahans: LahanOpt[]; lahansLoading?: boolean; lahansError?: string | null;
+  onRetryLahans?: () => void; initial: Rencana | null;
   onClose: () => void; onSave: (input: SaveRencanaInput, editId: string | null) => Promise<boolean>;
 }) {
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -119,10 +120,29 @@ export function RencanaForm({ crops, lahans, initial, onClose, onSave }: {
         <form onSubmit={(e) => { e.preventDefault(); void form.handleSubmit(); }} className="space-y-4 p-5">
           <form.Field name="lahanId">
             {(field) => (
-              <Select label="Lahan * — pilih dulu" value={field.state.value} onChange={(e) => field.handleChange(e.target.value)} error={errors.lahanId} required>
-                <option value="">Pilih lahan...</option>
-                {lahans.map((l) => <option key={l.id} value={l.id}>{l.kebunNama} — {l.nama}</option>)}
-              </Select>
+              <div>
+                <Select label={`Lahan * — ${lahansLoading ? "memuat..." : `${lahans.length} tersedia`}`} value={field.state.value} onChange={(e) => field.handleChange(e.target.value)} error={errors.lahanId} required disabled={lahansLoading}>
+                  <option value="">{lahansLoading ? "Memuat lahan..." : lahans.length === 0 ? "Belum ada lahan..." : "Pilih lahan..."}</option>
+                  {lahans.map((l) => <option key={l.id} value={l.id}>{l.kebunNama} — {l.nama}</option>)}
+                </Select>
+                {lahansError && (
+                  <p className="mt-1.5 text-xs text-destructive">
+                    {lahansError}{" "}
+                    {onRetryLahans && (
+                      <button type="button" onClick={onRetryLahans} className="font-bold text-royal-violet underline">
+                        Muat ulang
+                      </button>
+                    )}
+                  </p>
+                )}
+                {!lahansLoading && !lahansError && lahans.length === 0 && (
+                  <p className="mt-1.5 text-xs leading-4 text-stone-gray">
+                    Belum ada lahan terbaca. Buat dulu di{" "}
+                    <a href="/kebuns" className="font-bold text-royal-violet underline">halaman Kebun → tambah lahan</a>,
+                    lalu muat ulang form ini.
+                  </p>
+                )}
+              </div>
             )}
           </form.Field>
           <form.Field name="cropSlug">

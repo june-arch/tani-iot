@@ -63,28 +63,59 @@ export function useKalender(notify: (m: string) => void) {
     () => (kebuns ?? []).map((k) => ({ id: String(k.id), nama: kebunName(k) })),
     [kebuns],
   );
+  const kebunIdsKey = useMemo(() => kebunOpts.map((k) => k.id).join(","), [kebunOpts]);
+
+  // Fallback: backend /kebuns/my sudah include `lahans: true`, jadi lahan
+  // tetap tersedia walau fetch per-kebun gagal (mis. guard/token telat).
+  const embeddedLahans = useMemo<LahanOpt[]>(() => {
+    const out: LahanOpt[] = [];
+    for (const k of kebuns ?? []) {
+      const kName = kebunName(k);
+      const list = Array.isArray(k.lahans) ? k.lahans : [];
+      for (const l of list) {
+        if (!isRec(l) || l.id === undefined) continue;
+        out.push({
+          id: String(l.id),
+          nama: String(l.nama ?? l.name ?? "Lahan"),
+          kebunNama: kName,
+        });
+      }
+    }
+    return out;
+  }, [kebuns]);
 
   const lahansQuery = useQuery({
-    queryKey: ["lahans", kebunOpts],
+    queryKey: ["lahans", kebunIdsKey],
     enabled: kebunOpts.length > 0,
     queryFn: async (): Promise<LahanOpt[]> => {
       const perKebun = await Promise.all(kebunOpts.map(async (k): Promise<LahanOpt[]> => {
         const name = kebunName(k);
-        try {
-          const ls = await api.get<unknown[]>(ENDPOINTS.lahans(String(k.id)));
-          const out: LahanOpt[] = [];
-          for (const l of ls) {
-            if (!isRec(l) || l.id === undefined) continue;
-            out.push({ id: String(l.id), nama: String(l.nama ?? l.name ?? "Lahan"), kebunNama: name });
-          }
-          return out;
-        } catch {
-          return [];
+        const ls = await api.get<unknown[]>(ENDPOINTS.lahans(String(k.id)));
+        const out: LahanOpt[] = [];
+        for (const l of ls) {
+          if (!isRec(l) || l.id === undefined) continue;
+          out.push({ id: String(l.id), nama: String(l.nama ?? l.name ?? "Lahan"), kebunNama: name });
         }
+        return out;
       }));
       return perKebun.flat();
     },
   });
+
+  // Gabung hasil fetch per-kebun + embedded, dedupe by id agar dropdown
+  // tidak pernah kosong padahal user sudah buat lahan.
+  const lahans = useMemo<LahanOpt[]>(() => {
+    const seen = new Set<string>();
+    const out: LahanOpt[] = [];
+    for (const l of [...(lahansQuery.data ?? []), ...embeddedLahans]) {
+      if (seen.has(l.id)) continue;
+      seen.add(l.id);
+      out.push(l);
+    }
+    return out;
+  }, [lahansQuery.data, embeddedLahans]);
+  const lahansLoading = kebunsQuery.isLoading || (kebunOpts.length > 0 && lahansQuery.isLoading && embeddedLahans.length === 0);
+  const lahansError = lahansQuery.error ? errorMessage(lahansQuery.error, "Gagal memuat lahan") : kebunsQuery.error ? errorMessage(kebunsQuery.error, "Gagal memuat kebun") : null;
 
   const rencana = useMemo(() => plantingsQuery.data ?? [], [plantingsQuery.data]);
   const loading = plantingsQuery.isLoading;
@@ -185,7 +216,9 @@ export function useKalender(notify: (m: string) => void) {
   }, [panenAsync]);
 
   return {
-    crops: cropsQuery.data ?? null, kebuns, lahans: lahansQuery.data ?? [], rencana, loading,
+    crops: cropsQuery.data ?? null, kebuns, lahans, rencana, loading,
+    lahansLoading, lahansError, kebunsLoading: kebunsQuery.isLoading,
+    refetchLahans: () => { void kebunsQuery.refetch(); void lahansQuery.refetch(); },
     month, setMonth, selectedDay, setSelectedDay,
     fetchRencana, saveRencana, removeRencana, markTanam, markPanen,
   };
