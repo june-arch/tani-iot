@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 import { useQueryClient } from "@tanstack/react-query";
-import { LayoutDashboard, Activity, Sprout, Leaf, ChevronRight, CalendarDays, MapPin, LogOut, Smartphone } from "lucide-react";
+import { LayoutDashboard, Activity, Sprout, Leaf, ChevronRight, CalendarDays, MapPin, LogOut, Smartphone, BookOpen } from "lucide-react";
 import { clearAuth } from "@/lib/auth";
 import { useKebuns } from "@/lib/queries";
 import { kebunName } from "@/lib/endpoints";
@@ -15,6 +15,7 @@ const NAV = [
   { href: "/kebuns", label: "Kebun", Icon: MapPin },
   { href: "/sensors", label: "Sensor", Icon: Activity },
   { href: "/tanaman", label: "Tanaman", Icon: Sprout },
+  { href: "/katalog", label: "Katalog", Icon: BookOpen },
 ];
 
 const NAV_ADMIN = [
