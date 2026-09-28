@@ -103,7 +103,7 @@ export function useSensors(notify: (m: string) => void) {
 
   return {
     kebuns, selectedKebun, setSelectedKebun,
-    sensors, loading, err,
+    devices: devicesQuery.data ?? [], sensors, loading, err,
     selectedSensor, setSelectedSensor, selectedSensorObj,
     telemetry: telemetryQuery.data ?? null, telLoading: telemetryQuery.isLoading,
     refreshDevices,

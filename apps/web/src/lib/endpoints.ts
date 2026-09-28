@@ -4,6 +4,7 @@ export const ENDPOINTS = {
   kebunsMy: "/kebuns/my",
   lahans: (kebunId: string) => `/kebuns/${kebunId}/lahans`,
   devices: (kebunId: string) => `/kebuns/${kebunId}/devices`,
+  deviceSensors: (deviceId: string) => `/devices/${deviceId}/sensors`,
   telemetry: (sensorId: string, limit = 20) => `/sensors/${sensorId}/telemetry?limit=${limit}`,
   sensorConfig: (sensorId: string) => `/sensors/${sensorId}/config`,
   plantings: "/plantings",

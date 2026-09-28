@@ -13,6 +13,27 @@ export const kebunSchema = z.object({
   deskripsi: z.string().optional(),
 });
 
+export const deviceSchema = z.object({
+  nama: z.string().min(3, "Nama device minimal 3 karakter"),
+  type: z.enum(["TANDON", "IRRIGATION", "SOIL", "HYDROPONIC", "GATEWAY"], {
+    message: "Tipe device tidak valid",
+  }),
+  mqttTopic: z.string().min(3, "Topik MQTT wajib diisi"),
+  lokasi: z.string().optional(),
+  lahanId: z.string().optional(),
+});
+
+export const sensorSchema = z.object({
+  deviceId: z.string().min(1, "Device wajib dipilih"),
+  type: z.enum(
+    ["WATER_LEVEL", "SOLENOID", "PH", "NPK_N", "NPK_P", "NPK_K", "EC", "TDS_PPM", "TEMP", "HUMIDITY", "SOIL_MOISTURE"],
+    { message: "Tipe sensor tidak valid" },
+  ),
+  unit: z.string().min(1, "Satuan wajib diisi"),
+  minThreshold: z.coerce.number().nullable().optional(),
+  maxThreshold: z.coerce.number().nullable().optional(),
+});
+
 export const thresholdSchema = z
   .object({
     min: z.coerce.number().nullable().optional(),
@@ -35,6 +56,8 @@ export const rencanaTanamSchema = z.object({
 
 export type LoginInput = z.infer<typeof loginSchema>;
 export type KebunInput = z.infer<typeof kebunSchema>;
+export type DeviceInput = z.infer<typeof deviceSchema>;
+export type SensorInput = z.infer<typeof sensorSchema>;
 export type ThresholdInput = z.infer<typeof thresholdSchema>;
 export type RencanaTanamInput = z.infer<typeof rencanaTanamSchema>;
 

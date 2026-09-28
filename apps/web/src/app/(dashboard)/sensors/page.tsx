@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { container, item } from "@/lib/motion";
-import { Activity, Droplets, Thermometer, Beaker } from "lucide-react";
+import { Activity, Droplets, Thermometer, Beaker, Plus, Cpu } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -10,9 +10,12 @@ import { Input, Select } from "@/components/ui/Input";
 import { Skeleton } from "@/components/ui/Skeleton";
 import { Toast, useToast } from "@/components/ui/Toast";
 import { useSensors } from "@/hooks/useSensors";
+import { useLahans } from "@/lib/queries";
 import { SensorCard, describeSensor } from "@/components/sensors/SensorCard";
 import { TelemetryTable } from "@/components/sensors/TelemetryTable";
 import { ThresholdForm } from "@/components/sensors/ThresholdForm";
+import { DeviceFormModal } from "@/components/sensors/DeviceFormModal";
+import { SensorFormModal } from "@/components/sensors/SensorFormModal";
 import { MQTT_BROKER, SENSOR_GROUPS } from "@/lib/constants";
 import { kebunName } from "@/lib/endpoints";
 
@@ -31,8 +34,11 @@ function isTabActive(filter: string, id: string): boolean {
 export default function SensorsPage() {
   const [filter, setFilter] = useState("Semua");
   const [q, setQ] = useState("");
+  const [showDeviceForm, setShowDeviceForm] = useState(false);
+  const [showSensorForm, setShowSensorForm] = useState(false);
   const { toast, showToast } = useToast();
   const s = useSensors(showToast);
+  const { data: lahans } = useLahans(s.selectedKebun || null);
   const pills = filter === "Semua" ? [] : (SENSOR_GROUPS[filter] ?? []);
   const isSpecific = filter !== "Semua" && !SENSOR_GROUPS[filter];
 
@@ -60,7 +66,13 @@ export default function SensorsPage() {
         </div>
         <div className="flex items-center gap-2">
           <Badge variant="lilac">MQTT ● Terhubung</Badge>
-          <span className="text-xs text-stone-gray">broker: {MQTT_BROKER}</span>
+          <span className="hidden text-xs text-stone-gray xl:inline">broker: {MQTT_BROKER}</span>
+          <Button size="sm" className="gap-1.5" onClick={() => setShowDeviceForm(true)} disabled={!hasKebun}>
+            <Plus className="h-4 w-4" /> Device
+          </Button>
+          <Button size="sm" variant="secondary" className="gap-1.5" onClick={() => setShowSensorForm(true)} disabled={!hasKebun || s.devices.length === 0} title={s.devices.length === 0 ? "Buat device dulu" : "Tambah sensor ke device"}>
+            <Cpu className="h-4 w-4" /> Sensor
+          </Button>
         </div>
       </motion.div>
 
@@ -159,6 +171,25 @@ export default function SensorsPage() {
           />
         </motion.div>
       )}
+      <AnimatePresence>
+        {showDeviceForm && hasKebun && (
+          <DeviceFormModal
+            kebunId={s.selectedKebun}
+            kebunNama={kebunName((s.kebuns ?? []).find((k) => String(k.id) === s.selectedKebun))}
+            lahans={(lahans ?? []).map((l) => ({ id: String(l.id), nama: l.nama }))}
+            onClose={() => setShowDeviceForm(false)}
+            onSuccess={(m) => { showToast(m); void s.refreshDevices(s.selectedKebun); }}
+          />
+        )}
+        {showSensorForm && hasKebun && (
+          <SensorFormModal
+            devices={s.devices.map((d) => ({ id: String(d.id), nama: d.nama }))}
+            kebunId={s.selectedKebun}
+            onClose={() => setShowSensorForm(false)}
+            onSuccess={(m) => { showToast(m); void s.refreshDevices(s.selectedKebun); }}
+          />
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }
