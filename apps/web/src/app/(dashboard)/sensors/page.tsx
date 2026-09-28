@@ -16,6 +16,7 @@ import { TelemetryTable } from "@/components/sensors/TelemetryTable";
 import { ThresholdForm } from "@/components/sensors/ThresholdForm";
 import { DeviceFormModal } from "@/components/sensors/DeviceFormModal";
 import { SensorFormModal } from "@/components/sensors/SensorFormModal";
+import { DeviceConnectCard } from "@/components/sensors/DeviceConnectCard";
 import { MQTT_BROKER, SENSOR_GROUPS } from "@/lib/constants";
 import { kebunName } from "@/lib/endpoints";
 
@@ -54,6 +55,7 @@ export default function SensorsPage() {
 
   const hasKebun = s.kebuns !== null && s.kebuns.length > 0;
   const telTitle = s.selectedSensorObj ? (s.selectedSensorObj.name ?? s.selectedSensor) : "Pilih sensor";
+  const selectedDevice = s.devices.find((d) => (d.sensors ?? []).some((sn) => String(sn.id) === s.selectedSensor)) ?? null;
 
   return (
     <motion.div variants={container} initial="hidden" animate="show" className="space-y-6 pb-20 lg:pb-0">
@@ -169,6 +171,12 @@ export default function SensorsPage() {
             onSaved={() => void s.refreshDevices(s.selectedKebun)}
             notify={showToast}
           />
+        </motion.div>
+      )}
+
+      {hasKebun && selectedDevice && s.selectedSensorObj && (
+        <motion.div variants={item}>
+          <DeviceConnectCard kebunId={s.selectedKebun} device={selectedDevice} sensor={s.selectedSensorObj} />
         </motion.div>
       )}
       <AnimatePresence>
